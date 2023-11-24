@@ -1,0 +1,73 @@
+<!-- For Orca Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="5" reg ="12">
+    <Timestamp index="0" count="1"/>
+	<System name="SLEEP_CTRL" addr="0x6401_00CC">
+        <Module name="IPA_DEEP_SLEEP" register="1" bitmap="7" maxScale="1"/>
+		<Module name="SP_SYS_DEEP_SLEEP" register="1" bitmap="6" maxScale="1"/>
+		<Module name="AUDCP_DEEP_SLEEP" register="1" bitmap="5" maxScale="1"/>
+		<Module name="PUB_SYS_DEEP_SLEEP" register="1" bitmap="4" maxScale="1"/>
+		<Module name="NRCP_DEEP_SLEEP" register="1" bitmap="3" maxScale="1"/>
+		<Module name="PSCP_DEEP_SLEEP" register="1" bitmap="2" maxScale="1"/>
+		<Module name="V3_MODEM_DEEP_SLEEP" register="1" bitmap="1" maxScale="1"/>
+		<Module name="AP_DEEP_SLEEP" register="1" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="SLEEP_STATUS" addr="0x6401_00D4">
+		<Module name="IPA_SLP_STATUS" register="2" bitmap="24:27" maxScale="6"/>
+		<Module name="SP_SYS_SLP_STATUS" register="2" bitmap="20:23" maxScale="6"/>
+		<Module name="NRCP_SLP_STATUS" register="2" bitmap="16:19" maxScale="6"/>
+		<Module name="AUDCP_SLP_STATUS" register="2" bitmap="12:15" maxScale="6"/>
+		<Module name="PSCP_SLP_STATUS" register="2" bitmap="8:11" maxScale="6"/>
+		<Module name="V3_MODEM_SLP_STATUS" register="2" bitmap="4:7" maxScale="6"/>
+		<Module name="AP_SLP_STATUS" register="2" bitmap="0:3" maxScale="6"/>
+	</System>
+	<System name="PWR_STATUS1_DBG" addr="0x6401_0584">
+	    <Module name="PD_NRCP_SYS_STATE" register="3" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_AP_VSP_STATE" register="3" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_AP_VDSP_STATE" register="3" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_AP_SYS_STATE" register="3" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS2_DBG" addr="0x6401_0588">
+	    <Module name="PD_NRCP_UL_STATE" register="4" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_NRCP_DL_STATE" register="4" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_NRCP_DSP_1_STATE" register="4" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_NRCP_DSP_0_STATE" register="4" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS3_DBG" addr="0x6401_058C">
+	    <Module name="PD_PUB_SYS_STATE" register="5" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_PSCP_SYS_STATE" register="5" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_AUDCP_AUDDSP_STATE" register="5" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_AUDCP_SYS_STATE" register="5" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS4_DBG" addr="0x6401_0590">
+	    <Module name="PD_V3_LCE_STATE" register="6" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_V3_DPFEC_STATE" register="6" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_V3_WCE_STATE" register="6" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_V3_LWPROC_STATE" register="6" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS5_DBG" addr="0x6401_0594">
+	    <Module name="PD_V3_PHY_STATE" register="7" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_V3_PS_STATE" register="7" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_V3_MODEM_STATE" register="7" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_NRCP_SYNC_STATE" register="7" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS6_DBG" addr="0x6401_059C">
+	    <Module name="PD_APCPU_C3_STATE" register="8" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_APCPU_C2_STATE" register="8" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_APCPU_C1_STATE" register="8" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_APCPU_C0_STATE" register="8" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS7_DBG" addr="0x6401_05A0">
+	    <Module name="PD_APCPU_C7_STATE" register="9" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_APCPU_C6_STATE" register="9" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_APCPU_C5_STATE" register="9" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_APCPU_C4_STATE" register="9" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS8_DBG" addr="0x6401_05A4">
+		<Module name="PD_V3_TD_STATE" register="10" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_APCPU_TOP_STATE" register="10" bitmap="0:7" maxScale="23"/>
+	</System>
+	<System name="PUB_DFS_FRQ_SEL" addr="0x6401_0460">
+		<Module name="pub_dfs_freq_sel" register="11" bitmap="0:2" maxScale="7"/>
+	</System>
+</PowerTrace>

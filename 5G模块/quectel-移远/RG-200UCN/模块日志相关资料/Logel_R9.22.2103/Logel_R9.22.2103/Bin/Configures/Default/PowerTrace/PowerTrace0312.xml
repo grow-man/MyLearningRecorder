@@ -1,0 +1,72 @@
+<!-- For Pike2 Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="3" reg ="12">
+    <Timestamp index="0" count="1"/>
+	<System name="PD_CP_SYS_CFG" addr="0x402B_0048">
+	    <Module name="PD_PUBCP_SYS_AUTO_SHUTDOWN_EN" register="1" bitmap="27" maxScale="1"/>
+	    <Module name="PD_CP_SYS_DBG_SHUTDOWN_EN" register="1" bitmap="26" maxScale="1"/>
+		<Module name="PD_CP_SYS_FORCE_SHUTDOWN" register="1" bitmap="25" maxScale="1"/>
+		<Module name="PD_WTLCP_SYS_AUTO_SHUTDOWN_EN" register="1" bitmap="24" maxScale="1"/>
+<!-- 		<Module name="PD_CP_SYS_PWR_ON_DLY" register="1" bitmap="16:23" maxScale="255"/>
+		<Module name="PD_CP_SYS_PWR_ON_SEQ_DLY" register="1" bitmap="8:15" maxScale="255"/>
+		<Module name="PD_CP_SYS_ISO_ON_DLY" register="1" bitmap="0:7" maxScale="255"/> -->
+	</System>
+	<System name="PWR_STATUS0_DBG" addr="0x402B_00BC">
+        <Module name="PD_MM_TOP_STATE" register="2" bitmap="28:31" maxScale="10"/>		
+		<Module name="PD_GPU_TOP_STATE" register="2" bitmap="24:27" maxScale="15"/>
+		<Module name="PD_AP_SYS_STATE" register="2" bitmap="20:23" maxScale="15"/>
+		<Module name="PD_CA7_C3_STATE" register="2" bitmap="16:19" maxScale="15"/>
+		<Module name="PD_CA7_C2_STATE" register="2" bitmap="12:15" maxScale="15"/>
+		<Module name="PD_CA7_C1_STATE" register="2" bitmap="8:11" maxScale="15"/>
+		<Module name="PD_CA7_C0_STATE" register="2" bitmap="4:7" maxScale="15"/>
+		<Module name="PD_CA7_TOP_STATE" register="2" bitmap="0:3" maxScale="15"/>
+	</System>	
+	<System name="PWR_STATUS1_DBG" addr="0x402B_00C0">
+		<Module name="PD_WCN_GNSS_STATE" register="3" bitmap="24:27" maxScale="7"/>
+		<Module name="PD_WCN_WIFI_STATE" register="3" bitmap="20:23" maxScale="7"/>
+		<Module name="PD_WCN_TOP_STATE" register="3" bitmap="16:19" maxScale="7"/>
+		<Module name="PD_PUB_SYS_STATE" register="3" bitmap="12:15" maxScale="7"/>
+		<Module name="PD_WTLCP_TGDSP_STATE" register="3" bitmap="8:11" maxScale="7"/>
+		<Module name="PD_WTLCP_HU3GE_A_STATE" register="3" bitmap="4:7" maxScale="7"/>
+		<Module name="PD_CP_SYS_STATE" register="3" bitmap="0:3" maxScale="7"/>
+	</System>	
+	<System name="SLEEP_CTRL" addr="0x402B_00CC">
+	    <Module name="CM4_FORCE_DEEP_SLEEP" register="4" bitmap="21" maxScale="1"/>
+		<Module name="CP_FORCE_DEEP_SLEEP" register="4" bitmap="18" maxScale="1"/>
+		<Module name="AP_FORCE_DEEP_SLEEP" register="4" bitmap="16" maxScale="1"/>		
+		<Module name="PD_WCN_GNSS_DEEP_SLEEP" register="4" bitmap="8" maxScale="1"/>
+		<Module name="PD_WCN_WIFI_DEEP_SLEEP" register="4" bitmap="7" maxScale="1"/>		
+		<Module name="CP_DEEP_SLEEP" register="4" bitmap="2" maxScale="1"/>
+		<Module name="AP_DEEP_SLEEP" register="4" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="SLEEP_STATUS" addr="0x402B_00D4">
+		<Module name="CM4_SLP_STATUS" register="5" bitmap="20:23" maxScale="6"/>
+		<Module name="WCN_SLP_STATUS" register="5" bitmap="12:15" maxScale="6"/>
+		<Module name="CP_SLP_STATUS" register="5" bitmap="8:11" maxScale="6"/>
+		<Module name="AP_SLP_STATUS" register="5" bitmap="0:3" maxScale="6"/>
+	</System>	
+	<System name="WTLCP_TGDSP_CORE_INT_DISABLE" addr="0x402B_01B0">
+		<Module name="WTLCP_TGDSP_CORE_INT_DISABLE_FRC" register="6" bitmap="0" maxScale="1"/>		
+	</System>	
+	<System name="CP_DSLP_ENA" addr="0x402B_020C">
+		<Module name="PUBCP_DSLP_ENA" register="7" bitmap="1" maxScale="1"/>
+		<Module name="WTLCP_DSLP_ENA" register="7" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="PUBCP_INT_DISABLE" addr="0x402B_0220">
+		<Module name="PUBCP_INT_DISABLE" register="8" bitmap="0" maxScale="1"/>		
+	</System>	
+	<System name="WTLCP_INT_DISABLE" addr="0x402B_0224">
+		<Module name="WTLCP_INT_DISABLE" register="9" bitmap="0" maxScale="1"/>		
+	</System>
+	<System name="CP_CG_CFG" addr="0x402B_0348">
+		<Module name="WTLCP_CG_FORCE_OFF" register="10" bitmap="6" maxScale="1"/>
+		<Module name="WTLCP_CG_WITH_SLP_ENA" register="10" bitmap="5" maxScale="1"/>
+		<Module name="WTLCP_CG_AUTO_SEL" register="10" bitmap="4" maxScale="1"/>		
+		<Module name="PUBCP_CG_FORCE_OFF" register="10" bitmap="2" maxScale="1"/>
+		<Module name="PUBCP_CG_WITH_SLP_ENA" register="10" bitmap="1" maxScale="1"/>
+		<Module name="PUBCP_CG_AUTO_SEL" register="10" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="DDR" addr="0x402E_00A0">
+		<Module name="DDR" register="11" bitmap="8:11" optionValue="0x02,0x03,0x05" minScale="2" maxScale="5"/>
+	</System>
+</PowerTrace>

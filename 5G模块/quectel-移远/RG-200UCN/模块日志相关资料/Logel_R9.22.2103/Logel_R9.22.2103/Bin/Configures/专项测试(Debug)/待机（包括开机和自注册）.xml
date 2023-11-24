@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Filters version="2.0">
+    <Class name="L4" checked="1">
+        <SubClass name="ATC" showModule="1" checked="1">
+            <Module name="APP_MN_SAP" alias="APP_MN_SAP" value="1" type="1" >
+				<SubClass name="APP_MN_SAP LEVEL" des="APP_MN_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>	
+			</Module>
+            <Module name="SIGNAL_APP_MN_SAP" alias="SIGNAL_APP_MN_SAP" value="2" type="1" >
+				<SubClass name="SIGNAL_APP_MN_SAP LEVEL" des="SIGNAL_APP_MN_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>			
+			<Module name="_TSC_MOD_ATC" alias="ATC" value="1" type="2">
+				<SubClass name="ATC LEVEL" des="_TSC_MOD_ATC LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>			
+			</Module>
+        </SubClass>	
+        <SubClass name="SIM" showModule="1" checked="1">
+            <Module name="SIM_TIMER_SAP" alias="SIM_TIMER_SAP" value="3" type="1">
+				<SubClass name="SIM_TIMER_SAP LEVEL" des="SIM_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_SIM" alias="SIM" value="8" type="2">
+				<SubClass name="SIM LEVEL" des="SIM LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_SIM_CHIP" alias="SIM_CHIP" value="9" type="2">
+				<SubClass name="SIM_CHIP LEVEL" des="SIM_CHIP_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+        </SubClass>		
+		<SubClass name="MN" showModule="1" checked="1">
+            <Module name="MN_SIM_SAP" alias="MN_SIM_SAP" value="4" type="1">
+				<SubClass name="MN_SIM_SAP LEVEL" des="MN_SIM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			 <Module name="MNM_SIM_SAP" alias="MNM_SIM_SAP" value="5" type="1">
+				<SubClass name="MNM_SIM_SAP LEVEL" des="MNM_SIM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MNM_TIMER_SAP" alias="MNM_TIMER_SAP" value="6" type="1">
+				<SubClass name="MNM_TIMER_SAP LEVEL" des="MNM_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MN_AL_SAP" alias="MN_AL_SAP" value="7" type="">
+				<SubClass name="MN_AL_SAP LEVEL" des="MN_AL_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_MN_AL" alias="MN_AL" value="7" type="2">
+				<SubClass name="MN_AL LEVEL" des="MN_AL_MODULE LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MN_MNM_SAP" alias="MN_MNM_SAP" value="8" type="1">
+				<SubClass name="MN_MNM_SAP LEVEL" des="MN_MNM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_MNM" alias="MNM" value="7" type="2">
+				<SubClass name="MNM LEVEL" des="MNM_MODULE LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+        </SubClass>	
+    </Class>
+	<Class name="DSM(DATA SERVICE MANAGEMENT)" checked="1">
+		 <SubClass name="DSM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_DSM" alias="DSM" value="9" type="2" >
+				<SubClass name="DSM LEVEL" des="DSM LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		 </SubClass>
+	</Class>
+	<Class name="L4<->NAS" checked="1" showModule="1">	
+		<SubClass name="MN<->NAS" showModule="1" checked="1">
+			<Module name="MNCC_SAP" alias="MNCC_SAP" value="11" type="1" >
+				<SubClass name="MNCC_SAP LEVEL" des="MNCC_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			
+			<Module name="SM_REG_SAP" alias="SM_REG_SAP" value="12" type="1" >
+				<SubClass name="SM_REG_SAP LEVEL" des="SM_REG_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MNSMS_SAP" alias="MNSMS_SAP" value="13" type="1" >
+				<SubClass name="MNSMS_SAP LEVEL" des="MNSMS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MNSS_SAP" alias="MNSS_SAP" value="14" type="1" >
+				<SubClass name="MNSS_SAP LEVEL" des="MNSS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="GMM_REG_SAP" alias="GMM_REG_SAP" value="15" type="1" >
+				<SubClass name="GMM_REG_SAP LEVEL" des="GMM_REG_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="L4_NAS_SWTCH_SAP" alias="L4_NAS_SWTCH_SAP" value="16" type="1" >
+				<SubClass name="L4_NAS_SWTCH_SAP LEVEL" des="L4_NAS_SWTCH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MN_AL_RABM_SAP" alias="MN_AL_RABM_SAP" value="17" type="1" >
+				<SubClass name="MN_AL_RABM_SAP LEVEL" des="MN_AL_RABM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="L4_RABM_SAP" alias="L4_RABM_SAP" value="18" type="1" >
+				<SubClass name="L4_RABM_SAP LEVEL" des="L4_RABM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MN_SM_SAP" alias="MN_SM_SAP" value="19" type="1" >
+				<SubClass name="MN_SM_SAP LEVEL" des="MN_SM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="SIM<->NAS" showModule="1" checked="1">
+			<Module name="PS_SIM_SAP" alias="PS_SIM_SAP" value="20" type="1" >
+				<SubClass name="PS_SIM_SAP LEVEL" des="PS_SIM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MN_SIM_SAP" alias="MN_SIM_SAP" value="21" type="1" >
+				<SubClass name="MN_SIM_SAP LEVEL" des="MN_SIM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+	</Class>
+	
+	<Class name="L4<->AS" checked="1" showModule="1">
+		<Module name="MN_LLAYER1_ADX_SAP" alias="MN_LLAYER1_ADX_SAP" value="22" type="1" >
+				<SubClass name="MN_LLAYER1_ADX_SAP LEVEL" des="MN_LLAYER1_ADX_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+		</Module>
+				
+		<Module name="L4_CBMC_SAP" alias="L4_CBMC_SAP" value="26" type="1" >
+				<SubClass name="L4_CBMC_SAP LEVEL" des="L4_CBMC_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+		</Module>
+		
+		<Module name="L4_L2R_SAP" alias="L4_L2R_SAP" value="26" type="1" >
+				<SubClass name="L4_L2R_SAP LEVEL" des="L4_L2R_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+		</Module>
+		
+	</Class>
+	
+	<Class name="L4<->LCS" checked="1" showModule="1">			
+		<Module name="MN_LCS_SAP" alias="MN_LCS_SAP" value="30" type="1" >
+				<SubClass name="MN_LCS_SAP LEVEL" des="MN_LCS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+		</Module>
+	</Class>
+	<Class name="NAS" checked="1">	
+		<SubClass name="CC<-->TIMER" showModule="1" checked="1">
+			<Module name="CC_TIMER_SAP" alias="CC_TIMER_SAP" value="32" type="1" >
+				<SubClass name="CC_TIMER_SAP LEVEL" des="CC_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="SM<-->RABM" showModule="1" checked="1">
+			<Module name="RABM_SM_SAP" alias="RABM_SM_SAP" value="33" type="1" >
+				<SubClass name="RABM_SM_SAP LEVEL" des="RABM_SM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="SM<-->TIMER" showModule="1" checked="1">
+			<Module name="SM_TIMER_SAP" alias="SM_TIMER_SAP" value="34" type="1" >
+				<SubClass name="SM_TIMER_SAP LEVEL" des="SM_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="SMS<-->TIMER" showModule="1" checked="1">
+			<Module name="SMS_TIMER_SAP" alias="SMS_TIMER_SAP" value="35" type="1" >
+				<SubClass name="SMS_TIMER_SAP LEVEL" des="SMS_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="SS<-->TIMER" showModule="1" checked="1">
+			<Module name="SS_TIMER_SAP" alias="SS_TIMER_SAP" value="36" type="1" >
+				<SubClass name="SS_TIMER_SAP LEVEL" des="SMS_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MM/GMM<->SM" showModule="1" checked="1">
+			<Module name="GMM_SM_SAP" alias="GMM_SM_SAP" value="36" type="1" >
+				<SubClass name="GMM_SM_SAP LEVEL" des="GMM_SM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MM/GMM<->CMM" showModule="1" checked="1">
+			<Module name="CMM_GMM_SAP" alias="CMM_GMM_SAP" value="37" type="1" >
+				<SubClass name="CMM_GMM_SAP LEVEL" des="CMM_GMM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MM/GMM<->CC" showModule="1" checked="1">
+			<Module name="MM_CC_SAP" alias="MM_CC_SAP" value="38" type="1" >
+				<SubClass name="MM_CC_SAP LEVEL" des="MM_CC_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MM/GMM<->SS" showModule="1" checked="1">
+			<Module name="MM_SS_SAP" alias="MM_SS_SAP" value="39" type="1" >
+				<SubClass name="MM_SS_SAP LEVEL" des="MM_SS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MM/GMM<->SMS" showModule="1" checked="1">
+			<Module name="MM_SMS_SAP" alias="MM_SMS_SAP" value="40" type="1" >
+				<SubClass name="MM_SMS_SAP LEVEL" des="MM_SS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="GMM_SMS_SAP" alias="GMM_SMS_SAP" value="41" type="1" >
+				<SubClass name="GMM_SMS_SAP LEVEL" des="GMM_SS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="PMM_SMS_SAP" alias="PMM_SMS_SAP" value="42" type="1" >
+				<SubClass name="PMM_SMS_SAP LEVEL" des="PMM_SMS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="MM/GMM<->RABM" showModule="1" checked="1">
+			<Module name="GMM_RABM_SAP" alias="GMM_RABM_SAP" value="43" type="1" >
+				<SubClass name="GMM_RABM_SAP LEVEL" des="GMM_RABM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="MM/GMM<->EMM" showModule="1" checked="1">
+			<Module name="MMCTRL_EMM_SAP" alias="MMCTRL_EMM_SAP" value="44" type="1" >
+				<SubClass name="MMCTRL_EMM_SAP LEVEL" des="MMCTRL_EMM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="MM/GMM<->NAS_SWTH" showModule="1" checked="1">
+			<Module name="GMM_NAS_SWTH_SAP" alias="GMM_NAS_SWTH_SAP" value="45" type="1" >
+				<SubClass name="GMM_NAS_SWTH_SAP LEVEL" des="GMM_NAS_SWTH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="LLC_GMM_SAP" alias="LLC_GMM_SAP" value="46" type="1" >
+				<SubClass name="LLC_GMM_SAP LEVEL" des="LLC_GMM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="GMM_AS_SAP" alias="GMM_AS_SAP" value="46" type="1" >
+				<SubClass name="GMM_AS_SAP LEVEL" des="GMM_AS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="MM<->TIMER" showModule="1" checked="1">
+			<Module name="MM_TIMER_SAP" alias="MM_TIMER_SAP" value="47" type="1" >
+				<SubClass name="MM_TIMER_SAP LEVEL" des="MM_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="MM/GMM<->LPP" showModule="1" checked="1">
+			<Module name="GMM_LPP_SAP" alias="GMM_LPP_SAP" value="48" type="1" >
+				<SubClass name="GMM_LPP_SAP LEVEL" des="GMM_LPP_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="EMM<->PLMN SEARCH" showModule="1" checked="1">
+			<Module name="EMM_PH_SAP" alias="EMM_PH_SAP" value="48" type="1" >
+				<SubClass name="EMM_PH_SAP LEVEL" des="EMM_PH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="EMM<->ESM" showModule="1" checked="1">
+			<Module name="EMM_ESM_SAP" alias="EMM_ESM_SAP" value="49" type="1" >
+				<SubClass name="EMM_ESM_SAP LEVEL" des="EMM_ESM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="PLMN SEARCH<-->NAS SWTH" showModule="1" checked="1">
+			<Module name="PLM_AS_SAP" alias="PLM_AS_SAP" value="50" type="1" >
+				<SubClass name="PLM_AS_SAP LEVEL" des="PLM_AS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			
+			<Module name="PLM_NAS_SWTH_SAP" alias="PLM_NAS_SWTH_SAP" value="51" type="1" >
+				<SubClass name="PLM_NAS_SWTH_SAP LEVEL" des="PLM_NAS_SWTH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="PLMN SEARCH<-->MM" showModule="1" checked="1">
+			<Module name="MM_PLM_SAP" alias="MM_PLM_SAP" value="52" type="1" >
+				<SubClass name="MM_PLM_SAP LEVEL" des="MM_PLM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="MMSS_PLM_SAP" alias="MMSS_PLM_SAP" value="53" type="1" >
+				<SubClass name="MMSS_PLM_SAP LEVEL" des="MMSS_PLM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="PLMN SEARCH<-->TIMER" showModule="1" checked="1">
+			<Module name="PLM_TIMER_SAP" alias="PLM_TIMER_SAP" value="54" type="1" >
+				<SubClass name="PLM_TIMER_SAP LEVEL" des="PLM_TIMER_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="RABM<-->NAS_SWTH" showModule="1" checked="1">
+			<Module name="RABM_AS_SAP" alias="RABM_AS_SAP" value="55" type="1" >
+				<SubClass name="RABM_AS_SAP LEVEL" des="RABM_AS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="NAS_SWTH<-->SMS" showModule="1" checked="1">
+			<Module name="AS_NAS_SAP" alias="AS_NAS_SAP" value="56" type="1" >
+				<SubClass name="AS_NAS_SAP LEVEL" des="AS_NAS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="NAS_SWTH<-->SM" showModule="1" checked="1">
+			<Module name="SM_SNDCP_SAP" alias="SM_SNDCP_SAP" value="57" type="1" >
+				<SubClass name="SM_SNDCP_SAP LEVEL" des="SM_SNDCP_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="NAS_SWTH<-->CC" showModule="1" checked="1">
+			<Module name="CC_AS_SAP" alias="CC_AS_SAP" value="58" type="1" >
+				<SubClass name="CC_AS_SAP LEVEL" des="CC_AS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="CC" showModule="1" checked="1">
+			<Module name="_TSC_MOD_CC" alias="CC" value="32" type="2" >
+				<SubClass name="CC LEVEL" des="CC LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="SM/ESM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SM" alias="SM" value="32" type="2" >
+				<SubClass name="SM LEVEL" des="SM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+        <SubClass name="SMS" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SMS" alias="SMS" value="32" type="2" >
+				<SubClass name="SMS LEVEL" des="SM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+        <SubClass name="SS" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SS" alias="SS" value="32" type="2" >
+				<SubClass name="SS LEVEL" des="SS_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>	
+		<SubClass name="MM/GMM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_MM" alias="MM" value="32" type="2" >
+				<SubClass name="MM LEVEL" des="MM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>	
+        <SubClass name="EMM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_EMM" alias="EMM" value="32" type="2" >
+				<SubClass name="EMM LEVEL" des="EMM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+        <SubClass name="PLMN SEARCH" showModule="1" checked="1">
+			<Module name="_TSC_MOD_PLM" alias="PLM" value="32" type="2" >
+				<SubClass name="PLM LEVEL" des="PLM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="RAB MANAGEMENT" showModule="1" checked="1">
+			<Module name="_TSC_MOD_RABM" alias="RABM" value="32" type="2" >
+				<SubClass name="RABM LEVEL" des="RABM LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="NAS SWTH" showModule="1" checked="1">
+			<Module name="_TSC_MOD_NAS_SWTH" alias="NAS_SWTH" value="32" type="2" >
+				<SubClass name="NAS_SWTH LEVEL" des="NAS_SWITCH LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="GSM" checked="1" showModule="1" >
+		<SubClass name="RR/LLC/MAC/DL/SNDCP/RLC" showModule="1" checked="1">
+			<Module name="_TSC_MOD_GAS" alias="GAS" value="32" type="2" >
+				<SubClass name="GAS LEVEL" des="GAS Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="LAYER1" showModule="1" checked="1">
+			<Module name="_TSC_MOD_GL1" alias="GL1" value="32" type="2" >
+				<SubClass name="GL1 LEVEL" des="GL1 Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="GDSP" showModule="1" checked="1">
+			<Module name="_TSC_MOD_GDSP" alias="GDSP" value="1" type="3" >
+				<SubClass name="GDSP LEVEL" des="GDSP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="WCDMA" checked="1" showModule="1" >
+		<SubClass name="RRC" showModule="1" checked="1">
+			<Module name="_TSC_MOD_WPS_WRCC" alias="WPS_WRCC" value="32" type="2" >
+				<SubClass name="WPS_WRCC LEVEL" des="WPS_WRCC Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_WPS_WRRC" alias="WPS_WRRC" value="32" type="2" >
+				<SubClass name="WPS_WRRC LEVEL" des="WPS_WRRC Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="RLC/MAC" showModule="1" checked="1">
+			<Module name="_TSC_MOD_WPS_WL2" alias="WPS_WL2" value="32" type="2" >
+				<SubClass name="WPS_WL2 LEVEL" des="WPS_WL2 Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="LAYER1" showModule="1" checked="1">
+			<Module name="_TSC_MOD_WL1_WL1C" alias="WL1_WL1C" value="32" type="2" >
+				<SubClass name="WL1_WL1C LEVEL" des="WL1_WL1C Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_WL1_HAL" alias="WL1_HAL" value="32" type="2" >
+				<SubClass name="WL1_HAL LEVEL" des="WL1_HAL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_WL1_DRV" alias="WL1_DRV" value="32" type="2" >
+				<SubClass name="WL1_DRV LEVEL" des="WL1_DRV Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_WL1_MEAS_RPT" alias="WL1_MEAS_RPT" value="32" type="2" >
+				<SubClass name="WL1_MEAS_RPT LEVEL" des="WL1_MEAS_RPT Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="LTE" checked="1" showModule="1" >
+		<SubClass name="RRC(LTE)" showModule="1" checked="1">
+			<Module name="_TSC_MOD_LRRC" alias="LRRC" value="32" type="2" >
+				<SubClass name="LRRC LEVEL" des="LRRC Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LRRCA" alias="LRRCA" value="32" type="2" >
+				<SubClass name="LRRCA LEVEL" des="LRRCA Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="LL2" showModule="1" checked="1">
+			<Module name="_TSC_MOD_LL2_PDCP_RX" alias="LL2_PDCP_RX" value="32" type="2" >
+				<SubClass name="LL2_PDCP_RX LEVEL" des="LL2_PDCP_RX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_PDCP_TX" alias="LL2_PDCP_TX" value="32" type="2" >
+				<SubClass name="LL2_PDCP_TX LEVEL" des="LL2_PDCP_TX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_ROHC" alias="ROHC" value="32" type="2" >
+				<SubClass name="ROHC LEVEL" des="LL2_HAL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_HAL" alias="LL2_HAL" value="32" type="2" >
+				<SubClass name="LL2_HAL LEVEL" des="LL2_HAL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_RLC_RX" alias="LL2_RLC_RX" value="32" type="2" >
+				<SubClass name="LL2_RLC_RX LEVEL" des="LL2_RLC_RX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_RLC_TX" alias="LL2_RLC_TX" value="32" type="2" >
+				<SubClass name="LL2_RLC_TX LEVEL" des="LL2_RLC_TX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_RA" alias="LL2_RA" value="32" type="2" >
+				<SubClass name="LL2_RA LEVEL" des="LL2_RA Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_MAC_HH" alias="LL2_MAC_HH" value="32" type="2" >
+				<SubClass name="LL2_MAC_HH LEVEL" des="LL2_MAC_HH Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_MAC_RX" alias="LL2_MAC_RX" value="32" type="2" >
+				<SubClass name="LL2_MAC_RX LEVEL" des="LL2_MAC_RX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_MAC_TX" alias="LL2_MAC_TX" value="32" type="2" >
+				<SubClass name="LL2_MAC_TX LEVEL" des="LL2_MAC_TX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_ADX" alias="LL2_ADX" value="32" type="2" >
+				<SubClass name="LL2_ADX LEVEL" des="LL2_ADX Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_LL2_STAT" alias="LL2_STAT" value="32" type="2" >
+				<SubClass name="LL2_STAT LEVEL" des="LL2_STAT Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="L1" showModule="1" checked="1">
+			<Module name="LL1_POWERSWEEP_SYNC" alias="POWERSWEEP_SYNC" value="2" type="3" >
+				<SubClass name="POWERSWEEP_SYNC LEVEL" des="POWERSWEEP_SYNC Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_MEAS" alias="MEAS" value="3" type="3" >
+				<SubClass name="MEAS LEVEL" des="MEAS Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_DL" alias="DL" value="4" type="3" >
+				<SubClass name="DL LEVEL" des="DL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_UL" alias="UL" value="5" type="3" >
+				<SubClass name="UL LEVEL" des="UL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_LOOP" alias="LOOP" value="6" type="3" >
+				<SubClass name="LOOP LEVEL" des="LOOP Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_PAL" alias="PAL" value="7" type="3" >
+				<SubClass name="PAL LEVEL" des="PAL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_HARQ_CSI" alias="HARQ_CSI" value="8" type="3" >
+				<SubClass name="HARQ_CSI LEVEL" des="HARQ_CSI Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_CDRX_CGI" alias="CDRX_CGI" value="9" type="3" >
+				<SubClass name="CDRX_CGI LEVEL" des="CDRX_CGI Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_MTB_PO" alias="MTB_PO" value="10" type="3" >
+				<SubClass name="MTB_PO LEVEL" des="MTB_PO Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_ISR" alias="ISR" value="11" type="3" >
+				<SubClass name="ISR LEVEL" des="ISR Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_CHANNEL_IDENTIFY" alias="CHANNEL_IDENTIFY" value="12" type="3" >
+				<SubClass name="CHANNEL_IDENTIFY LEVEL" des="CHANNEL_IDENTIFY Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_SLEEP" alias="SLEEP" value="13" type="3" >
+				<SubClass name="SLEEP LEVEL" des="SLEEP Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LL1_HAL" alias="HAL" value="14" type="3" >
+				<SubClass name="HAL LEVEL" des="HAL Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="SYSTEM" checked="1" showModule="1" >
+		<SubClass name="SYSTEM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SDI" alias="SDI" value="32" type="2" >
+				<SubClass name="SDI LEVEL" des="SDI Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="IMS" checked="1" showModule="1" >
+		<SubClass name="IMS_SAP" showModule="1" checked="1">
+			<Module name="IMS_SAP" alias="IMS_SAP" value="32" type="1" >
+				<SubClass name="IMS_SAP LEVEL" des="IMS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>	
+		<SubClass name="CSM" showModule="1" checked="1">
+			<Module name="_TSC_MOD_CSM" alias="CSM" value="58" type="2" >
+				<SubClass name="CSM LEVEL" des="CSM_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_CSM_CALL" alias="CSM_CALL" value="58" type="2" >
+				<SubClass name="CSM_CALL LEVEL" des="CSM_CALL_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_ISI" alias="ISI" value="58" type="2" >
+				<SubClass name="ISI LEVEL" des="ISI_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="SAPP" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SAPP" alias="SAPP" value="60" type="2" >
+				<SubClass name="SAPP LEVEL" des="SAPP_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_SIP" alias="SIP" value="61" type="2" >
+				<SubClass name="SIP LEVEL" des="SIP_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="MC" showModule="1" checked="1">
+			<Module name="_TSC_MOD_MC" alias="MC" value="60" type="2" >
+				<SubClass name="MC LEVEL" des="MC_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_VE" alias="VE" value="61" type="2" >
+				<SubClass name="VE LEVEL" des="VE_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="_TSC_MOD_VPR" alias="VPR" value="61" type="2" >
+				<SubClass name="VPR LEVEL" des="VPR_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		
+		<SubClass name="SUPSRV" showModule="1" checked="1">
+			<Module name="_TSC_MOD_SUPSRV" alias="SUPSRV" value="60" type="2" >
+				<SubClass name="SUPSRV LEVEL" des="SUPSRV_Module LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	<Class name="NAS<->AS" checked="1" showModule="1" >	
+		<SubClass name="NAS<-->LAS" showModule="1" checked="1">
+			<Module name="LTE_EMM_SAP" alias="LTE_EMM_SAP" value="59" type="1" >
+				<SubClass name="LTE_EMM_SAP LEVEL" des="LTE_EMM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LTE_PH_SAP" alias="LTE_PH_SAP" value="60" type="1" >
+				<SubClass name="LTE_PH_SAP LEVEL" des="LTE_PH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LTE_ESM_SAP" alias="LTE_ESM_SAP" value="61" type="1" >
+				<SubClass name="LTE_ESM_SAP LEVEL" des="LTE_ESM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="NAS<->GAS" showModule="1" checked="1">
+			<Module name="GSM_NAS_SWTH_SAP" alias="GSM_NAS_SWTH_SAP" value="62" type="1" >
+				<SubClass name="GSM_NAS_SWTH_SAP LEVEL" des="GSM_NAS_SWTH_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	
+	<Class name="AS" checked="1" showModule="1" >	
+		<SubClass name="LAS" showModule="1" checked="1">
+			<SubClass name="LRRC" showModule="1" checked="1">
+				<Module name="LRRCA_LRRC_SAP" alias="LRRCA_LRRC_SAP" value="64" type="1" >
+					<SubClass name="LRRCA_LRRC_SAP LEVEL" des="LRRCA_LRRC_SAP LEVEL">
+						<SubClass name="Level 0" value="1" checked="1" />
+						<SubClass name="Level 1" value="2" checked="1" />
+						<SubClass name="Level 2" value="4" checked="1" />
+						<SubClass name="Level 3" value="8" checked="0" />
+					</SubClass>
+				</Module>
+				<Module name="LRRC_LRRCA_SAP" alias="LRRC_LRRCA_SAP" value="65" type="1" >
+					<SubClass name="LRRC_LRRCA_SAP LEVEL" des="LRRC_LRRCA_SAP LEVEL">
+						<SubClass name="Level 0" value="1" checked="1" />
+						<SubClass name="Level 1" value="2" checked="1" />
+						<SubClass name="Level 2" value="4" checked="1" />
+						<SubClass name="Level 3" value="8" checked="0" />
+					</SubClass>
+				</Module>
+			</SubClass>
+		</SubClass>
+		
+		<SubClass name="LAS<->WAS" showModule="1" checked="1">
+			<Module name="LAS_WAS_SAP" alias="LAS_WAS_SAP" value="67" type="1" >
+				<SubClass name="LAS_WAS_SAP LEVEL" des="LAS_WAS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="WRRCA_LRRCA_SAP(LTE)" alias="WRRCA_LRRCA_SAP(LTE)" value="68" type="1" >
+				<SubClass name="WRRCA_LRRCA_SAP(LTE) LEVEL" des="WRRCA_LRRCA_SAP(LTE) LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>			
+		</SubClass>
+		<SubClass name="LAS<->GAS" showModule="1" checked="1">
+			<Module name="GRR_LASM_SAP" alias="GRR_LASM_SAP" value="69" type="1" >
+				<SubClass name="GRR_LASM_SAP LEVEL" des="GRR_LASM_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LASM_GRR_SAP" alias="LASM_GRR_SAP" value="70" type="1" >
+				<SubClass name="LASM_GRR_SAP LEVEL" des="LASM_GRR_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="WAS" showModule="1" checked="1">
+			<SubClass name="RRC/RLC/MAC/RRCA" showModule="1" checked="1">
+				<Module name="WCDMA_SAP" alias="WCDMA_SAP" value="71" type="1" >
+					<SubClass name="WCDMA_SAP LEVEL" des="WCDMA_SAP LEVEL">
+						<SubClass name="Level 0" value="1" checked="1" />
+						<SubClass name="Level 1" value="2" checked="1" />
+						<SubClass name="Level 2" value="4" checked="1" />
+						<SubClass name="Level 3" value="8" checked="1" />
+					</SubClass>
+				</Module>
+			</SubClass>
+		</SubClass>
+		<SubClass name="GAS" showModule="1" checked="1">
+			<SubClass name="RR/DL/SNDCP/LLC/MAC/RLC" showModule="1" checked="1">
+				<Module name="STACK_2G_SAP" alias="STACK_2G_SAP" value="72" type="1" >
+					<SubClass name="STACK_2G_SAP LEVEL" des="STACK_2G_SAP LEVEL">
+						<SubClass name="Level 0" value="1" checked="1" />
+						<SubClass name="Level 1" value="2" checked="1" />
+						<SubClass name="Level 2" value="4" checked="1" />
+						<SubClass name="Level 3" value="8" checked="0" />
+					</SubClass>
+				</Module>
+			</SubClass>
+		</SubClass>
+		<SubClass name="WAS<->GAS" showModule="1" checked="1">
+			<Module name="WAS_GAS_SAP" alias="WAS_GAS_SAP" value="74" type="1" >
+				<SubClass name="WAS_GAS_SAP LEVEL" des="WAS_GAS_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+			
+			<Module name="WRRCA_GRRA_SAP" alias="WRRCA_GRRA_SAP" value="74" type="1" >
+				<SubClass name="WRRCA_GRRA_SAP LEVEL" des="WRRA_GRRA_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="1" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	</Class>
+	
+	<Class name="AS<->PHY" checked="1" showModule="1" >
+		<SubClass name="LAS<->PHY" showModule="1" checked="1">
+			<Module name="LCONTROL_GLAYER1_SAP" alias="LCONTROL_GLAYER1_SAP" value="76" type="1" >
+				<SubClass name="LCONTROL_GLAYER1_SAP LEVEL" des="LCONTROL_GLAYER1_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="RRC_LLAYER1_ADX_SAP" alias="RRC_LLAYER1_ADX_SAP" value="77" type="1" >
+				<SubClass name="RRC_LLAYER1_ADX_SAP LEVEL" des="RRC_LLAYER1_ADX_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LLAYER1_ADX_RRC_SAP" alias="LLAYER1_ADX_RRC_SAP" value="78" type="1" >
+				<SubClass name="LLAYER1_ADX_RRC_SAP LEVEL" des="LLAYER1_ADX_RRC_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LLAYER1_ADX_GRR_SAP" alias="LLAYER1_ADX_GRR_SAP" value="79" type="1" >
+				<SubClass name="LLAYER1_ADX_GRR_SAP LEVEL" des="LLAYER1_ADX_GRR_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LLAYER1_ADX_GLAYER1_SAP" alias="LLAYER1_ADX_GLAYER1_SAP" value="80" type="1" >
+				<SubClass name="LLAYER1_ADX_GLAYER1_SAP LEVEL" des="LLAYER1_ADX_GLAYER1_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LLAYER1_ADX_L1C_SAP" alias="LLAYER1_ADX_L1C_SAP" value="81" type="1" >
+				<SubClass name="LLAYER1_ADX_L1C_SAP LEVEL" des="LLAYER1_ADX_L1C_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LLAYER1_ADX_WL1C_SAP" alias="LLAYER1_ADX_WL1C_SAP" value="82" type="1" >
+				<SubClass name="LLAYER1_ADX_WL1C_SAP LEVEL" des="LLAYER1_ADX_WL1C_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="LCONTROL_WL1C_SAP" alias="LCONTROL_WL1C_SAP" value="83" type="1" >
+				<SubClass name="LCONTROL_WL1C_SAP LEVEL" des="LCONTROL_WL1C_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="L1C_LLAYER1_ADX_SAP" alias="L1C_LLAYER1_ADX_SAP" value="84" type="1" >
+				<SubClass name="L1C_LLAYER1_ADX_SAP LEVEL" des="L1C_LLAYER1_ADX_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+			<Module name="GLAYER1_LLAYER1_ADX_SAP" alias="GLAYER1_LLAYER1_ADX_SAP" value="85" type="1" >
+				<SubClass name="GLAYER1_LLAYER1_ADX_SAP LEVEL" des="GLAYER1_LLAYER1_ADX_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="1" />
+					<SubClass name="Level 1" value="2" checked="1" />
+					<SubClass name="Level 2" value="4" checked="1" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+		<SubClass name="LL2<->PHY" showModule="1" checked="0">
+			<Module name="LLAYER1_ADX_LL2_SAP" alias="LLAYER1_ADX_LL2_SAP" value="86" type="1" >
+				<SubClass name="LLAYER1_ADX_LL2_SAP LEVEL" des="LLAYER1_ADX_LL2_SAP LEVEL">
+					<SubClass name="Level 0" value="1" checked="0" />
+					<SubClass name="Level 1" value="2" checked="0" />
+					<SubClass name="Level 2" value="4" checked="0" />
+					<SubClass name="Level 3" value="8" checked="0" />
+				</SubClass>
+			</Module>
+		</SubClass>
+	
+	</Class>
+	
+	<Class name="CAP LOG" checked="1">
+        <SubClass name="CAP Length" value="1500" editable="1" editValueType="int" editValueRange="0, 2000" />
+    </Class>
+</Filters>

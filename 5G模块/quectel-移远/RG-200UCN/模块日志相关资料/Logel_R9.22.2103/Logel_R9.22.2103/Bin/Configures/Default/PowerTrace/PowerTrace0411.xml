@@ -1,0 +1,105 @@
+<!-- For Sharkl5 Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="4" reg="11">
+    <Timestamp index="0" count="1"/>
+	<System name="PWR_STATUS0_DBG" addr="0x327E_00BC">
+        <Module name="PD_CDMA_SYS_STATE" register="1" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_AP_VSP_STATE" register="1" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_AP_SYS_STATE" register="1" bitmap="0:7" maxScale="31"/>
+	</System>
+	<System name="PWR_STATUS1_DBG" addr="0x327E_00C0">
+		<Module name="PD_WTLCP_HU3GE_B_STATE" register="2" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_WTLCP_LDSP_STATE" register="2" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_WTLCP_TGDSP_STATE" register="2" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_WTLCP_HU3GE_A_STATE" register="2" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS2_DBG" addr="0x327E_00C4">
+	    <Module name="PD_WTLCP_TD_PROC_STATE" register="3" bitmap="24:31" maxScale="29"/>
+		<Module name="PD_WTLCP_LTE_PROC_STATE" register="3" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_PUBCP_SYS_STATE" register="3" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_WTLCP_SYS_STATE" register="3" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS3_DBG" addr="0x327E_010C">
+		<Module name="PD_GPU_RGX_DUST_STATE" register="4" bitmap="24:31" maxScale="31"/>
+		<Module name="PD_MM_TOP_STATE" register="4" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_GPU_TOP_STATE" register="4" bitmap="8:15" maxScale="31"/>
+		<Module name="PD_AUDCP_AUDDSP_STATE" register="4" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="PWR_STATUS4_DBG" addr="0x327E_00B8">
+	    <Module name="PD_AUDCP_SYS_STATE" register="5" bitmap="24:31" maxScale="29"/>
+	    <Module name="PD_PUB_SYS_STATE" register="5" bitmap="16:23" maxScale="29"/>
+		<Module name="PD_WTLCP_LTE_CE_STATE" register="5" bitmap="8:15" maxScale="29"/>
+		<Module name="PD_WTLCP_LTE_DPFEC_STATE" register="5" bitmap="0:7" maxScale="29"/>
+	</System>
+	<System name="SLEEP_CTRL" addr="0x327E_00CC">
+		<Module name="PUB_SYS_FORCE_SYSTEM_SLEEP" register="6" bitmap="31" maxScale="1"/>
+		<Module name="PUB_SYS_FORCE_LIGHT_SLEEP" register="6" bitmap="30" maxScale="1"/>
+		<Module name="PUB_SYS_FORCE_DEEP_SLEEP" register="6" bitmap="29" maxScale="1"/>
+		<Module name="PUB_SYS_AUTO_DEEP_SLEEP_ENABLE" register="6" bitmap="28" maxScale="1"/>
+		<Module name="AON_DMA_FORCE_LIGHT_SLEEP" register="6" bitmap="27" maxScale="1"/>
+		<Module name="PUBCP_FORCE_LIGHT_SLEEP" register="6" bitmap="26" maxScale="1"/>
+		<Module name="WTLCP_FORCE_LIGHT_SLEEP" register="6" bitmap="25" maxScale="1"/>
+		<Module name="AUDCP_FORCE_LIGHT_SLEEP" register="6" bitmap="24" maxScale="1"/>
+		<Module name="AP_FORCE_LIGHT_SLEEP" register="6" bitmap="23" maxScale="1"/>
+		<Module name="AON_SYS_FORCE_LIGHT_SLEEP" register="6" bitmap="22" maxScale="1"/>
+		<Module name="AUDCP_FORCE_PUB_DEEP_SLEEP" register="6" bitmap="21" maxScale="1"/>
+		<Module name="SP_SYS_FORCE_DEEP_SLEEP" register="6" bitmap="20" maxScale="1"/>
+		<Module name="AUDCP_FORCE_DEEP_SLEEP" register="6" bitmap="19" maxScale="1"/>
+		<Module name="PUBCP_FORCE_DEEP_SLEEP" register="6" bitmap="18" maxScale="1"/>
+		<Module name="WTLCP_FORCE_DEEP_SLEEP" register="6" bitmap="17" maxScale="1"/>
+		<Module name="AP_FORCE_DEEP_SLEEP" register="6" bitmap="16" maxScale="1"/>
+		<Module name="CDMA_FORCE_DEEP_SLEEP" register="6" bitmap="15" maxScale="1"/>
+		<Module name="AUDCP_FORCE_SYSTEM_SLEEP" register="6" bitmap="14" maxScale="1"/>
+		<Module name="GPU_TOP_FORCE_SYSTEM_SLEEP" register="6" bitmap="13" maxScale="1"/>
+		<Module name="PUBCP_FORCE_SYSTEM_SLEEP" register="6" bitmap="11" maxScale="1"/>
+		<Module name="WTLCP_FORCE_SYSTEM_SLEEP" register="6" bitmap="10" maxScale="1"/>
+		<Module name="AP_FORCE_SYSTEM_SLEEP" register="6" bitmap="9" maxScale="1"/>
+		<Module name="APCPU_FORCE_SYSTEM_SLEEP" register="6" bitmap="8" maxScale="1"/>
+		<Module name="AP_ALL_FORCE_SYSTEM_SLEEP" register="6" bitmap="7" maxScale="1"/>
+		<Module name="SP_SYS_DEEP_SLEEP" register="6" bitmap="6" maxScale="1"/>
+		<Module name="AUDCP_DEEP_SLEEP" register="6" bitmap="5" maxScale="1"/>
+		<Module name="PUB_SYS_DEEP_SLEEP" register="6" bitmap="4" maxScale="1"/>
+		<Module name="CDMA_DEEP_SLEEP" register="6" bitmap="3" maxScale="1"/>
+		<Module name="PUBCP_DEEP_SLEEP" register="6" bitmap="2" maxScale="1"/>
+		<Module name="WTLCP_DEEP_SLEEP" register="6" bitmap="1" maxScale="1"/>
+		<Module name="AP_DEEP_SLEEP" register="6" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="SLEEP_STATUS" addr="0x327E_00D4">
+		<Module name="CDMA_AUTO_SLP_STATUS" register="7" bitmap="24:27" maxScale="6"/>
+		<Module name="SP_SYS_SLP_STATUS" register="7" bitmap="20:23" maxScale="6"/>		
+		<Module name="CDMA_SLP_STATUS" register="7" bitmap="16:19" maxScale="6"/>
+		<Module name="AUDCP_SLP_STATUS" register="7" bitmap="12:15" maxScale="6"/>
+		<Module name="PUBCP_SLP_STATUS" register="7" bitmap="8:11" maxScale="6"/>
+		<Module name="WTLCP_SLP_STATUS" register="7" bitmap="4:7" maxScale="6"/>
+		<Module name="AP_SLP_STATUS" register="7" bitmap="0:3" maxScale="6"/>
+	</System>
+	<System name="PUB_SYS_AUTO_LIGHT_SLEEP_ENABLE" addr="0x327E_00C8">
+		<Module name="pub_sys_auto_light_sleep_ena_sp_cm4_poll" register="8" bitmap="12" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_aucp_auddsp_poll" register="8" bitmap="11" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_pubcp_cr5_poll" register="8" bitmap="10" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_wtlcp_tgdsp_poll" register="8" bitmap="9" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_wtlcp_ldsp_poll" register="8" bitmap="8" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_apcpu_c7_poll" register="8" bitmap="7" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_apcpu_c2_poll" register="8" bitmap="2" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_apcpu_c1_poll" register="8" bitmap="1" maxScale="1"/>
+		<Module name="pub_sys_auto_light_sleep_ena_apcpu_c0_poll" register="8" bitmap="0" maxScale="1"/>
+	</System>
+	<System name="LIGHT_SLEEP_ENABLE" addr="0x327E_0230">
+		<Module name="AON_SMART_LSLP_ENA" register="9" bitmap="20" maxScale="1"/>
+		<Module name="AUDCP_SMART_LSLP_ENA" register="9" bitmap="19" maxScale="1"/>
+		<Module name="WTLCP_SMART_LSLP_ENA" register="9" bitmap="18" maxScale="1"/>
+		<Module name="PUBCP_SMART_LSLP_ENA" register="9" bitmap="17" maxScale="1"/>
+		<Module name="AP_SMART_LSLP_ENA" register="9" bitmap="16" maxScale="1"/>
+		<Module name="PUB_SYS_SMART_LSLP_ENA" register="9" bitmap="10" maxScale="1"/>
+		<Module name="MM_LSLP_ENA" register="9" bitmap="9" maxScale="1"/>
+		<Module name="GPU_LSLP_ENA" register="9" bitmap="8" maxScale="1"/>
+		<Module name="AUDCP_SYS_LSLP_ENA" register="9" bitmap="4" maxScale="1"/>
+		<Module name="AON_DMA_LSLP_ENA" register="9" bitmap="3" maxScale="1"/>
+		<Module name="WTLCP_LSLP_ENA" register="9" bitmap="2" maxScale="1"/>
+		<Module name="PUBCP_LSLP_ENA" register="9" bitmap="1" maxScale="1"/>
+		<Module name="AP_LSLP_ENA" register="9" bitmap="0" maxScale="1"/>
+	</System>
+    <System name="DDR_FREQ" addr="0x3100_012C">
+        <Module name="DDR_FREQ" register="10" bitmap="8:10" maxScale="6"/>
+    </System>
+</PowerTrace>

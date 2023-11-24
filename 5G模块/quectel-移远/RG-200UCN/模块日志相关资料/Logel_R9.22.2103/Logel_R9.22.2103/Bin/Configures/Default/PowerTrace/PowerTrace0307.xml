@@ -1,0 +1,44 @@
+<!-- For isharkL2 Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="3" reg ="7">
+    <Timestamp index="0" count="1"/>
+	<System name="PWR_STATE_DBG1" addr="0xE42B_011C">
+		<Module name="PD_WTLCP_HU3GE_B_STATE" register="1" bitmap="25:29" maxScale="7"/>		
+		<Module name="PD_WTLCP_TGDSP_STATE" register="1" bitmap="20:24" maxScale="7"/>
+	    <Module name="PD_WTLCP_LTE_P4_STATE" register="1" bitmap="15:19" maxScale="7"/>		
+	    <Module name="PD_PUBCP_SYS_STATE" register="1" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_BIA_S0IX_STATE" register="1" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="PWR_STATE_DBG2" addr="0xE42B_0120">
+		<Module name="PD_VSP_SYS_STATE" register="2" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P1_STATE" register="2" bitmap="20:24" maxScale="7"/>
+		<Module name="PD_PUB0_SYS_STATE" register="2" bitmap="15:19" maxScale="7"/>		
+		<Module name="PD_GPU_PHANTOM_STATE" register="2" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_AP_SYS_STATE" register="2" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="PWR_STATE_DBG3" addr="0xE42B_0124">
+		<Module name="PD_WTLCP_LTE_P3_STATE" register="3" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_BIA_STATE" register="3" bitmap="20:24" maxScale="7"/>
+		<Module name="PD_WTLCP_TD_STATE" register="3" bitmap="15:19" maxScale="7"/>
+		<Module name="PD_GPU_TOP_STATE" register="3" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_WTLCP_LDSP_STATE" register="3" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="PWR_STATE_DBG4" addr="0xE42B_0128">
+	    <Module name="PD_WTLCP_HU3GE_A_STATE" register="4" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_CAM_SYS_STATE" register="4" bitmap="20:24" maxScale="7"/>
+		<Module name="PD_VSP_CORE_STATE" register="4" bitmap="15:19" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P2_STATE" register="4" bitmap="10:14" maxScale="7"/>
+		<Module name="PD_ISP_TOP_STATE" register="4" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_WTLCP_SYS_STATE" register="4" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="SYS_SLP_STATUS0" addr="0xE42B_015C">
+		<Module name="PUBCP_SYS_SLP_STATUS" register="5" bitmap="24:27" maxScale="7"/>
+		<Module name="WTLCP_SYS_SLP_STATUS" register="5" bitmap="16:19" maxScale="7"/>
+		<Module name="PUB0_SYS_SLP_STATUS" register="5" bitmap="8:11" maxScale="7"/>
+		<Module name="CM4_SYS_SLP_STATUS" register="5" bitmap="4:7" maxScale="7"/>
+		<Module name="AP_SYS_SLP_STATUS" register="5" bitmap="0:3" maxScale="7"/>
+	</System>
+	<System name="DDR" addr="0xE42E_0098">
+		<Module name="DDR" register="6" bitmap="8:15" optionValue="0x1f,0x0f,0x13,0x0b" maxScale="3"/>
+	</System>
+</PowerTrace>

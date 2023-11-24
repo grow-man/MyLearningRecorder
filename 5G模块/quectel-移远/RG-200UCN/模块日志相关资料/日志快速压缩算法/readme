@@ -1,0 +1,104 @@
+编译源文件 ./quicklz/gos_quicklz.c 以及 ./quicklz/quicklz.c
+其中gos_quicklz 是自己写的外层封装,官方示例可以参照./quicklz/test.c
+
+实际使用的代码：
+
+请特别注意，下方算法压缩时会申请源文件大小*2的内存，请特别注意
+
+/**
+ * @brief           使用QuickLZ进行压缩
+ * @param           szFile    [in] 源文件
+ * @param           szZipFile    [in] 压缩后文件
+ * @return          BOOL 
+ * @author          zhengwenjie(zhengwenjie@gbcom.com.cn)
+ * @date            2023-11-09 10:29:30
+ * @note
+ * 实测 100M文件压缩后大小为23M，平均时长为5s
+ */
+BOOL ZipFile(CHAR *szFile, CHAR *szZipFile)
+{
+    INT32       iFileSize;
+    FILE        *fp = NULL;
+    CHAR        *szBuf = NULL;
+    CHAR        *szOut = NULL;
+    BOOL        bRet = FALSE;
+    HANDLE      hZip = NULL;
+    UINT32      ulOutLen = 0;
+
+    if (!szFile)
+    {
+        GosLog(LOG_ERROR, "szFile is null in ZipFile");
+        return FALSE;
+    }
+
+    if (access(szFile, F_OK) == -1)
+    {
+        GosLog(LOG_ERROR, "No such file %s ", szFile);
+        return FALSE;
+    }
+
+    iFileSize = gos_get_file_size(szFile); ///获取文件大小
+    if (iFileSize <= 0)
+    {
+        GosLog(LOG_ERROR, "get file(%s) size failed", szFile);
+        return FALSE;
+    }
+
+    fp = fopen(szFile, "r");
+    if (!fp)
+    {
+        GosLog(LOG_ERROR, "open file(%s) failed bacuse %s", szFile, strerror(errno));
+        return FALSE;
+    }
+
+    szBuf = (CHAR*)calloc(1, iFileSize*2+4096);
+    if (!szBuf)
+    {
+        GosLog(LOG_ERROR, "calloc failed");
+        goto end;
+    }
+
+    szOut = szBuf+iFileSize;
+
+    if (iFileSize != fread(szBuf, 1, iFileSize, fp))
+    {
+        GosLog(LOG_ERROR, "fread failed");
+        goto end;
+    }
+
+    hZip = gos_comp_init();
+    gos_comp(hZip, szBuf, iFileSize, szOut, &ulOutLen);
+    if (ulOutLen == 0)
+    {
+        GosLog(LOG_ERROR, "gos_comp failed");
+        goto end;
+    }
+
+    fclose(fp);
+    fp = fopen(szZipFile, "wb");
+    if (!fp)
+    {
+        GosLog(LOG_ERROR, "open file(%s) failed", szZipFile);
+        goto end;
+    }
+
+    if (ulOutLen != fwrite(szOut, 1, ulOutLen, fp))
+    {
+        GosLog(LOG_ERROR, "fwrite failed");
+        goto end;
+    }
+
+    bRet = TRUE;
+    GosLog(LOG_INFO, "zip file: %s(%d)->%s(%d) succ", szFile, gos_get_file_size(szFile), szZipFile, gos_get_file_size(szZipFile));
+
+end:
+    if (fp)
+    {
+        fclose(fp);
+    }
+
+    gos_comp_free(hZip);
+    GOS_FREE(szBuf);
+
+    return bRet;
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Marks>
+    <Mark name="GSM Rx Data IQ" Description="Enable GSM DSP Rx Data IQ">
+        <AT Command="AT+SPDSP=1,1,0,0" />
+    </Mark>
+    <Mark name="Audio Data IQ" Description="IQ setting">
+        <AT Command="AT+SPDSP=65535,0,0,4096" />
+    </Mark>
+    <Mark name="cap" Description="Enable cap log output">
+        <AT Command="AT+spcaplog=1" />
+    </Mark>
+    <Mark name="ATD" Description="This command instructs the DCE to originate a call.">
+        <AT Command="ATD&lt;0123456789*#+abc&gt;" />
+    </Mark>
+    <Mark name="PDP action for IP" Description="The execution command is used to activate or deactivate the specified PDP context">
+        <AT Command='AT+CGDCONT=1,&quot;IP&quot;,&quot;ABCDEF&quot;,&quot;2.2.2.2&quot;,0,0' />
+    </Mark>
+    <Mark name="PDP action for IE" Description="The execution command is used to activate or deactivate the specified PDP context">
+        <AT Command='AT+CGEQREQ=1,2,5440,13400,,,0,320,&quot;1E4&quot;,&quot;1E5&quot;,1,,3,0,0' />
+    </Mark>
+    <Mark name="PDP action" Description="The execution command is used to activate or deactivate the specified PDP context">
+        <AT Command="AT+CGACT=1,1" />
+    </Mark>
+    <Mark name="DCE " Description="This command is used to select and register GSM/UMTS network operator">
+        <AT Command="AT+cops" />
+    </Mark>
+    <Mark name="cfun" Description="Set command selects the level of functionality &lt;fun&gt; in the MT">
+        <AT Command="AT+CFUN=1,0" />
+    </Mark>
+    <Mark name="ATA" Description="This command instructs the DCE to immediately connect to the line and start the answer sequence as specified for the underlying DCE. Any additional commands that appear after ATA on the same command line are ignored.">
+        <AT Command="ATA" />
+    </Mark>
+    <Mark name="ccfc" Description="This command allows control of the call forwarding supplementary service according to 3GPP TS 22.082">
+        <AT Command="AT+ccfc=0,1" />
+    </Mark>
+    <Mark name="ccwa" Description="This command allows control of the Call Waiting supplementary service according to GSM 02.83. Activation, deactivation and status query are supported.">
+        <AT Command="AT+CCWA=0,0,1" />
+    </Mark>
+    <Mark name="chld" Description="This command allows the control of the following call related services">
+        <AT Command="AT+CHLD=1" />
+    </Mark>
+    <Mark name="ATH" Description="This command is used to hang up all( one or several )connecting or connected calls">
+        <AT Command="ATH0" />
+    </Mark>
+    <Mark name="Switch off UE" Description="">
+        <AT Command="AT+CFUN=0" />
+    </Mark>
+    <Mark name="Switch on UE" Description="">
+        <AT Command="AT+CFUN=1" />
+    </Mark>
+    <Mark name="Security protection enable" Description="Security protection enable">
+        <AT Command="AT+SPTEST=1,1" />
+    </Mark>
+    <Mark name="Security protection disable" Description="Security protection disable">
+        <AT Command="AT+SPTEST=1,0" />
+    </Mark>
+    <Mark name="CSG selection" Description="CSG selection cases for GCF">
+        <AT Command='AT+COPSCSG=1,2,&quot;00101&quot;,&quot;1&quot;,7' />
+    </Mark>
+    <Mark name="EPS test0" Description="EPS case">
+        <AT Command="AT+cfun=0" />
+    </Mark>
+    <Mark name="EPS test1" Description="3,254 means the network mode is LTE only(including TD-LTE&amp;LTE-FDD),1,254 means TD-LTE, 2,254 means LTE-FDD">
+        <AT Command="AT+sptestmodem=3,254" />
+    </Mark>
+    <Mark name="EPS test2" Description="EPS case">
+        <AT Command="AT+cemode=0" />
+    </Mark>
+    <Mark name="Enable USIM Driver Log" Description="Enable USIM Driver Log">
+        <AT Command="AT+SPUSIMDRVLS=1" />
+    </Mark>
+    <Mark name="HSDL DL ADC 1cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,1,1,1" />
+    </Mark>
+    <Mark name="HSDL UL DAC 1cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,1,0,1" />
+    </Mark>
+    <Mark name="HSDL DL DFE main 1cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,1,1" />
+    </Mark>
+    <Mark name="HSDL DL DFE meas 1cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,2,1" />
+    </Mark>
+    <Mark name="HSDL DL DFE cs 1cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,3,1" />
+    </Mark>
+    <Mark name="HSDL DL ADC 2cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,1,1,2" />
+    </Mark>
+    <Mark name="HSDL UL DAC 2cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,1,0,2" />
+    </Mark>
+    <Mark name="HSDL DL DFE main 2cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,1,2" />
+    </Mark>
+    <Mark name="HSDL DL DFE meas 2cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,2,2" />
+    </Mark>
+    <Mark name="HSDL DL DFE cs 2cc (manual)" Description="">
+        <AT Command="at+spltedsppm=1,2,3,2" />
+    </Mark>
+    <Mark name="HSDL Reset" Description="">
+        <AT Command="at+spltedsppm=1,0,0,0" />
+    </Mark>
+    <Mark name="HSDL DL DFE main 1cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,1,5" />
+    </Mark>
+    <Mark name="HSDL DL DFE meas 1cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,2,5" />
+    </Mark>
+    <Mark name="HSDL DL DFE cs 1cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,3,5" />
+    </Mark>
+    <Mark name="HSDL DL DFE main 2cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,1,6" />
+    </Mark>
+    <Mark name="HSDL DL DFE meas 2cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,2,6" />
+    </Mark>
+    <Mark name="HSDL DL DFE cs 2cc (automatic)" Description="">
+        <AT Command="at+spltedsppm=1,2,3,6" />
+    </Mark>
+</Marks>

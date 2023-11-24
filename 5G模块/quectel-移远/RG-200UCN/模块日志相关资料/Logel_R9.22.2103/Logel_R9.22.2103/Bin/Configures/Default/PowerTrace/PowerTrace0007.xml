@@ -1,0 +1,38 @@
+<!-- For Whale2 Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="0" reg ="7">
+    <Timestamp index="0" count="1"/>
+	<System name="AP">
+		<Module name="AP_DS" register="5" bitmap="1"/>
+		<SubSystem name="PD_CA53_BIG CORE_STATE">
+			<Module name="B_C0" register="1" bitmap="20:24"/>
+			<Module name="B_C1" register="1" bitmap="25:29"/>
+			<Module name="B_C2" register="4" bitmap="20:24"/>
+			<Module name="B_C3" register="4" bitmap="25:29"/>
+		</SubSystem>
+		<SubSystem name="PD_CA53_LIT CORE_STATE">
+			<Module name="L_C0" register="1" bitmap="0:4"/>
+			<Module name="L_C1" register="1" bitmap="5:9"/>
+			<Module name="L_C2" register="1" bitmap="10:14"/>
+			<Module name="L_C3" register="1" bitmap="15:19"/>
+		</SubSystem>
+	</System>
+	<System name="WTLCP">
+		<Module name="WTL_DS" register="5" bitmap="3"/>
+		<SubSystem name="DSP">
+			<Module name="L" register="2" bitmap="25:29"/>
+			<Module name="W" register="2" bitmap="20:24"/>
+			<Module name="G" register="2" bitmap="15:19"/>
+			<Module name="T" register="2" bitmap="10:14"/>
+		</SubSystem>
+	</System>
+	<System name="PUBCP">
+		<Module name="PUB_DS" register="5" bitmap="2"/>
+	</System>
+	<System name="AG-DSP">
+		<Module name="AG_DS" register="5" bitmap="4"/>
+	</System>
+	<System name="PM&Sensor Hub">
+		<Module name="CM3_DS" register="5" bitmap="3"/>
+	</System>
+</PowerTrace>

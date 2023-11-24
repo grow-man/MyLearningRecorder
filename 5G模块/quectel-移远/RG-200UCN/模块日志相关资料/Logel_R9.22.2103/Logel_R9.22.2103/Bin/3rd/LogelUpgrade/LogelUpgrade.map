@@ -1,0 +1,1316 @@
+ LogelUpgrade
+
+ Timestamp is 5cf7685e (Wed Jun 05 14:59:42 2019)
+
+ Preferred load address is 00400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 000077d7H .text                   CODE
+ 0001:000077e0 00000d84H .text$x                 CODE
+ 0001:00008570 0000004eH .text$yc                CODE
+ 0001:000085c0 0000007bH .text$yd                CODE
+ 0002:00000000 00000624H .idata$5                DATA
+ 0002:00000624 00000004H .CRT$XCA                DATA
+ 0002:00000628 00000004H .CRT$XCAA               DATA
+ 0002:0000062c 00000004H .CRT$XCL                DATA
+ 0002:00000630 00000008H .CRT$XCU                DATA
+ 0002:00000638 00000004H .CRT$XCZ                DATA
+ 0002:0000063c 00000004H .CRT$XIA                DATA
+ 0002:00000640 00000004H .CRT$XIAA               DATA
+ 0002:00000644 00000004H .CRT$XIC                DATA
+ 0002:00000648 00000004H .CRT$XIY                DATA
+ 0002:0000064c 00000004H .CRT$XIZ                DATA
+ 0002:00000650 0001fde0H .rdata                  DATA
+ 0002:00020430 0000004fH .rdata$debug            DATA
+ 0002:00020480 00000500H .rdata$r                DATA
+ 0002:00020980 000000b4H .rdata$sxdata           DATA
+ 0002:00020a34 00000004H .rtc$IAA                DATA
+ 0002:00020a38 00000004H .rtc$IZZ                DATA
+ 0002:00020a3c 00000004H .rtc$TAA                DATA
+ 0002:00020a40 00000004H .rtc$TZZ                DATA
+ 0002:00020a48 00000d24H .xdata$x                DATA
+ 0002:0002176c 00000000H ATL$__a                 DATA
+ 0002:0002176c 00000000H ATL$__z                 DATA
+ 0002:0002176c 000000f0H .idata$2                DATA
+ 0002:0002185c 00000014H .idata$3                DATA
+ 0002:00021870 00000624H .idata$4                DATA
+ 0002:00021e94 000010d6H .idata$6                DATA
+ 0002:00022f6a 00000000H .edata                  DATA
+ 0003:00000000 00000220H .data                   DATA
+ 0003:00000220 00040734H .bss                    DATA
+ 0004:00000000 000001a8H .rsrc$01                DATA
+ 0004:000001b0 00001680H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:0000002d       ___safe_se_handler_count   0000002d     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00000000       ___ImageBase               00400000     <linker-defined>
+ 0001:00000000       ?GetMessageMap@CLogelUpgradeApp@@MBEPBUAFX_MSGMAP@@XZ 00401000 f   LogelUpgrade.obj
+ 0001:00000010       ??0CLogelUpgradeApp@@QAE@XZ 00401010 f   LogelUpgrade.obj
+ 0001:000000d0       ??_ECLogelUpgradeApp@@UAEPAXI@Z 004010d0 f i  CIL library: CIL module
+ 0001:000000d0       ??_GCLogelUpgradeApp@@UAEPAXI@Z 004010d0 f i LogelUpgrade.obj
+ 0001:000000f0       ??1CLogelUpgradeApp@@UAE@XZ 004010f0 f i LogelUpgrade.obj
+ 0001:00000160       ?InitInstance@CLogelUpgradeApp@@UAEHXZ 00401160 f   LogelUpgrade.obj
+ 0001:000002e0       ?AssertValid@CObject@@UBEXXZ 004012e0 f i LogelUpgrade.obj
+ 0001:000002e0       ?LoadCustomState@CWinAppEx@@MAEXXZ 004012e0 f i LogelUpgrade.obj
+ 0001:000002e0       ?SaveCustomState@CWinAppEx@@MAEXXZ 004012e0 f i LogelUpgrade.obj
+ 0001:000002e0       ?PreSaveState@CWinAppEx@@MAEXXZ 004012e0 f i LogelUpgrade.obj
+ 0001:000002e0       ?PreLoadState@CWinAppEx@@MAEXXZ 004012e0 f i LogelUpgrade.obj
+ 0001:000002f0       ?OnWorkspaceIdle@CWinAppEx@@UAEHPAVCWnd@@@Z 004012f0 f i LogelUpgrade.obj
+ 0001:00000300       ??0CAboutDlg@@QAE@XZ       00401300 f   LogelUpgradeDlg.obj
+ 0001:00000360       ??_GCAboutDlg@@UAEPAXI@Z   00401360 f i LogelUpgradeDlg.obj
+ 0001:00000360       ??_ECAboutDlg@@UAEPAXI@Z   00401360 f i  CIL library: CIL module
+ 0001:000003c0       ??1CAboutDlg@@UAE@XZ       004013c0 f i LogelUpgradeDlg.obj
+ 0001:00000410       ?GetMessageMap@CAboutDlg@@MBEPBUAFX_MSGMAP@@XZ 00401410 f   LogelUpgradeDlg.obj
+ 0001:00000420       ??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z 00401420 f   LogelUpgradeDlg.obj
+ 0001:00000510       ??_ECLogelUpgradeDlg@@UAEPAXI@Z 00401510 f i  CIL library: CIL module
+ 0001:00000510       ??_GCLogelUpgradeDlg@@UAEPAXI@Z 00401510 f i LogelUpgradeDlg.obj
+ 0001:00000530       ??1CLogelUpgradeDlg@@UAE@XZ 00401530 f   LogelUpgradeDlg.obj
+ 0001:000005f0       ?DoDataExchange@CLogelUpgradeDlg@@MAEXPAVCDataExchange@@@Z 004015f0 f   LogelUpgradeDlg.obj
+ 0001:00000620       ?GetMessageMap@CLogelUpgradeDlg@@MBEPBUAFX_MSGMAP@@XZ 00401620 f   LogelUpgradeDlg.obj
+ 0001:00000630       ?OnInitDialog@CLogelUpgradeDlg@@MAEHXZ 00401630 f   LogelUpgradeDlg.obj
+ 0001:00000740       ?OnSysCommand@CLogelUpgradeDlg@@IAEXIJ@Z 00401740 f   LogelUpgradeDlg.obj
+ 0001:000007e0       ?OnPaint@CLogelUpgradeDlg@@IAEXXZ 004017e0 f   LogelUpgradeDlg.obj
+ 0001:00000a00       ?OnQueryDragIcon@CLogelUpgradeDlg@@IAEPAUHICON__@@XZ 00401a00 f   LogelUpgradeDlg.obj
+ 0001:00000a10       ?OnTimer@CLogelUpgradeDlg@@IAEXI@Z 00401a10 f   LogelUpgradeDlg.obj
+ 0001:00000a80       ?OnCtlColor@CLogelUpgradeDlg@@IAEPAUHBRUSH__@@PAVCDC@@PAVCWnd@@I@Z 00401a80 f   LogelUpgradeDlg.obj
+ 0001:00000ad0       ?OnUpgradeStateChange@CLogelUpgradeDlg@@IAEJIJ@Z 00401ad0 f   LogelUpgradeDlg.obj
+ 0001:00000af0       ?UpgradeThreadProc@CLogelUpgradeDlg@@SAKPAX@Z 00401af0 f   LogelUpgradeDlg.obj
+ 0001:00000b00       ?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ 00401b00 f   LogelUpgradeDlg.obj
+ 0001:000020b0       ?LoadResource@CLogelUpgradeDlg@@AAEXXZ 004030b0 f   LogelUpgradeDlg.obj
+ 0001:00002140       ?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z 00403140 f   LogelUpgradeDlg.obj
+ 0001:000024b0       ?PreTranslateMessage@CLogelUpgradeDlg@@MAEHPAUtagMSG@@@Z 004034b0 f   LogelUpgradeDlg.obj
+ 0001:000024f0       ?OnFileProcNotify@CLogelUpgradeDlg@@MAEXIH@Z 004034f0 f   LogelUpgradeDlg.obj
+ 0001:00002530       ??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@0@Z 00403530 f i LogelUpgradeDlg.obj
+ 0001:000025c0       ??1?$CA2AEX@$0IA@@ATL@@QAE@XZ 004035c0 f i LogelUpgradeDlg.obj
+ 0001:000025e0       ?Create@CDialog@@UAEHIPAVCWnd@@@Z 004035e0 f i LogelUpgradeDlg.obj
+ 0001:000025f0       ??$AtlConvAllocMemory@D@ATL@@YAXPAPADHPADH@Z 004035f0 f i LogelUpgradeDlg.obj
+ 0001:00002680       ?AfxCrtErrorCheck@@YAHH@Z  00403680 f i LogelUpgradeDlg.obj
+ 0001:00002710       ??_ECFont@@UAEPAXI@Z       00403710 f i  CIL library: CIL module
+ 0001:00002710       ??_GCFont@@UAEPAXI@Z       00403710 f i LogelUpgradeDlg.obj
+ 0001:00002770       ??0CFont@@QAE@XZ           00403770 f i LogelUpgradeDlg.obj
+ 0001:000027d0       ??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@PBD@Z 004037d0 f i LogelUpgradeDlg.obj
+ 0001:00002880       ??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@PBDABV10@@Z 00403880 f i LogelUpgradeDlg.obj
+ 0001:00002930       ??1CBrush@@UAE@XZ          00403930 f i LogelUpgradeDlg.obj
+ 0001:00002980       ??_ECGdiObject@@UAEPAXI@Z  00403980 f i  CIL library: CIL module
+ 0001:00002980       ??_GCGdiObject@@UAEPAXI@Z  00403980 f i LogelUpgradeDlg.obj
+ 0001:000029a0       ??1CGdiObject@@UAE@XZ      004039a0 f i LogelUpgradeDlg.obj
+ 0001:00002ac0       ??_GCBrush@@UAEPAXI@Z      00403ac0 f i LogelUpgradeDlg.obj
+ 0001:00002ac0       ??_ECBrush@@UAEPAXI@Z      00403ac0 f i  CIL library: CIL module
+ 0001:00002b20       ?AtlThrowImpl@ATL@@YGXJ@Z  00403b20 f i LogelUpgradeDlg.obj
+ 0001:00002b40       ??_ECProgressCtrl@@UAEPAXI@Z 00403b40 f i  CIL library: CIL module
+ 0001:00002b40       ??_GCProgressCtrl@@UAEPAXI@Z 00403b40 f i LogelUpgradeDlg.obj
+ 0001:00002b60       ?BeginModalState@CWnd@@UAEXXZ 00403b60 f i LogelUpgradeDlg.obj
+ 0001:00002b70       ?EndModalState@CWnd@@UAEXXZ 00403b70 f i LogelUpgradeDlg.obj
+ 0001:00002b80       ?DoDataExchange@CWnd@@MAEXPAVCDataExchange@@@Z 00403b80 f i LogelUpgradeDlg.obj
+ 0001:00002b80       ?DoDataExchange@CAboutDlg@@MAEXPAVCDataExchange@@@Z 00403b80 f i LogelUpgradeDlg.obj
+ 0001:00002b80       ?Dump@CObject@@UBEXAAVCDumpContext@@@Z 00403b80 f i LogelUpgrade.obj
+ 0001:00002b80       ?Serialize@CObject@@UAEXAAVCArchive@@@Z 00403b80 f i LogelUpgrade.obj
+ 0001:00002b90       ?Instance@CMessageBox@@SAPAV1@XZ 00403b90 f   MessageBox.obj
+ 0001:00002c10       ?AfxMsgBox@CMessageBox@@QAEHPBDIII@Z 00403c10 f   MessageBox.obj
+ 0001:00002c40       ?progressRoutine@Utils@@SGKT_LARGE_INTEGER@@000KKPAX11@Z 00403c40 f   Utils.obj
+ 0001:00002c80       ?RARX@Utils@@SAHPAD00PAX@Z 00403c80 f   Utils.obj
+ 0001:000030e0       ?UnRarCallbackProc@Utils@@SGHIJJJ@Z 004040e0 f   Utils.obj
+ 0001:00003100       ?RemoveDir@Utils@@SAHPAD@Z 00404100 f   Utils.obj
+ 0001:00003310       ?DeleteDirAllFiles@Utils@@SAHPAD@Z 00404310 f   Utils.obj
+ 0001:00003410       ?FindAllFile@Utils@@SAHPBDAAVCStringArray@@_N22@Z 00404410 f   Utils.obj
+ 0001:00003660       ?EnumKeys@Utils@@SAHPADAAVCStringArray@@@Z 00404660 f   Utils.obj
+ 0001:000037e0       ?CopyFileA@Utils@@SAHPBD0@Z 004047e0 f   Utils.obj
+ 0001:000038c0       ?CreateDir@Utils@@SAHPBD@Z 004048c0 f   Utils.obj
+ 0001:000039a0       ?IsExistFiledir@Utils@@SAHPBD@Z 004049a0 f   Utils.obj
+ 0001:00003a70       ?GetFileExt@Utils@@SAHPBDAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@_N@Z 00404a70 f   Utils.obj
+ 0001:00003b40       ??0CXVerInfo@@QAE@XZ       00404b40 f   XAboutDlg.obj
+ 0001:00003b80       ??1CXVerInfo@@QAE@XZ       00404b80 f   XAboutDlg.obj
+ 0001:00003b90       ?Init@CXVerInfo@@QAEHPBD@Z 00404b90 f   XAboutDlg.obj
+ 0001:00003c50       ?GetApplicationPath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 00404c50 f   CFiles.obj
+ 0001:00003d00       ?GetApplicationFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 00404d00 f   CFiles.obj
+ 0001:00003dc0       ?GetFilePath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00404dc0 f   CFiles.obj
+ 0001:00003eb0       ?GetAsciiFullFileName@CFiles@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00404eb0 f   CFiles.obj
+ 0001:00003f30       ?GetFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00404f30 f   CFiles.obj
+ 0001:00004020       ?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z 00405020 f   CFiles.obj
+ 0001:000041a0       ?SaveStringFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0HH@Z 004051a0 f   CFiles.obj
+ 0001:000042d0       ?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 004052d0 f   CFiles.obj
+ 0001:00004450       ??0CLocale@@QAE@XZ         00405450 f   CLanguage.obj
+ 0001:00004540       ??1CLocale@@QAE@XZ         00405540 f   CLanguage.obj
+ 0001:000045c0       ?GetAsciiAbbreviatedLanguageName@CLanguage@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 004055c0 f   CLanguage.obj
+ 0001:00004680       ??0CSehException@@QAE@ABU_EXCEPTION_POINTERS@@@Z 00405680 f   CSehException.obj
+ 0001:00004700       ??1CSehException@@QAE@XZ   00405700 f   CSehException.obj
+ 0001:00004730       ?GetExceptionPointer@CSehException@@QAEXK@Z 00405730 f   CSehException.obj
+ 0001:00004840       ?GetMiniTextSystemInformation@CSehException@@CAXPAX@Z 00405840 f   CSehException.obj
+ 0001:00004bb0       ?GetMiniTextSystemInformationNoCatch@CSehException@@CAXPAX@Z 00405bb0 f   CSehException.obj
+ 0001:00004c30       ?GetMiniTextExceptionDescription@CSehException@@CAPBDK@Z 00405c30 f   CSehException.obj
+ 0001:00004e10       ?GetMiniTextRegisterInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00405e10 f   CSehException.obj
+ 0001:00005080       ?GetMiniTextRegisterInformationNoCatch@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406080 f   CSehException.obj
+ 0001:00005100       ?GetMiniTextCallMethodInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406100 f   CSehException.obj
+ 0001:00005470       ?GetMiniTextCallMethodInformationNoCatch@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406470 f   CSehException.obj
+ 0001:000054f0       ?GetMiniTextModuleInformation@CSehException@@CAHPAEPADAAPAE@Z 004064f0 f   CSehException.obj
+ 0001:000055b0       ?GetMiniTextCallStackInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 004065b0 f   CSehException.obj
+ 0001:00005780       ?GetMiniTextCallStackInformationNoCatch@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406780 f   CSehException.obj
+ 0001:00005800       ?GetMiniTextStackInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406800 f   CSehException.obj
+ 0001:00005a10       ?GetMiniTextStackInformationNoCatch@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00406a10 f   CSehException.obj
+ 0001:00005a90       ?CreateMiniTextFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z 00406a90 f   CSehException.obj
+ 0001:00005bd0       ?CreateMiniDumpFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z 00406bd0 f   CSehException.obj
+ 0001:00005d30       ?CreateMiniDump@CSehException@@SAHABU_EXCEPTION_POINTERS@@PBD@Z 00406d30 f   CSehException.obj
+ 0001:00005ef0       ?ExceptionTranslateSehToCppe@CSehException@@CAXIPAU_EXCEPTION_POINTERS@@@Z 00406ef0 f   CSehException.obj
+ 0001:00005f90       ?UnhandledExceptionFilter@CSehException@@CGJPAU_EXCEPTION_POINTERS@@@Z 00406f90 f   CSehException.obj
+ 0001:00006090       ?NewOperatorException@CSehException@@CAHI@Z 00407090 f   CSehException.obj
+ 0001:000061b0       ?PureCallException@CSehException@@CAXXZ 004071b0 f   CSehException.obj
+ 0001:000062c0       ?InvalidParameterException@CSehException@@CAXPB_W00II@Z 004072c0 f   CSehException.obj
+ 0001:00006410       ?UnknownException@CSehException@@CAXXZ 00407410 f   CSehException.obj
+ 0001:00006520       ?SetCommonExceptionMethod@CSehException@@SAXH@Z 00407520 f   CSehException.obj
+ 0001:00006590       ?AsciiToString@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00407590 f   CStrings.obj
+ 0001:00006590       ?StringToAscii@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00407590 f   CStrings.obj
+ 0001:000065f0       ??_ETAny@@UAEPAXI@Z        004075f0 f i  CIL library: CIL module
+ 0001:000065f0       ??_GTAny@@UAEPAXI@Z        004075f0 f i TAny.obj
+ 0001:00006640       ??1TAny@@UAE@XZ            00407640 f   TAny.obj
+ 0001:00006680       ?Initialize@TAny@@QAEHIII@Z 00407680 f   TAny.obj
+ 0001:00006700       ?SetDataTypeSize@TAny@@QAEHI@Z 00407700 f   TAny.obj
+ 0001:00006790       ?EndData@TAny@@QAEXXZ      00407790 f   TAny.obj
+ 0001:000067c4       _MiniDumpWriteDump@28      004077c4 f   DbgHelp:dbghelp.dll
+ 0001:000067ca       ??3@YAXPAX@Z               004077ca f   mfc90:mfc90.dll
+ 0001:000067d0       ?OnHelp@CWinApp@@IAEXXZ    004077d0 f   mfc90:mfc90.dll
+ 0001:000067d6       ?GetThisMessageMap@CWinApp@@KGPBUAFX_MSGMAP@@XZ 004077d6 f   mfc90:mfc90.dll
+ 0001:000067dc       ??0CWinAppEx@@QAE@H@Z      004077dc f   mfc90:mfc90.dll
+ 0001:000067e2       ??1CWinAppEx@@UAE@XZ       004077e2 f   mfc90:mfc90.dll
+ 0001:000067e8       ?InitInstance@CWinApp@@UAEHXZ 004077e8 f   mfc90:mfc90.dll
+ 0001:000067ee       ?AfxEnableControlContainer@@YAXPAVCOccManager@@@Z 004077ee f   mfc90:mfc90.dll
+ 0001:000067f4       ?SetRegistryKey@CWinApp@@IAEXPBD@Z 004077f4 f   mfc90:mfc90.dll
+ 0001:000067fa       ?DoModal@CDialog@@UAEHXZ   004077fa f   mfc90:mfc90.dll
+ 0001:00006800       ?GetRuntimeClass@CWinAppEx@@UBEPAUCRuntimeClass@@XZ 00407800 f   mfc90:mfc90.dll
+ 0001:00006806       ?OnCmdMsg@CCmdTarget@@UAEHIHPAXPAUAFX_CMDHANDLERINFO@@@Z 00407806 f   mfc90:mfc90.dll
+ 0001:0000680c       ?OnFinalRelease@CCmdTarget@@UAEXXZ 0040780c f   mfc90:mfc90.dll
+ 0001:00006812       ?IsInvokeAllowed@CCmdTarget@@UAEHJ@Z 00407812 f   mfc90:mfc90.dll
+ 0001:00006818       ?GetDispatchIID@CCmdTarget@@UAEHPAU_GUID@@@Z 00407818 f   mfc90:mfc90.dll
+ 0001:0000681e       ?GetTypeInfoCount@CCmdTarget@@UAEIXZ 0040781e f   mfc90:mfc90.dll
+ 0001:00006824       ?GetTypeLibCache@CCmdTarget@@UAEPAVCTypeLibCache@@XZ 00407824 f   mfc90:mfc90.dll
+ 0001:0000682a       ?GetTypeLib@CCmdTarget@@UAEJKPAPAUITypeLib@@@Z 0040782a f   mfc90:mfc90.dll
+ 0001:00006830       ?GetCommandMap@CCmdTarget@@MBEPBUAFX_OLECMDMAP@@XZ 00407830 f   mfc90:mfc90.dll
+ 0001:00006836       ?GetDispatchMap@CCmdTarget@@MBEPBUAFX_DISPMAP@@XZ 00407836 f   mfc90:mfc90.dll
+ 0001:0000683c       ?GetConnectionMap@CCmdTarget@@MBEPBUAFX_CONNECTIONMAP@@XZ 0040783c f   mfc90:mfc90.dll
+ 0001:00006842       ?GetInterfaceMap@CCmdTarget@@MBEPBUAFX_INTERFACEMAP@@XZ 00407842 f   mfc90:mfc90.dll
+ 0001:00006848       ?GetEventSinkMap@CCmdTarget@@MBEPBUAFX_EVENTSINKMAP@@XZ 00407848 f   mfc90:mfc90.dll
+ 0001:0000684e       ?OnCreateAggregates@CCmdTarget@@UAEHXZ 0040784e f   mfc90:mfc90.dll
+ 0001:00006854       ?GetInterfaceHook@CCmdTarget@@UAEPAUIUnknown@@PBX@Z 00407854 f   mfc90:mfc90.dll
+ 0001:0000685a       ?GetExtraConnectionPoints@CCmdTarget@@MAEHPAVCPtrArray@@@Z 0040785a f   mfc90:mfc90.dll
+ 0001:00006860       ?GetConnectionHook@CCmdTarget@@MAEPAUIConnectionPoint@@ABU_GUID@@@Z 00407860 f   mfc90:mfc90.dll
+ 0001:00006866       ?Run@CWinApp@@UAEHXZ       00407866 f   mfc90:mfc90.dll
+ 0001:0000686c       ?PreTranslateMessage@CWinThread@@UAEHPAUtagMSG@@@Z 0040786c f   mfc90:mfc90.dll
+ 0001:00006872       ?PumpMessage@CWinThread@@UAEHXZ 00407872 f   mfc90:mfc90.dll
+ 0001:00006878       ?OnIdle@CWinApp@@UAEHJ@Z   00407878 f   mfc90:mfc90.dll
+ 0001:0000687e       ?IsIdleMessage@CWinThread@@UAEHPAUtagMSG@@@Z 0040787e f   mfc90:mfc90.dll
+ 0001:00006884       ?ExitInstance@CWinAppEx@@UAEHXZ 00407884 f   mfc90:mfc90.dll
+ 0001:0000688a       ?ProcessWndProcException@CWinApp@@UAEJPAVCException@@PBUtagMSG@@@Z 0040788a f   mfc90:mfc90.dll
+ 0001:00006890       ?ProcessMessageFilter@CWinThread@@UAEHHPAUtagMSG@@@Z 00407890 f   mfc90:mfc90.dll
+ 0001:00006896       ?GetMainWnd@CWinThread@@UAEPAVCWnd@@XZ 00407896 f   mfc90:mfc90.dll
+ 0001:0000689c       ?Delete@CWinThread@@UAEXXZ 0040789c f   mfc90:mfc90.dll
+ 0001:000068a2       ?InitLibId@CWinApp@@UAEXXZ 004078a2 f   mfc90:mfc90.dll
+ 0001:000068a8       ?Register@CWinApp@@UAEHXZ  004078a8 f   mfc90:mfc90.dll
+ 0001:000068ae       ?Unregister@CWinApp@@UAEHXZ 004078ae f   mfc90:mfc90.dll
+ 0001:000068b4       ?OpenDocumentFile@CWinApp@@UAEPAVCDocument@@PBD@Z 004078b4 f   mfc90:mfc90.dll
+ 0001:000068ba       ?AddToRecentFileList@CWinApp@@UAEXPBD@Z 004078ba f   mfc90:mfc90.dll
+ 0001:000068c0       ?InitApplication@CWinApp@@UAEHXZ 004078c0 f   mfc90:mfc90.dll
+ 0001:000068c6       ?SaveAllModified@CWinApp@@UAEHXZ 004078c6 f   mfc90:mfc90.dll
+ 0001:000068cc       ?DoMessageBox@CWinApp@@UAEHPBDII@Z 004078cc f   mfc90:mfc90.dll
+ 0001:000068d2       ?DoWaitCursor@CWinApp@@UAEXH@Z 004078d2 f   mfc90:mfc90.dll
+ 0001:000068d8       ?OnDDECommand@CWinApp@@UAEHPAD@Z 004078d8 f   mfc90:mfc90.dll
+ 0001:000068de       ?WinHelpA@CWinApp@@UAEXKI@Z 004078de f   mfc90:mfc90.dll
+ 0001:000068e4       ?HtmlHelpA@CWinApp@@UAEXKI@Z 004078e4 f   mfc90:mfc90.dll
+ 0001:000068ea       ?WinHelpInternal@CWinApp@@UAEXKI@Z 004078ea f   mfc90:mfc90.dll
+ 0001:000068f0       ?LoadAppLangResourceDLL@CWinApp@@UAEPAUHINSTANCE__@@XZ 004078f0 f   mfc90:mfc90.dll
+ 0001:000068f6       ?LoadSysPolicies@CWinApp@@UAEHXZ 004078f6 f   mfc90:mfc90.dll
+ 0001:000068fc       ?LoadState@CWinAppEx@@UAEHPBDPAVCFrameImpl@@@Z 004078fc f   mfc90:mfc90.dll
+ 0001:00006902       ?CleanState@CWinAppEx@@UAEHPBD@Z 00407902 f   mfc90:mfc90.dll
+ 0001:00006908       ?SaveState@CWinAppEx@@UAEHPBDPAVCFrameImpl@@@Z 00407908 f   mfc90:mfc90.dll
+ 0001:0000690e       ?OnViewDoubleClick@CWinAppEx@@UAEHPAVCWnd@@H@Z 0040790e f   mfc90:mfc90.dll
+ 0001:00006914       ?ShowPopupMenu@CWinAppEx@@UAEHIABVCPoint@@PAVCWnd@@@Z 00407914 f   mfc90:mfc90.dll
+ 0001:0000691a       ?OnAppContextHelp@CWinAppEx@@UAEXPAVCWnd@@QBK@Z 0040791a f   mfc90:mfc90.dll
+ 0001:00006920       ?OnClosingMainFrame@CWinAppEx@@MAEXPAVCFrameImpl@@@Z 00407920 f   mfc90:mfc90.dll
+ 0001:00006926       ?LoadWindowPlacement@CWinAppEx@@MAEHAAVCRect@@AAH1@Z 00407926 f   mfc90:mfc90.dll
+ 0001:0000692c       ?StoreWindowPlacement@CWinAppEx@@MAEHABVCRect@@HH@Z 0040792c f   mfc90:mfc90.dll
+ 0001:00006932       ?ReloadWindowPlacement@CWinAppEx@@MAEHPAVCFrameWnd@@@Z 00407932 f   mfc90:mfc90.dll
+ 0001:00006938       ??0CDialog@@QAE@IPAVCWnd@@@Z 00407938 f   mfc90:mfc90.dll
+ 0001:0000693e       ??1CDialog@@UAE@XZ         0040793e f   mfc90:mfc90.dll
+ 0001:00006944       ?GetThisMessageMap@CDialog@@KGPBUAFX_MSGMAP@@XZ 00407944 f   mfc90:mfc90.dll
+ 0001:0000694a       ?CreateEx@CProgressCtrl@@UAEHKKABUtagRECT@@PAVCWnd@@I@Z 0040794a f   mfc90:mfc90.dll
+ 0001:00006950       ?Create@CProgressCtrl@@UAEHKABUtagRECT@@PAVCWnd@@I@Z 00407950 f   mfc90:mfc90.dll
+ 0001:00006956       ?GetOccDialogInfo@CWnd@@MAEPAU_AFX_OCC_DIALOG_INFO@@XZ 00407956 f   mfc90:mfc90.dll
+ 0001:0000695c       ?SetOccDialogInfo@CWnd@@MAEHPAU_AFX_OCC_DIALOG_INFO@@@Z 0040795c f   mfc90:mfc90.dll
+ 0001:00006962       ?CreateControlSite@CWnd@@MAEHPAVCOleControlContainer@@PAPAVCOleControlSite@@IABU_GUID@@@Z 00407962 f   mfc90:mfc90.dll
+ 0001:00006968       ?CreateControlContainer@CWnd@@MAEHPAPAVCOleControlContainer@@@Z 00407968 f   mfc90:mfc90.dll
+ 0001:0000696e       ?IsFrameWnd@CWnd@@UBEHXZ   0040796e f   mfc90:mfc90.dll
+ 0001:00006974       ?CheckAutoCenter@CWnd@@UAEHXZ 00407974 f   mfc90:mfc90.dll
+ 0001:0000697a       ?OnChildNotify@CWnd@@MAEHIIJPAJ@Z 0040797a f   mfc90:mfc90.dll
+ 0001:00006980       ?PostNcDestroy@CWnd@@MAEXXZ 00407980 f   mfc90:mfc90.dll
+ 0001:00006986       ?DefWindowProcA@CWnd@@MAEJIIJ@Z 00407986 f   mfc90:mfc90.dll
+ 0001:0000698c       ?OnWndMsg@CWnd@@MAEHIIJPAJ@Z 0040798c f   mfc90:mfc90.dll
+ 0001:00006992       ?WindowProc@CWnd@@MAEJIIJ@Z 00407992 f   mfc90:mfc90.dll
+ 0001:00006998       ?OnAmbientProperty@CWnd@@UAEHPAVCOleControlSite@@JPAUtagVARIANT@@@Z 00407998 f   mfc90:mfc90.dll
+ 0001:0000699e       ?PreTranslateMessage@CWnd@@UAEHPAUtagMSG@@@Z 0040799e f   mfc90:mfc90.dll
+ 0001:000069a4       ?GetSuperWndProcAddr@CWnd@@MAEPAP6GJPAUHWND__@@IIJ@ZXZ 004079a4 f   mfc90:mfc90.dll
+ 0001:000069aa       ?OnNotify@CWnd@@MAEHIJPAJ@Z 004079aa f   mfc90:mfc90.dll
+ 0001:000069b0       ?OnCommand@CWnd@@MAEHIJ@Z  004079b0 f   mfc90:mfc90.dll
+ 0001:000069b6       ?CreateAccessibleProxy@CWnd@@UAEJIJPAJ@Z 004079b6 f   mfc90:mfc90.dll
+ 0001:000069bc       ?SetProxy@CWnd@@UAEJPAUIAccessibleProxy@@@Z 004079bc f   mfc90:mfc90.dll
+ 0001:000069c2       ?put_accValue@CWnd@@UAEJUtagVARIANT@@PA_W@Z 004079c2 f   mfc90:mfc90.dll
+ 0001:000069c8       ?put_accName@CWnd@@UAEJUtagVARIANT@@PA_W@Z 004079c8 f   mfc90:mfc90.dll
+ 0001:000069ce       ?accDoDefaultAction@CWnd@@UAEJUtagVARIANT@@@Z 004079ce f   mfc90:mfc90.dll
+ 0001:000069d4       ?accHitTest@CWnd@@UAEJJJPAUtagVARIANT@@@Z 004079d4 f   mfc90:mfc90.dll
+ 0001:000069da       ?accNavigate@CWnd@@UAEJJUtagVARIANT@@PAU2@@Z 004079da f   mfc90:mfc90.dll
+ 0001:000069e0       ?accLocation@CWnd@@UAEJPAJ000UtagVARIANT@@@Z 004079e0 f   mfc90:mfc90.dll
+ 0001:000069e6       ?accSelect@CWnd@@UAEJJUtagVARIANT@@@Z 004079e6 f   mfc90:mfc90.dll
+ 0001:000069ec       ?get_accDefaultAction@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 004079ec f   mfc90:mfc90.dll
+ 0001:000069f2       ?get_accSelection@CWnd@@UAEJPAUtagVARIANT@@@Z 004079f2 f   mfc90:mfc90.dll
+ 0001:000069f8       ?get_accFocus@CWnd@@UAEJPAUtagVARIANT@@@Z 004079f8 f   mfc90:mfc90.dll
+ 0001:000069fe       ?get_accKeyboardShortcut@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 004079fe f   mfc90:mfc90.dll
+ 0001:00006a04       ?get_accHelpTopic@CWnd@@UAEJPAPA_WUtagVARIANT@@PAJ@Z 00407a04 f   mfc90:mfc90.dll
+ 0001:00006a0a       ?get_accHelp@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 00407a0a f   mfc90:mfc90.dll
+ 0001:00006a10       ?get_accState@CWnd@@UAEJUtagVARIANT@@PAU2@@Z 00407a10 f   mfc90:mfc90.dll
+ 0001:00006a16       ?get_accRole@CWnd@@UAEJUtagVARIANT@@PAU2@@Z 00407a16 f   mfc90:mfc90.dll
+ 0001:00006a1c       ?get_accDescription@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 00407a1c f   mfc90:mfc90.dll
+ 0001:00006a22       ?get_accValue@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 00407a22 f   mfc90:mfc90.dll
+ 0001:00006a28       ?get_accName@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 00407a28 f   mfc90:mfc90.dll
+ 0001:00006a2e       ?get_accChild@CWnd@@UAEJUtagVARIANT@@PAPAUIDispatch@@@Z 00407a2e f   mfc90:mfc90.dll
+ 0001:00006a34       ?get_accChildCount@CWnd@@UAEJPAJ@Z 00407a34 f   mfc90:mfc90.dll
+ 0001:00006a3a       ?get_accParent@CWnd@@UAEJPAPAUIDispatch@@@Z 00407a3a f   mfc90:mfc90.dll
+ 0001:00006a40       ?EnsureStdObj@CWnd@@UAEJXZ 00407a40 f   mfc90:mfc90.dll
+ 0001:00006a46       ?EndModalLoop@CWnd@@UAEXH@Z 00407a46 f   mfc90:mfc90.dll
+ 0001:00006a4c       ?ContinueModal@CWnd@@UAEHXZ 00407a4c f   mfc90:mfc90.dll
+ 0001:00006a52       ?WinHelpInternal@CWnd@@UAEXKI@Z 00407a52 f   mfc90:mfc90.dll
+ 0001:00006a58       ?HtmlHelpA@CWnd@@UAEXKI@Z  00407a58 f   mfc90:mfc90.dll
+ 0001:00006a5e       ?WinHelpA@CWnd@@UAEXKI@Z   00407a5e f   mfc90:mfc90.dll
+ 0001:00006a64       ?GetScrollBarCtrl@CWnd@@UBEPAVCScrollBar@@H@Z 00407a64 f   mfc90:mfc90.dll
+ 0001:00006a6a       ?OnToolHitTest@CWnd@@UBEHVCPoint@@PAUtagTOOLINFOA@@@Z 00407a6a f   mfc90:mfc90.dll
+ 0001:00006a70       ?SetMenu@CWnd@@UAEHPAVCMenu@@@Z 00407a70 f   mfc90:mfc90.dll
+ 0001:00006a76       ?GetMenu@CWnd@@UBEPAVCMenu@@XZ 00407a76 f   mfc90:mfc90.dll
+ 0001:00006a7c       ?CalcWindowRect@CWnd@@UAEXPAUtagRECT@@I@Z 00407a7c f   mfc90:mfc90.dll
+ 0001:00006a82       ?PreCreateWindow@CWnd@@UAEHAAUtagCREATESTRUCTA@@@Z 00407a82 f   mfc90:mfc90.dll
+ 0001:00006a88       ?DestroyWindow@CWnd@@UAEHXZ 00407a88 f   mfc90:mfc90.dll
+ 0001:00006a8e       ?CreateEx@CWnd@@UAEHKPBD0KHHHHPAUHWND__@@PAUHMENU__@@PAX@Z 00407a8e f   mfc90:mfc90.dll
+ 0001:00006a94       ?CreateEx@CWnd@@UAEHKPBD0KABUtagRECT@@PAV1@IPAX@Z 00407a94 f   mfc90:mfc90.dll
+ 0001:00006a9a       ?Create@CWnd@@UAEHPBD0KABUtagRECT@@PAV1@IPAUCCreateContext@@@Z 00407a9a f   mfc90:mfc90.dll
+ 0001:00006aa0       ?PreSubclassWindow@CWnd@@UAEXXZ 00407aa0 f   mfc90:mfc90.dll
+ 0001:00006aa6       ?GetInterfaceMap@CWnd@@MBEPBUAFX_INTERFACEMAP@@XZ 00407aa6 f   mfc90:mfc90.dll
+ 0001:00006aac       ?GetMessageMap@CWnd@@MBEPBUAFX_MSGMAP@@XZ 00407aac f   mfc90:mfc90.dll
+ 0001:00006ab2       ?OnFinalRelease@CWnd@@UAEXXZ 00407ab2 f   mfc90:mfc90.dll
+ 0001:00006ab8       ?GetRuntimeClass@CProgressCtrl@@UBEPAUCRuntimeClass@@XZ 00407ab8 f   mfc90:mfc90.dll
+ 0001:00006abe       ??1CWnd@@UAE@XZ            00407abe f   mfc90:mfc90.dll
+ 0001:00006ac4       ??0CWnd@@QAE@XZ            00407ac4 f   mfc90:mfc90.dll
+ 0001:00006aca       ??1CProgressCtrl@@UAE@XZ   00407aca f   mfc90:mfc90.dll
+ 0001:00006ad0       ?AfxThrowOleException@@YGXJ@Z 00407ad0 f   mfc90:mfc90.dll
+ 0001:00006ad6       ?AfxThrowMemoryException@@YGXXZ 00407ad6 f   mfc90:mfc90.dll
+ 0001:00006adc       ?GetRuntimeClass@CBrush@@UBEPAUCRuntimeClass@@XZ 00407adc f   mfc90:mfc90.dll
+ 0001:00006ae2       ?AfxMessageBox@@YGHPBDII@Z 00407ae2 f   mfc90:mfc90.dll
+ 0001:00006ae8       ?DeleteObject@CGdiObject@@QAEHXZ 00407ae8 f   mfc90:mfc90.dll
+ 0001:00006aee       ?GetRuntimeClass@CGdiObject@@UBEPAUCRuntimeClass@@XZ 00407aee f   mfc90:mfc90.dll
+ 0001:00006af4       ?AfxFindResourceHandle@@YGPAUHINSTANCE__@@PBD0@Z 00407af4 f   mfc90:mfc90.dll
+ 0001:00006afa       ?AfxGetModuleState@@YGPAVAFX_MODULE_STATE@@XZ 00407afa f   mfc90:mfc90.dll
+ 0001:00006b00       ?DDX_Control@@YGXPAVCDataExchange@@HAAVCWnd@@@Z 00407b00 f   mfc90:mfc90.dll
+ 0001:00006b06       ?DDX_Text@@YGXPAVCDataExchange@@HAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@@Z 00407b06 f   mfc90:mfc90.dll
+ 0001:00006b0c       ?OnInitDialog@CDialog@@UAEHXZ 00407b0c f   mfc90:mfc90.dll
+ 0001:00006b12       ?FromHandle@CMenu@@SGPAV1@PAUHMENU__@@@Z 00407b12 f   mfc90:mfc90.dll
+ 0001:00006b18       ?Default@CWnd@@IAEJXZ      00407b18 f   mfc90:mfc90.dll
+ 0001:00006b1e       ??0CPaintDC@@QAE@PAVCWnd@@@Z 00407b1e f   mfc90:mfc90.dll
+ 0001:00006b24       ??1CPaintDC@@UAE@XZ        00407b24 f   mfc90:mfc90.dll
+ 0001:00006b2a       ?OnPaint@CDialog@@IAEXXZ   00407b2a f   mfc90:mfc90.dll
+ 0001:00006b30       ?FromHandle@CDC@@SGPAV1@PAUHDC__@@@Z 00407b30 f   mfc90:mfc90.dll
+ 0001:00006b36       ??0CDC@@QAE@XZ             00407b36 f   mfc90:mfc90.dll
+ 0001:00006b3c       ??1CDC@@UAE@XZ             00407b3c f   mfc90:mfc90.dll
+ 0001:00006b42       ?Attach@CDC@@QAEHPAUHDC__@@@Z 00407b42 f   mfc90:mfc90.dll
+ 0001:00006b48       ?FromHandle@CGdiObject@@SGPAV1@PAX@Z 00407b48 f   mfc90:mfc90.dll
+ 0001:00006b4e       ?SelectGdiObject@CDC@@KGPAVCGdiObject@@PAUHDC__@@PAX@Z 00407b4e f   mfc90:mfc90.dll
+ 0001:00006b54       ?DeleteDC@CDC@@QAEHXZ      00407b54 f   mfc90:mfc90.dll
+ 0001:00006b5a       ?OnOK@CDialog@@MAEXXZ      00407b5a f   mfc90:mfc90.dll
+ 0001:00006b60       ?OnCtlColor@CWnd@@IAEPAUHBRUSH__@@PAVCDC@@PAV1@I@Z 00407b60 f   mfc90:mfc90.dll
+ 0001:00006b66       ?AfxDynamicDownCast@@YAPAVCObject@@PAUCRuntimeClass@@PAV1@@Z 00407b66 f   mfc90:mfc90.dll
+ 0001:00006b6c       ?GetThisClass@CDialog@@SGPAUCRuntimeClass@@XZ 00407b6c f   mfc90:mfc90.dll
+ 0001:00006b72       ??0CFile@@QAE@XZ           00407b72 f   mfc90:mfc90.dll
+ 0001:00006b78       ??1CFile@@UAE@XZ           00407b78 f   mfc90:mfc90.dll
+ 0001:00006b7e       ?Open@CFile@@UAEHPBDIPAVCFileException@@@Z 00407b7e f   mfc90:mfc90.dll
+ 0001:00006b84       ??0CStringArray@@QAE@XZ    00407b84 f   mfc90:mfc90.dll
+ 0001:00006b8a       ??1CStringArray@@UAE@XZ    00407b8a f   mfc90:mfc90.dll
+ 0001:00006b90       ?AfxThrowInvalidArgException@@YGXXZ 00407b90 f   mfc90:mfc90.dll
+ 0001:00006b96       ?SetSize@CStringArray@@QAEXHH@Z 00407b96 f   mfc90:mfc90.dll
+ 0001:00006b9c       ?SetAtGrow@CStringArray@@QAEXHABV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@@Z 00407b9c f   mfc90:mfc90.dll
+ 0001:00006ba2       ?Close@CFile@@UAEXXZ       00407ba2 f   mfc90:mfc90.dll
+ 0001:00006ba8       ?Attach@CGdiObject@@QAEHPAX@Z 00407ba8 f   mfc90:mfc90.dll
+ 0001:00006bae       ?GetRuntimeClass@CFont@@UBEPAUCRuntimeClass@@XZ 00407bae f   mfc90:mfc90.dll
+ 0001:00006bb4       ?CreatePointFont@CFont@@QAEHHPBDPAVCDC@@@Z 00407bb4 f   mfc90:mfc90.dll
+ 0001:00006bba       ?GetDlgItem@CWnd@@QBEPAV1@H@Z 00407bba f   mfc90:mfc90.dll
+ 0001:00006bc0       ?UpdateData@CWnd@@QAEHH@Z  00407bc0 f   mfc90:mfc90.dll
+ 0001:00006bc6       ?PreTranslateMessage@CDialog@@UAEHPAUtagMSG@@@Z 00407bc6 f   mfc90:mfc90.dll
+ 0001:00006bcc       ?GetRuntimeClass@CDialog@@UBEPAUCRuntimeClass@@XZ 00407bcc f   mfc90:mfc90.dll
+ 0001:00006bd2       ?OnCmdMsg@CDialog@@UAEHIHPAXPAUAFX_CMDHANDLERINFO@@@Z 00407bd2 f   mfc90:mfc90.dll
+ 0001:00006bd8       ?CheckAutoCenter@CDialog@@UAEHXZ 00407bd8 f   mfc90:mfc90.dll
+ 0001:00006bde       ?SetOccDialogInfo@CDialog@@MAEHPAU_AFX_OCC_DIALOG_INFO@@@Z 00407bde f   mfc90:mfc90.dll
+ 0001:00006be4       ?GetOccDialogInfo@CDialog@@MAEPAU_AFX_OCC_DIALOG_INFO@@XZ 00407be4 f   mfc90:mfc90.dll
+ 0001:00006bea       ?Create@CDialog@@UAEHPBDPAVCWnd@@@Z 00407bea f   mfc90:mfc90.dll
+ 0001:00006bf0       ?CreateIndirect@CDialog@@UAEHPAXPAVCWnd@@@Z 00407bf0 f   mfc90:mfc90.dll
+ 0001:00006bf6       ?CreateIndirect@CDialog@@UAEHPBUDLGTEMPLATE@@PAVCWnd@@PAX@Z 00407bf6 f   mfc90:mfc90.dll
+ 0001:00006bfc       ?OnSetFont@CDialog@@UAEXPAVCFont@@@Z 00407bfc f   mfc90:mfc90.dll
+ 0001:00006c02       ?OnCancel@CDialog@@MAEXXZ  00407c02 f   mfc90:mfc90.dll
+ 0001:00006c08       ?PreInitDialog@CDialog@@MAEXXZ 00407c08 f   mfc90:mfc90.dll
+ 0001:00006c0e       ??0CFileFind@@QAE@XZ       00407c0e f   mfc90:mfc90.dll
+ 0001:00006c14       ??1CFileFind@@UAE@XZ       00407c14 f   mfc90:mfc90.dll
+ 0001:00006c1a       ?FindFile@CFileFind@@UAEHPBDK@Z 00407c1a f   mfc90:mfc90.dll
+ 0001:00006c20       ?FindNextFileA@CFileFind@@UAEHXZ 00407c20 f   mfc90:mfc90.dll
+ 0001:00006c26       ?IsDots@CFileFind@@UBEHXZ  00407c26 f   mfc90:mfc90.dll
+ 0001:00006c2c       ?GetFilePath@CFileFind@@UBE?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@XZ 00407c2c f   mfc90:mfc90.dll
+ 0001:00006c32       ?Close@CFileFind@@QAEXXZ   00407c32 f   mfc90:mfc90.dll
+ 0001:00006c38       ?SetAtGrow@CStringArray@@QAEXHPBD@Z 00407c38 f   mfc90:mfc90.dll
+ 0001:00006c3e       ??_U@YAPAXI@Z              00407c3e f   mfc90:mfc90.dll
+ 0001:00006c44       ??_V@YAXPAX@Z              00407c44 f   mfc90:mfc90.dll
+ 0001:00006c4a       @__security_check_cookie@4 00407c4a f   msvcrt:secchk.obj
+ 0001:00006c59       __onexit                   00407c59 f   msvcrt:atonexit.obj
+ 0001:00006cfe       _atexit                    00407cfe f   msvcrt:atonexit.obj
+ 0001:00006d15       ??_Etype_info@@UAEPAXI@Z   00407d15 f i msvcrt:ti_inst.obj
+ 0001:00006d62       __purecall                 00407d62 f   msvcrt:MSVCR90.dll
+ 0001:00007073       _WinMainCRTStartup         00408073 f   msvcrt:crtexew.obj
+ 0001:0000707d       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 0040807d f   msvcrt:ehvecdtr.obj
+ 0001:000070db       ??_M@YGXPAXIHP6EX0@Z@Z     004080db f   msvcrt:ehvecdtr.obj
+ 0001:0000713e       ___report_gsfailure        0040813e f   msvcrt:gs_report.obj
+ 0001:00007244       __unlock                   00408244 f   msvcrt:MSVCR90.dll
+ 0001:0000724a       ___dllonexit               0040824a f   msvcrt:MSVCR90.dll
+ 0001:00007250       __lock                     00408250 f   msvcrt:MSVCR90.dll
+ 0001:00007258       __SEH_prolog4              00408258 f   msvcrt:sehprolg4.obj
+ 0001:0000729d       __SEH_epilog4              0040829d f   msvcrt:sehprolg4.obj
+ 0001:000072b1       __except_handler4          004082b1 f   msvcrt:chandler4gs.obj
+ 0001:000072d6       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 004082d6 f   msvcrt:unhandld.obj
+ 0001:00007318       ___CxxSetUnhandledExceptionFilter 00408318 f   msvcrt:unhandld.obj
+ 0001:00007326       __amsg_exit                00408326 f   msvcrt:MSVCR90.dll
+ 0001:0000732c       __RTC_Initialize           0040832c f   msvcrt:_initsect_.obj
+ 0001:00007352       __RTC_Terminate            00408352 f   msvcrt:_initsect_.obj
+ 0001:00007378       __XcptFilter               00408378 f   msvcrt:MSVCR90.dll
+ 0001:00007380       __ValidateImageBase        00408380 f   msvcrt:pesect.obj
+ 0001:000073c0       __FindPESection            004083c0 f   msvcrt:pesect.obj
+ 0001:00007410       __IsNonwritableInCurrentImage 00408410 f   msvcrt:pesect.obj
+ 0001:000074ce       __initterm                 004084ce f   msvcrt:MSVCR90.dll
+ 0001:000074d4       __initterm_e               004084d4 f   msvcrt:MSVCR90.dll
+ 0001:000074da       __setdefaultprecision      004084da f   msvcrt:fp8.obj
+ 0001:00007505       __matherr                  00408505 f   msvcrt:merr.obj
+ 0001:00007505       __setargv                  00408505 f   msvcrt:dllargv.obj
+ 0001:00007508       ___security_init_cookie    00408508 f   msvcrt:gs_support.obj
+ 0001:0000759e       ?terminate@@YAXXZ          0040859e f   msvcrt:MSVCR90.dll
+ 0001:000075a4       __crt_debugger_hook        004085a4 f   msvcrt:MSVCR90.dll
+ 0001:000075aa       __except_handler4_common   004085aa f   msvcrt:MSVCR90.dll
+ 0001:000075b0       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 004085b0 f   msvcrt:MSVCR90.dll
+ 0001:000075b0       ??1type_info@@UAE@XZ       004085b0 f   msvcrt:MSVCR90.dll
+ 0001:000075b6       ___CxxFrameHandler3        004085b6 f   msvcrt:MSVCR90.dll
+ 0001:000075bc       __invoke_watson            004085bc f   msvcrt:MSVCR90.dll
+ 0001:000075c2       __controlfp_s              004085c2 f   msvcrt:MSVCR90.dll
+ 0001:000075c8       _CreateToolhelp32Snapshot@8 004085c8 f   kernel32:KERNEL32.dll
+ 0001:000075ce       _Module32First@8           004085ce f   kernel32:KERNEL32.dll
+ 0001:000075d4       _Module32Next@8            004085d4 f   kernel32:KERNEL32.dll
+ 0001:000075da       _GetFileVersionInfoSizeA@8 004085da f   Version:VERSION.dll
+ 0001:000075e0       _GetFileVersionInfoA@16    004085e0 f   Version:VERSION.dll
+ 0001:000075e6       _VerQueryValueA@16         004085e6 f   Version:VERSION.dll
+ 0001:000075ec       _WinMain@16                004085ec f   mfcs90:appmodul.obj
+ 0001:000075f7       ?AfxInitialize@@YGHHK@Z    004085f7 f   mfcs90:appmodul.obj
+ 0001:00007622       ?AfxWinMain@@YGHPAUHINSTANCE__@@0PADH@Z 00408622 f   mfc90:mfc90.dll
+ 0001:00007628       _memset                    00408628 f   msvcrt:MSVCR90.dll
+ 0001:00007630       __chkstk                   00408630 f   msvcrt:chkstk.obj
+ 0001:00007630       __alloca_probe             00408630     msvcrt:chkstk.obj
+ 0001:00007660       __ftol2_sse                00408660 f   msvcrt:ftol2.obj
+ 0001:00007669       __ftol2_pentium4           00408669 f   msvcrt:ftol2.obj
+ 0001:0000767c       __ftol2_sse_excpt          0040867c f   msvcrt:ftol2.obj
+ 0001:00007696       __ftol2                    00408696 f   msvcrt:ftol2.obj
+ 0001:0000770c       __CxxThrowException@8      0040870c f   msvcrt:MSVCR90.dll
+ 0001:00007712       _memcpy                    00408712 f   msvcrt:MSVCR90.dll
+ 0001:00007768       __get_sse2_info            00408768 f   msvcrt:cpu_disp.obj
+ 0001:000077ca       ___sse2_available_init     004087ca f   msvcrt:cpu_disp.obj
+ 0002:00000000       __imp__GetUserNameA@8      0040a000     advapi32:ADVAPI32.dll
+ 0002:00000004       \177ADVAPI32_NULL_THUNK_DATA 0040a004     advapi32:ADVAPI32.dll
+ 0002:00000008       __imp__InitCommonControlsEx@4 0040a008     comctl32:COMCTL32.dll
+ 0002:0000000c       \177COMCTL32_NULL_THUNK_DATA 0040a00c     comctl32:COMCTL32.dll
+ 0002:00000010       __imp__CreateDIBSection@24 0040a010     gdi32:GDI32.dll
+ 0002:00000014       __imp__CreateSolidBrush@4  0040a014     gdi32:GDI32.dll
+ 0002:00000018       __imp__BitBlt@36           0040a018     gdi32:GDI32.dll
+ 0002:0000001c       __imp__GetObjectA@12       0040a01c     gdi32:GDI32.dll
+ 0002:00000020       __imp__CreateCompatibleDC@4 0040a020     gdi32:GDI32.dll
+ 0002:00000024       __imp__DeleteObject@4      0040a024     gdi32:GDI32.dll
+ 0002:00000028       \177GDI32_NULL_THUNK_DATA  0040a028     gdi32:GDI32.dll
+ 0002:0000002c       __imp__LoadLibraryA@4      0040a02c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__GetProcAddress@8    0040a030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__FreeLibrary@4       0040a034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__FindFirstFileA@8    0040a038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__FindNextFileA@8     0040a03c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__FindClose@4         0040a040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__RemoveDirectoryA@4  0040a044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__lstrcpynA@12        0040a048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__CreateDirectoryA@8  0040a04c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__GetModuleFileNameA@12 0040a050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__CreateFileA@28      0040a054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GetCommandLineA@0   0040a058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__GetLocaleInfoA@16   0040a05c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__GetSystemDefaultLangID@0 0040a060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__lstrlenA@4          0040a064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetVersionExA@4     0040a068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__GetSystemInfo@4     0040a06c     kernel32:KERNEL32.dll
+ 0002:00000070       __imp__GlobalMemoryStatus@4 0040a070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__VirtualQuery@12     0040a074     kernel32:KERNEL32.dll
+ 0002:00000078       __imp__OpenThread@12       0040a078     kernel32:KERNEL32.dll
+ 0002:0000007c       __imp__GetCurrentThreadId@0 0040a07c     kernel32:KERNEL32.dll
+ 0002:00000080       __imp__OpenProcess@12      0040a080     kernel32:KERNEL32.dll
+ 0002:00000084       __imp__GetCurrentProcessId@0 0040a084     kernel32:KERNEL32.dll
+ 0002:00000088       __imp__CreateToolhelp32Snapshot@8 0040a088     kernel32:KERNEL32.dll
+ 0002:0000008c       __imp__Module32First@8     0040a08c     kernel32:KERNEL32.dll
+ 0002:00000090       __imp__Module32Next@8      0040a090     kernel32:KERNEL32.dll
+ 0002:00000094       __imp__IsBadReadPtr@8      0040a094     kernel32:KERNEL32.dll
+ 0002:00000098       __imp__IsBadCodePtr@4      0040a098     kernel32:KERNEL32.dll
+ 0002:0000009c       __imp__GetLocalTime@4      0040a09c     kernel32:KERNEL32.dll
+ 0002:000000a0       __imp__SetUnhandledExceptionFilter@4 0040a0a0     kernel32:KERNEL32.dll
+ 0002:000000a4       __imp__InterlockedExchange@8 0040a0a4     kernel32:KERNEL32.dll
+ 0002:000000a8       __imp__InterlockedCompareExchange@12 0040a0a8     kernel32:KERNEL32.dll
+ 0002:000000ac       __imp__GetStartupInfoA@4   0040a0ac     kernel32:KERNEL32.dll
+ 0002:000000b0       __imp__TerminateProcess@8  0040a0b0     kernel32:KERNEL32.dll
+ 0002:000000b4       __imp__GetCurrentProcess@0 0040a0b4     kernel32:KERNEL32.dll
+ 0002:000000b8       __imp__UnhandledExceptionFilter@4 0040a0b8     kernel32:KERNEL32.dll
+ 0002:000000bc       __imp__IsDebuggerPresent@0 0040a0bc     kernel32:KERNEL32.dll
+ 0002:000000c0       __imp__QueryPerformanceCounter@4 0040a0c0     kernel32:KERNEL32.dll
+ 0002:000000c4       __imp__GetTickCount@0      0040a0c4     kernel32:KERNEL32.dll
+ 0002:000000c8       __imp__GetSystemTimeAsFileTime@4 0040a0c8     kernel32:KERNEL32.dll
+ 0002:000000cc       __imp__WaitForSingleObject@8 0040a0cc     kernel32:KERNEL32.dll
+ 0002:000000d0       __imp__GetPrivateProfileStringA@24 0040a0d0     kernel32:KERNEL32.dll
+ 0002:000000d4       __imp__GetPrivateProfileSectionA@16 0040a0d4     kernel32:KERNEL32.dll
+ 0002:000000d8       __imp__CopyFileExA@24      0040a0d8     kernel32:KERNEL32.dll
+ 0002:000000dc       __imp__DeleteFileA@4       0040a0dc     kernel32:KERNEL32.dll
+ 0002:000000e0       __imp__GetTempPathA@8      0040a0e0     kernel32:KERNEL32.dll
+ 0002:000000e4       __imp__CreateThread@24     0040a0e4     kernel32:KERNEL32.dll
+ 0002:000000e8       __imp__Sleep@4             0040a0e8     kernel32:KERNEL32.dll
+ 0002:000000ec       __imp__CloseHandle@4       0040a0ec     kernel32:KERNEL32.dll
+ 0002:000000f0       __imp__GetLastError@0      0040a0f0     kernel32:KERNEL32.dll
+ 0002:000000f4       __imp__CreateMutexA@12     0040a0f4     kernel32:KERNEL32.dll
+ 0002:000000f8       __imp__WinExec@8           0040a0f8     kernel32:KERNEL32.dll
+ 0002:000000fc       \177KERNEL32_NULL_THUNK_DATA 0040a0fc     kernel32:KERNEL32.dll
+ 0002:00000100       __imp_??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@ABV10@0@Z 0040a100     msvcprt:MSVCP90.dll
+ 0002:00000104       __imp_?npos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@2IB 0040a104     msvcprt:MSVCP90.dll
+ 0002:00000108       __imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 0040a108     msvcprt:MSVCP90.dll
+ 0002:0000010c       __imp_??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 0040a10c     msvcprt:MSVCP90.dll
+ 0002:00000110       __imp_??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@ABV01@@Z 0040a110     msvcprt:MSVCP90.dll
+ 0002:00000114       __imp_?close@?$basic_fstream@DU?$char_traits@D@std@@@std@@QAEXXZ 0040a114     msvcprt:MSVCP90.dll
+ 0002:00000118       __imp_?open@?$basic_fstream@DU?$char_traits@D@std@@@std@@QAEXPBDHH@Z 0040a118     msvcprt:MSVCP90.dll
+ 0002:0000011c       __imp_??0?$basic_fstream@DU?$char_traits@D@std@@@std@@QAE@XZ 0040a11c     msvcprt:MSVCP90.dll
+ 0002:00000120       __imp_?write@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@PBDH@Z 0040a120     msvcprt:MSVCP90.dll
+ 0002:00000124       __imp_?substr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBE?AV12@II@Z 0040a124     msvcprt:MSVCP90.dll
+ 0002:00000128       __imp_?find_last_of@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIPBDI@Z 0040a128     msvcprt:MSVCP90.dll
+ 0002:0000012c       __imp_?find@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEIPBDI@Z 0040a12c     msvcprt:MSVCP90.dll
+ 0002:00000130       __imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z 0040a130     msvcprt:MSVCP90.dll
+ 0002:00000134       __imp_??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z 0040a134     msvcprt:MSVCP90.dll
+ 0002:00000138       __imp_??_D?$basic_fstream@DU?$char_traits@D@std@@@std@@QAEXXZ 0040a138     msvcprt:MSVCP90.dll
+ 0002:0000013c       __imp_?global@locale@std@@SA?AV12@ABV12@@Z 0040a13c     msvcprt:MSVCP90.dll
+ 0002:00000140       __imp_??4locale@std@@QAEAAV01@ABV01@@Z 0040a140     msvcprt:MSVCP90.dll
+ 0002:00000144       __imp_??1locale@std@@QAE@XZ 0040a144     msvcprt:MSVCP90.dll
+ 0002:00000148       __imp_??0locale@std@@QAE@PBDH@Z 0040a148     msvcprt:MSVCP90.dll
+ 0002:0000014c       __imp_??0locale@std@@QAE@XZ 0040a14c     msvcprt:MSVCP90.dll
+ 0002:00000150       __imp_?reserve@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXI@Z 0040a150     msvcprt:MSVCP90.dll
+ 0002:00000154       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z 0040a154     msvcprt:MSVCP90.dll
+ 0002:00000158       __imp_??Y?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@ABV01@@Z 0040a158     msvcprt:MSVCP90.dll
+ 0002:0000015c       __imp_??$?9DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z 0040a15c     msvcprt:MSVCP90.dll
+ 0002:00000160       \177MSVCP90_NULL_THUNK_DATA 0040a160     msvcprt:MSVCP90.dll
+ 0002:00000164       __imp__memset              0040a164     msvcrt:MSVCR90.dll
+ 0002:00000168       __imp___CxxThrowException@8 0040a168     msvcrt:MSVCR90.dll
+ 0002:0000016c       __imp___setmbcp            0040a16c     msvcrt:MSVCR90.dll
+ 0002:00000170       __imp___controlfp_s        0040a170     msvcrt:MSVCR90.dll
+ 0002:00000174       __imp___invoke_watson      0040a174     msvcrt:MSVCR90.dll
+ 0002:00000178       __imp____CxxFrameHandler3  0040a178     msvcrt:MSVCR90.dll
+ 0002:0000017c       __imp_?_type_info_dtor_internal_method@type_info@@QAEXXZ 0040a17c     msvcrt:MSVCR90.dll
+ 0002:00000180       __imp___except_handler4_common 0040a180     msvcrt:MSVCR90.dll
+ 0002:00000184       __imp___crt_debugger_hook  0040a184     msvcrt:MSVCR90.dll
+ 0002:00000188       __imp_?terminate@@YAXXZ    0040a188     msvcrt:MSVCR90.dll
+ 0002:0000018c       __imp____set_app_type      0040a18c     msvcrt:MSVCR90.dll
+ 0002:00000190       __imp____p__fmode          0040a190     msvcrt:MSVCR90.dll
+ 0002:00000194       __imp____p__commode        0040a194     msvcrt:MSVCR90.dll
+ 0002:00000198       __imp___adjust_fdiv        0040a198     msvcrt:MSVCR90.dll
+ 0002:0000019c       __imp____setusermatherr    0040a19c     msvcrt:MSVCR90.dll
+ 0002:000001a0       __imp___configthreadlocale 0040a1a0     msvcrt:MSVCR90.dll
+ 0002:000001a4       __imp___initterm_e         0040a1a4     msvcrt:MSVCR90.dll
+ 0002:000001a8       __imp___initterm           0040a1a8     msvcrt:MSVCR90.dll
+ 0002:000001ac       __imp___acmdln             0040a1ac     msvcrt:MSVCR90.dll
+ 0002:000001b0       __imp__exit                0040a1b0     msvcrt:MSVCR90.dll
+ 0002:000001b4       __imp___ismbblead          0040a1b4     msvcrt:MSVCR90.dll
+ 0002:000001b8       __imp___XcptFilter         0040a1b8     msvcrt:MSVCR90.dll
+ 0002:000001bc       __imp___exit               0040a1bc     msvcrt:MSVCR90.dll
+ 0002:000001c0       __imp___cexit              0040a1c0     msvcrt:MSVCR90.dll
+ 0002:000001c4       __imp____getmainargs       0040a1c4     msvcrt:MSVCR90.dll
+ 0002:000001c8       __imp___amsg_exit          0040a1c8     msvcrt:MSVCR90.dll
+ 0002:000001cc       __imp___decode_pointer     0040a1cc     msvcrt:MSVCR90.dll
+ 0002:000001d0       __imp___onexit             0040a1d0     msvcrt:MSVCR90.dll
+ 0002:000001d4       __imp___lock               0040a1d4     msvcrt:MSVCR90.dll
+ 0002:000001d8       __imp___encode_pointer     0040a1d8     msvcrt:MSVCR90.dll
+ 0002:000001dc       __imp____dllonexit         0040a1dc     msvcrt:MSVCR90.dll
+ 0002:000001e0       __imp___unlock             0040a1e0     msvcrt:MSVCR90.dll
+ 0002:000001e4       __imp_?set_unexpected@@YAP6AXXZP6AXXZ@Z 0040a1e4     msvcrt:MSVCR90.dll
+ 0002:000001e8       __imp__memcpy              0040a1e8     msvcrt:MSVCR90.dll
+ 0002:000001ec       __imp___set_invalid_parameter_handler 0040a1ec     msvcrt:MSVCR90.dll
+ 0002:000001f0       __imp___set_purecall_handler 0040a1f0     msvcrt:MSVCR90.dll
+ 0002:000001f4       __imp_?_set_new_handler@@YAP6AHI@ZP6AHI@Z@Z 0040a1f4     msvcrt:MSVCR90.dll
+ 0002:000001f8       __imp_?_set_se_translator@@YAP6AXIPAU_EXCEPTION_POINTERS@@@ZP6AXI0@Z@Z 0040a1f8     msvcrt:MSVCR90.dll
+ 0002:000001fc       __imp___mbschr             0040a1fc     msvcrt:MSVCR90.dll
+ 0002:00000200       __imp__sprintf             0040a200     msvcrt:MSVCR90.dll
+ 0002:00000204       __imp___mbscmp             0040a204     msvcrt:MSVCR90.dll
+ 0002:00000208       __imp___stricmp            0040a208     msvcrt:MSVCR90.dll
+ 0002:0000020c       __imp___purecall           0040a20c     msvcrt:MSVCR90.dll
+ 0002:00000210       __imp___recalloc           0040a210     msvcrt:MSVCR90.dll
+ 0002:00000214       __imp__calloc              0040a214     msvcrt:MSVCR90.dll
+ 0002:00000218       __imp__free                0040a218     msvcrt:MSVCR90.dll
+ 0002:0000021c       __imp__memcpy_s            0040a21c     msvcrt:MSVCR90.dll
+ 0002:00000220       __imp____argv              0040a220     msvcrt:MSVCR90.dll
+ 0002:00000224       __imp____argc              0040a224     msvcrt:MSVCR90.dll
+ 0002:00000228       \177MSVCR90_NULL_THUNK_DATA 0040a228     msvcrt:MSVCR90.dll
+ 0002:0000022c       __imp__ShellExecuteExA@4   0040a22c     shell32:SHELL32.dll
+ 0002:00000230       \177SHELL32_NULL_THUNK_DATA 0040a230     shell32:SHELL32.dll
+ 0002:00000234       __imp__PathIsDirectoryA@4  0040a234     shlwapi:SHLWAPI.dll
+ 0002:00000238       \177SHLWAPI_NULL_THUNK_DATA 0040a238     shlwapi:SHLWAPI.dll
+ 0002:0000023c       __imp__FillRect@12         0040a23c     user32:USER32.dll
+ 0002:00000240       __imp__IsIconic@4          0040a240     user32:USER32.dll
+ 0002:00000244       __imp__GetDC@4             0040a244     user32:USER32.dll
+ 0002:00000248       __imp__ModifyMenuA@20      0040a248     user32:USER32.dll
+ 0002:0000024c       __imp__SetTimer@16         0040a24c     user32:USER32.dll
+ 0002:00000250       __imp__AppendMenuA@16      0040a250     user32:USER32.dll
+ 0002:00000254       __imp__DrawIcon@16         0040a254     user32:USER32.dll
+ 0002:00000258       __imp__GetClientRect@8     0040a258     user32:USER32.dll
+ 0002:0000025c       __imp__PostMessageA@16     0040a25c     user32:USER32.dll
+ 0002:00000260       __imp__GetSystemMetrics@4  0040a260     user32:USER32.dll
+ 0002:00000264       __imp__GetSystemMenu@8     0040a264     user32:USER32.dll
+ 0002:00000268       __imp__LoadIconA@8         0040a268     user32:USER32.dll
+ 0002:0000026c       __imp__KillTimer@8         0040a26c     user32:USER32.dll
+ 0002:00000270       __imp__SendMessageA@16     0040a270     user32:USER32.dll
+ 0002:00000274       __imp__MessageBoxExA@20    0040a274     user32:USER32.dll
+ 0002:00000278       __imp__SetWindowTextA@8    0040a278     user32:USER32.dll
+ 0002:0000027c       __imp__EnableWindow@8      0040a27c     user32:USER32.dll
+ 0002:00000280       \177USER32_NULL_THUNK_DATA 0040a280     user32:USER32.dll
+ 0002:00000284       __imp__VerQueryValueA@16   0040a284     Version:VERSION.dll
+ 0002:00000288       __imp__GetFileVersionInfoA@16 0040a288     Version:VERSION.dll
+ 0002:0000028c       __imp__GetFileVersionInfoSizeA@8 0040a28c     Version:VERSION.dll
+ 0002:00000290       \177VERSION_NULL_THUNK_DATA 0040a290     Version:VERSION.dll
+ 0002:00000294       __imp__SymGetSymFromAddr64@20 0040a294     DbgHelp:dbghelp.dll
+ 0002:00000298       __imp__SymGetLineFromAddr64@20 0040a298     DbgHelp:dbghelp.dll
+ 0002:0000029c       __imp__SymGetModuleInfo64@16 0040a29c     DbgHelp:dbghelp.dll
+ 0002:000002a0       __imp__SymCleanup@4        0040a2a0     DbgHelp:dbghelp.dll
+ 0002:000002a4       __imp__MiniDumpWriteDump@28 0040a2a4     DbgHelp:dbghelp.dll
+ 0002:000002a8       __imp__SymInitialize@12    0040a2a8     DbgHelp:dbghelp.dll
+ 0002:000002ac       __imp__SymFunctionTableAccess64@12 0040a2ac     DbgHelp:dbghelp.dll
+ 0002:000002b0       __imp__SymGetModuleBase64@12 0040a2b0     DbgHelp:dbghelp.dll
+ 0002:000002b4       __imp__StackWalk64@36      0040a2b4     DbgHelp:dbghelp.dll
+ 0002:000002b8       \177dbghelp_NULL_THUNK_DATA 0040a2b8     DbgHelp:dbghelp.dll
+ 0002:000002bc       __imp_?Attach@CGdiObject@@QAEHPAX@Z 0040a2bc     mfc90:mfc90.dll
+ 0002:000002c0       __imp_?Close@CFile@@UAEXXZ 0040a2c0     mfc90:mfc90.dll
+ 0002:000002c4       __imp_?SetAtGrow@CStringArray@@QAEXHABV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@@Z 0040a2c4     mfc90:mfc90.dll
+ 0002:000002c8       __imp_?SetSize@CStringArray@@QAEXHH@Z 0040a2c8     mfc90:mfc90.dll
+ 0002:000002cc       __imp_??0?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAE@PAUIAtlStringMgr@1@@Z 0040a2cc     mfc90:mfc90.dll
+ 0002:000002d0       __imp_?GetManager@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBEPAUIAtlStringMgr@2@XZ 0040a2d0     mfc90:mfc90.dll
+ 0002:000002d4       __imp_?Concatenate@?$CSimpleStringT@D$00@ATL@@KAXAAV12@PBDH1H@Z 0040a2d4     mfc90:mfc90.dll
+ 0002:000002d8       __imp_?AfxThrowInvalidArgException@@YGXXZ 0040a2d8     mfc90:mfc90.dll
+ 0002:000002dc       __imp_??1CStringArray@@UAE@XZ 0040a2dc     mfc90:mfc90.dll
+ 0002:000002e0       __imp_??0CStringArray@@QAE@XZ 0040a2e0     mfc90:mfc90.dll
+ 0002:000002e4       __imp_?Open@CFile@@UAEHPBDIPAVCFileException@@@Z 0040a2e4     mfc90:mfc90.dll
+ 0002:000002e8       __imp_??Y?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV01@PBD@Z 0040a2e8     mfc90:mfc90.dll
+ 0002:000002ec       __imp_??Y?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV01@ABV?$CSimpleStringT@D$00@1@@Z 0040a2ec     mfc90:mfc90.dll
+ 0002:000002f0       __imp_??4?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV01@ABV01@@Z 0040a2f0     mfc90:mfc90.dll
+ 0002:000002f4       __imp_??0?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAE@ABV01@@Z 0040a2f4     mfc90:mfc90.dll
+ 0002:000002f8       __imp_??1CFile@@UAE@XZ     0040a2f8     mfc90:mfc90.dll
+ 0002:000002fc       __imp_??0CFile@@QAE@XZ     0040a2fc     mfc90:mfc90.dll
+ 0002:00000300       __imp_?GetThisClass@CDialog@@SGPAUCRuntimeClass@@XZ 0040a300     mfc90:mfc90.dll
+ 0002:00000304       __imp_?AfxDynamicDownCast@@YAPAVCObject@@PAUCRuntimeClass@@PAV1@@Z 0040a304     mfc90:mfc90.dll
+ 0002:00000308       __imp_?OnCtlColor@CWnd@@IAEPAUHBRUSH__@@PAVCDC@@PAV1@I@Z 0040a308     mfc90:mfc90.dll
+ 0002:0000030c       __imp_?OnOK@CDialog@@MAEXXZ 0040a30c     mfc90:mfc90.dll
+ 0002:00000310       __imp_?DeleteDC@CDC@@QAEHXZ 0040a310     mfc90:mfc90.dll
+ 0002:00000314       __imp_?SelectGdiObject@CDC@@KGPAVCGdiObject@@PAUHDC__@@PAX@Z 0040a314     mfc90:mfc90.dll
+ 0002:00000318       __imp_?FromHandle@CGdiObject@@SGPAV1@PAX@Z 0040a318     mfc90:mfc90.dll
+ 0002:0000031c       __imp_?Attach@CDC@@QAEHPAUHDC__@@@Z 0040a31c     mfc90:mfc90.dll
+ 0002:00000320       __imp_??1CDC@@UAE@XZ       0040a320     mfc90:mfc90.dll
+ 0002:00000324       __imp_??0CDC@@QAE@XZ       0040a324     mfc90:mfc90.dll
+ 0002:00000328       __imp_?FromHandle@CDC@@SGPAV1@PAUHDC__@@@Z 0040a328     mfc90:mfc90.dll
+ 0002:0000032c       __imp_?OnPaint@CDialog@@IAEXXZ 0040a32c     mfc90:mfc90.dll
+ 0002:00000330       __imp_??1CPaintDC@@UAE@XZ  0040a330     mfc90:mfc90.dll
+ 0002:00000334       __imp_??0CPaintDC@@QAE@PAVCWnd@@@Z 0040a334     mfc90:mfc90.dll
+ 0002:00000338       __imp_?Default@CWnd@@IAEJXZ 0040a338     mfc90:mfc90.dll
+ 0002:0000033c       __imp_?FromHandle@CMenu@@SGPAV1@PAUHMENU__@@@Z 0040a33c     mfc90:mfc90.dll
+ 0002:00000340       __imp_?OnInitDialog@CDialog@@UAEHXZ 0040a340     mfc90:mfc90.dll
+ 0002:00000344       __imp_?DDX_Text@@YGXPAVCDataExchange@@HAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@@Z 0040a344     mfc90:mfc90.dll
+ 0002:00000348       __imp_?DDX_Control@@YGXPAVCDataExchange@@HAAVCWnd@@@Z 0040a348     mfc90:mfc90.dll
+ 0002:0000034c       __imp_?AfxGetModuleState@@YGPAVAFX_MODULE_STATE@@XZ 0040a34c     mfc90:mfc90.dll
+ 0002:00000350       __imp_?AfxFindResourceHandle@@YGPAUHINSTANCE__@@PBD0@Z 0040a350     mfc90:mfc90.dll
+ 0002:00000354       __imp_?GetRuntimeClass@CGdiObject@@UBEPAUCRuntimeClass@@XZ 0040a354     mfc90:mfc90.dll
+ 0002:00000358       __imp_?DeleteObject@CGdiObject@@QAEHXZ 0040a358     mfc90:mfc90.dll
+ 0002:0000035c       __imp_?Format@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAAXPBDZZ 0040a35c     mfc90:mfc90.dll
+ 0002:00000360       __imp_?AfxMessageBox@@YGHPBDII@Z 0040a360     mfc90:mfc90.dll
+ 0002:00000364       __imp_?GetRuntimeClass@CBrush@@UBEPAUCRuntimeClass@@XZ 0040a364     mfc90:mfc90.dll
+ 0002:00000368       __imp_?LoadStringA@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEHI@Z 0040a368     mfc90:mfc90.dll
+ 0002:0000036c       __imp_?AfxThrowMemoryException@@YGXXZ 0040a36c     mfc90:mfc90.dll
+ 0002:00000370       __imp_?AfxThrowOleException@@YGXJ@Z 0040a370     mfc90:mfc90.dll
+ 0002:00000374       __imp_??0?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAE@PBD@Z 0040a374     mfc90:mfc90.dll
+ 0002:00000378       __imp_??1CProgressCtrl@@UAE@XZ 0040a378     mfc90:mfc90.dll
+ 0002:0000037c       __imp_??0CWnd@@QAE@XZ      0040a37c     mfc90:mfc90.dll
+ 0002:00000380       __imp_??1CWnd@@UAE@XZ      0040a380     mfc90:mfc90.dll
+ 0002:00000384       __imp_?GetRuntimeClass@CProgressCtrl@@UBEPAUCRuntimeClass@@XZ 0040a384     mfc90:mfc90.dll
+ 0002:00000388       __imp_?OnFinalRelease@CWnd@@UAEXXZ 0040a388     mfc90:mfc90.dll
+ 0002:0000038c       __imp_?GetMessageMap@CWnd@@MBEPBUAFX_MSGMAP@@XZ 0040a38c     mfc90:mfc90.dll
+ 0002:00000390       __imp_?GetInterfaceMap@CWnd@@MBEPBUAFX_INTERFACEMAP@@XZ 0040a390     mfc90:mfc90.dll
+ 0002:00000394       __imp_?PreSubclassWindow@CWnd@@UAEXXZ 0040a394     mfc90:mfc90.dll
+ 0002:00000398       __imp_?Create@CWnd@@UAEHPBD0KABUtagRECT@@PAV1@IPAUCCreateContext@@@Z 0040a398     mfc90:mfc90.dll
+ 0002:0000039c       __imp_?CreateEx@CWnd@@UAEHKPBD0KABUtagRECT@@PAV1@IPAX@Z 0040a39c     mfc90:mfc90.dll
+ 0002:000003a0       __imp_?CreateEx@CWnd@@UAEHKPBD0KHHHHPAUHWND__@@PAUHMENU__@@PAX@Z 0040a3a0     mfc90:mfc90.dll
+ 0002:000003a4       __imp_?DestroyWindow@CWnd@@UAEHXZ 0040a3a4     mfc90:mfc90.dll
+ 0002:000003a8       __imp_?PreCreateWindow@CWnd@@UAEHAAUtagCREATESTRUCTA@@@Z 0040a3a8     mfc90:mfc90.dll
+ 0002:000003ac       __imp_?CalcWindowRect@CWnd@@UAEXPAUtagRECT@@I@Z 0040a3ac     mfc90:mfc90.dll
+ 0002:000003b0       __imp_?GetMenu@CWnd@@UBEPAVCMenu@@XZ 0040a3b0     mfc90:mfc90.dll
+ 0002:000003b4       __imp_?SetMenu@CWnd@@UAEHPAVCMenu@@@Z 0040a3b4     mfc90:mfc90.dll
+ 0002:000003b8       __imp_?OnToolHitTest@CWnd@@UBEHVCPoint@@PAUtagTOOLINFOA@@@Z 0040a3b8     mfc90:mfc90.dll
+ 0002:000003bc       __imp_?GetScrollBarCtrl@CWnd@@UBEPAVCScrollBar@@H@Z 0040a3bc     mfc90:mfc90.dll
+ 0002:000003c0       __imp_?WinHelpA@CWnd@@UAEXKI@Z 0040a3c0     mfc90:mfc90.dll
+ 0002:000003c4       __imp_?HtmlHelpA@CWnd@@UAEXKI@Z 0040a3c4     mfc90:mfc90.dll
+ 0002:000003c8       __imp_?WinHelpInternal@CWnd@@UAEXKI@Z 0040a3c8     mfc90:mfc90.dll
+ 0002:000003cc       __imp_?ContinueModal@CWnd@@UAEHXZ 0040a3cc     mfc90:mfc90.dll
+ 0002:000003d0       __imp_?EndModalLoop@CWnd@@UAEXH@Z 0040a3d0     mfc90:mfc90.dll
+ 0002:000003d4       __imp_?EnsureStdObj@CWnd@@UAEJXZ 0040a3d4     mfc90:mfc90.dll
+ 0002:000003d8       __imp_?get_accParent@CWnd@@UAEJPAPAUIDispatch@@@Z 0040a3d8     mfc90:mfc90.dll
+ 0002:000003dc       __imp_?get_accChildCount@CWnd@@UAEJPAJ@Z 0040a3dc     mfc90:mfc90.dll
+ 0002:000003e0       __imp_?get_accChild@CWnd@@UAEJUtagVARIANT@@PAPAUIDispatch@@@Z 0040a3e0     mfc90:mfc90.dll
+ 0002:000003e4       __imp_?get_accName@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a3e4     mfc90:mfc90.dll
+ 0002:000003e8       __imp_?get_accValue@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a3e8     mfc90:mfc90.dll
+ 0002:000003ec       __imp_?get_accDescription@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a3ec     mfc90:mfc90.dll
+ 0002:000003f0       __imp_?get_accRole@CWnd@@UAEJUtagVARIANT@@PAU2@@Z 0040a3f0     mfc90:mfc90.dll
+ 0002:000003f4       __imp_?get_accState@CWnd@@UAEJUtagVARIANT@@PAU2@@Z 0040a3f4     mfc90:mfc90.dll
+ 0002:000003f8       __imp_?get_accHelp@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a3f8     mfc90:mfc90.dll
+ 0002:000003fc       __imp_?get_accHelpTopic@CWnd@@UAEJPAPA_WUtagVARIANT@@PAJ@Z 0040a3fc     mfc90:mfc90.dll
+ 0002:00000400       __imp_?get_accKeyboardShortcut@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a400     mfc90:mfc90.dll
+ 0002:00000404       __imp_?get_accFocus@CWnd@@UAEJPAUtagVARIANT@@@Z 0040a404     mfc90:mfc90.dll
+ 0002:00000408       __imp_?GetRuntimeClass@CFont@@UBEPAUCRuntimeClass@@XZ 0040a408     mfc90:mfc90.dll
+ 0002:0000040c       __imp_?CreatePointFont@CFont@@QAEHHPBDPAVCDC@@@Z 0040a40c     mfc90:mfc90.dll
+ 0002:00000410       __imp_?GetDlgItem@CWnd@@QBEPAV1@H@Z 0040a410     mfc90:mfc90.dll
+ 0002:00000414       __imp_?UpdateData@CWnd@@QAEHH@Z 0040a414     mfc90:mfc90.dll
+ 0002:00000418       __imp_?PreTranslateMessage@CDialog@@UAEHPAUtagMSG@@@Z 0040a418     mfc90:mfc90.dll
+ 0002:0000041c       __imp_?GetRuntimeClass@CDialog@@UBEPAUCRuntimeClass@@XZ 0040a41c     mfc90:mfc90.dll
+ 0002:00000420       __imp_?OnCmdMsg@CDialog@@UAEHIHPAXPAUAFX_CMDHANDLERINFO@@@Z 0040a420     mfc90:mfc90.dll
+ 0002:00000424       __imp_?CheckAutoCenter@CDialog@@UAEHXZ 0040a424     mfc90:mfc90.dll
+ 0002:00000428       __imp_?SetOccDialogInfo@CDialog@@MAEHPAU_AFX_OCC_DIALOG_INFO@@@Z 0040a428     mfc90:mfc90.dll
+ 0002:0000042c       __imp_?GetOccDialogInfo@CDialog@@MAEPAU_AFX_OCC_DIALOG_INFO@@XZ 0040a42c     mfc90:mfc90.dll
+ 0002:00000430       __imp_?Create@CDialog@@UAEHPBDPAVCWnd@@@Z 0040a430     mfc90:mfc90.dll
+ 0002:00000434       __imp_?CreateIndirect@CDialog@@UAEHPAXPAVCWnd@@@Z 0040a434     mfc90:mfc90.dll
+ 0002:00000438       __imp_?CreateIndirect@CDialog@@UAEHPBUDLGTEMPLATE@@PAVCWnd@@PAX@Z 0040a438     mfc90:mfc90.dll
+ 0002:0000043c       __imp_?OnSetFont@CDialog@@UAEXPAVCFont@@@Z 0040a43c     mfc90:mfc90.dll
+ 0002:00000440       __imp_?OnCancel@CDialog@@MAEXXZ 0040a440     mfc90:mfc90.dll
+ 0002:00000444       __imp_?PreInitDialog@CDialog@@MAEXXZ 0040a444     mfc90:mfc90.dll
+ 0002:00000448       __imp_?Left@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBE?AV12@H@Z 0040a448     mfc90:mfc90.dll
+ 0002:0000044c       __imp_?Right@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBE?AV12@H@Z 0040a44c     mfc90:mfc90.dll
+ 0002:00000450       __imp_?ReverseFind@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBEHD@Z 0040a450     mfc90:mfc90.dll
+ 0002:00000454       __imp_?Find@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBEHPBDH@Z 0040a454     mfc90:mfc90.dll
+ 0002:00000458       __imp_?Find@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBEHDH@Z 0040a458     mfc90:mfc90.dll
+ 0002:0000045c       __imp_?Replace@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEHPBD0@Z 0040a45c     mfc90:mfc90.dll
+ 0002:00000460       __imp_?CompareNoCase@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QBEHPBD@Z 0040a460     mfc90:mfc90.dll
+ 0002:00000464       __imp_??0CFileFind@@QAE@XZ 0040a464     mfc90:mfc90.dll
+ 0002:00000468       __imp_??1CFileFind@@UAE@XZ 0040a468     mfc90:mfc90.dll
+ 0002:0000046c       __imp_?FindFile@CFileFind@@UAEHPBDK@Z 0040a46c     mfc90:mfc90.dll
+ 0002:00000470       __imp_?FindNextFileA@CFileFind@@UAEHXZ 0040a470     mfc90:mfc90.dll
+ 0002:00000474       __imp_?get_accSelection@CWnd@@UAEJPAUtagVARIANT@@@Z 0040a474     mfc90:mfc90.dll
+ 0002:00000478       __imp_?get_accDefaultAction@CWnd@@UAEJUtagVARIANT@@PAPA_W@Z 0040a478     mfc90:mfc90.dll
+ 0002:0000047c       __imp_?accSelect@CWnd@@UAEJJUtagVARIANT@@@Z 0040a47c     mfc90:mfc90.dll
+ 0002:00000480       __imp_?accLocation@CWnd@@UAEJPAJ000UtagVARIANT@@@Z 0040a480     mfc90:mfc90.dll
+ 0002:00000484       __imp_?accNavigate@CWnd@@UAEJJUtagVARIANT@@PAU2@@Z 0040a484     mfc90:mfc90.dll
+ 0002:00000488       __imp_?accHitTest@CWnd@@UAEJJJPAUtagVARIANT@@@Z 0040a488     mfc90:mfc90.dll
+ 0002:0000048c       __imp_?accDoDefaultAction@CWnd@@UAEJUtagVARIANT@@@Z 0040a48c     mfc90:mfc90.dll
+ 0002:00000490       __imp_?put_accName@CWnd@@UAEJUtagVARIANT@@PA_W@Z 0040a490     mfc90:mfc90.dll
+ 0002:00000494       __imp_?put_accValue@CWnd@@UAEJUtagVARIANT@@PA_W@Z 0040a494     mfc90:mfc90.dll
+ 0002:00000498       __imp_?SetProxy@CWnd@@UAEJPAUIAccessibleProxy@@@Z 0040a498     mfc90:mfc90.dll
+ 0002:0000049c       __imp_?IsDots@CFileFind@@UBEHXZ 0040a49c     mfc90:mfc90.dll
+ 0002:000004a0       __imp_?GetFilePath@CFileFind@@UBE?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@XZ 0040a4a0     mfc90:mfc90.dll
+ 0002:000004a4       __imp_?Close@CFileFind@@QAEXXZ 0040a4a4     mfc90:mfc90.dll
+ 0002:000004a8       __imp_?SetAtGrow@CStringArray@@QAEXHPBD@Z 0040a4a8     mfc90:mfc90.dll
+ 0002:000004ac       __imp_?CreateAccessibleProxy@CWnd@@UAEJIJPAJ@Z 0040a4ac     mfc90:mfc90.dll
+ 0002:000004b0       __imp_?OnCommand@CWnd@@MAEHIJ@Z 0040a4b0     mfc90:mfc90.dll
+ 0002:000004b4       __imp_?TrimRight@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV12@D@Z 0040a4b4     mfc90:mfc90.dll
+ 0002:000004b8       __imp_?TrimLeft@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV12@XZ 0040a4b8     mfc90:mfc90.dll
+ 0002:000004bc       __imp_?TrimRight@?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV12@XZ 0040a4bc     mfc90:mfc90.dll
+ 0002:000004c0       __imp_?GetAt@?$CSimpleStringT@D$00@ATL@@QBEDH@Z 0040a4c0     mfc90:mfc90.dll
+ 0002:000004c4       __imp_??_U@YAPAXI@Z        0040a4c4     mfc90:mfc90.dll
+ 0002:000004c8       __imp_?OnNotify@CWnd@@MAEHIJPAJ@Z 0040a4c8     mfc90:mfc90.dll
+ 0002:000004cc       __imp_?GetSuperWndProcAddr@CWnd@@MAEPAP6GJPAUHWND__@@IIJ@ZXZ 0040a4cc     mfc90:mfc90.dll
+ 0002:000004d0       __imp_?PreTranslateMessage@CWnd@@UAEHPAUtagMSG@@@Z 0040a4d0     mfc90:mfc90.dll
+ 0002:000004d4       __imp_?OnAmbientProperty@CWnd@@UAEHPAVCOleControlSite@@JPAUtagVARIANT@@@Z 0040a4d4     mfc90:mfc90.dll
+ 0002:000004d8       __imp_?WindowProc@CWnd@@MAEJIIJ@Z 0040a4d8     mfc90:mfc90.dll
+ 0002:000004dc       __imp_?OnWndMsg@CWnd@@MAEHIIJPAJ@Z 0040a4dc     mfc90:mfc90.dll
+ 0002:000004e0       __imp_?DefWindowProcA@CWnd@@MAEJIIJ@Z 0040a4e0     mfc90:mfc90.dll
+ 0002:000004e4       __imp_?PostNcDestroy@CWnd@@MAEXXZ 0040a4e4     mfc90:mfc90.dll
+ 0002:000004e8       __imp_?OnChildNotify@CWnd@@MAEHIIJPAJ@Z 0040a4e8     mfc90:mfc90.dll
+ 0002:000004ec       __imp_?CheckAutoCenter@CWnd@@UAEHXZ 0040a4ec     mfc90:mfc90.dll
+ 0002:000004f0       __imp_?IsFrameWnd@CWnd@@UBEHXZ 0040a4f0     mfc90:mfc90.dll
+ 0002:000004f4       __imp_?CreateControlContainer@CWnd@@MAEHPAPAVCOleControlContainer@@@Z 0040a4f4     mfc90:mfc90.dll
+ 0002:000004f8       __imp_?CreateControlSite@CWnd@@MAEHPAVCOleControlContainer@@PAPAVCOleControlSite@@IABU_GUID@@@Z 0040a4f8     mfc90:mfc90.dll
+ 0002:000004fc       __imp_?SetOccDialogInfo@CWnd@@MAEHPAU_AFX_OCC_DIALOG_INFO@@@Z 0040a4fc     mfc90:mfc90.dll
+ 0002:00000500       __imp_?GetOccDialogInfo@CWnd@@MAEPAU_AFX_OCC_DIALOG_INFO@@XZ 0040a500     mfc90:mfc90.dll
+ 0002:00000504       __imp_?Create@CProgressCtrl@@UAEHKABUtagRECT@@PAVCWnd@@I@Z 0040a504     mfc90:mfc90.dll
+ 0002:00000508       __imp_?CreateEx@CProgressCtrl@@UAEHKKABUtagRECT@@PAVCWnd@@I@Z 0040a508     mfc90:mfc90.dll
+ 0002:0000050c       __imp_?GetThisMessageMap@CDialog@@KGPBUAFX_MSGMAP@@XZ 0040a50c     mfc90:mfc90.dll
+ 0002:00000510       __imp_??1CDialog@@UAE@XZ   0040a510     mfc90:mfc90.dll
+ 0002:00000514       __imp_??0CDialog@@QAE@IPAVCWnd@@@Z 0040a514     mfc90:mfc90.dll
+ 0002:00000518       __imp_?ReloadWindowPlacement@CWinAppEx@@MAEHPAVCFrameWnd@@@Z 0040a518     mfc90:mfc90.dll
+ 0002:0000051c       __imp_?StoreWindowPlacement@CWinAppEx@@MAEHABVCRect@@HH@Z 0040a51c     mfc90:mfc90.dll
+ 0002:00000520       __imp_?LoadWindowPlacement@CWinAppEx@@MAEHAAVCRect@@AAH1@Z 0040a520     mfc90:mfc90.dll
+ 0002:00000524       __imp_?OnClosingMainFrame@CWinAppEx@@MAEXPAVCFrameImpl@@@Z 0040a524     mfc90:mfc90.dll
+ 0002:00000528       __imp_?OnAppContextHelp@CWinAppEx@@UAEXPAVCWnd@@QBK@Z 0040a528     mfc90:mfc90.dll
+ 0002:0000052c       __imp_?ShowPopupMenu@CWinAppEx@@UAEHIABVCPoint@@PAVCWnd@@@Z 0040a52c     mfc90:mfc90.dll
+ 0002:00000530       __imp_?OnViewDoubleClick@CWinAppEx@@UAEHPAVCWnd@@H@Z 0040a530     mfc90:mfc90.dll
+ 0002:00000534       __imp_?SaveState@CWinAppEx@@UAEHPBDPAVCFrameImpl@@@Z 0040a534     mfc90:mfc90.dll
+ 0002:00000538       __imp_?CleanState@CWinAppEx@@UAEHPBD@Z 0040a538     mfc90:mfc90.dll
+ 0002:0000053c       __imp_?LoadState@CWinAppEx@@UAEHPBDPAVCFrameImpl@@@Z 0040a53c     mfc90:mfc90.dll
+ 0002:00000540       __imp_?LoadSysPolicies@CWinApp@@UAEHXZ 0040a540     mfc90:mfc90.dll
+ 0002:00000544       __imp_?LoadAppLangResourceDLL@CWinApp@@UAEPAUHINSTANCE__@@XZ 0040a544     mfc90:mfc90.dll
+ 0002:00000548       __imp_?WinHelpInternal@CWinApp@@UAEXKI@Z 0040a548     mfc90:mfc90.dll
+ 0002:0000054c       __imp_?HtmlHelpA@CWinApp@@UAEXKI@Z 0040a54c     mfc90:mfc90.dll
+ 0002:00000550       __imp_?WinHelpA@CWinApp@@UAEXKI@Z 0040a550     mfc90:mfc90.dll
+ 0002:00000554       __imp_?OnDDECommand@CWinApp@@UAEHPAD@Z 0040a554     mfc90:mfc90.dll
+ 0002:00000558       __imp_?DoWaitCursor@CWinApp@@UAEXH@Z 0040a558     mfc90:mfc90.dll
+ 0002:0000055c       __imp_?DoMessageBox@CWinApp@@UAEHPBDII@Z 0040a55c     mfc90:mfc90.dll
+ 0002:00000560       __imp_?SaveAllModified@CWinApp@@UAEHXZ 0040a560     mfc90:mfc90.dll
+ 0002:00000564       __imp_?InitApplication@CWinApp@@UAEHXZ 0040a564     mfc90:mfc90.dll
+ 0002:00000568       __imp_?AddToRecentFileList@CWinApp@@UAEXPBD@Z 0040a568     mfc90:mfc90.dll
+ 0002:0000056c       __imp_?OpenDocumentFile@CWinApp@@UAEPAVCDocument@@PBD@Z 0040a56c     mfc90:mfc90.dll
+ 0002:00000570       __imp_?Unregister@CWinApp@@UAEHXZ 0040a570     mfc90:mfc90.dll
+ 0002:00000574       __imp_?Register@CWinApp@@UAEHXZ 0040a574     mfc90:mfc90.dll
+ 0002:00000578       __imp_?InitLibId@CWinApp@@UAEXXZ 0040a578     mfc90:mfc90.dll
+ 0002:0000057c       __imp_?Delete@CWinThread@@UAEXXZ 0040a57c     mfc90:mfc90.dll
+ 0002:00000580       __imp_?GetMainWnd@CWinThread@@UAEPAVCWnd@@XZ 0040a580     mfc90:mfc90.dll
+ 0002:00000584       __imp_?ProcessMessageFilter@CWinThread@@UAEHHPAUtagMSG@@@Z 0040a584     mfc90:mfc90.dll
+ 0002:00000588       __imp_?ProcessWndProcException@CWinApp@@UAEJPAVCException@@PBUtagMSG@@@Z 0040a588     mfc90:mfc90.dll
+ 0002:0000058c       __imp_?ExitInstance@CWinAppEx@@UAEHXZ 0040a58c     mfc90:mfc90.dll
+ 0002:00000590       __imp_?IsIdleMessage@CWinThread@@UAEHPAUtagMSG@@@Z 0040a590     mfc90:mfc90.dll
+ 0002:00000594       __imp_?OnIdle@CWinApp@@UAEHJ@Z 0040a594     mfc90:mfc90.dll
+ 0002:00000598       __imp_?PumpMessage@CWinThread@@UAEHXZ 0040a598     mfc90:mfc90.dll
+ 0002:0000059c       __imp_?PreTranslateMessage@CWinThread@@UAEHPAUtagMSG@@@Z 0040a59c     mfc90:mfc90.dll
+ 0002:000005a0       __imp_?Run@CWinApp@@UAEHXZ 0040a5a0     mfc90:mfc90.dll
+ 0002:000005a4       __imp_?GetConnectionHook@CCmdTarget@@MAEPAUIConnectionPoint@@ABU_GUID@@@Z 0040a5a4     mfc90:mfc90.dll
+ 0002:000005a8       __imp_?GetExtraConnectionPoints@CCmdTarget@@MAEHPAVCPtrArray@@@Z 0040a5a8     mfc90:mfc90.dll
+ 0002:000005ac       __imp_?GetInterfaceHook@CCmdTarget@@UAEPAUIUnknown@@PBX@Z 0040a5ac     mfc90:mfc90.dll
+ 0002:000005b0       __imp_?OnCreateAggregates@CCmdTarget@@UAEHXZ 0040a5b0     mfc90:mfc90.dll
+ 0002:000005b4       __imp_?GetEventSinkMap@CCmdTarget@@MBEPBUAFX_EVENTSINKMAP@@XZ 0040a5b4     mfc90:mfc90.dll
+ 0002:000005b8       __imp_?GetInterfaceMap@CCmdTarget@@MBEPBUAFX_INTERFACEMAP@@XZ 0040a5b8     mfc90:mfc90.dll
+ 0002:000005bc       __imp_?GetConnectionMap@CCmdTarget@@MBEPBUAFX_CONNECTIONMAP@@XZ 0040a5bc     mfc90:mfc90.dll
+ 0002:000005c0       __imp_?GetDispatchMap@CCmdTarget@@MBEPBUAFX_DISPMAP@@XZ 0040a5c0     mfc90:mfc90.dll
+ 0002:000005c4       __imp_?GetCommandMap@CCmdTarget@@MBEPBUAFX_OLECMDMAP@@XZ 0040a5c4     mfc90:mfc90.dll
+ 0002:000005c8       __imp_?GetTypeLib@CCmdTarget@@UAEJKPAPAUITypeLib@@@Z 0040a5c8     mfc90:mfc90.dll
+ 0002:000005cc       __imp_?GetTypeLibCache@CCmdTarget@@UAEPAVCTypeLibCache@@XZ 0040a5cc     mfc90:mfc90.dll
+ 0002:000005d0       __imp_?GetTypeInfoCount@CCmdTarget@@UAEIXZ 0040a5d0     mfc90:mfc90.dll
+ 0002:000005d4       __imp_?GetDispatchIID@CCmdTarget@@UAEHPAU_GUID@@@Z 0040a5d4     mfc90:mfc90.dll
+ 0002:000005d8       __imp_?IsInvokeAllowed@CCmdTarget@@UAEHJ@Z 0040a5d8     mfc90:mfc90.dll
+ 0002:000005dc       __imp_?OnFinalRelease@CCmdTarget@@UAEXXZ 0040a5dc     mfc90:mfc90.dll
+ 0002:000005e0       __imp_?OnCmdMsg@CCmdTarget@@UAEHIHPAXPAUAFX_CMDHANDLERINFO@@@Z 0040a5e0     mfc90:mfc90.dll
+ 0002:000005e4       __imp_?GetRuntimeClass@CWinAppEx@@UBEPAUCRuntimeClass@@XZ 0040a5e4     mfc90:mfc90.dll
+ 0002:000005e8       __imp_?DoModal@CDialog@@UAEHXZ 0040a5e8     mfc90:mfc90.dll
+ 0002:000005ec       __imp_?SetRegistryKey@CWinApp@@IAEXPBD@Z 0040a5ec     mfc90:mfc90.dll
+ 0002:000005f0       __imp_?AfxEnableControlContainer@@YAXPAVCOccManager@@@Z 0040a5f0     mfc90:mfc90.dll
+ 0002:000005f4       __imp_?InitInstance@CWinApp@@UAEHXZ 0040a5f4     mfc90:mfc90.dll
+ 0002:000005f8       __imp_??4?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAEAAV01@PBD@Z 0040a5f8     mfc90:mfc90.dll
+ 0002:000005fc       __imp_??1?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAE@XZ 0040a5fc     mfc90:mfc90.dll
+ 0002:00000600       __imp_??0?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@QAE@XZ 0040a600     mfc90:mfc90.dll
+ 0002:00000604       __imp_??1CWinAppEx@@UAE@XZ 0040a604     mfc90:mfc90.dll
+ 0002:00000608       __imp_??0CWinAppEx@@QAE@H@Z 0040a608     mfc90:mfc90.dll
+ 0002:0000060c       __imp_?GetThisMessageMap@CWinApp@@KGPBUAFX_MSGMAP@@XZ 0040a60c     mfc90:mfc90.dll
+ 0002:00000610       __imp_?OnHelp@CWinApp@@IAEXXZ 0040a610     mfc90:mfc90.dll
+ 0002:00000614       __imp_??3@YAXPAX@Z         0040a614     mfc90:mfc90.dll
+ 0002:00000618       __imp_??_V@YAXPAX@Z        0040a618     mfc90:mfc90.dll
+ 0002:0000061c       __imp_?AfxWinMain@@YGHPAUHINSTANCE__@@0PADH@Z 0040a61c     mfc90:mfc90.dll
+ 0002:00000620       \177mfc90_NULL_THUNK_DATA  0040a620     mfc90:mfc90.dll
+ 0002:00000624       ___xc_a                    0040a624     msvcrt:cinitexe.obj
+ 0002:00000638       ___xc_z                    0040a638     msvcrt:cinitexe.obj
+ 0002:0000063c       ___xi_a                    0040a63c     msvcrt:cinitexe.obj
+ 0002:0000064c       ___xi_z                    0040a64c     msvcrt:cinitexe.obj
+ 0002:000006b0       ??_7type_info@@6B@         0040a6b0     msvcrt:ti_inst.obj
+ 0002:00000714       ??_C@_0CH@LGHPHLNB@Local?5AppWizard?9Generated?5Applic@ 0040a714     LogelUpgrade.obj
+ 0002:0000073c       ??_C@_0BA@MFPNCIGL@LogelUpgradeApp?$AA@ 0040a73c     LogelUpgrade.obj
+ 0002:0000074c       ??_C@_0DK@KLCAHBEC@Another?5upgrade?5process?5is?5runni@ 0040a74c     LogelUpgrade.obj
+ 0002:0000078c       ??_7CLogelUpgradeApp@@6B@  0040a78c     LogelUpgrade.obj
+ 0002:00000888       ??_C@_00CNPNBAHC@?$AA@     0040a888     LogelUpgrade.obj
+ 0002:00000960       ??_C@_0BM@ILMKCCPA@?23rd?2LogelUpgrade?2unrar?4dll?$AA@ 0040a960     LogelUpgradeDlg.obj
+ 0002:0000097c       ??_C@_0P@GNBFCHAF@updateTemp?4dat?$AA@ 0040a97c     LogelUpgradeDlg.obj
+ 0002:0000098c       ??_C@_0CA@JBMPJAOE@?2Bin?23rd?2LogelUpgrade?2Patch?4ini?$AA@ 0040a98c     LogelUpgradeDlg.obj
+ 0002:000009ac       ??_C@_0L@DGMLCNOE@RemoveList?$AA@ 0040a9ac     LogelUpgradeDlg.obj
+ 0002:000009b8       ??_C@_01KICIPPFI@?2?$AA@   0040a9b8     LogelUpgradeDlg.obj
+ 0002:000009bc       ??_C@_01LFCBOECM@?4?$AA@   0040a9bc     LogelUpgradeDlg.obj
+ 0002:000009c0       ??_C@_03EMIMMIHL@?$CK?4?$CK?$AA@ 0040a9c0     LogelUpgradeDlg.obj
+ 0002:000009c4       ??_C@_0L@HCCLKGIA@IgnoreList?$AA@ 0040a9c4     LogelUpgradeDlg.obj
+ 0002:000009d0       ??_C@_04EJFLAMBI@?2Bin?$AA@ 0040a9d0     LogelUpgradeDlg.obj
+ 0002:000009d8       ??_C@_0L@HLJNLHIA@Target_Exe?$AA@ 0040a9d8     LogelUpgradeDlg.obj
+ 0002:000009e4       ??_C@_07CJFOONCK@Upgrade?$AA@ 0040a9e4     LogelUpgradeDlg.obj
+ 0002:000009ec       ??_C@_0M@IHPICAL@Script_Path?$AA@ 0040a9ec     LogelUpgradeDlg.obj
+ 0002:000009f8       ??_C@_09DDNEHOJH@ScriptCfg?$AA@ 0040a9f8     LogelUpgradeDlg.obj
+ 0002:00000a04       ??_C@_03ENNCACIO@bat?$AA@  0040aa04     LogelUpgradeDlg.obj
+ 0002:00000a08       ??_C@_01BJJEKLCA@?$CC?$AA@ 0040aa08     LogelUpgradeDlg.obj
+ 0002:00000a0c       ??_C@_0BJ@MOHMJMKA@Spreadtrum?5LogelUpgrade?5?$AA@ 0040aa0c     LogelUpgradeDlg.obj
+ 0002:00000a28       ??_C@_04IEJJHLIN@?A?$KF?J?i?$AA@ 0040aa28     LogelUpgradeDlg.obj
+ 0002:00000a30       ??_C@_0CD@JKMLFJOP@Now?5waiting?5for?5upgrade?5process?4@ 0040aa30     LogelUpgradeDlg.obj
+ 0002:00000a54       ??_C@_0BM@HABGMGKO@Downloading?5upgrade?5file?4?4?4?$AA@ 0040aa54     LogelUpgradeDlg.obj
+ 0002:00000a70       ??_C@_0BO@BPIIEPLM@Decompressing?5upgrade?5file?4?4?4?$AA@ 0040aa70     LogelUpgradeDlg.obj
+ 0002:00000a90       ??_C@_0BC@CEPMOENC@Updating?5files?4?4?4?$AA@ 0040aa90     LogelUpgradeDlg.obj
+ 0002:00000aa4       ??_C@_0CJ@GHHNLJGM@Upgrade?5succeeded?$CB?5Starting?5new?5@ 0040aaa4     LogelUpgradeDlg.obj
+ 0002:00000ad0       ??_C@_0BN@HDHLJMKB@INI?5file?5parameters?5invalid?$CB?$AA@ 0040aad0     LogelUpgradeDlg.obj
+ 0002:00000af0       ??_C@_0CL@FOEJMMIO@Upgrade?5failed?$CB?5Starting?5origina@ 0040aaf0     LogelUpgradeDlg.obj
+ 0002:00000b1c       ??_C@_0CK@DPINJMJM@Download?5upgrade?5file?5failed?0?5er@ 0040ab1c     LogelUpgradeDlg.obj
+ 0002:00000b48       ??_C@_0CI@MFMFDAGP@Decompress?5rar?5file?5failed?0?5err_@ 0040ab48     LogelUpgradeDlg.obj
+ 0002:00000b74       ??_7IFileProcObserver@@6B@ 0040ab74     LogelUpgradeDlg.obj
+ 0002:00000b7c       ??_7CLogelUpgradeDlg@@6BCDialog@@@ 0040ab7c     LogelUpgradeDlg.obj
+ 0002:00000cec       ??_7CLogelUpgradeDlg@@6BIFileProcObserver@@@ 0040acec     LogelUpgradeDlg.obj
+ 0002:00000cf4       ??_7CAboutDlg@@6B@         0040acf4     LogelUpgradeDlg.obj
+ 0002:00000e60       ??_C@_0FB@GFEPGFJO@C?3?2Program?5Files?5?$CIx86?$CJ?2Microsoft@ 0040ae60     LogelUpgradeDlg.obj
+ 0002:00000eb4       ??_C@_0BP@OIEOKIDM@Exception?5thrown?5in?5destructor?$AA@ 0040aeb4     LogelUpgradeDlg.obj
+ 0002:00000ed4       ??_C@_0O@KHJMBFME@?$CFs?5?$CI?$CFs?3?$CFd?$CJ?6?$CFs?$AA@ 0040aed4     LogelUpgradeDlg.obj
+ 0002:00000ee4       ??_C@_0L@LBHJMCDF@?$CFs?5?$CI?$CFs?3?$CFd?$CJ?$AA@ 0040aee4     LogelUpgradeDlg.obj
+ 0002:00000ef4       ??_7CGdiObject@@6B@        0040aef4     LogelUpgradeDlg.obj
+ 0002:00000f0c       ??_7CBrush@@6B@            0040af0c     LogelUpgradeDlg.obj
+ 0002:00000f24       ??_7CFont@@6B@             0040af24     LogelUpgradeDlg.obj
+ 0002:00000f3c       ??_7CProgressCtrl@@6B@     0040af3c     LogelUpgradeDlg.obj
+ 0002:00001088       ??_C@_0N@MKIPJBNH@LogelUpgrade?$AA@ 0040b088     MessageBox.obj
+ 0002:00001098       ??_C@_0P@GHFPNOJB@bad?5allocation?$AA@ 0040b098     stdafx.obj
+ 0002:000010a8       ??_C@_06JBKGCNBB@Delete?$AA@ 0040b0a8     stdafx.obj
+ 0002:000010b0       ??_C@_08KAAPDIAN@NoRemove?$AA@ 0040b0b0     stdafx.obj
+ 0002:000010bc       ??_C@_0M@DBGDLGLL@ForceRemove?$AA@ 0040b0bc     stdafx.obj
+ 0002:000010c8       ??_C@_03LAIAPFCB@Val?$AA@  0040b0c8     stdafx.obj
+ 0002:000010cc       ??_C@_01HMGJMAIH@B?$AA@    0040b0cc     stdafx.obj
+ 0002:000010d0       ??_C@_01CKDDGHAB@D?$AA@    0040b0d0     stdafx.obj
+ 0002:000010d4       ??_C@_01PLPBNMEI@M?$AA@    0040b0d4     stdafx.obj
+ 0002:000010d8       ??_C@_01CPLAODJH@S?$AA@    0040b0d8     stdafx.obj
+ 0002:000010dc       ??_C@_02LNAEAIDO@?$DL?5?$AA@ 0040b0dc     stdafx.obj
+ 0002:000010e0       ??_C@_0BB@JMIOBLGP@RAROpenArchiveEx?$AA@ 0040b0e0     Utils.obj
+ 0002:000010f4       ??_C@_0O@DMABBMCD@RARReadHeader?$AA@ 0040b0f4     Utils.obj
+ 0002:00001104       ??_C@_0P@GEIDMNGE@RARProcessFile?$AA@ 0040b104     Utils.obj
+ 0002:00001114       ??_C@_0BA@LLFLMDOK@RARCloseArchive?$AA@ 0040b114     Utils.obj
+ 0002:00001124       ??_C@_0P@EKBJKPGL@RARSetCallback?$AA@ 0040b124     Utils.obj
+ 0002:00001134       ??_C@_02DJGKEECL@?4?4?$AA@ 0040b134     Utils.obj
+ 0002:00001138       ??_C@_04FGAJMCLA@?2?$CK?4?$CK?$AA@ 0040b138     Utils.obj
+ 0002:00001140       ??_C@_05BMGBEOOC@?$CFs?2?$CFs?$AA@ 0040b140     Utils.obj
+ 0002:00001148       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 0040b148     XAboutDlg.obj
+ 0002:0000114c       ??_C@_0BJ@KPNNKBCP@?2VarFileInfo?2Translation?$AA@ 0040b14c     XAboutDlg.obj
+ 0002:00001168       ??_C@_0BK@KLKDFMGB@?2StringFileInfo?2?$CF04x?$CF04x?2?$AA@ 0040b168     XAboutDlg.obj
+ 0002:00001188       ?m_bmpdata@CXAboutDlg@@0QBEB 0040b188     XAboutDlg.obj
+ 0002:0001fb98       ??_C@_02KOPDJAMB@?$CC?5?$AA@ 00429b98     CFiles.obj
+ 0002:0001fb9c       ??_C@_02DPEMFEPD@?3?2?$AA@ 00429b9c     CFiles.obj
+ 0002:0001fba0       ??_C@_02CBLDBPFN@?1?1?$AA@ 00429ba0     CFiles.obj
+ 0002:0001fba4       ??_C@_02HDBGODGB@?2?2?$AA@ 00429ba4     CFiles.obj
+ 0002:0001fba8       ??_C@_0BO@JPKMONOJ@Windows?3?5?$CFd?4?$CFd?4?$CFd?0?5SP?5?$CFd?4?$CFd?$AN?6?$AA@ 00429ba8     CSehException.obj
+ 0002:0001fbc8       ??_C@_07NBCGADJA@Unknown?$AA@ 00429bc8     CSehException.obj
+ 0002:0001fbd0       ??_C@_09OLBIFBJN@Process?3?5?$AA@ 00429bd0     CSehException.obj
+ 0002:0001fbdc       ??_C@_08GHJGAJEI@?5run?5by?5?$AA@ 00429bdc     CSehException.obj
+ 0002:0001fbe8       ??_C@_0BP@FJOFCHNK@?$AN?6?$AN?6?$CFd?5processor?$CIs?$CJ?0?5type?5?$CFd?$AN?6?$AA@ 00429be8     CSehException.obj
+ 0002:0001fc08       ??_C@_0BF@PKPDOBED@?$CFd?$CF?$CF?5memory?5in?5use?$AN?6?$AA@ 00429c08     CSehException.obj
+ 0002:0001fc20       ??_C@_0BM@DFAPCCLB@?$CFd?5MBytes?5physical?5memory?$AN?6?$AA@ 00429c20     CSehException.obj
+ 0002:0001fc3c       ??_C@_0CB@EJGDLKJD@?$CFd?5MBytes?5physical?5memory?5free?$AN?6@ 00429c3c     CSehException.obj
+ 0002:0001fc60       ??_C@_0BI@NONPBIPK@?$CFd?5MBytes?5paging?5file?$AN?6?$AA@ 00429c60     CSehException.obj
+ 0002:0001fc78       ??_C@_0BN@MJNFNEBJ@?$CFd?5MBytes?5paging?5file?5free?$AN?6?$AA@ 00429c78     CSehException.obj
+ 0002:0001fc98       ??_C@_0BP@FGGNOFNJ@?$CFd?5MBytes?5user?5address?5space?$AN?6?$AA@ 00429c98     CSehException.obj
+ 0002:0001fcb8       ??_C@_0CG@PNDKOBLP@?$CFd?5MBytes?5user?5address?5space?5fre@ 00429cb8     CSehException.obj
+ 0002:0001fce0       ??_C@_0EK@BFEDCFNJ@Exception?$CIGetMiniTextSystemInfor@ 00429ce0     CSehException.obj
+ 0002:0001fd2c       ??_C@_0M@FNOJOPNP@a?5Control?9C?$AA@ 00429d2c     CSehException.obj
+ 0002:0001fd38       ??_C@_0BA@MNEFCPPO@a?5Control?9Break?$AA@ 00429d38     CSehException.obj
+ 0002:0001fd48       ??_C@_0BI@IPDDFHBH@a?5Datatype?5Misalignment?$AA@ 00429d48     CSehException.obj
+ 0002:0001fd60       ??_C@_0N@JLDHOHAI@a?5Breakpoint?$AA@ 00429d60     CSehException.obj
+ 0002:0001fd70       ??_C@_0BE@GLOKLDAN@an?5Access?5Violation?$AA@ 00429d70     CSehException.obj
+ 0002:0001fd84       ??_C@_0BB@DKICMMFA@an?5In?5Page?5Error?$AA@ 00429d84     CSehException.obj
+ 0002:0001fd98       ??_C@_0M@JNBECNGI@a?5No?5Memory?$AA@ 00429d98     CSehException.obj
+ 0002:0001fda4       ??_C@_0BH@CMGOADMI@an?5Illegal?5Instruction?$AA@ 00429da4     CSehException.obj
+ 0002:0001fdbc       ??_C@_0BL@DFCKDLHL@a?5Noncontinuable?5Exception?$AA@ 00429dbc     CSehException.obj
+ 0002:0001fdd8       ??_C@_0BH@HOHCDFKK@an?5Invalid?5Disposition?$AA@ 00429dd8     CSehException.obj
+ 0002:0001fdf0       ??_C@_0BI@DFIFOIBG@a?5Array?5Bounds?5Exceeded?$AA@ 00429df0     CSehException.obj
+ 0002:0001fe08       ??_C@_0BJ@LCJBHHL@a?5Float?5Denormal?5Operand?$AA@ 00429e08     CSehException.obj
+ 0002:0001fe24       ??_C@_0BH@PIHGMMNI@a?5Float?5Divide?5by?5Zero?$AA@ 00429e24     CSehException.obj
+ 0002:0001fe3c       ??_C@_0BH@HGODNPMP@a?5Float?5Inexact?5Result?$AA@ 00429e3c     CSehException.obj
+ 0002:0001fe54       ??_C@_0BK@NACDCIPD@a?5Float?5Invalid?5Operation?$AA@ 00429e54     CSehException.obj
+ 0002:0001fe70       ??_C@_0BB@LAJAGHGH@a?5Float?5Overflow?$AA@ 00429e70     CSehException.obj
+ 0002:0001fe84       ??_C@_0BE@DOBFFDCD@a?5Float?5Stack?5Check?$AA@ 00429e84     CSehException.obj
+ 0002:0001fe98       ??_C@_0BC@CICINNDB@a?5Float?5Underflow?$AA@ 00429e98     CSehException.obj
+ 0002:0001feac       ??_C@_0BK@FNOEEFCK@an?5Integer?5Divide?5by?5Zero?$AA@ 00429eac     CSehException.obj
+ 0002:0001fec8       ??_C@_0BE@CDPGECPC@an?5Integer?5Overflow?$AA@ 00429ec8     CSehException.obj
+ 0002:0001fedc       ??_C@_0BJ@HMGNLHOK@a?5Privileged?5Instruction?$AA@ 00429edc     CSehException.obj
+ 0002:0001fef8       ??_C@_0BB@LJENMGNL@a?5Stack?5Overflow?$AA@ 00429ef8     CSehException.obj
+ 0002:0001ff0c       ??_C@_0BM@LDHCKNKI@a?5DLL?5Initialization?5Failed?$AA@ 00429f0c     CSehException.obj
+ 0002:0001ff28       ??_C@_0BK@HOJFPEEB@a?5Microsoft?5C?$CL?$CL?5Exception?$AA@ 00429f28     CSehException.obj
+ 0002:0001ff44       ??_C@_0BK@KPJFIGIL@an?5Unknown?5exception?5type?$AA@ 00429f44     CSehException.obj
+ 0002:0001ff60       ??_C@_0DD@FOFBIMMA@Caused?5?$CFs?5?$CI0x?$CF08X?$CJ?5in?5module?5?$CFs?5@ 00429f60     CSehException.obj
+ 0002:0001ff94       ??_C@_08CPFAPHAF@Write?5to?$AA@ 00429f94     CSehException.obj
+ 0002:0001ffa0       ??_C@_09JHOILLPP@Read?5from?$AA@ 00429fa0     CSehException.obj
+ 0002:0001ffac       ??_C@_0DA@MCFGBHML@?$CFs?5location?50x?$CF08X?5caused?5an?5acc@ 00429fac     CSehException.obj
+ 0002:0001ffdc       ??_C@_0P@CGKMDHFN@?$AN?6Registers?3?$AN?6?$AA@ 00429fdc     CSehException.obj
+ 0002:0001ffec       ??_C@_0DJ@HNCBKED@EAX?3?50x?$CF08X?5EBX?3?5?5?50x?$CF08X?5ECX?3?5?5@ 00429fec     CSehException.obj
+ 0002:00020028       ??_C@_0DJ@EJKCKKJE@EDI?3?50x?$CF08X?5ESI?3?5?5?50x?$CF08X?5ESP?3?5?5@ 0042a028     CSehException.obj
+ 0002:00020064       ??_C@_0DJ@GIFMIFBO@EIP?3?50x?$CF08X?5SegCs?3?50x?$CF08X?5SegSs?3@ 0042a064     CSehException.obj
+ 0002:000200a0       ??_C@_0CD@CMKKGKAC@?$AN?6Instruction?5?$CIBytes?5at?5CS?3EIP?$CJ?3@ 0042a0a0     CSehException.obj
+ 0002:000200c4       ??_C@_05BFHEBJNP@?$CF02X?5?$AA@ 0042a0c4     CSehException.obj
+ 0002:000200cc       ??_C@_04FMMHFHOO@?$AN?6?$AN?6?$AA@ 0042a0cc     CSehException.obj
+ 0002:000200d8       ??_C@_0EM@NPHPEKDM@Exception?$CIGetMiniTextRegisterInf@ 0042a0d8     CSehException.obj
+ 0002:00020124       ??_C@_0P@MILHJELF@Call?5Method?3?$AN?6?$AA@ 0042a124     CSehException.obj
+ 0002:00020134       ??_C@_03HPADHAHE@N?1A?$AA@ 0042a134     CSehException.obj
+ 0002:00020138       ??_C@_0CC@PPIDGK@?$CFs?$CI?$CJ?5?3?5?$FL?$CFs?$FN?5?$CIFile?3?5?$CFs?5?$EALine?5?$CFd?$CJ?$AN@ 0042a138     CSehException.obj
+ 0002:00020160       ??_C@_0EO@KNCJGLLL@Exception?$CIGetMiniTextCallMethodI@ 0042a160     CSehException.obj
+ 0002:000201b0       ??_C@_0O@LLBFIMFD@Call?5Stack?3?$AN?6?$AA@ 0042a1b0     CSehException.obj
+ 0002:000201c0       ??_C@_0L@FCOHINHC@?$CF08X?5?5?$CFs?$AN?6?$AA@ 0042a1c0     CSehException.obj
+ 0002:000201cc       ??_C@_07GAGNLFAI@?5?5?$CL?$CF08X?$AA@ 0042a1cc     CSehException.obj
+ 0002:000201d4       ??_C@_0BF@KDBEOEMM@?5?5Exception?5Offset?$AN?6?$AA@ 0042a1d4     CSehException.obj
+ 0002:000201ec       ??_C@_0CN@KIBOHLO@?5?5?$CI0x?$CF08X?0?50x?$CF08X?0?50x?$CF08X?0?50x?$CF08@ 0042a1ec     CSehException.obj
+ 0002:0002021c       ??_C@_06JGLDJOME@?$CF08X?$AN?6?$AA@ 0042a21c     CSehException.obj
+ 0002:00020228       ??_C@_0EN@JLKKHGFC@Exception?$CIGetMiniTextCallStackIn@ 0042a228     CSehException.obj
+ 0002:00020278       ??_C@_08FKNBBGGN@Stack?3?$AN?6?$AA@ 0042a278     CSehException.obj
+ 0002:00020284       ??_C@_08PCBNCANO@0x?$CF08X?3?5?$AA@ 0042a284     CSehException.obj
+ 0002:00020290       ??_C@_05HKMJPJLL@?$CF08X?5?$AA@ 0042a290     CSehException.obj
+ 0002:00020298       ??_C@_09CMIEKKHO@?5?5?5?5?5?5?5?5?5?$AA@ 0042a298     CSehException.obj
+ 0002:000202a4       ??_C@_03JGECCODE@?$CFc?5?$AA@ 0042a2a4     CSehException.obj
+ 0002:000202a8       ??_C@_0EJ@MHNKMFPC@Exception?$CIGetMiniTextStackInform@ 0042a2a8     CSehException.obj
+ 0002:000202f4       ??_C@_04LCMACLFG@?4txt?$AA@ 0042a2f4     CSehException.obj
+ 0002:000202fc       ??_C@_04JMFINIFG@?4dmp?$AA@ 0042a2fc     CSehException.obj
+ 0002:00020304       ??_C@_01LBDDMOBJ@?$FN?$AA@ 0042a304     CSehException.obj
+ 0002:00020308       ??_C@_06PIBBCOLE@_Name?$FL?$AA@ 0042a308     CSehException.obj
+ 0002:00020310       ??_C@_0EB@ODAOOLFA@Log?2Crash_Time?$FL?$CF04d?$CF02d?$CF02d?4?$CF02d@ 0042a310     CSehException.obj
+ 0002:00020354       ??_C@_0BJ@IGDPHONL@UnhandledExceptionFilter?$AA@ 0042a354     CSehException.obj
+ 0002:00020370       ??_C@_0BF@LAJBGANL@NewOperatorException?$AA@ 0042a370     CSehException.obj
+ 0002:00020388       ??_C@_0BC@GBCNPHOA@PureCallException?$AA@ 0042a388     CSehException.obj
+ 0002:0002039c       ??_C@_0BK@BIJCCHEM@InvalidParameterException?$AA@ 0042a39c     CSehException.obj
+ 0002:000203b8       ??_C@_0BB@HMLMNGLB@UnknownException?$AA@ 0042a3b8     CSehException.obj
+ 0002:000203d0       ??_7TAny@@6B@              0042a3d0     TAny.obj
+ 0002:000203d8       __real@4059000000000000    0042a3d8      CIL library: CIL module
+ 0002:000203e0       __real@4f800000            0042a3e0      CIL library: CIL module
+ 0002:000203e8       __load_config_used         0042a3e8     msvcrt:loadcfg.obj
+ 0002:00020480       ??_R4type_info@@6B@        0042a480     msvcrt:ti_inst.obj
+ 0002:00020494       ??_R3type_info@@8          0042a494     msvcrt:ti_inst.obj
+ 0002:000204a4       ??_R2type_info@@8          0042a4a4     msvcrt:ti_inst.obj
+ 0002:000204ac       ??_R1A@?0A@EA@type_info@@8 0042a4ac     msvcrt:ti_inst.obj
+ 0002:000204c8       ??_R4CLogelUpgradeApp@@6B@ 0042a4c8     LogelUpgrade.obj
+ 0002:000204dc       ??_R3CLogelUpgradeApp@@8   0042a4dc     LogelUpgrade.obj
+ 0002:000204ec       ??_R2CLogelUpgradeApp@@8   0042a4ec     LogelUpgrade.obj
+ 0002:00020508       ??_R1A@?0A@EA@CWinAppEx@@8 0042a508     LogelUpgrade.obj
+ 0002:00020524       ??_R3CWinAppEx@@8          0042a524     LogelUpgrade.obj
+ 0002:00020534       ??_R2CWinAppEx@@8          0042a534     LogelUpgrade.obj
+ 0002:0002054c       ??_R1A@?0A@EA@CWinApp@@8   0042a54c     LogelUpgrade.obj
+ 0002:00020568       ??_R3CWinApp@@8            0042a568     LogelUpgrade.obj
+ 0002:00020578       ??_R2CWinApp@@8            0042a578     LogelUpgrade.obj
+ 0002:0002058c       ??_R1A@?0A@EA@CWinThread@@8 0042a58c     LogelUpgrade.obj
+ 0002:000205a8       ??_R3CWinThread@@8         0042a5a8     LogelUpgrade.obj
+ 0002:000205b8       ??_R2CWinThread@@8         0042a5b8     LogelUpgrade.obj
+ 0002:000205c8       ??_R1A@?0A@EA@CCmdTarget@@8 0042a5c8     LogelUpgrade.obj
+ 0002:000205e4       ??_R3CCmdTarget@@8         0042a5e4     LogelUpgrade.obj
+ 0002:000205f4       ??_R2CCmdTarget@@8         0042a5f4     LogelUpgrade.obj
+ 0002:00020600       ??_R1A@?0A@EA@CObject@@8   0042a600     LogelUpgrade.obj
+ 0002:0002061c       ??_R3CObject@@8            0042a61c     LogelUpgrade.obj
+ 0002:0002062c       ??_R2CObject@@8            0042a62c     LogelUpgrade.obj
+ 0002:00020634       ??_R1A@?0A@EA@CLogelUpgradeApp@@8 0042a634     LogelUpgrade.obj
+ 0002:00020650       ??_R4CProgressCtrl@@6B@    0042a650     LogelUpgradeDlg.obj
+ 0002:00020664       ??_R3CProgressCtrl@@8      0042a664     LogelUpgradeDlg.obj
+ 0002:00020674       ??_R2CProgressCtrl@@8      0042a674     LogelUpgradeDlg.obj
+ 0002:00020688       ??_R1A@?0A@EA@CProgressCtrl@@8 0042a688     LogelUpgradeDlg.obj
+ 0002:000206a4       ??_R4CFont@@6B@            0042a6a4     LogelUpgradeDlg.obj
+ 0002:000206b8       ??_R3CFont@@8              0042a6b8     LogelUpgradeDlg.obj
+ 0002:000206c8       ??_R2CFont@@8              0042a6c8     LogelUpgradeDlg.obj
+ 0002:000206d8       ??_R1A@?0A@EA@CFont@@8     0042a6d8     LogelUpgradeDlg.obj
+ 0002:000206f4       ??_R4CBrush@@6B@           0042a6f4     LogelUpgradeDlg.obj
+ 0002:00020708       ??_R3CBrush@@8             0042a708     LogelUpgradeDlg.obj
+ 0002:00020718       ??_R2CBrush@@8             0042a718     LogelUpgradeDlg.obj
+ 0002:00020728       ??_R1A@?0A@EA@CBrush@@8    0042a728     LogelUpgradeDlg.obj
+ 0002:00020744       ??_R4CGdiObject@@6B@       0042a744     LogelUpgradeDlg.obj
+ 0002:00020758       ??_R3CGdiObject@@8         0042a758     LogelUpgradeDlg.obj
+ 0002:00020768       ??_R2CGdiObject@@8         0042a768     LogelUpgradeDlg.obj
+ 0002:00020774       ??_R1A@?0A@EA@CGdiObject@@8 0042a774     LogelUpgradeDlg.obj
+ 0002:00020790       ??_R4CAboutDlg@@6B@        0042a790     LogelUpgradeDlg.obj
+ 0002:000207a4       ??_R3CAboutDlg@@8          0042a7a4     LogelUpgradeDlg.obj
+ 0002:000207b4       ??_R2CAboutDlg@@8          0042a7b4     LogelUpgradeDlg.obj
+ 0002:000207cc       ??_R1A@?0A@EA@CAboutDlg@@8 0042a7cc     LogelUpgradeDlg.obj
+ 0002:000207e8       ??_R4CLogelUpgradeDlg@@6BIFileProcObserver@@@ 0042a7e8     LogelUpgradeDlg.obj
+ 0002:000207fc       ??_R4CLogelUpgradeDlg@@6BCDialog@@@ 0042a7fc     LogelUpgradeDlg.obj
+ 0002:00020810       ??_R3CLogelUpgradeDlg@@8   0042a810     LogelUpgradeDlg.obj
+ 0002:00020820       ??_R2CLogelUpgradeDlg@@8   0042a820     LogelUpgradeDlg.obj
+ 0002:0002083c       ??_R1HE@?0A@EN@IFileProcObserver@@8 0042a83c     LogelUpgradeDlg.obj
+ 0002:00020858       ??_R1A@?0A@EA@CDialog@@8   0042a858     LogelUpgradeDlg.obj
+ 0002:00020874       ??_R3CDialog@@8            0042a874     LogelUpgradeDlg.obj
+ 0002:00020884       ??_R2CDialog@@8            0042a884     LogelUpgradeDlg.obj
+ 0002:00020898       ??_R1A@?0A@EA@CWnd@@8      0042a898     LogelUpgradeDlg.obj
+ 0002:000208b4       ??_R3CWnd@@8               0042a8b4     LogelUpgradeDlg.obj
+ 0002:000208c4       ??_R2CWnd@@8               0042a8c4     LogelUpgradeDlg.obj
+ 0002:000208d4       ??_R1A@?0A@EA@CLogelUpgradeDlg@@8 0042a8d4     LogelUpgradeDlg.obj
+ 0002:000208f0       ??_R4IFileProcObserver@@6B@ 0042a8f0     LogelUpgradeDlg.obj
+ 0002:00020904       ??_R3IFileProcObserver@@8  0042a904     LogelUpgradeDlg.obj
+ 0002:00020914       ??_R2IFileProcObserver@@8  0042a914     LogelUpgradeDlg.obj
+ 0002:0002091c       ??_R1A@?0A@EA@IFileProcObserver@@8 0042a91c     LogelUpgradeDlg.obj
+ 0002:00020938       ??_R4TAny@@6B@             0042a938     TAny.obj
+ 0002:0002094c       ??_R3TAny@@8               0042a94c     TAny.obj
+ 0002:0002095c       ??_R2TAny@@8               0042a95c     TAny.obj
+ 0002:00020964       ??_R1A@?0A@EA@TAny@@8      0042a964     TAny.obj
+ 0002:00020980       ___safe_se_handler_table   0042a980     <linker-defined>
+ 0002:00020a34       ___rtc_iaa                 0042aa34     msvcrt:_initsect_.obj
+ 0002:00020a38       ___rtc_izz                 0042aa38     msvcrt:_initsect_.obj
+ 0002:00020a3c       ___rtc_taa                 0042aa3c     msvcrt:_initsect_.obj
+ 0002:00020a40       ___rtc_tzz                 0042aa40     msvcrt:_initsect_.obj
+ 0002:00020aec       __CT??_R0?AVCSehException@@@8816 0042aaec     CSehException.obj
+ 0002:00020b08       __CTA1?AVCSehException@@   0042ab08     CSehException.obj
+ 0002:00020b10       __TI1?AVCSehException@@    0042ab10     CSehException.obj
+ 0002:0002176c       __IMPORT_DESCRIPTOR_dbghelp 0042b76c     DbgHelp:dbghelp.dll
+ 0002:00021780       __IMPORT_DESCRIPTOR_mfc90  0042b780     mfc90:mfc90.dll
+ 0002:00021794       __IMPORT_DESCRIPTOR_MSVCR90 0042b794     msvcrt:MSVCR90.dll
+ 0002:000217a8       __IMPORT_DESCRIPTOR_KERNEL32 0042b7a8     kernel32:KERNEL32.dll
+ 0002:000217bc       __IMPORT_DESCRIPTOR_USER32 0042b7bc     user32:USER32.dll
+ 0002:000217d0       __IMPORT_DESCRIPTOR_GDI32  0042b7d0     gdi32:GDI32.dll
+ 0002:000217e4       __IMPORT_DESCRIPTOR_ADVAPI32 0042b7e4     advapi32:ADVAPI32.dll
+ 0002:000217f8       __IMPORT_DESCRIPTOR_SHELL32 0042b7f8     shell32:SHELL32.dll
+ 0002:0002180c       __IMPORT_DESCRIPTOR_COMCTL32 0042b80c     comctl32:COMCTL32.dll
+ 0002:00021820       __IMPORT_DESCRIPTOR_SHLWAPI 0042b820     shlwapi:SHLWAPI.dll
+ 0002:00021834       __IMPORT_DESCRIPTOR_MSVCP90 0042b834     msvcprt:MSVCP90.dll
+ 0002:00021848       __IMPORT_DESCRIPTOR_VERSION 0042b848     Version:VERSION.dll
+ 0002:0002185c       __NULL_IMPORT_DESCRIPTOR   0042b85c     DbgHelp:dbghelp.dll
+ 0003:00000000       ??_R0?AVtype_info@@@8      0042d000     msvcrt:ti_inst.obj
+ 0003:0000001c       ___security_cookie         0042d01c     msvcrt:gs_cookie.obj
+ 0003:00000020       ___security_cookie_complement 0042d020     msvcrt:gs_cookie.obj
+ 0003:00000028       ___native_dllmain_reason   0042d028     msvcrt:natstart.obj
+ 0003:0000002c       ___native_vcclrit_reason   0042d02c     msvcrt:natstart.obj
+ 0003:00000030       ___globallocalestatus      0042d030     msvcrt:xthdloc.obj
+ 0003:00000034       ___defaultmatherr          0042d034     msvcrt:merr.obj
+ 0003:00000038       ??_R0?AVCObject@@@8        0042d038     LogelUpgrade.obj
+ 0003:00000050       ??_R0?AVCCmdTarget@@@8     0042d050     LogelUpgrade.obj
+ 0003:0000006c       ??_R0?AVCWinThread@@@8     0042d06c     LogelUpgrade.obj
+ 0003:00000088       ??_R0?AVCWinApp@@@8        0042d088     LogelUpgrade.obj
+ 0003:000000a0       ??_R0?AVCWinAppEx@@@8      0042d0a0     LogelUpgrade.obj
+ 0003:000000b8       ??_R0?AVCLogelUpgradeApp@@@8 0042d0b8     LogelUpgrade.obj
+ 0003:000000d8       ??_R0?AVCProgressCtrl@@@8  0042d0d8     LogelUpgradeDlg.obj
+ 0003:000000f4       ??_R0?AVCFont@@@8          0042d0f4     LogelUpgradeDlg.obj
+ 0003:00000108       ??_R0?AVCBrush@@@8         0042d108     LogelUpgradeDlg.obj
+ 0003:00000120       ??_R0?AVCGdiObject@@@8     0042d120     LogelUpgradeDlg.obj
+ 0003:0000013c       ??_R0?AVCAboutDlg@@@8      0042d13c     LogelUpgradeDlg.obj
+ 0003:00000154       ??_R0?AVCWnd@@@8           0042d154     LogelUpgradeDlg.obj
+ 0003:00000168       ??_R0?AVCDialog@@@8        0042d168     LogelUpgradeDlg.obj
+ 0003:00000180       ??_R0?AVCLogelUpgradeDlg@@@8 0042d180     LogelUpgradeDlg.obj
+ 0003:000001a0       ??_R0?AVIFileProcObserver@@@8 0042d1a0     LogelUpgradeDlg.obj
+ 0003:000001c0       ??_R0PAVCException@@@8     0042d1c0     LogelUpgradeDlg.obj
+ 0003:000001e4       ??_R0?AVCSehException@@@8  0042d1e4     CSehException.obj
+ 0003:00000200       ??_R0?AUTAny@@@8           0042d200     TAny.obj
+ 0003:00000220       __afxForceEXCLUDE          0042d220     mfcs90:nolib.obj
+ 0003:00000224       __afxForceSTDAFX           0042d224     mfcs90:stdafx.obj
+ 0003:00000228       ?nothrow@std@@3Unothrow_t@1@B 0042d228     msvcrt:nothrow0.obj
+ 0003:00000574       __forceCRTManifestRTM      0042d574     msvcrt:crtmanifestrtm.obj
+ 0003:00000578       __dowildcard               0042d578     msvcrt:wildcard.obj
+ 0003:0000057c       __newmode                  0042d57c     msvcrt:_newmode.obj
+ 0003:00000580       __commode                  0042d580     msvcrt:xncommod.obj
+ 0003:00000584       __fmode                    0042d584     msvcrt:xtxtmode.obj
+ 0003:00000588       ?_afxInitAppState@@3DA     0042d588     mfcs90:appmodul.obj
+ 0003:0000058c       __forceMFCManifestRTM      0042d58c     mfcs90:mfcmanifestrtm.obj
+ 0003:00000590       ___@@_PchSym_@00@UhemPillgUcoltUhlfixvUxlwvUgllohUoltvofktizwvUhlfixvUoltvofktizwvUivovzhvUhgwzucOlyq@ 0042d590     stdafx.obj
+ 0003:00000598       ?g_UnrarInfo@@3USUNRAR_INFO@@A 0042d598     Utils.obj
+ 0003:00000810       ?theApp@@3VCLogelUpgradeApp@@A 0042d810     LogelUpgrade.obj
+ 0003:00040938       ___sse2_available          0046d938     <common>
+ 0003:0004093c       __adjust_fdiv              0046d93c     <common>
+ 0003:00040940       ___native_startup_state    0046d940     <common>
+ 0003:00040944       ___native_startup_lock     0046d944     <common>
+ 0003:00040948       ___dyn_tls_init_callback   0046d948     <common>
+ 0003:0004094c       ___onexitend               0046d94c     <common>
+ 0003:00040950       ___onexitbegin             0046d950     <common>
+
+ entry point at        0001:00007073
+
+ Static symbols
+
+ 0001:00002a1a       __catch$??1CGdiObject@@UAE@XZ$0 00403a1a f i  CIL library: CIL module
+ 0001:0000415a       __catch$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z$2 0040515a f    CIL library: CIL module
+ 0001:00004167       __catch$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z$0 00405167 f    CIL library: CIL module
+ 0001:000043ea       __catch$?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$0 004053ea f    CIL library: CIL module
+ 0001:00006d68       _pre_cpp_init              00407d68 f   msvcrt:crtexew.obj
+ 0001:00006db3       ___tmainCRTStartup         00407db3 f   msvcrt:crtexew.obj
+ 0001:00006f92       _pre_c_init                00407f92 f   msvcrt:crtexew.obj
+ 0001:00007718       _has_osfxsr_set            00408718 f   msvcrt:cpu_disp.obj
+ 0001:000077e0       __unwindfunclet$?AsciiToString@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$0 004087e0 f    CIL library: CIL module
+ 0001:000077e0       __unwindfunclet$?StringToAscii@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$0 004087e0 f    CIL library: CIL module
+ 0001:000077fa       __ehhandler$?AsciiToString@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 004087fa f    CIL library: CIL module
+ 0001:000077fa       __ehhandler$?StringToAscii@CStrings@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 004087fa f    CIL library: CIL module
+ 0001:00007820       __unwindfunclet$?GetMiniTextCallMethodInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z$0 00408820 f    CIL library: CIL module
+ 0001:0000782c       __unwindfunclet$?GetMiniTextCallMethodInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z$1 0040882c f    CIL library: CIL module
+ 0001:00007838       __ehhandler$?GetMiniTextCallMethodInformation@CSehException@@CAXABU_EXCEPTION_POINTERS@@PAX@Z 00408838 f    CIL library: CIL module
+ 0001:00007870       __unwindfunclet$?GetAsciiAbbreviatedLanguageName@CLanguage@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ$0 00408870 f    CIL library: CIL module
+ 0001:0000788a       __ehhandler$?GetAsciiAbbreviatedLanguageName@CLanguage@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 0040888a f    CIL library: CIL module
+ 0001:000078c0       __unwindfunclet$??1CLocale@@QAE@XZ$0 004088c0 f    CIL library: CIL module
+ 0001:000078c9       __unwindfunclet$??1CLocale@@QAE@XZ$1 004088c9 f    CIL library: CIL module
+ 0001:000078d5       __ehhandler$??1CLocale@@QAE@XZ 004088d5 f    CIL library: CIL module
+ 0001:000078f0       __unwindfunclet$??0CLocale@@QAE@XZ$0 004088f0 f    CIL library: CIL module
+ 0001:000078f9       __unwindfunclet$??0CLocale@@QAE@XZ$1 004088f9 f    CIL library: CIL module
+ 0001:00007905       __unwindfunclet$??0CLocale@@QAE@XZ$2 00408905 f    CIL library: CIL module
+ 0001:0000790e       __unwindfunclet$??0CLocale@@QAE@XZ$3 0040890e f    CIL library: CIL module
+ 0001:00007917       __unwindfunclet$??0CLocale@@QAE@XZ$4 00408917 f    CIL library: CIL module
+ 0001:00007920       __ehhandler$??0CLocale@@QAE@XZ 00408920 f    CIL library: CIL module
+ 0001:00007940       __unwindfunclet$?GetApplicationFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ$0 00408940 f    CIL library: CIL module
+ 0001:00007949       __unwindfunclet$?GetApplicationFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ$1 00408949 f    CIL library: CIL module
+ 0001:00007963       __ehhandler$?GetApplicationFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 00408963 f    CIL library: CIL module
+ 0001:00007990       __unwindfunclet$?GetApplicationPath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ$0 00408990 f    CIL library: CIL module
+ 0001:00007999       __unwindfunclet$?GetApplicationPath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ$1 00408999 f    CIL library: CIL module
+ 0001:000079b3       __ehhandler$?GetApplicationPath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ 004089b3 f    CIL library: CIL module
+ 0001:000079e0       __unwindfunclet$?GetFileExt@Utils@@SAHPBDAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@_N@Z$0 004089e0 f    CIL library: CIL module
+ 0001:000079e9       __unwindfunclet$?GetFileExt@Utils@@SAHPBDAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@_N@Z$2 004089e9 f    CIL library: CIL module
+ 0001:000079f2       __ehhandler$?GetFileExt@Utils@@SAHPBDAAV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@ATL@@_N@Z 004089f2 f    CIL library: CIL module
+ 0001:00007a10       __unwindfunclet$?IsExistFiledir@Utils@@SAHPBD@Z$0 00408a10 f    CIL library: CIL module
+ 0001:00007a1c       __ehhandler$?IsExistFiledir@Utils@@SAHPBD@Z 00408a1c f    CIL library: CIL module
+ 0001:00007a50       __unwindfunclet$?DeleteDirAllFiles@Utils@@SAHPAD@Z$0 00408a50 f    CIL library: CIL module
+ 0001:00007a58       __unwindfunclet$?DeleteDirAllFiles@Utils@@SAHPAD@Z$1 00408a58 f    CIL library: CIL module
+ 0001:00007a61       __ehhandler$?DeleteDirAllFiles@Utils@@SAHPAD@Z 00408a61 f    CIL library: CIL module
+ 0001:00007a90       __unwindfunclet$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@PBDABV10@@Z$0 00408a90 f    CIL library: CIL module
+ 0001:00007aaa       __ehhandler$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@PBDABV10@@Z 00408aaa f    CIL library: CIL module
+ 0001:00007ad0       __unwindfunclet$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@PBD@Z$0 00408ad0 f    CIL library: CIL module
+ 0001:00007ad0       __unwindfunclet$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@0@Z$0 00408ad0 f    CIL library: CIL module
+ 0001:00007aea       __ehhandler$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@PBD@Z 00408aea f    CIL library: CIL module
+ 0001:00007aea       __ehhandler$??HATL@@YA?AV?$CStringT@DV?$StrTraitMFC_DLL@DV?$ChTraitsCRT@D@ATL@@@@@0@ABV10@0@Z 00408aea f    CIL library: CIL module
+ 0001:00007b10       __unwindfunclet$??1CAboutDlg@@UAE@XZ$0 00408b10 f    CIL library: CIL module
+ 0001:00007b18       __ehhandler$??1CAboutDlg@@UAE@XZ 00408b18 f    CIL library: CIL module
+ 0001:00007b40       __unwindfunclet$??0CAboutDlg@@QAE@XZ$0 00408b40 f    CIL library: CIL module
+ 0001:00007b48       __ehhandler$??0CAboutDlg@@QAE@XZ 00408b48 f    CIL library: CIL module
+ 0001:00007b70       __unwindfunclet$??1CLogelUpgradeApp@@UAE@XZ$0 00408b70 f    CIL library: CIL module
+ 0001:00007b78       __unwindfunclet$??1CLogelUpgradeApp@@UAE@XZ$1 00408b78 f    CIL library: CIL module
+ 0001:00007b87       __unwindfunclet$??1CLogelUpgradeApp@@UAE@XZ$2 00408b87 f    CIL library: CIL module
+ 0001:00007b96       __ehhandler$??1CLogelUpgradeApp@@UAE@XZ 00408b96 f    CIL library: CIL module
+ 0001:00007bc0       __unwindfunclet$?ExceptionTranslateSehToCppe@CSehException@@CAXIPAU_EXCEPTION_POINTERS@@@Z$0 00408bc0 f    CIL library: CIL module
+ 0001:00007bcb       __ehhandler$?ExceptionTranslateSehToCppe@CSehException@@CAXIPAU_EXCEPTION_POINTERS@@@Z 00408bcb f    CIL library: CIL module
+ 0001:00007c00       __unwindfunclet$?GetAsciiFullFileName@CFiles@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$0 00408c00 f    CIL library: CIL module
+ 0001:00007c00       __unwindfunclet$?GetFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$0 00408c00 f    CIL library: CIL module
+ 0001:00007c09       __unwindfunclet$?GetAsciiFullFileName@CFiles@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$1 00408c09 f    CIL library: CIL module
+ 0001:00007c09       __unwindfunclet$?GetFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$1 00408c09 f    CIL library: CIL module
+ 0001:00007c23       __ehhandler$?GetFullFileName@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00408c23 f    CIL library: CIL module
+ 0001:00007c23       __ehhandler$?GetAsciiFullFileName@CFiles@@CA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00408c23 f    CIL library: CIL module
+ 0001:00007c40       __unwindfunclet$?GetFilePath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$0 00408c40 f    CIL library: CIL module
+ 0001:00007c49       __unwindfunclet$?GetFilePath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$1 00408c49 f    CIL library: CIL module
+ 0001:00007c63       __unwindfunclet$?GetFilePath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z$2 00408c63 f    CIL library: CIL module
+ 0001:00007c7d       __ehhandler$?GetFilePath@CFiles@@SA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV23@@Z 00408c7d f    CIL library: CIL module
+ 0001:00007cb0       __unwindfunclet$?CopyFileA@Utils@@SAHPBD0@Z$0 00408cb0 f    CIL library: CIL module
+ 0001:00007cb9       __unwindfunclet$?CopyFileA@Utils@@SAHPBD0@Z$1 00408cb9 f    CIL library: CIL module
+ 0001:00007cc2       __ehhandler$?CopyFileA@Utils@@SAHPBD0@Z 00408cc2 f    CIL library: CIL module
+ 0001:00007ce0       __unwindfunclet$?EnumKeys@Utils@@SAHPADAAVCStringArray@@@Z$0 00408ce0 f    CIL library: CIL module
+ 0001:00007ce9       __unwindfunclet$?EnumKeys@Utils@@SAHPADAAVCStringArray@@@Z$1 00408ce9 f    CIL library: CIL module
+ 0001:00007cf2       __unwindfunclet$?EnumKeys@Utils@@SAHPADAAVCStringArray@@@Z$2 00408cf2 f    CIL library: CIL module
+ 0001:00007cfb       __ehhandler$?EnumKeys@Utils@@SAHPADAAVCStringArray@@@Z 00408cfb f    CIL library: CIL module
+ 0001:00007d20       __unwindfunclet$?RemoveDir@Utils@@SAHPAD@Z$0 00408d20 f    CIL library: CIL module
+ 0001:00007d2c       __unwindfunclet$?RemoveDir@Utils@@SAHPAD@Z$1 00408d2c f    CIL library: CIL module
+ 0001:00007d38       __unwindfunclet$?RemoveDir@Utils@@SAHPAD@Z$2 00408d38 f    CIL library: CIL module
+ 0001:00007d44       __unwindfunclet$?RemoveDir@Utils@@SAHPAD@Z$3 00408d44 f    CIL library: CIL module
+ 0001:00007d50       __ehhandler$?RemoveDir@Utils@@SAHPAD@Z 00408d50 f    CIL library: CIL module
+ 0001:00007d80       __unwindfunclet$?Instance@CMessageBox@@SAPAV1@XZ$0 00408d80 f    CIL library: CIL module
+ 0001:00007d8e       __ehhandler$?Instance@CMessageBox@@SAPAV1@XZ 00408d8e f    CIL library: CIL module
+ 0001:00007db0       __unwindfunclet$??1CGdiObject@@UAE@XZ$2 00408db0 f    CIL library: CIL module
+ 0001:00007db9       __ehhandler$??1CGdiObject@@UAE@XZ 00408db9 f    CIL library: CIL module
+ 0001:00007df0       __unwindfunclet$??1CBrush@@UAE@XZ$0 00408df0 f    CIL library: CIL module
+ 0001:00007df8       __ehhandler$??1CBrush@@UAE@XZ 00408df8 f    CIL library: CIL module
+ 0001:00007e20       __unwindfunclet$??0CFont@@QAE@XZ$0 00408e20 f    CIL library: CIL module
+ 0001:00007e28       __ehhandler$??0CFont@@QAE@XZ 00408e28 f    CIL library: CIL module
+ 0001:00007e50       __unwindfunclet$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z$0 00408e50 f    CIL library: CIL module
+ 0001:00007e5b       __unwindfunclet$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z$1 00408e5b f    CIL library: CIL module
+ 0001:00007e67       __unwindfunclet$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z$2 00408e67 f    CIL library: CIL module
+ 0001:00007e75       __unwindfunclet$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z$3 00408e75 f    CIL library: CIL module
+ 0001:00007e81       __unwindfunclet$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z$4 00408e81 f    CIL library: CIL module
+ 0001:00007e8d       __ehhandler$?SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z 00408e8d f    CIL library: CIL module
+ 0001:00007ec0       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$0 00408ec0 f    CIL library: CIL module
+ 0001:00007ecb       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$1 00408ecb f    CIL library: CIL module
+ 0001:00007ed7       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$2 00408ed7 f    CIL library: CIL module
+ 0001:00007ee3       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$3 00408ee3 f    CIL library: CIL module
+ 0001:00007eef       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$4 00408eef f    CIL library: CIL module
+ 0001:00007efb       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$5 00408efb f    CIL library: CIL module
+ 0001:00007f07       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$6 00408f07 f    CIL library: CIL module
+ 0001:00007f13       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$7 00408f13 f    CIL library: CIL module
+ 0001:00007f1f       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$8 00408f1f f    CIL library: CIL module
+ 0001:00007f2b       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$9 00408f2b f    CIL library: CIL module
+ 0001:00007f37       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$10 00408f37 f    CIL library: CIL module
+ 0001:00007f42       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$11 00408f42 f    CIL library: CIL module
+ 0001:00007f4d       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$12 00408f4d f    CIL library: CIL module
+ 0001:00007f58       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$13 00408f58 f    CIL library: CIL module
+ 0001:00007f63       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$14 00408f63 f    CIL library: CIL module
+ 0001:00007f6f       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$15 00408f6f f    CIL library: CIL module
+ 0001:00007f7a       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$16 00408f7a f    CIL library: CIL module
+ 0001:00007f85       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$17 00408f85 f    CIL library: CIL module
+ 0001:00007f91       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$18 00408f91 f    CIL library: CIL module
+ 0001:00007f9d       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$19 00408f9d f    CIL library: CIL module
+ 0001:00007fa9       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$20 00408fa9 f    CIL library: CIL module
+ 0001:00007fb5       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$21 00408fb5 f    CIL library: CIL module
+ 0001:00007fc0       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$22 00408fc0 f    CIL library: CIL module
+ 0001:00007fcc       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$23 00408fcc f    CIL library: CIL module
+ 0001:00007fd8       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$24 00408fd8 f    CIL library: CIL module
+ 0001:00007fe4       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$25 00408fe4 f    CIL library: CIL module
+ 0001:00007fef       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$26 00408fef f    CIL library: CIL module
+ 0001:00007ffb       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$27 00408ffb f    CIL library: CIL module
+ 0001:00008006       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$28 00409006 f    CIL library: CIL module
+ 0001:00008012       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$29 00409012 f    CIL library: CIL module
+ 0001:0000801e       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$30 0040901e f    CIL library: CIL module
+ 0001:0000802a       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$31 0040902a f    CIL library: CIL module
+ 0001:00008036       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$32 00409036 f    CIL library: CIL module
+ 0001:00008042       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$33 00409042 f    CIL library: CIL module
+ 0001:0000804e       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$34 0040904e f    CIL library: CIL module
+ 0001:0000805a       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$35 0040905a f    CIL library: CIL module
+ 0001:00008066       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$36 00409066 f    CIL library: CIL module
+ 0001:00008072       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$37 00409072 f    CIL library: CIL module
+ 0001:0000807e       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$38 0040907e f    CIL library: CIL module
+ 0001:0000808a       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$39 0040908a f    CIL library: CIL module
+ 0001:00008096       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$40 00409096 f    CIL library: CIL module
+ 0001:000080a2       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$41 004090a2 f    CIL library: CIL module
+ 0001:000080ae       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$42 004090ae f    CIL library: CIL module
+ 0001:000080ba       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$43 004090ba f    CIL library: CIL module
+ 0001:000080c6       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$44 004090c6 f    CIL library: CIL module
+ 0001:000080d2       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$45 004090d2 f    CIL library: CIL module
+ 0001:000080de       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$46 004090de f    CIL library: CIL module
+ 0001:000080ea       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$47 004090ea f    CIL library: CIL module
+ 0001:000080f6       __unwindfunclet$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ$48 004090f6 f    CIL library: CIL module
+ 0001:00008101       __ehhandler$?UpgradeThreadFunc@CLogelUpgradeDlg@@QAEKXZ 00409101 f    CIL library: CIL module
+ 0001:00008130       __unwindfunclet$?OnPaint@CLogelUpgradeDlg@@IAEXXZ$0 00409130 f    CIL library: CIL module
+ 0001:00008138       __unwindfunclet$?OnPaint@CLogelUpgradeDlg@@IAEXXZ$1 00409138 f    CIL library: CIL module
+ 0001:00008143       __ehhandler$?OnPaint@CLogelUpgradeDlg@@IAEXXZ 00409143 f    CIL library: CIL module
+ 0001:00008180       __unwindfunclet$?OnSysCommand@CLogelUpgradeDlg@@IAEXIJ@Z$0 00409180 f    CIL library: CIL module
+ 0001:0000818a       __unwindfunclet$?OnSysCommand@CLogelUpgradeDlg@@IAEXIJ@Z$1 0040918a f    CIL library: CIL module
+ 0001:00008192       __ehhandler$?OnSysCommand@CLogelUpgradeDlg@@IAEXIJ@Z 00409192 f    CIL library: CIL module
+ 0001:000081b0       __unwindfunclet$?OnInitDialog@CLogelUpgradeDlg@@MAEHXZ$0 004091b0 f    CIL library: CIL module
+ 0001:000081b9       __ehhandler$?OnInitDialog@CLogelUpgradeDlg@@MAEHXZ 004091b9 f    CIL library: CIL module
+ 0001:000081e0       __unwindfunclet$??1CLogelUpgradeDlg@@UAE@XZ$0 004091e0 f    CIL library: CIL module
+ 0001:000081e8       __unwindfunclet$??1CLogelUpgradeDlg@@UAE@XZ$1 004091e8 f    CIL library: CIL module
+ 0001:000081f3       __unwindfunclet$??1CLogelUpgradeDlg@@UAE@XZ$2 004091f3 f    CIL library: CIL module
+ 0001:00008202       __unwindfunclet$??1CLogelUpgradeDlg@@UAE@XZ$3 00409202 f    CIL library: CIL module
+ 0001:00008210       __unwindfunclet$??1CLogelUpgradeDlg@@UAE@XZ$4 00409210 f    CIL library: CIL module
+ 0001:00008218       __ehhandler$??1CLogelUpgradeDlg@@UAE@XZ 00409218 f    CIL library: CIL module
+ 0001:00008240       __unwindfunclet$??_GCAboutDlg@@UAEPAXI@Z$0 00409240 f    CIL library: CIL module
+ 0001:00008248       __ehhandler$??_GCAboutDlg@@UAEPAXI@Z 00409248 f    CIL library: CIL module
+ 0001:00008270       __unwindfunclet$?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$2 00409270 f    CIL library: CIL module
+ 0001:00008279       __unwindfunclet$?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$3 00409279 f    CIL library: CIL module
+ 0001:00008282       __unwindfunclet$?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z$4 00409282 f    CIL library: CIL module
+ 0001:0000828b       __ehhandler$?CreateDirectorys@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z 0040928b f    CIL library: CIL module
+ 0001:000082b0       __unwindfunclet$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z$4 004092b0 f    CIL library: CIL module
+ 0001:000082bc       __unwindfunclet$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z$5 004092bc f    CIL library: CIL module
+ 0001:000082c6       __unwindfunclet$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z$7 004092c6 f    CIL library: CIL module
+ 0001:000082cf       __ehhandler$?SaveFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABUTAny@@HH@Z 004092cf f    CIL library: CIL module
+ 0001:000082f0       __unwindfunclet$??_GCFont@@UAEPAXI@Z$0 004092f0 f    CIL library: CIL module
+ 0001:000082f0       __unwindfunclet$??_GCBrush@@UAEPAXI@Z$0 004092f0 f    CIL library: CIL module
+ 0001:000082f8       __ehhandler$??_GCBrush@@UAEPAXI@Z 004092f8 f    CIL library: CIL module
+ 0001:000082f8       __ehhandler$??_GCFont@@UAEPAXI@Z 004092f8 f    CIL library: CIL module
+ 0001:00008320       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$0 00409320 f    CIL library: CIL module
+ 0001:00008328       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$4 00409328 f    CIL library: CIL module
+ 0001:00008330       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$1 00409330 f    CIL library: CIL module
+ 0001:0000833b       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$2 0040933b f    CIL library: CIL module
+ 0001:0000834a       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$5 0040934a f    CIL library: CIL module
+ 0001:00008352       __unwindfunclet$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z$3 00409352 f    CIL library: CIL module
+ 0001:00008360       __ehhandler$??0CLogelUpgradeDlg@@QAE@PAVCWnd@@@Z 00409360 f    CIL library: CIL module
+ 0001:00008380       __unwindfunclet$?InitInstance@CLogelUpgradeApp@@UAEHXZ$0 00409380 f    CIL library: CIL module
+ 0001:0000838d       __ehhandler$?InitInstance@CLogelUpgradeApp@@UAEHXZ 0040938d f    CIL library: CIL module
+ 0001:000083b0       __unwindfunclet$?CreateMiniDumpFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z$0 004093b0 f    CIL library: CIL module
+ 0001:000083b9       __unwindfunclet$?CreateMiniDumpFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z$1 004093b9 f    CIL library: CIL module
+ 0001:000083c2       __ehhandler$?CreateMiniDumpFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z 004093c2 f    CIL library: CIL module
+ 0001:000083f0       __unwindfunclet$?SaveStringFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0HH@Z$0 004093f0 f    CIL library: CIL module
+ 0001:000083f8       __ehhandler$?SaveStringFile@CFiles@@SAHABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0HH@Z 004093f8 f    CIL library: CIL module
+ 0001:00008420       __unwindfunclet$?CreateMiniTextFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z$0 00409420 f    CIL library: CIL module
+ 0001:00008429       __unwindfunclet$?CreateMiniTextFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z$1 00409429 f    CIL library: CIL module
+ 0001:00008432       __unwindfunclet$?CreateMiniTextFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z$2 00409432 f    CIL library: CIL module
+ 0001:0000843b       __ehhandler$?CreateMiniTextFile@CSehException@@CAHABU_EXCEPTION_POINTERS@@PBD@Z 0040943b f    CIL library: CIL module
+ 0001:00008470       __unwindfunclet$?UnknownException@CSehException@@CAXXZ$0 00409470 f    CIL library: CIL module
+ 0001:00008470       __unwindfunclet$?InvalidParameterException@CSehException@@CAXPB_W00II@Z$0 00409470 f    CIL library: CIL module
+ 0001:00008470       __unwindfunclet$?PureCallException@CSehException@@CAXXZ$0 00409470 f    CIL library: CIL module
+ 0001:00008470       __unwindfunclet$?NewOperatorException@CSehException@@CAHI@Z$0 00409470 f    CIL library: CIL module
+ 0001:0000847b       __ehhandler$?NewOperatorException@CSehException@@CAHI@Z 0040947b f    CIL library: CIL module
+ 0001:0000847b       __ehhandler$?UnknownException@CSehException@@CAXXZ 0040947b f    CIL library: CIL module
+ 0001:0000847b       __ehhandler$?InvalidParameterException@CSehException@@CAXPB_W00II@Z 0040947b f    CIL library: CIL module
+ 0001:0000847b       __ehhandler$?PureCallException@CSehException@@CAXXZ 0040947b f    CIL library: CIL module
+ 0001:000084b0       __unwindfunclet$?UnhandledExceptionFilter@CSehException@@CGJPAU_EXCEPTION_POINTERS@@@Z$0 004094b0 f    CIL library: CIL module
+ 0001:000084bb       __ehhandler$?UnhandledExceptionFilter@CSehException@@CGJPAU_EXCEPTION_POINTERS@@@Z 004094bb f    CIL library: CIL module
+ 0001:000084f0       __unwindfunclet$??0CLogelUpgradeApp@@QAE@XZ$0 004094f0 f    CIL library: CIL module
+ 0001:000084f8       __unwindfunclet$??0CLogelUpgradeApp@@QAE@XZ$1 004094f8 f    CIL library: CIL module
+ 0001:00008507       __unwindfunclet$??0CLogelUpgradeApp@@QAE@XZ$2 00409507 f    CIL library: CIL module
+ 0001:00008516       __ehhandler$??0CLogelUpgradeApp@@QAE@XZ 00409516 f    CIL library: CIL module
+ 0001:00008540       __unwindfunclet$??__Ffont@?4??SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z@YAXXZ$0 00409540 f    CIL library: CIL module
+ 0001:0000854a       __ehhandler$??__Ffont@?4??SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z@YAXXZ 0040954a f    CIL library: CIL module
+ 0001:00008570       ??__EtheApp@@YAXXZ         00409570 f    CIL library: CIL module
+ 0001:00008590       ??__E_afxDefaultAcceleratorDelimiter@@YAXXZ 00409590 f    CIL library: CIL module
+ 0001:000085ac       ??__E_afxInitAppState@@YAXXZ 004095ac f   mfcs90:appmodul.obj
+ 0001:000085c0       ??__FtheApp@@YAXXZ         004095c0 f    CIL library: CIL module
+ 0001:000085d0       ??__Ffont@?4??SwitchState@CLogelUpgradeDlg@@AAEXW4EM_UPGRADE_STATE@1@H@Z@YAXXZ 004095d0 f    CIL library: CIL module
+ 0001:00008620       ??__Fg_intance@?1??Instance@CMessageBox@@SAPAV1@XZ@YAXXZ 00409620 f    CIL library: CIL module
+ 0001:00008630       ??__F_afxDefaultAcceleratorDelimiter@@YAXXZ 00409630 f    CIL library: CIL module

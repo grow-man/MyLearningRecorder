@@ -1,0 +1,55 @@
+<!--  signature :  pPowerStates->signature = 0xA5A5A5A5 -->
+<!--  rev				:  pPowerStates->reserved1 = 0		  		-->
+<!--  register	:  pPowerStates->state[register]  	  	-->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="0" reg ="6">
+    <Timestamp index="0" count="1"/>
+	<System name="PWR_STATUS0_DBG">
+		<Module name="PD_MM_TOP_STATE" register="1" bitmap="28:31" maxScale="7"/>
+		<Module name="PD_GPU_TOP_STATE" register="1" bitmap="24:27" maxScale="7"/>
+		<Module name="PD_AP_SYS_STATE" register="1" bitmap="20:23" maxScale="7"/>
+		<Module name="PD_CA7_C3_STATE" register="1" bitmap="16:19" maxScale="7"/>
+		<Module name="PD_CA7_C2_STATE" register="1" bitmap="12:15" maxScale="7"/>
+		<Module name="PD_CA7_C1_STATE" register="1" bitmap="8:11" maxScale="7"/>
+		<Module name="PD_CA7_C0_STATE" register="1" bitmap="4:7" maxScale="7"/>
+		<Module name="PD_CA7_TOP_STATE" register="1" bitmap="0:3" maxScale="7"/>
+	</System>
+	<System name="PWR_STATUS1_DBG">
+		<Module name="PD_WTLCP_TD_STATE" register="2" bitmap="28:31" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P1_STATE" register="2" bitmap="24:27" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P2_STATE" register="2" bitmap="20:23" maxScale="7"/>
+		<Module name="PD_WTLCP_LDSP_STATE" register="2" bitmap="12:15" maxScale="7"/>
+		<Module name="PD_WTLCP_TGDSP_STATE" register="2" bitmap="8:11" maxScale="7"/>
+		<Module name="PD_WTLCP_HU3GE_A_STATE" register="2" bitmap="4:7" maxScale="7"/>
+		<Module name="PD_WTLCP_HU3GE_B_STATE" register="2" bitmap="0:3" maxScale="7"/>
+	</System>
+	<System name="PWR_STATUS2_DBG">
+		<Module name="PD_PUB_SYS_STATE" register="3" bitmap="24:27" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P4_STATE" register="3" bitmap="16:19" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P3_STATE" register="3" bitmap="12:15" maxScale="7"/>
+		<Module name="PD_PUBCP_SYS_STATE" register="3" bitmap="8:11" maxScale="7"/>
+		<Module name="PD_WTLCP_SYS_STATE" register="3" bitmap="4:7" maxScale="7"/>
+	</System>
+	<System name="SLEEP_CTRL">
+		<Module name="AON_DMA_FORCE_LIGHT_SLEEP" register="4" bitmap="27"/>
+		<Module name="PUBCP_FORCE_LIGHT_SLEEP" register="4" bitmap="26"/>
+		<Module name="WTLCP_FORCE_LIGHT_SLEEP" register="4" bitmap="25"/>
+		<Module name="AP_FORCE_LIGHT_SLEEP" register="4" bitmap="24"/>
+		<Module name="ARM7_FORCE_DEEP_SLEEP" register="4" bitmap="21"/>
+		<Module name="PUBCP_FORCE_DEEP_SLEEP" register="4" bitmap="18"/>
+		<Module name="WTLCP_FORCE_DEEP_SLEEP" register="4" bitmap="17"/>
+		<Module name="AP_FORCE_DEEP_SLEEP" register="4" bitmap="16"/>
+		<Module name="PUBCP_LIGHT_SLEEP" register="4" bitmap="10"/>
+		<Module name="WTLCP_LIGHT_SLEEP" register="4" bitmap="9"/>
+		<Module name="AP_LIGHT_SLEEP" register="4" bitmap="8"/>
+		<Module name="PUBCP_DEEP_SLEEP" register="4" bitmap="2"/>
+		<Module name="WTLCP_DEEP_SLEEP" register="4" bitmap="1"/>
+		<Module name="AP_DEEP_SLEEP" register="4" bitmap="0"/>
+	</System>
+	<System name="SLEEP_STATUS">
+		<Module name="ARM7_SLP_STATUS" register="5" bitmap="20:23" maxScale="7"/>
+		<Module name="PUBCP_SLP_STATUS" register="5" bitmap="8:11" maxScale="7"/>
+		<Module name="WTLCP_SLP_STATUS" register="5" bitmap="4:7" maxScale="7"/>
+		<Module name="AP_SLP_STATUS" register="5" bitmap="0:3" maxScale="7"/>
+	</System>
+</PowerTrace>

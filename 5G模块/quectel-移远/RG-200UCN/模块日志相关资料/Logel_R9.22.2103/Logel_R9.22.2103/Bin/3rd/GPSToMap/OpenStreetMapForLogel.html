@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <META content="IE=10.0000" http-equiv="X-UA-Compatible">
+    <script type="text/javascript" src="./ol/jquery-2.2.3.min.js"></script>
+	<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script type="text/javascript" src="./ol/polyfill.min.js"></script>
+    <link rel="stylesheet" href="./ol/bootstrap.min.css">
+	<script type="text/javascript" src="./ol/bootstrap.min.js"></script>
+	<link rel="stylesheet"  href="./ol/css/ol.css"/>
+	<script src="./ol/build/ol.js"></script>
+    <title>LogelToMap</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map-canvas {
+        height: 100%;
+		width: 100%;
+		float: left;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+	  /* CSS style for the popup */
+      .ol-popup {
+        position: absolute;
+        background-color: white;
+        -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        bottom: 12px;
+        left: -50px;
+        min-width: 240px;
+      }
+      .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+	<div id="popup" class="ol-popup">
+      <div id="popup-content"></div>
+    </div>
+    <script>
+		/* global variables */
+        var map            = undefined;
+        var veclayer       = undefined;
+		var featureLoc     = undefined;
+        var markersArray   = new ol.Collection();
+		var icnGreenOld    = undefined;
+		var lastFeature    = undefined;
+		var bQueryTimezone = false;
+		var timeZoneInfo;
+		var ptsFromLogel;
+
+		/* overlay */
+		var container = document.getElementById('popup');
+		var content   = document.getElementById('popup-content');
+        var popup     = undefined;
+
+		/* icon styles */
+		var icon_style_blue    = undefined;
+		var icon_style_green   = undefined;
+		var icon_style_green_l = undefined;
+		var icon_style_locate  = undefined;
+
+
+		function locate(newLat, newLon, desc) {
+		    panTo(newLat, newLon, desc);
+		}
+
+		function getTimeZoneDiff() {
+
+			if (!bQueryTimezone) {
+				var paraStr = window.external.QueryTimezoneParameters();
+
+				if (paraStr.length > 0) {
+					var paraArr = paraStr.split(',');
+					queryTimezone(paraArr[0], paraArr[1], paraArr[2]);
+				} else {
+					bQueryTimezone = true;
+					initGPSInfo();
+				}
+			}
+			return timeZoneInfo.timeZone.toString();
+		}
+
+		function initMap() {
+
+			// create overlay
+			popup = new ol.Overlay({
+				element: container,
+				stopEvent: true,
+				autoPan: true,
+				autoPanAnimation: {
+                    duration: 500
+				},
+				offset: [0,-16]
+			});
+
+			// create marker icon styles
+		    icon_style_blue = new ol.style.Style({
+								  image: new ol.style.Icon(/** @type {module:ol/style/Icon~Options} */ ({
+											 anchor: [0.5, 0.5],
+                                             anchorXUnits: 'fraction',
+                                             anchorYUnits: 'fraction',
+											 src: 'img/measle_blue.png'
+										 }))
+							  });
+
+			icon_style_green = new ol.style.Style({
+								   image: new ol.style.Icon(/** @type {module:ol/style/Icon~Options} */ ({
+											  anchor: [0.5, 0.5],
+											  anchorXUnits: 'fraction',
+											  anchorYUnits: 'fraction',
+											  src: 'img/measle_green.png'
+										  }))
+							   });
+
+			icon_style_green_l = new ol.style.Style({
+									 image: new ol.style.Icon(/** @type {module:ol/style/Icon~Options} */ ({
+											    anchor: [0.5, 0.5],
+											    anchorXUnits: 'fraction',
+											    anchorYUnits: 'fraction',
+											    src: 'img/icnLarge.png'
+										    }))
+								 });
+
+			icon_style_locate = new ol.style.Style({
+									image: new ol.style.Icon(/** @type {module:ol/style/Icon~Options} */ ({
+											   anchor: [0.5, 46],
+											   anchorXUnits: 'fraction',
+											   anchorYUnits: 'pixels',
+											   src: 'img/locate.png'
+										   }))
+								});
+
+			// create new OSM map
+			map = new ol.Map({
+				target: document.getElementById('map-canvas'),
+				layers: [
+				  new ol.layer.Tile({
+				      source: new ol.source.OSM(),
+				      //extent: ol.proj.transformExtent([120.50, 30.79, 122.50, 31.64], 'EPSG:4326', 'EPSG:3857')
+			      })
+				],
+				view: new ol.View({
+                          center: ol.proj.transform([121.626542, 31.210709], 'EPSG:4326', 'EPSG:3857'),
+                          zoom: 13,
+                          minZoom: 10
+                }),
+				overlays: [popup]
+            });
+
+			// register map event - dblclick
+			map.on('dblclick', function(evt) {
+		        var feature = map.forEachFeatureAtPixel(evt.pixel,
+														function(feature) {
+															if (feature) {
+																if (feature.get('type') == 'Point') {
+																	return feature;
+																}
+															}
+														});
+			    if (feature) {
+
+					syncWithLogel(feature.get('time') + "," + timeZoneInfo.timeZone.toString());
+
+					var coordinates = feature.getGeometry().getCoordinates();
+					showLocate(coordinates);
+
+					// disable enlarge map view
+					return false;
+			    }
+		    });
+
+			// register map event - pointermove
+			map.on('pointermove', function(e) {
+
+				if (e.dragging) {
+				    popup.setPosition(undefined);
+				    return;
+				}
+
+				var pixel = map.getEventPixel(e.originalEvent);
+				var hit = map.hasFeatureAtPixel(pixel);
+
+				map.getTarget().style.cursor = hit ? 'pointer' : '';
+
+				if (hit) {
+
+					var feature = map.forEachFeatureAtPixel(pixel,
+														function(feature) {
+															if (feature) {
+																if (feature.get('type') == 'Point') {
+																	return feature;
+																}
+															}
+														});
+			        if (feature) {
+
+						if (feature != lastFeature) {
+
+						    var coordinates = feature.getGeometry().getCoordinates();
+							var desc = translateLatLng(feature.get('description'));
+
+							content.innerHTML = desc;
+							popup.setPosition(coordinates);
+
+                            if (lastFeature != undefined) {
+								lastFeature.setStyle(icnGreenOld);
+							}
+
+							icnGreenOld = feature.getStyle();
+							feature.setStyle(icon_style_green_l);
+
+							lastFeature = feature;
+						}
+					}
+				}
+				else {
+					popup.setPosition(undefined);
+				    if (lastFeature != undefined) {
+						lastFeature.setStyle(icnGreenOld);
+						lastFeature = undefined;
+					}
+				}
+			});
+
+            initMapSymbol();
+
+			getTimeZoneDiff();
+		}
+
+		function initMapSymbol() {
+
+			ptsFromLogel = [];
+			timeZoneInfo = {
+					timeZone: 28800000,
+                    zoneName: "Asia/Shanghai",
+                    countryNameStr: "china"
+				};
+		}
+
+		function initGPSInfo() {
+
+			ptsFromLogel.length = 0;
+			ptsFromLogel = getPointsFromLogel();
+
+			if (ptsFromLogel.length > 0)
+			{
+				addMakers(ptsFromLogel);
+			}
+		}
+
+		function viewAnimate(_coordinate, _duration, _resolution) {
+
+			if (map == undefined)
+				return;
+
+			map.getView().animate({
+                center: _coordinate,
+                duration: _duration,
+				resolution: _resolution
+            });
+		}
+
+		function showLocate(coordinate) {
+
+			if (featureLoc != undefined) {
+				if (veclayer.getSource().hasFeature(featureLoc))
+					veclayer.getSource().removeFeature(featureLoc);
+			}
+
+			featureLoc = new ol.Feature({
+							 geometry: new ol.geom.Point(coordinate),
+							 type: ''
+						 });
+			featureLoc.setStyle(icon_style_locate);
+
+			veclayer.getSource().getFeaturesCollection().push(featureLoc);
+		}
+
+		function panTo(newlat, newlon, desc) {
+
+		    var lon = parseFloat(newlon);
+			var	lat = parseFloat(newlat);
+
+			var coordinate = ol.proj.fromLonLat([lon, lat]);
+
+			viewAnimate(coordinate, 1500);
+
+			showLocate(coordinate);
+		}
+
+		function getPointsFromLogel() {
+
+			// 该函数将在GPSToMap.exe中引起对getTimeZoneDiff的调用
+			var rtn = window.external.GetPoints();
+			var ptArr = new Array();
+			var ptsLatLon = rtn.split(",");
+			var ptTemp;
+
+			for (var i = 0; i < ptsLatLon.length - 5; i += 5) {
+
+				//ptTemp = GPS.gcj_encrypt( ptsLatLon[i], ptsLatLon[i + 1]);
+				ptArr.push({
+					lat: ptsLatLon[i],//ptTemp.lat,
+					lon: ptsLatLon[i + 1],//ptTemp.lon,
+					kmlDataTime: ptsLatLon[i + 2],
+					desc: ptsLatLon[i + 3],
+					inCPLog: ptsLatLon[i + 4]
+				});
+			}
+
+			return ptArr;
+		}
+
+		function addMakers(pts) {
+
+			var marker;
+			var lon;
+			var lat;
+			var coordinate;
+			var coordArray = new Array();
+
+			markersArray.clear();
+
+			if (pts.length == 0)
+				return;
+
+			// add marker
+			for (var i = 0; i < pts.length; i++) {
+
+			    lon = parseFloat(pts[i].lon);
+				lat = parseFloat(pts[i].lat);
+
+                coordinate = ol.proj.fromLonLat([lon, lat]);
+
+			    marker = new ol.Feature({
+							 geometry: new ol.geom.Point(coordinate),
+							 type: 'Point',
+							 description: pts[i].desc,
+				             time: pts[i].kmlDataTime,
+						 });
+
+				if (pts[i].inCPLog === "true"){
+					marker.setStyle(icon_style_green);
+				} else {
+					marker.setStyle(icon_style_blue);
+				}
+
+				coordArray.push(coordinate);
+				markersArray.push(marker);
+			}
+
+			// add line that links all markers
+			marker = new ol.Feature({
+							 geometry: new ol.geom.LineString(coordArray),
+							 type: 'LineString'
+						 });
+			markersArray.push(marker);
+
+			// create client vector layer
+			if (veclayer != undefined) {
+				map.removeLayer(veclayer);
+			}
+			veclayer = new ol.layer.Vector({
+					       source: new ol.source.Vector({
+								       features: markersArray
+							       }),
+						   style: new ol.style.Style({
+									  stroke: new ol.style.Stroke({
+												 color: 'rgba(0, 255, 0, 0.5)', // #00FF00
+												 width: 5
+											  })
+								  })
+				       });
+
+			// map add vector layer
+			map.addLayer(veclayer);
+
+			// move map view to the extent that wrap all the markers
+			var coor_bound = ol.extent.boundingExtent(coordArray);
+			if (coor_bound.length >= 4) {
+
+			    var coordAdj = 1000;
+
+				var minX = coor_bound[0];
+				var minY = coor_bound[1];
+				var maxX = coor_bound[2];
+				var maxY = coor_bound[3];
+				var midX = minX + Math.abs((maxX - minX)/2.0);
+				var midY = minY + Math.abs((maxY - minY)/2.0);
+
+				var coor_move = [midX, midY];
+
+				var resolution = map.getView().getResolutionForExtent([minX - coordAdj, minY - coordAdj, maxX + coordAdj, maxY + coordAdj]);
+
+				viewAnimate(coor_move, 100, resolution);
+			}
+		}
+
+		function translateLatLng(description) {
+
+            var reg_lng = /Longitude:.([0-9.]+)/g;
+            var result = reg_lng.exec(description);
+            if ( isEmpty(result) ) {
+                return description;
+            }
+            var old_lng = result[1];
+
+            var reg_lat = /Latitude:.([0-9.]+)/g;
+            result = reg_lat.exec(description);
+            if ( isEmpty(result) ) {
+                return description;
+            }
+            var old_lat = result[1];
+
+            var pt = GPS.gcj_encrypt(old_lat, old_lng);
+            var new_lng = "Longitude: " + pt.lon;
+            var new_lat = "Latitude: " + pt.lat;
+
+            description = description.replace(reg_lng, new_lng);
+            description = description.replace(reg_lat, new_lat);
+
+            return description;
+        }
+
+        function isEmpty(obj) {
+            for (var name in obj)
+            {
+                return false;
+            }
+            return true;
+        }
+
+		function syncWithLogel(markerTitle) {
+			window.external.SyncFromWebPage(markerTitle);
+		}
+
+		function updateTimeRange(timeS, timeE) {
+
+		    if (timeS == "0" && timeE == "0") {
+		        for (var i = 0; i < ptsFromLogel.length; i++) {
+                    ptsFromLogel[i].inCPLog = "false";
+                }
+            } else {
+                ptsFromLogel.length = 0;
+                ptsFromLogel = getPointsFromLogel();
+            }
+
+			if (ptsFromLogel.length > 0)
+			{
+				addMakers(ptsFromLogel);
+			}
+		}
+
+		function queryTimezone(lat, lng, timeStamp){
+			timeStamp = timeStamp / 1000;
+			url = 'http://api.timezonedb.com/v2/get-time-zone?key=YGCXJOCY92EN' +
+				'&format=json' +
+				'&by=position' +
+				'&lat=' + lat.toString() +
+				'&lng=' + lng.toString() +
+				'&time=' + timeStamp.toString();
+
+			//url = 'http://api.timezonedb.com/v2/get-time-zone?key=YGCXJOCY92EN&format=json&by=position&lat=31.210709&lng=121.626542&time=1498456514';
+
+            $.ajax({
+                url: url,
+                type: 'GET',
+                async: false,
+                dataType: 'JSONP',  			// 处理Ajax跨域问题
+                success: function(data){		// 该函数为异步执行
+                    if (data.status == "OK") {
+
+                        bQueryTimezone = true;
+                        timeZoneInfo.timeZone = data.gmtOffset * 1000;	// 单位: 毫秒
+                        timeZoneInfo.zoneName = data.zoneName;
+                        timeZoneInfo.countryNameStr = data.countryName;
+
+						initGPSInfo();
+                    }
+                },
+                error: function (err) {			// 该函数为异步执行
+                    //console.log(err);
+					initGPSInfo();
+                }
+            });
+		}
+
+		var GPS = {
+            PI : 3.14159265358979324,
+            x_pi : 3.14159265358979324 * 3000.0 / 180.0,
+            delta : function (lat, lon) {
+                // Krasovsky 1940
+                //
+                // a = 6378245.0, 1/f = 298.3
+                // b = a * (1 - f)
+                // ee = (a^2 - b^2) / a^2;
+                var a = 6378245.0; //  a: 卫星椭球坐标投影到平面地图坐标系的投影因子。
+                var ee = 0.00669342162296594323; //  ee: 椭球的偏心率。
+                var dLat = this.transformLat(lon - 105.0, lat - 35.0);
+                var dLon = this.transformLon(lon - 105.0, lat - 35.0);
+                var radLat = lat / 180.0 * this.PI;
+                var magic = Math.sin(radLat);
+                magic = 1 - ee * magic * magic;
+                var sqrtMagic = Math.sqrt(magic);
+                dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * this.PI);
+                dLon = (dLon * 180.0) / (a / sqrtMagic * Math.cos(radLat) * this.PI);
+                return {'lat': dLat, 'lon': dLon};
+            },
+
+            //WGS-84 to GCJ-02
+            gcj_encrypt : function (wgsLat, wgsLon) {
+                if (this.outOfChina(wgsLat, wgsLon))
+                    return {'lat': wgsLat, 'lon': wgsLon};
+
+                var d = this.delta(wgsLat, wgsLon);
+                return {'lat' : parseFloat(wgsLat) + parseFloat(d.lat),'lon' : parseFloat(wgsLon) + parseFloat(d.lon)};
+            },
+            //GCJ-02 to WGS-84
+            gcj_decrypt : function (gcjLat, gcjLon) {
+                if (this.outOfChina(gcjLat, gcjLon))
+                    return {'lat': gcjLat, 'lon': gcjLon};
+
+                var d = this.delta(gcjLat, gcjLon);
+                return {'lat': gcjLat - d.lat, 'lon': gcjLon - d.lon};
+            },
+            //GCJ-02 to WGS-84 exactly
+            gcj_decrypt_exact : function (gcjLat, gcjLon) {
+                var initDelta = 0.01;
+                var threshold = 0.000000001;
+                var dLat = initDelta, dLon = initDelta;
+                var mLat = gcjLat - dLat, mLon = gcjLon - dLon;
+                var pLat = gcjLat + dLat, pLon = gcjLon + dLon;
+                var wgsLat, wgsLon, i = 0;
+                while (1) {
+                    wgsLat = (mLat + pLat) / 2;
+                    wgsLon = (mLon + pLon) / 2;
+                    var tmp = this.gcj_encrypt(wgsLat, wgsLon)
+                    dLat = tmp.lat - gcjLat;
+                    dLon = tmp.lon - gcjLon;
+                    if ((Math.abs(dLat) < threshold) && (Math.abs(dLon) < threshold))
+                        break;
+
+                    if (dLat > 0) pLat = wgsLat; else mLat = wgsLat;
+                    if (dLon > 0) pLon = wgsLon; else mLon = wgsLon;
+
+                    if (++i > 10000) break;
+                }
+                //console.log(i);
+                return {'lat': wgsLat, 'lon': wgsLon};
+            },
+            //GCJ-02 to BD-09
+            bd_encrypt : function (gcjLat, gcjLon) {
+                var x = gcjLon, y = gcjLat;
+                var z = Math.sqrt(x * x + y * y) + 0.00002 * Math.sin(y * this.x_pi);
+                var theta = Math.atan2(y, x) + 0.000003 * Math.cos(x * this.x_pi);
+                bdLon = z * Math.cos(theta) + 0.0065;
+                bdLat = z * Math.sin(theta) + 0.006;
+                return {'lat' : bdLat,'lon' : bdLon};
+            },
+            //BD-09 to GCJ-02
+            bd_decrypt : function (bdLat, bdLon) {
+                var x = bdLon - 0.0065, y = bdLat - 0.006;
+                var z = Math.sqrt(x * x + y * y) - 0.00002 * Math.sin(y * this.x_pi);
+                var theta = Math.atan2(y, x) - 0.000003 * Math.cos(x * this.x_pi);
+                var gcjLon = z * Math.cos(theta);
+                var gcjLat = z * Math.sin(theta);
+                return {'lat' : gcjLat, 'lon' : gcjLon};
+            },
+            //WGS-84 to Web mercator
+            //mercatorLat -> y mercatorLon -> x
+            mercator_encrypt : function(wgsLat, wgsLon) {
+                var x = wgsLon * 20037508.34 / 180.;
+                var y = Math.log(Math.tan((90. + wgsLat) * this.PI / 360.)) / (this.PI / 180.);
+                y = y * 20037508.34 / 180.;
+                return {'lat' : y, 'lon' : x};
+                /*
+                 if ((Math.abs(wgsLon) > 180 || Math.abs(wgsLat) > 90))
+                 return null;
+                 var x = 6378137.0 * wgsLon * 0.017453292519943295;
+                 var a = wgsLat * 0.017453292519943295;
+                 var y = 3189068.5 * Math.log((1.0 + Math.sin(a)) / (1.0 - Math.sin(a)));
+                 return {'lat' : y, 'lon' : x};
+                 //*/
+            },
+            // Web mercator to WGS-84
+            // mercatorLat -> y mercatorLon -> x
+            mercator_decrypt : function(mercatorLat, mercatorLon) {
+                var x = mercatorLon / 20037508.34 * 180.;
+                var y = mercatorLat / 20037508.34 * 180.;
+                y = 180 / this.PI * (2 * Math.atan(Math.exp(y * this.PI / 180.)) - this.PI / 2);
+                return {'lat' : y, 'lon' : x};
+                /*
+                 if (Math.abs(mercatorLon) < 180 && Math.abs(mercatorLat) < 90)
+                 return null;
+                 if ((Math.abs(mercatorLon) > 20037508.3427892) || (Math.abs(mercatorLat) > 20037508.3427892))
+                 return null;
+                 var a = mercatorLon / 6378137.0 * 57.295779513082323;
+                 var x = a - (Math.floor(((a + 180.0) / 360.0)) * 360.0);
+                 var y = (1.5707963267948966 - (2.0 * Math.atan(Math.exp((-1.0 * mercatorLat) / 6378137.0)))) * 57.295779513082323;
+                 return {'lat' : y, 'lon' : x};
+                 //*/
+            },
+            // two point's distance
+            distance : function (latA, lonA, latB, lonB) {
+                var earthR = 6371000.;
+                var x = Math.cos(latA * this.PI / 180.) * Math.cos(latB * this.PI / 180.) * Math.cos((lonA - lonB) * this.PI / 180);
+                var y = Math.sin(latA * this.PI / 180.) * Math.sin(latB * this.PI / 180.);
+                var s = x + y;
+                if (s > 1) s = 1;
+                if (s < -1) s = -1;
+                var alpha = Math.acos(s);
+                var distance = alpha * earthR;
+                return distance;
+            },
+            outOfChina : function (lat, lon) {
+                if (lon < 72.004 || lon > 137.8347)
+                    return true;
+                if (lat < 0.8293 || lat > 55.8271)
+                    return true;
+                return false;
+            },
+            transformLat : function (x, y) {
+                var ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * Math.sqrt(Math.abs(x));
+                ret += (20.0 * Math.sin(6.0 * x * this.PI) + 20.0 * Math.sin(2.0 * x * this.PI)) * 2.0 / 3.0;
+                ret += (20.0 * Math.sin(y * this.PI) + 40.0 * Math.sin(y / 3.0 * this.PI)) * 2.0 / 3.0;
+                ret += (160.0 * Math.sin(y / 12.0 * this.PI) + 320 * Math.sin(y * this.PI / 30.0)) * 2.0 / 3.0;
+                return ret;
+            },
+            transformLon : function (x, y) {
+                var ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * Math.sqrt(Math.abs(x));
+                ret += (20.0 * Math.sin(6.0 * x * this.PI) + 20.0 * Math.sin(2.0 * x * this.PI)) * 2.0 / 3.0;
+                ret += (20.0 * Math.sin(x * this.PI) + 40.0 * Math.sin(x / 3.0 * this.PI)) * 2.0 / 3.0;
+                ret += (150.0 * Math.sin(x / 12.0 * this.PI) + 300.0 * Math.sin(x / 30.0 * this.PI)) * 2.0 / 3.0;
+                return ret;
+            }
+        };
+
+		// page init
+		window.onload = initMap;
+
+		// patch for IE10 below version
+		window.requestAnimationFrame = window.requestAnimationFrame || function (fn) {return setTimeout(fn,1000/60)}
+		window.cancelAnimationFrame  = window.cancelAnimationFrame || clearTimeout;
+
+    </script>
+  </body>
+</html>

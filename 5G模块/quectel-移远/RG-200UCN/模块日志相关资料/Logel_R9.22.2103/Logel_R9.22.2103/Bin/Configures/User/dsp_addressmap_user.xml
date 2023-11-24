@@ -1,0 +1,189 @@
+<!--  name : max lenght is 32 characters       -->
+<AddressMap version="1.0">
+    <Rat name="common" />
+    <Rat name="lte">
+        <Group name="N32K">
+            <TestPoint addr="0xDF9B" name="N32K_L" />
+            <TestPoint addr="0xDF9C" name="N32K_H" />
+        </Group>
+    </Rat>
+    <Rat name="tg">
+        <Group name="N32K">
+            <TestPoint addr="0xDCCA" name="N32K_L" />
+            <TestPoint addr="0xDCC9" name="N32K_H" />
+        </Group>
+        <Group name="AGC_GAIN_WORD">
+            <TestPoint addr="0xDD6F" name="AGC_GAIN_WORD" />
+        </Group>
+        <Group name="TX_POWER_LEVEL">
+            <TestPoint addr="0xD873" name="TX_POWER_LEVEL" />
+        </Group>
+        <Group name="CAFC">
+            <TestPoint addr="0xDD78" name="CAFC" />
+        </Group>
+    </Rat>
+    <Rat name="ag" />
+    <Rat name="wcn">
+        <Group name="marlin2">
+            <Group name="BR/EDR Normal">
+                <TestPoint addr="0xD102" name="[HCI_IN] HCI Command" />
+                <TestPoint addr="0xD103" name="[HCI_OUT] HCI Event" />
+                <TestPoint addr="0xD104" name="[HCI_OUT] Cmd Comp Evt, Sta" />
+                <TestPoint addr="0xD105" name="[HCI_OUT] Cmd Sta Evt, Cmd" />
+                <TestPoint addr="0xD106" name="[HCI_OUT] Cmd Comp Evt, Cmd" />
+                <TestPoint addr="0xD737" name="[HCI_OUT] HCI LE Sub Evt" />
+                <TestPoint addr="0xD113" name="[BB_IN] Rx Packet" />
+                <TestPoint addr="0xD114" name="[BB_OUT] Tx Packet" />
+                <TestPoint addr="0xD300" name="[LMP_IN] LMP" />
+                <TestPoint addr="0xD301" name="[LMP_OUT] Encode LMP" />
+                <TestPoint addr="0xD000" name="ISR Basic" />
+                <TestPoint addr="0xDC2E" name="Classic LE Switch" />
+                <TestPoint addr="0xD4B0" name="Time Frame" />
+                <TestPoint addr="0xD28B" name="[L2CAP_IN] payload" />
+            </Group>
+            <Group name="BLE Normal">
+                <TestPoint addr="0xD701" name="ISR Basic LE" />
+                <TestPoint addr="0xD704" name="[BLE_ADV_OUT]Encode ADV PDU" />
+                <TestPoint addr="0xD705" name="[BLE_ADV_IN]Decode ADV PDU" />
+                <TestPoint addr="0xD744" name="[BLE_LL_OUT]Encode LL PDU" />
+                <TestPoint addr="0xD745" name="[BLE_LL_IN]Decode LL PDU" />
+                <TestPoint addr="0xD737" name="[HCI_OUT] HCI LE SUBEvent" />
+            </Group>
+            <Group name="Radio">
+                <TestPoint addr="0xD236" name="Radio] Raido Mode Switch" />
+            </Group>
+            <Group name="Version">
+                <TestPoint addr="0xDCAA" name="BT_CONTROLLER VERSION/DATE" />
+            </Group>
+            <Group name="Coex">
+                <TestPoint addr="0xD215" name="[Coex] Switch State" />
+                <TestPoint addr="0xD234" name="[Coex] WiFi(2) Bt(1) Switch" />
+                <TestPoint addr="0xD751" name="[Coex] last_bt_work_time" />
+                <TestPoint addr="0xD752" name="[Coex] last_wifi_work_time" />
+            </Group>
+            <Group name="Uart">
+                <TestPoint addr="0xD241" name="UART_TX_FIFO_LENGTH" />
+            </Group>
+            <Group name="SDIO">
+                <TestPoint addr="0xD224" name="[SDIO_OUT] LENGTH" />
+                <TestPoint addr="0xDA24" name="[SDIO_OUT] TYPE" />
+                <TestPoint addr="0xD29C" name="[SDIO_OUT] L2CAP_IN_Q sub data" />
+            </Group>
+            <Group name="SIPC">
+                <TestPoint addr="0xD137" name="[SIPC_IN] Type" />
+                <TestPoint addr="0xD168" name="[SIPC_IN] Length" />
+            </Group>
+            <Group name="Queue">
+                <TestPoint addr="0xDB21" name="[Queue] Enqueue(Data Queue)" />
+                <TestPoint addr="0xDB22" name="[Queue] Enqueue(Not Data Queue)" />
+                <TestPoint addr="0xDB23" name="[Queue] Commit, Type and Pending" />
+                <TestPoint addr="0xD617" name="[Queue] Ack Last Dequeued" />
+            </Group>
+        </Group>
+        <Group name="marlin3">
+            <Group name="BR/EDR Normal">
+                <TestPoint addr="0xDD00" name="[HCI_IN]HCI PAYLOAD" />
+                <TestPoint addr="0xDD01" name="[HCI_IN]HCI LENGTH" />
+                <TestPoint addr="0xDD04" name="[HCI_OUT]Cmd Comp Evt, Sta" />
+                <TestPoint addr="0xDD05" name="[HCI_OUT]Cmd Sta Evt, Cmd" />
+                <TestPoint addr="0xDD06" name="[HCI_OUT]Cmd Comp Evt, Cmd" />
+                <TestPoint addr="0xDD20" name="[HCI_IN]HCI EVENT PAYLOAD" />
+                <TestPoint addr="0xD306" name="[LMP_OUT]LMP IN PAYLOAD" />
+                <TestPoint addr="0xD305" name="[LMP_OUT]LMP OUT PAYLOAD" />
+                <TestPoint addr="0xD16E" name="[IRQ]irq state before" />
+                <TestPoint addr="0xD16F" name="[IRQ]irq state after" />
+                <TestPoint addr="0xDD8E" name="[L2CAP_IN]Rx packet last 8" />
+                <TestPoint addr="0xDD8F" name="[L2CAP_OUT]Tx packet last 8" />
+                <TestPoint addr="0xD200" name="[sleep]LMP IN" />
+                <TestPoint addr="0xD102" name="[rx status]rx packet status" />
+                <TestPoint addr="0xD103" name="[rx status]rx packet status" />
+                <TestPoint addr="0xD115" name="[rx status]tx packet status" />
+                <TestPoint addr="0xD116" name="[rx status]tx packet status" />
+            </Group>
+            <Group name="CLK">
+                <TestPoint addr="0xD4B0" name="Time Frame" />
+                <TestPoint addr="0xD19A" name="NATIVE CLK" />
+                <TestPoint addr="0xD51C" name="NATIVE CLK" />
+                <TestPoint addr="0xD51D" name="native clk bitcount" />
+                <TestPoint addr="0xD165" name="CLK" />
+                <TestPoint addr="0xDC88" name="daycount" />
+                <TestPoint addr="0xDC99" name="daycount_set_1" />
+                <TestPoint addr="0xdc98" name="daycount_set_0" />
+            </Group>
+            <Group name="Queue">
+                <TestPoint addr="0xD832" name="[Dequeue]acl last dequeue" />
+            </Group>
+            <Group name="Schedul">
+                <TestPoint addr="0xD501" name="Check Req" />
+                <TestPoint addr="0xD502" name="New Event Selected" />
+                <TestPoint addr="0xD503" name="Old Event End" />
+                <TestPoint addr="0xD57E" name="Priority" />
+                <TestPoint addr="0xD570" name="Event skip/been preempt" />
+                <TestPoint addr="0xD564" name="Timer type event timeout" />
+            </Group>
+            <Group name="Common">
+                <TestPoint addr="0xDD02" name="HCI CMD" />
+                <TestPoint addr="0xDD03" name="HCI Event" />
+                <TestPoint addr="0xD300" name="LMP IN" />
+                <TestPoint addr="0xD301" name="LMP OUT,enqueue" />
+                <TestPoint addr="0xD113" name="RX packet type" />
+                <TestPoint addr="0xD114" name="TX packet type" />
+                <TestPoint addr="0xD19A" name="Native CLK,in half-slot" />
+                <TestPoint addr="0xDD04" name="HCI Event error code" />
+                <TestPoint addr="0xD102" name="RX Status" />
+                <TestPoint addr="0xD77A" name="LE LL IN" />
+                <TestPoint addr="0xD77B" name="LE LL OUT" />
+                <TestPoint addr="0xD82B" name="A2DP Chopping point" />
+                <TestPoint addr="0xDD8A" name="ACL OUT,handle" />
+                <TestPoint addr="0xDD8B" name="ACL OUT,size" />
+                <TestPoint addr="0xDD8F" name="ACL TX tail 2 bytes" />
+                <TestPoint addr="0xDD24" name="SDIO callback" />
+            </Group>
+            <Group name="Coex">
+                <TestPoint addr="0xD4B8" name="Number of A2DP packet pending" />
+                <TestPoint addr="0xD441" name="Wifi start/end time" />
+                <TestPoint addr="0xDA90" name="Reg_BT_Coex_Cfg,WIFI_CTRL" />
+                <TestPoint addr="0xD411" name="Coex masked channels" />
+                <TestPoint addr="0xD450" name="allocated wifi time,with wifi" />
+                <TestPoint addr="0xD452" name="allocated wifi time,without wifi" />
+                <TestPoint addr="0xD430" name="Wifi Open" />
+                <TestPoint addr="0xD440" name="BT Open" />
+            </Group>
+            <Group name="A2DP Caton">
+                <Group name="Share time not enough">
+                    <TestPoint addr="0xD441" name="Stime,can get is bt page inquiry" />
+                    <TestPoint addr="0xD114" name="TX packet type" />
+                </Group>
+                <Group name="Time slice is too fine">
+                    <TestPoint addr="0xD114" name="TX packet type" />
+                    <TestPoint addr="0xD503" name="Old event end" />
+                </Group>
+                <Group name="Task delay">
+                    <TestPoint addr="0xD564" name="Timer type event timeout" />
+                </Group>
+            </Group>
+            <Group name="Connection fail">
+                <Group name="LMP transcation error">
+                    <TestPoint addr="0xD300" name="LMP IN" />
+                    <TestPoint addr="0xD301" name="LMP_OUT,enqueue" />
+                </Group>
+                <Group name="Schedul priority">
+                    <TestPoint addr="0xD57E" name="Priority" />
+                </Group>
+            </Group>
+            <Group name="Mounse keyboard caton">
+                <Group name="Coex RF switch">
+                    <TestPoint addr="0xDA90" name="Reg BT_coex_cfg/APB_wifi_ctrl" />
+                </Group>
+                <Group name="Scheduling">
+                    <TestPoint addr="0xD570" name="Event skip/been preempt" />
+                    <TestPoint addr="0xD503" name="Old event end" />
+                    <TestPoint addr="0xD57E" name="priority" />
+                    <TestPoint addr="0xD114" name="TX packet type" />
+                    <TestPoint addr="0xD113" name="RX packet type" />
+                </Group>
+            </Group>
+        </Group>
+    </Rat>
+    <Rat name="ag(orca)" />
+</AddressMap>

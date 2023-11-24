@@ -1,0 +1,1 @@
+"%~dp0\DSPMemExtractor.exe" "%~dp0test.logel" "%~dp0out"

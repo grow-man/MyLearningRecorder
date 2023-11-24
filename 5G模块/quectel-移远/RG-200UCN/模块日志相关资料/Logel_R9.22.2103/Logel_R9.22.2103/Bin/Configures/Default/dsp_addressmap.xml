@@ -1,0 +1,31 @@
+<!--  name : max lenght is 32 characters       -->
+
+<AddressMap version="1.0">
+	<Rat name="common">
+	</Rat>
+	<Rat name="lte">
+		<Group name="PHICH">
+			<TestPoint addr="0xD546" name="PhichGroup"/>
+			<TestPoint addr="0xD549" name="PhichSeq"/>
+			<TestPoint addr="0xD547" name="DetPhich"/>
+		</Group>
+		<Group name="Tx power">
+			<TestPoint addr="0xD7E0" name="Pusch Tx power"/>
+			<TestPoint addr="0xD7E1" name="Pucch Tx power"/>
+			<TestPoint addr="0xD7E2" name="Prach Tx power"/>
+			<TestPoint addr="0xD7E3" name="SRS Tx power"/>
+		</Group>
+		<Group name="BLER">
+			<TestPoint addr="0xD4D3" name="ulBLER"/>
+			<TestPoint addr="0xD563" name="dlBLER"/>
+		</Group>
+	</Rat>
+	<Rat name="tg">
+	</Rat>
+	<Rat name="ag">
+	</Rat>
+	<Rat name="wcn">
+	</Rat>
+	<Rat name="ag(orca)">
+	</Rat>
+</AddressMap>

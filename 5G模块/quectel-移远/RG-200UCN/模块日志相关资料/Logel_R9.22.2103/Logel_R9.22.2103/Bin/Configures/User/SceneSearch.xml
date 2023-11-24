@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Scene>
+    <Template name="CLOUDSIM" check="0" readonly="0" expand="0">
+        <record key="ROUTING_AREA_UPDATE_REQUEST" SceneType="2" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+        <record key="ROUTING_AREA_UPDATE_ACCEPT" SceneType="2" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+    </Template>
+    <Template name="Call Drop: RL_Failure" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_MMCC_DATA_REQ" SceneType="0" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+        <record key="MSG_ID_MMCC_DATA_IND" SceneType="0" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+        <record key="MSG_ID_RRCA_CPHY_RL_FAILURE_IND" SceneType="0" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+        <record key="MSG_ID_CPHY_RL_FAILURE_IND" SceneType="0" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+        <record key="MSG_ID_MNM_CALL_FAILURE_IND" SceneType="0" IsRegularExpression="0" color="RGB(255,0,0)" check="0" />
+    </Template>
+    <Template name="Call Fail: RRC Connection Failure" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_MNCC_SETUP_REQ" SceneType="0" IsRegularExpression="0" color="RGB(0,255,0)" check="0" />
+        <record key="MSG_ID_MMCC_EST_REQ" SceneType="0" IsRegularExpression="0" color="RGB(0,255,0)" check="0" />
+        <record key="MSG_ID_GMMAS_ESTABLISH_REJ" SceneType="0" IsRegularExpression="0" color="RGB(0,255,0)" check="0" />
+        <record key="MSG_ID_MMCC_EST_REJ" SceneType="0" IsRegularExpression="0" color="RGB(0,255,0)" check="0" />
+        <record key="MSG_ID_MNM_CALL_FAILURE_IND" SceneType="0" IsRegularExpression="0" color="RGB(0,255,0)" check="0" />
+    </Template>
+    <Template name="RRC Connection Failure" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_GMM_AS_3G_SIG_EST_REQ" SceneType="0" IsRegularExpression="0" color="RGB(0,0,255)" check="0" />
+        <record key="MSG_ID_GMM_AS_GPRS_SIG_EST_REQ" SceneType="0" IsRegularExpression="0" color="RGB(0,0,255)" check="0" />
+        <record key="MSG_ID_GMMAS_ESTABLISH_REJ" SceneType="0" IsRegularExpression="0" color="RGB(0,0,255)" check="0" />
+    </Template>
+    <Template name="SMS send fail" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_SMS_SUBMIT" SceneType="0" IsRegularExpression="0" color="RGB(255,255,0)" check="0" />
+        <record key="MSG_ID_L4_SMSAL_SUBMIT_TPDU_REJ" SceneType="0" IsRegularExpression="0" color="RGB(255,255,0)" check="0" />
+        <record key="APP_MN_SEND_SMS_CNF" SceneType="0" IsRegularExpression="0" color="RGB(255,255,0)" check="0" />
+    </Template>
+    <Template name="SMS Fail: ESTABLISH REJECT" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_SMS_SUBMIT" SceneType="0" IsRegularExpression="0" color="RGB(255,128,64)" check="0" />
+        <record key="MSG_ID_MMSMS_EST_REJ" SceneType="0" IsRegularExpression="0" color="RGB(255,128,64)" check="0" />
+    </Template>
+    <Template name="SIM REMOVE" check="0" readonly="0" expand="0">
+        <record key="APP_MN_SIM_NOT_READY_IND" SceneType="0" IsRegularExpression="0" color="RGB(128,128,255)" check="0" />
+    </Template>
+    <Template name="NO PLMN" check="0" readonly="0" expand="0">
+        <record key="MSG_ID_MM_PLM_NO_PLMN_IND" SceneType="0" IsRegularExpression="0" color="RGB(255,0,255)" check="0" />
+    </Template>
+    <Template name="PDP ACTIAVTE FAIL" check="0" readonly="0" expand="1">
+        <record key="MSG_ID_SMREG_PDP_ACTIVATE_REQ" SceneType="0" IsRegularExpression="0" color="RGB(128,0,0)" check="0" />
+        <record key="MSG_ID_SMREG_PDP_ACTIVATE_REJ" SceneType="0" IsRegularExpression="0" color="RGB(128,0,0)" check="0" />
+    </Template>
+    <Template name="1111" check="1" readonly="0" expand="1">
+        <record key="mnm_gprs" SceneType="1" IsRegularExpression="0" color="RGB(0,128,0)" check="1" />
+    </Template>
+</Scene>

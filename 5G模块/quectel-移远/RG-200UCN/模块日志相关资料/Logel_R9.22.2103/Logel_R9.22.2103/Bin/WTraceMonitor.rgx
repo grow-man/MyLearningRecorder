@@ -1,0 +1,23 @@
+"meas: Stored meas result, PGC = 303, ECN0_2 = %d, RSCP = %d, RSSI = %d":303_ECN0_2,303_RSCP,303_RSSI
+"fng: equ fng TTRK: WL1C SNR iir state (Rake, Eq0, Eq1, EqMrc) = (%d, %d, %d, %d)":Rake,EQ0,EQ1,EQMRC
+"rx: DEC_HISR--TaskTag %d CFN 0 TbSize %d CRC_Map %d":taskTag,TbSize,CRC_Map
+"tx: HSDPA: NACK COUNT:%d,ACK COUNT:%d,DTX COUNT:%d":NACK,ACK,DTX
+"tx: TX_PrimHandler: AllowL2SendData = %d, PC_Pre_Frms = %d, real slot[0] power = %d, TPC_CMD:%d":allow_send, , slot_Power,TPC_cmd
+"HSUPA: DSP TX: DSP1: ETFCI = %d MAX_TX = %d RSN = %d HappyBit = %d":ETFCI,MAX_TX,RSN,HappyBit
+"hal wrx: debug CQI: all_cqiVal = %d, cqiVal = %d, cqiEncode = %d":, cqival,cqiEncode
+"HSUPA: DSP TX: DSP1: SEC_ENTI<TRUE(1)> = %d UPH = %d Restrict_SG = %d targetSG = %d":,UPH,RestrictSG,targetSG
+"HSUPA: DSP TX: DSP1: SG<Zero(38),Inactive(0)> = %d Label = %d Slupr = %d PRIM_AVAIL<TRUE(1)>= %d"SG,Label,PRIM_AVAIL
+"HSUPA: DSP TX: DSP1: SRG<Dn(0),HOLD(2),UP(1)> = %d NRG<Dn(0),HOLD(1)> = %d":SRG,NRG
+"CHAN_Update_PHY_Channels: rl_PGC: %d HS_Serving: %d EDCH_Serving: %d HICH_Flg: %d":HS_PGC,HS_serving,EDCH_Serving,HICH_Flg
+"xdsp: AGC DEBUG: PCHSTATE= %d,nsStateCntTh= %d, dch_speed = %d":, ,dch_speed
+"fng: Determin ADC state: adcPriState = %d, adcDivState = %d, adcOnState = %d,speed = %d,pingPong=%d":adcPriState,adcDivState,adcOnState,speed,pingPong
+"RFCAL: hw RXFRONT_CX8_RSSI_PRI = %d, M_RXFRONT_CX8_RSSI_DIV = %d, M_RXFRONT_SYM_CFG = %d":RSSI_PRI,RSSI_DIV,SYS_CFG
+"fng: AGC DEBUG A0C0: AGain = %d, rake_DGain = %d, eq_DGain = %d, RSSI = %d, HW RSSI = %d":Again,rake_DGain,eq_DGain,RSSI,HW RSSI
+"fng: AGC DEBUG A0C0: Div AGain = %d, rake_DGain = %d, eq_DGain = %d, RSSI1 = %d, RSSI2 = %d":Div_Again,rake_DGain,eq_DGain,RSSI1,RSSI2
+"fng: AGC DEBUG: AGain = %d, DGain = %d, RSSI = %d, HW RSSI = %d":Again,DGain,RSSI,HW RSSI
+"fng: AGC DEBUG: Div AGain = %d, Div DGain = %d, Div RSSI = %d, Div HW RSSI = %d":Div_Again,Div DGain,Div RSSI,Div HW RSSI
+"fng: AGC debug: EQGainReg = %d, pri: X1toX2cnt=%d,X2toX1Cnt=%d,X2toX4Cnt=%d,X4toX2Cnt=%d,X4toX8Cnt=%d,X8toX4Cnt=%d":EQGainReg,X1toX2cnt,X2toX1Cnt,X2toX4Cnt,X4toX2Cnt,X4toX8Cnt,X8toX4Cnt
+"WMAC:IMP:EHS:RX:RAS: Start QueueId = %d, EHS_SI = %d, TSN = %d":QueueId,EHS_SI,TSN
+"fng: ADC DEBUG: Pri adjust value1 = %d, adjust value2 = %d, adjust result = %d, adc wirte in reg = %d":,,adc_adjust_value 
+"meas: get meas results for evaluate PGC=%d,CpichEcNo=%d, CpichRscp=%d,index in Cell is %d":PGC,CpichEcNo,CpichRscp,IndexCell
+"fng: equ fng TTRK: WL1C SNR iir state (Rake, Equalizer, Equalizer1, Equalizer2) = (%d, %d, %d, %d)":,Eq_SNR,Eq0_SNR,Eq1_SNR

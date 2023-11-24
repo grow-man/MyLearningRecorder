@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Filters>
+    <Class name="PS LOG">
+        <!-- ARM MESSAGE-->
+        <SubClass name="MESSAGE">
+            <SubClass name="ATC" showModule="0" checked="1">
+                <Module name="MN_AL_SAP" alias="MN_AL" value="68" />
+                <Module name="DUMMY_MMI_SAP" alias="DUMMY_MMI" value="70" />
+                <Module name="DSM_AT_SAP" alias="DSM_AT" value="188" />
+            </SubClass>
+            <SubClass name="MN" showModule="0" checked="1">
+                <Module name="MNM_TIMER_SAP" alias="MNM_TIMER" value="9" />
+                <Module name="SAT_TIMER_SAP" alias="SAT_TIMER" value="10" />
+                <Module name="MNCC_SAP" alias="MNCC" value="40" />
+                <Module name="MNM_SIM_SAP" alias="MNM_SIM" value="45" />
+                <Module name="MNSMS_SAP" alias="MNSMS" value="49" />
+                <Module name="MNSS_SAP" alias="MNSS" value="52" />
+                <Module name="L4_AS_SAP" alias="L4_AS" value="57" />
+                <Module name="MNC_SAP" alias="MNC" value="60" />
+                <Module name="SAT_SAP" alias="SAT" value="61" />
+                <Module name="L4_CBMC_SAP" alias="L4_CBMC" value="65" />
+                <Module name="APP_MN_SAP" alias="APP_MN" value="67" />
+                <Module name="MN_AL_SAP" alias="MN_AL" value="68" />
+                <Module name="MN_AL_RABM_SAP" alias="MN_AL_RABM" value="69" />
+                <Module name="AC_SSI_SAP" alias="AC_SSI" value="71" />
+                <Module name="AC_APP_SAP" alias="AC_APP" value="72" />
+                <Module name="MNC_MNM_SAP" alias="MNC_MNM" value="73" />
+                <Module name="MNMPHONE_MNMSMS_SAP" alias="MNMPHONE_MNMSMS" value="74" />
+                <Module name="APP_READER_SSI_SAP" alias="APP_READER_SSI" value="75" />
+                <Module name="APP_READER_AC_SAP" alias="APP_READER_AC" value="76" />
+                <Module name="SSI_SAP" alias="SSI" value="77" />
+                <Module name="MNC_SIM_SAP" alias="MNC_SIM" value="78" />
+                <Module name="L4_PLM_SAP" alias="L4_PLM" value="80 " />
+                <Module name="MN_SM_SAP" alias="MN_SM" value="81" />
+                <Module name="L4_TDT_SAP" alias="L4_TDT" value="103" />
+                <Module name="L4_L2R_SAP" alias="L4_L2R" value="104" />
+                <Module name="L4_NAS_SWTH_SAP" alias="L4_NAS_SWTH" value="112" />
+                <Module name="L4_RABM_SAP" alias="L4_RABM" value="123" />
+                <Module name="MAC_L4_SAP" alias="MAC_L4" value="149" />
+                <Module name="MN_LLAYER1_ADX_SAP" alias="MN_LLAYER1_ADX" value="186" />
+                <Module name="DSM_MN_SAP" alias="DSM_MN" value="187" />
+                <Module name="SIGNAL_APP_MN_SAP" alias="SIGNAL_APP_MN" value="251" />
+            </SubClass>
+            <SubClass name="IMS" showModule="0" checked="1">
+                <Module name="IMS_SAP" alias="IMS" value="250" />
+            </SubClass>
+            <SubClass name="Data Service Management" showModule="0" checked="1">
+                <Module name="DSM_TIMER_SAP" alias="TIMER" value="29" />
+                <Module name="DSM_MN_SAP" alias="MN" value="187" />
+                <Module name="DSM_AT_SAP" alias="AT" value="188" />
+            </SubClass>
+            <SubClass name="NAS">
+                <SubClass name="CC" showModule="0" checked="1">
+                    <Module name="CC_TIMER_SAP" alias="CC_TIMER" value="5" />
+                    <Module name="MNCC_SAP" alias="MNCC" value="40" />
+                    <Module name="MM_CC_SAP" alias="MM_CC" value="48" />
+                    <Module name="CC_AS_SAP" alias="CC_AS" value="55" />
+                </SubClass>
+                <SubClass name="SM/ESM" showModule="0" checked="1">
+                    <Module name="SM_TIMER_SAP" alias="SM_TIMER" value="1" />
+                    <Module name="SM_REG_SAP" alias="SM_REG" value="41" />
+                    <Module name="GMM_SM_SAP" alias="GMM_SM" value="43" />
+                    <Module name="MN_SM_SAP" alias="MN_SM" value="81" />
+                    <Module name="SM_RL_SAP" alias="SM_RL" value="91" />
+                    <Module name="SM_GMMAA_SAP" alias="SM_GMMAA" value="92" />
+                    <Module name="SM_SNDCP_SAP" alias="SM_SNDCP" value="93" />
+                    <Module name="RABM_SM_SAP" alias="RABM_SM" value="113" />
+                    <Module name="EMM_ESM_SAP" alias="EMM_ESM" value="159" />
+                    <Module name="LTE_ESM_SAP" alias="LTE_ESM" value="164" />
+                </SubClass>
+                <SubClass name="SMS" showModule="0" checked="1">
+                    <Module name="SMS_TIMER_SAP" alias="SMS_TIMER" value="7" />
+                    <Module name="GMM_SMS_SAP" alias="GMM_SMS" value="47" />
+                    <Module name="MNSMS_SAP" alias="MNSMS" value="49" />
+                    <Module name="MM_SMS_SAP" alias="MM_SMS" value="54" />
+                    <Module name="LLC_SMS_SAP" alias="LLC_SMS" value="88" />
+                    <Module name="PMM_SMS_SAP" alias="PMM_SMS" value="121" />
+                </SubClass>
+                <SubClass name="SS" showModule="0" checked="1">
+                    <Module name="SS_TIMER_SAP" alias="SS_TIMER" value="6" />
+                    <Module name="MNSS_SAP" alias="MNSS" value="52" />
+                    <Module name="MM_SS_SAP" alias="MM_SS" value="53" />
+                </SubClass>
+                <SubClass name="MM/GMM" showModule="0" checked="1">
+                    <Module name="GMM_TIMER_SAP" alias="GMM_TIMER" value="2" />
+                    <Module name="MM_TIMER_SAP" alias="MM_TIMER" value="3" />
+                    <Module name="GMM_REG_SAP" alias="DSM_AT" value="42" />
+                    <Module name="GMM_SM_SAP" alias="GMM_REG" value="43" />
+                    <Module name="GMM_SIM_SAP" alias="GMM_SIM" value="44" />
+                    <Module name="GMM_SMS_SAP" alias="GMM_SMS" value="47" />
+                    <Module name="MM_CC_SAP" alias="MM_CC" value="48" />
+                    <Module name="GMM_AS_SAP" alias="GMM_AS" value="50" />
+                    <Module name="MM_PLM_SAP" alias="MM_PLM" value="51" />
+                    <Module name="MM_SS_SAP" alias="MM_SS" value="53" />
+                    <Module name="MM_SMS_SAP" alias="MM_SMS" value="54" />
+                    <Module name="AS_NAS_SAP" alias="AS_NAS" value="56" />
+                    <Module name="LLC_GMM_SAP" alias="LLC_GMM" value="82" />
+                    <Module name="GMM_NAS_SWTH_SAP" alias="GMM_NAS_SWTH" value="109" />
+                    <Module name="GMM_RABM_SAP" alias="GMM_RABM" value="115" />
+                    <Module name="MMCTRL_EMM_SAP" alias="MMCTRL_EMM" value="158" />
+                    <Module name="LTE_MM_SAP" alias="LTE_MM" value="163" />
+                    <Module name="GMM_LPP_SAP" alias="GMM_LPP_SAP" value="190" />
+                </SubClass>
+                <SubClass name="EMM" showModule="0" checked="1">
+                    <Module name="MMCTRL_EMM_SAP" alias="MMCTRL_EMM" value="158" />
+                    <Module name="EMM_ESM_SAP" alias="EMM_ESM" value="159" />
+                    <Module name="EMM_PH_SAP" alias="EMM_PH" value="160" />
+                    <Module name="LTE_EMM_SAP" alias="LTE_EMM" value="161" />
+                </SubClass>
+                <SubClass name="PLMN Search" showModule="0" checked="1">
+                    <Module name="PLM_TIMER_SAP" alias="PLM_TIMER" value="8" />
+                    <Module name="SM_REG_SAP" alias="SM_REG" value="41" />
+                    <Module name="GMM_REG_SAP" alias="GMM_REG" value="42" />
+                    <Module name="MM_PLM_SAP" alias="MM_PLM" value="51" />
+                    <Module name="PLM_AS_SAP" alias="PLM_AS" value="79" />
+                    <Module name="L4_PLM_SAP" alias="L4_PLM" value="80" />
+                    <Module name="SNDCP_REG_SAP" alias="SNDCP_REG" value="94" />
+                    <Module name="PLM_NAS_SWTH_SAP" alias="PLM_NAS_SWTH" value="110" />
+                    <Module name="EMM_PH_SAP" alias="EMM_PH" value="160" />
+                    <Module name="LTE_PH_SAP" alias="LTE_PH" value="162" />
+                </SubClass>
+                <SubClass name="RAB Management" showModule="0" checked="1">
+                    <Module name="RABM_TIMER_SAP" alias="RABM_TIMER" value="30" />
+                    <Module name="MN_AL_RABM_SAP" alias="MN_AL_RABM" value="69" />
+                    <Module name="RABM_SM_SAP" alias="RABM_SM" value="113" />
+                    <Module name="RABM_AS_SAP" alias="RABM_AS" value="114" />
+                    <Module name="GMM_RABM_SAP" alias="GMM_RABM" value="115" />
+                    <Module name="PDCP_RABM_SAP" alias="PDCP_RABM" value="122" />
+                    <Module name="L4_RABM_SAP" alias="L4_RABM" value="123" />
+                </SubClass>
+                <SubClass name="LPP" showModule="0" checked="1">
+                    <Module name="GMM_LPP_SAP" alias="GMM_LPP_SAP" value="190" />
+                </SubClass>
+                <SubClass name="NAS Switch" showModule="0" checked="1">
+                    <Module name="GMM_NAS_SWTH_SAP" alias="GMM_NAS_SWTH" value="109" />
+                    <Module name="PLM_NAS_SWTH_SAP" alias="PLM_NAS_SWTH" value="110" />
+                    <Module name="GSM_NAS_SWTH_SAP" alias="GSM_NAS_SWTH" value="111" />
+                    <Module name="L4_NAS_SWTH_SAP" alias="L4_NAS_SWTH" value="112" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="GSM" showModule="0" checked="1">
+                <Module name="RR_RRC_SAP" alias="RR_RRC" value="14" />
+                <Module name="SNDCP_TIMER_SAP" alias="SNDCP_TIMER" value="17" />
+                <Module name="LLC_TIMER_SAP" alias="LLC_TIMER" value="18" />
+                <Module name="GPRS_RLC_TIMER_SAP" alias="GPRS_RLC_TIMER" value="19" />
+                <Module name="RRM_TIMER_SAP" alias="RRM_TIMER" value="20" />
+                <Module name="GPRS_MAC_TIMER_SAP" alias="GPRS_MAC_TIMER" value="22" />
+                <Module name="LAPDM_TIMER_SAP" alias="LAPDM_TIMER" value="23" />
+                <Module name="MPAL_TIMER_SAP" alias="DSM_AT" value="24" />
+                <Module name="GMM_AS_SAP" alias="GMM_AS" value="50" />
+                <Module name="LLC_GMM_SAP" alias="LLC_GMM" value="82" />
+                <Module name="LLC_RLC_SAP" alias="LLC_RLC" value="83" />
+                <Module name="LLC_SNDCP_SAP" alias="LLC_SNDCP" value="84" />
+                <Module name="GPRS_RLC_MAC_SAP" alias="GPRS_RLC_MAC" value="85" />
+                <Module name="GPRS_RLC_REASM_SAP" alias="GPRS_RLC_REASM" value="86" />
+                <Module name="MAC_MPAL_SAP" alias="MAC_MPAL" value="87" />
+                <Module name="LLC_SMS_SAP" alias="LLC_SMS" value="88" />
+                <Module name="SM_SNDCP_SAP" alias="SM_SNDCP" value="93" />
+                <Module name="SNDCP_REG_SAP" alias="SNDCP_REG" value="94" />
+                <Module name="RR_LAPDM_SAP" alias="RR_LAPDM" value="95" />
+                <Module name="LAPDM_MPAL_SAP" alias="LAPDM_MPAL" value="96" />
+                <Module name="RRM_MPAL_SAP" alias="RRM_MPAL" value="97" />
+                <Module name="PLM_MPAL_SAP" alias="PLM_MPAL" value="100" />
+                <Module name="RLC_MPAL_SAP" alias="RLC_MPAL" value="101" />
+                <Module name="GSM_NAS_SWTH_SAP" alias="GSM_NAS_SWTH" value="111" />
+                <Module name="RRA_RRCA_SAP" alias="RRA_RRCA" value="157" />
+                <Module name="STACK_2G_SAP" alias="STACK_2G" value="165" />
+                <Module name="LASM_GRR_SAP" alias="LASM_GRR" value="167" />
+                <Module name="LLAYER1_ADX_GRR_SAP" alias="LLAYER1_ADX_GRR" value="174" />
+                <Module name="LLAYER1_ADX_GLAYER1_SAP" alias="LLAYER1_ADX_GLAYER1" value="175" />
+                <Module name="LCONTROL_GLAYER1_SAP" alias="LCONTROL_GLAYER1" value="178" />
+                <Module name="GLAYER1_LLAYER1_ADX_SAP" alias="GLAYER1_LLAYER1_ADX" value="184" />
+                <Module name="GSM_CMN_SAP_II" alias="GSM_CMN_SAP_II" value="254" />
+                <Module name="GSM_CMN_SAP" alias="GSM_CMN" value="255" />
+            </SubClass>
+            <SubClass name="WCDMA" showModule="0" checked="1">
+                <Module name="CBMC_TIMER_SAP" alias="CBMC_TIMER" value="12" />
+                <Module name="GMM_AS_SAP" alias="GMM_AS" value="50" />
+                <Module name="CC_AS_SAP" alias="CC_AS" value="55" />
+                <Module name="CBMC_AS_SAP" alias="CBMC_AS" value="64" />
+                <Module name="L4_CBMC_SAP" alias="L4_CBMC" value="65" />
+                <Module name="LCONTROL_WL1C_SAP" alias="LCONTROL_WL1C" value="180" />
+                <Module name="WL1C_LLAYER1_ADX_SAP" alias="WL1C_LLAYER1_ADX" value="185" />
+                <Module name="WRRCA_RRCA_SAP" alias="WRRCA_RRCA_SAP" value="189" />
+                <Module name="WCDMA_SAP" alias="WCDMA" value="253" />
+            </SubClass>
+            <SubClass name="TDSCDMA">
+                <SubClass name="RRC" showModule="0" checked="1">
+                    <Module name="RR_RRC_SAP" alias="RR_RRC" value="14" />
+                    <Module name="RRCD_TIMER_SAP" alias="RRCD_TIMER" value="31" />
+                    <Module name="RRCC_TIMER_SAP" alias="RRCC_TIMER" value="32" />
+                    <Module name="RRC_TIMER_SAP" alias="RRC_TIMER" value="33" />
+                    <Module name="CC_AS_SAP" alias="CC_AS" value="55" />
+                    <Module name="AS_NAS_SAP" alias="AS_NAS" value="56" />
+                    <Module name="PLM_AS_SAP" alias="PLM_AS" value="79" />
+                    <Module name="RRC_SIM_SAP" alias="RRC_SIM" value="116" />
+                    <Module name="RRCD_RRCC_SAP" alias="RRCD_RRCC" value="117" />
+                    <Module name="RRCD_UT_SAP" alias="RRCD_UT" value="118" />
+                    <Module name="RRCC_UT_SAP" alias="RRCC_UT" value="119" />
+                    <Module name="PDCP_RABM_SAP" alias="PDCP_RABM" value="122" />
+                    <Module name="RLC_RRC_SAP" alias="RLC_RRC" value="124" />
+                    <Module name="MAC_RRC_SAP" alias="MAC_RRC" value="126" />
+                    <Module name="PDCP_RRC_SAP" alias="PDCP_RRC" value="129" />
+                    <Module name="BMC_RRC_SAP" alias="BMC_RRC" value="130" />
+                    <Module name="L1SIM_READER_SAP" alias="L1SIM_READER" value="131" />
+                    <Module name="MTA_NW_RRCC_SAP" alias="MTA_NW_RRCC" value="132" />
+                    <Module name="TCRLC_TCRLCTM_SAP" alias="TCRLC_TCRLCTM" value="133" />
+                    <Module name="RRC_TCPDCP_SAP" alias="RRC_TCPDCP" value="134" />
+                    <Module name="RRC_TCRLC_SAP" alias="RRC_TCRLC" value="135" />
+                    <Module name="RRC_LINK_RRC_SAP" alias="RRC_LINK_RRC" value="151" />
+                    <Module name="RLC_RRCA_SAP" alias="RLC_RRCA" value="152" />
+                    <Module name="MAC_RRCA_SAP" alias="MAC_RRCA" value="153" />
+                    <Module name="CPHY_RRCA_SAP" alias="CPHY_RRCA" value="154" />
+                    <Module name="PDCP_RRCA_SAP" alias="PDCP_RRCA" value="155" />
+                    <Module name="RRC_RRCA_SAP" alias="RRC_RRCA" value="156" />
+                    <Module name="RRA_RRCA_SAP" alias="RRA_RRCA" value="157" />
+                    <Module name="LASM_RRC_SAP" alias="LASM_RRC" value="166" />
+                    <Module name="RRC_LASM_SAP" alias="RRC_LASM" value="168" />
+                    <Module name="LLAYER1_ADX_RRC_SAP" alias="LLAYER1_ADX_RRC" value="173" />
+                    <Module name="WRRCA_RRCA_SAP" alias="WRRCA_RRCA_SAP" value="189" />
+                </SubClass>
+                <SubClass name="RLC/MAC" showModule="0" checked="1">
+                    <Module name="RLC_TIMER_SAP" alias="RLC_TIMER" value="34" />
+                    <Module name="MAC_TIMER_SAP" alias="MAC_TIMER" value="35" />
+                    <Module name="PDCP_TIMER_SAP" alias="PDCP_TIMER" value="36" />
+                    <Module name="TCRLC_TIMER_SAP" alias="TCRLC_TIMER" value="38" />
+                    <Module name="FLC_DATA_SAP" alias="FLC_DATA" value="106" />
+                    <Module name="RLC_RRC_SAP" alias="RLC_RRC" value="124" />
+                    <Module name="RLC_APP_SAP" alias="RLC_APP" value="125" />
+                    <Module name="MAC_RRC_SAP" alias="MAC_RRC" value="126" />
+                    <Module name="MAC_RLC_SAP" alias="MAC_RLC" value="127" />
+                    <Module name="L1_MAC_SAP" alias="L1_MAC" value="128" />
+                    <Module name="RLC_CBMC_SAP" alias="RLC_CBMC" value="144" />
+                    <Module name="RLC_PDCP_SAP" alias="RLC_PDCP" value="145" />
+                    <Module name="RLC_TCRLC_SAP" alias="RLC_TCRLC" value="146" />
+                    <Module name="RLC_TCRLCTM_SAP" alias="RLC_TCRLCTM" value="147" />
+                    <Module name="MAC_L4_SAP" alias="MAC_L4" value="149" />
+                    <Module name="RLC_RRCA_SAP" alias="RLC_RRCA" value="152" />
+                    <Module name="MAC_RRCA_SAP" alias="MAC_RRCA" value="153" />
+                    <Module name="PDCP_RRCA_SAP" alias="PDCP_RRCA" value="155" />
+                </SubClass>
+                <SubClass name="Layer 1 Controller" showModule="0" checked="1">
+                    <Module name="DM_CPHY_SAP" alias="DM_CPHY" value="15" />
+                    <Module name="CPHY_SAP" alias="CPHY" value="120" />
+                    <Module name="DSP_L1C_SAP" alias="DSP_L1C" value="150" />
+                    <Module name="CPHY_RRCA_SAP" alias="CPHY_RRCA" value="154" />
+                    <Module name="LLAYER1_ADX_L1C_SAP" alias="LLAYER1_ADX_L1C" value="176" />
+                    <Module name="L1C_LLAYER1_ADX_SAP" alias="L1C_LLAYER1_ADX" value="181" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="LTE">
+                <SubClass name="RRC/RLC/MAC" showModule="0" checked="1">
+                    <Module name="GMM_AS_SAP" alias="GMM_AS" value="50" />
+                    <Module name="LTE_EMM_SAP" alias="LTE_EMM" value="161" />
+                    <Module name="LTE_PH_SAP" alias="LTE_PH" value="162" />
+                    <Module name="LTE_MM_SAP" alias="LTE_MM" value="163" />
+                    <Module name="LTE_ESM_SAP" alias="LTE_ESM" value="164" />
+                    <Module name="LASM_RRC_SAP" alias="LASM_RRC" value="166" />
+                    <Module name="LASM_GRR_SAP" alias="LASM_GRR" value="167" />
+                    <Module name="RRC_LASM_SAP" alias="RRC_LASM" value="168" />
+                    <Module name="LRRC_LRRCA_SAP" alias="LRRC_LRRCA" value="170" />
+                    <Module name="LRRCA_LRRC_SAP" alias="LRRCA_LRRC" value="171" />
+                    <Module name="RRA_LRRCA_SAP" alias="RRA_LRRCA" value="172" />
+                    <Module name="LCONTROL_GLAYER1_SAP" alias="LCONTROL_GLAYER1" value="178" />
+                    <Module name="LCONTROL_GRRA_SAP" alias="LCONTROL_GRRA" value="179" />
+                    <Module name="LCONTROL_WL1C_SAP" alias="LCONTROL_WL1C" value="180" />
+                    <Module name="GRR_LASM_SAP" alias="GRR_LASM" value="182" />
+                    <Module name="TD_LTE_SAP" alias="TD_LTE" value="252" />
+                </SubClass>
+                <SubClass name="Layer 1 Controller" showModule="0" checked="1">
+                    <Module name="RRC_LLAYER1_ADX_SAP" alias="RRC_LLAYER1_ADX" value="169" />
+                    <Module name="LLAYER1_ADX_RRC_SAP" alias="LLAYER1_ADX_RRC" value="173" />
+                    <Module name="LLAYER1_ADX_GRR_SAP" alias="LLAYER1_ADX_GRR" value="174" />
+                    <Module name="LLAYER1_ADX_GLAYER1_SAP" alias="LLAYER1_ADX_GLAYER1" value="175" />
+                    <Module name="LLAYER1_ADX_L1C_SAP" alias="LLAYER1_ADX_L1C" value="176" />
+                    <Module name="LLAYER1_ADX_WL1C_SAP" alias="LLAYER1_ADX_WL1C" value="177" />
+                    <Module name="L1C_LLAYER1_ADX_SAP" alias="L1C_LLAYER1_ADX" value="181" />
+                    <Module name="GRR_LLAYER1_ADX_SAP" alias="GRR_LLAYER1_ADX" value="183" />
+                    <Module name="GLAYER1_LLAYER1_ADX_SAP" alias="GLAYER1_LLAYER1_ADX" value="184" />
+                    <Module name="WL1C_LLAYER1_ADX_SAP" alias="WL1C_LLAYER1_ADX" value="185" />
+                    <Module name="MN_LLAYER1_ADX_SAP" alias="MN_LLAYER1_ADX" value="186" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="C2K">
+                <SubClass name="MN PDM" showModule="0" checked="1">
+                    <Module name="MN_PDM_SAP" alias="MN_PDM" value="195" />
+                </SubClass>
+                 <SubClass name="MN CDM" showModule="0" checked="1">
+                    <Module name="MN_CDM_SAP" alias="MN_CDM" value="196" />
+                </SubClass>
+                <SubClass name="MN CMM" showModule="0" checked="1">
+                    <Module name="MN_CMM_SAP" alias="MN_CMM" value="197" />
+                </SubClass>
+                <SubClass name="CMM UIM" showModule="0" checked="1">
+                    <Module name="CMM_UIM_SAP" alias="CMM_UIM" value="198" />
+                </SubClass>
+                <SubClass name="CMM MMSS" showModule="0" checked="1">
+                    <Module name="CMM_MMSS_SAP" alias="CMM_MMSS" value="199" />
+                </SubClass>
+                <SubClass name="CMM GMM" showModule="0" checked="1">
+                    <Module name="CMM_GMM_SAP" alias="CMM_GMM" value="200" />
+                </SubClass>
+                <SubClass name="MMSS PLM" showModule="0" checked="1">
+                    <Module name="MMSS_PLM_SAP" alias="MMSS_PLM" value="201" />
+                </SubClass>
+                <SubClass name="CMM CAS" showModule="0" checked="1">
+                    <Module name="CMM_CAS_SAP" alias="CMM_CAS" value="202" />
+                </SubClass>
+                <SubClass name="CRRA LRRCA" showModule="0" checked="1">
+                    <Module name="CRRA_LRRCA_SAP" alias="CRRA_LRRCA" value="203" />
+                </SubClass>
+                <SubClass name="C2K" showModule="0" checked="1">
+                    <Module name="C2K_SAP" alias="C2K" value="249" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="SIM" showModule="0" checked="1">
+                <Module name="SIM_TIMER_SAP" alias="TIMER" value="4" />
+                <Module name="GMM_SIM_SAP" alias="GMM" value="44" />
+                <Module name="MNM_SIM_SAP" alias="MNM" value="45" />
+                <Module name="MNC_SIM_SAP" alias="MNC" value="78" />
+                <Module name="RRC_SIM_SAP" alias="RRC" value="116" />
+            </SubClass>
+            <SubClass name="NV" showModule="0" checked="1">
+                <Module name="NVM_STACK_SAP" alias="NVM_STACK" value="63" />
+            </SubClass>
+            <SubClass name="Others" showModule="0" checked="1">
+                <Module name="ATPP_TIMER_SAP" alias="ATPP_TIMER" value="11" />
+                <Module name="CL_TIMER_SAP" alias="CL_TIMER" value="13" />
+                <Module name="RMPC_TIMER_SAP" alias="RMPC_TIMER" value="21" />
+                <Module name="CSRR_TIMER_SAP" alias="CSRR_TIMER" value="25" />
+                <Module name="TDT_TIMER_SAP" alias="TDT_TIMER" value="26" />
+                <Module name="RLP_TIMER_SAP" alias="RLP_TIMER" value="27" />
+                <Module name="L2R_TIMER_SAP" alias="L2R_TIMER" value="28" />
+                <Module name="DUMY_SPCH_APP_TIMER_SAP" alias="DUMY_SPCH_APP_TIMER" value="39" />
+                <Module name="DRIVER_DATA_SAP" alias="DRIVER_DATA" value="46" />
+                <Module name="AAC_SAP" alias="AAC" value="58" />
+                <Module name="CL_READER_SAP" alias="CL_READER" value="59" />
+                <Module name="L2IW_SAP" alias="L2IW" value="62" />
+                <Module name="CL_SNDCP_SAP" alias="CL_SNDCP" value="62" />
+                <Module name="CL_DP_SAP" alias="CL_DP" value="62" />
+                <Module name="FA_UT_SAP" alias="FA_UT" value="66" />
+                <Module name="MAC_RMPC_SAP" alias="MAC_RMPC" value="89" />
+                <Module name="RRM_RMPC_SAP" alias="RRM_RMPC" value="90" />
+                <Module name="RMPC_MPAL_SAP" alias="RMPC_MPAL" value="98" />
+                <Module name="RMPC_RLC_SAP" alias="RMPC_RLC" value="99" />
+                <Module name="RMPC_CSRR_SAP" alias="RMPC_CSRR" value="102" />
+                <Module name="DATA_MPAL_SAP" alias="DATA_MPAL" value="105" />
+                <Module name="CSRR_MPAL_SAP" alias="CSRR_MPAL" value="107" />
+                <Module name="L2R_RLP_SAP" alias="L2R_RLP" value="108" />
+                <Module name="DUMY_SPCH_APP_SAP" alias="DUMY_SPCH_APP" value="136" />
+                <Module name="RESERVED1_SAP" alias="RESERVED1" value="137" />
+                <Module name="L1SIM_CBMC_SAP" alias="L1SIM_CBMC" value="138" />
+                <Module name="RSF_ATCI_SAP" alias="RSF_ATCI" value="139" />
+                <Module name="CC_SPEECH_APP_TX_SAP" alias="CC_SPEECH_APP_TX" value="140" />
+                <Module name="RLC_SPEECH_APP_TX_SAP" alias="RLC_SPEECH_APP_TX" value="141" />
+                <Module name="CC_SPEECH_APP_RX_SAP" alias="CC_SPEECH_APP_RX" value="142" />
+                <Module name="RLC_SPEECH_APP_RX_SAP" alias="RLC_SPEECH_APP_RX" value="143" />
+                <Module name="RESERVED__221_SAP" alias="RESERVED__221" value="148" />
+                <Module name="MN_LCS_SAP" alias="MN_LCS" value="191" />
+            </SubClass>
+        </SubClass>
+        <!-- ARM TRACE-->
+        <SubClass name="TRACE">
+            <SubClass name="ATC" showModule="0" checked="1">
+                <Module name="_TSC_MOD_ATC" alias="ATC" value="19" />
+            </SubClass>
+            <SubClass name="MN" showModule="0" checked="1">
+                <Module name="_TSC_MOD_MN_AL" alias="MN_AL" value="16" />
+                <Module name="_TSC_MOD_MNC" alias="MNC" value="17" />
+                <Module name="_TSC_MOD_MNM" alias="MNM" value="18" />
+            </SubClass>
+            <SubClass name="IMS" showModule="0" checked="1">
+                <Module name="_TSC_MOD_SIP" alias="SIP" value="36" />
+                <Module name="_TSC_MOD_ISI" alias="ISI" value="37" />
+                <Module name="_TSC_MOD_VPR" alias="VPR" value="38" />
+                <Module name="_TSC_MOD_CSM" alias="CSM" value="39" />
+                <Module name="_TSC_MOD_VE" alias="VE" value="40" />
+                <Module name="_TSC_MOD_SUPSRV" alias="SUPSRV" value="41" />
+                <Module name="_TSC_MOD_CSM_CALL" alias="CSM_CALL" value="42" />
+                <Module name="_TSC_MOD_MC" alias="MC" value="43" />
+                <Module name="_TSC_MOD_SAPP" alias="SAPP" value="44" />
+            </SubClass>
+            <SubClass name="Data Service Management" showModule="0" checked="1">
+                <Module name="_TSC_MOD_DSM" alias="DSM" value="26" />
+            </SubClass>
+            <SubClass name="NAS">
+                <SubClass name="CC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_CC" alias="CC" value="8" />
+                </SubClass>
+                <SubClass name="SM/ESM" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_SM" alias="SM" value="13" />
+                </SubClass>
+                <SubClass name="SMS" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_SMS" alias="SMS" value="14" />
+                </SubClass>
+                <SubClass name="SS" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_SS" alias="SS" value="15" />
+                </SubClass>
+                <SubClass name="MM" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_MM" alias="MM" value="9" />
+                </SubClass>
+                <SubClass name="EMM" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_LNAS" alias="LNAS" value="23" />
+                </SubClass>
+                <SubClass name="PLMN Search" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_PLM" alias="PLM" value="11" />
+                </SubClass>
+                <SubClass name="RAB Management" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_RABM" alias="RABM" value="12" />
+                </SubClass>
+                <SubClass name="NAS Switch" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_NAS_SWTH" alias="NAS_SWTH" value="10" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="GSM">
+                <SubClass name="RR/DL/RLC/MAC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_GAS" alias="GAS" value="20" />
+                </SubClass>
+                <SubClass name="Layer 1 Controller" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_GL1" alias="GL1" value="21" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="WCDMA">
+                <SubClass name="RRC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_WPS_WRCC" alias="WPS_WRCC" value="33" />
+                    <Module name="_TSC_MOD_WPS_WRRC" alias="WPS_WRRC" value="34" />
+                </SubClass>
+                <SubClass name="RLC/MAC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_WPS_WL2" alias="WPS_WL2" value="32" />
+                </SubClass>
+                <SubClass name="Layer 1 Controller" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_WL1_DRV" alias="WL1_DRV" value="27" />
+                    <Module name="_TSC_MOD_WL1_GKI" alias="WL1_GKI" value="28" />
+                    <Module name="_TSC_MOD_WL1_HAL" alias="WL1_HAL" value="29" />
+                    <Module name="_TSC_MOD_WL1_MEAS_RPT" alias="WL1_MEAS_RPT" value="30" />
+                    <Module name="_TSC_MOD_WL1_WL1C" alias="WL1_WL1C" value="31" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="TDSCDMA">
+                <SubClass name="RRC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_RRCC" alias="RRCC" value="5" />
+                    <Module name="_TSC_MOD_RRCD" alias="RRCD" value="6" />
+                    <Module name="_TSC_MOD_RRCA" alias="RRCA" value="7" />
+                </SubClass>
+                <SubClass name="RLC/MAC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_TL2" alias="TL2" value="4" />
+                </SubClass>
+                <SubClass name="Layer 1 Controller" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_TL1" alias="TL1" value="3" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="LTE">
+                <SubClass name="RRC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_LRRC" alias="LRRC" value="24" />
+                </SubClass>
+                <SubClass name="RLC/MAC" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_LL2" alias="LL2" value="25" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="C2K">
+                <SubClass name="CNAS" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CNAS" alias="CNAS" value="46" />
+                </SubClass>
+                <SubClass name="CAS COMM" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CAS_COMM" alias="CAS_COMM" value="47" />
+                </SubClass>
+                <SubClass name="CPHY 1X" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CPHY_1X" alias="CPHY_1X" value="48" />
+                </SubClass>
+                <SubClass name="CPHY DO" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CPHY_DO" alias="CPHY_DO" value="49" />
+                </SubClass>
+                <SubClass name="CPHY RF" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CPHY_RF" alias="CPHY_RF" value="50" />
+                </SubClass>
+                <SubClass name="CPHY COMM" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CPHY_COMM" alias="CPHY_COMM" value="51" />
+                </SubClass>
+                <SubClass name="CRRA" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CRRA" alias="CRRA" value="52" />
+                </SubClass>
+                <SubClass name="CAS CONTROL" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CAS_CONTROL" alias="CAS_CONTROL" value="53" />
+                </SubClass>
+                <SubClass name="CAS DATA" showModule="0" checked="1">
+                    <Module name="_TSC_MOD_C2K_CAS_DATA" alias="CAS_DATA" value="54" />
+                </SubClass>
+            </SubClass>
+            <SubClass name="SIM" showModule="0" checked="1">
+                <Module name="_TSC_MOD_SIM" alias="SIM" value="2" />
+            </SubClass>
+            <SubClass name="SYSTEM" showModule="0" checked="1">
+                <Module name="_TSC_MOD_SDI" alias="SDI" value="1" />
+            </SubClass>
+            <SubClass name="Others" showModule="0" checked="1">
+                <Module name="_TSC_GLOBAL" alias="GLOBAL" value="0" />
+            </SubClass>
+        </SubClass>
+        <SubClass name="CAP LOG" checked="1">
+            <SubClass name="CAP Length" value="80" editable="1" editValueType="int" editValueRange="0, 2000" />
+        </SubClass>
+        <SubClass name="LEVEL" singleCheckParent="true">
+            <SubClass name="Critical" value="0" checked="0" />
+            <SubClass name="Important" value="1" checked="0" />
+            <SubClass name="Normal" value="3" checked="1" />
+            <SubClass name="Information" value="5" checked="0" />
+        </SubClass>
+    </Class>
+    <Class name="DSP LOG" value="0" checked="1">
+    	<SubClass name="LDSP_LEVEL" singleCheckParent="true">
+            <SubClass name="Critical" value="0" checked="0" />
+            <SubClass name="Normal" value="1" checked="1" />
+            <SubClass name="Info" value="2" checked="0" />
+            <SubClass name="Debug" value="3" checked="0" />
+        </SubClass>
+    </Class>
+    <Class name="AUDIO" checked="0">
+        <SubClass name="ARM Point">
+            <SubClass name="0:Rx_Arm_In" value="0" checked="0" />
+            <SubClass name="1:Rx_Arm_Out" value="1" checked="0" />
+            <SubClass name="2:Tx_Arm_In" value="2" checked="0" />
+            <SubClass name="3:Tx_Arm_Out" value="3" checked="0" />
+            <SubClass name="4" value="4" checked="0" />
+            <SubClass name="5" value="5" checked="0" />
+            <SubClass name="6" value="6" checked="0" />
+            <SubClass name="7" value="7" checked="0" />
+            <SubClass name="23:Rx" value="23" checked="0" />
+            <SubClass name="24:Tx" value="24" checked="0" />
+        </SubClass>
+        <SubClass name="DSP Point">
+            <SubClass name="1" value="1" checked="0" />
+            <SubClass name="2" value="2" checked="0" />
+            <SubClass name="3" value="3" checked="0" />
+            <SubClass name="4" value="4" checked="0" />
+            <SubClass name="5" value="5" checked="0" />
+            <SubClass name="6" value="6" checked="0" />
+            <SubClass name="7" value="7" checked="0" />
+            <SubClass name="8" value="8" checked="0" />
+            <SubClass name="9" value="9" checked="0" />
+            <SubClass name="10" value="10" checked="0" />
+        </SubClass>
+        <SubClass name="AGDSP" checked="0" autoExpand="1" warningCheck="1">
+            <SubClass name="Log Dest" singleCheckParent="true">
+                <SubClass name="Disable Log" value="0" checked="1" />
+                <SubClass name="Enable Log to UART" value="1" checked="0" />
+                <SubClass name="Enable Log to AP" value="2" checked="0" />
+            </SubClass>
+            <SubClass name="PCM Enable" singleCheckParent="true">
+                <SubClass name="Disable PCM Dump" value="0" checked="1" />
+                <SubClass name="Enable PCM Dump" value="1" checked="0" />
+            </SubClass>
+        </SubClass>
+    </Class>
+</Filters>

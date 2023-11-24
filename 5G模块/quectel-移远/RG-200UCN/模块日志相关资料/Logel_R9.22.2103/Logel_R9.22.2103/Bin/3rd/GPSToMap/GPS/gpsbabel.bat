@@ -1,0 +1,1 @@
+"%~dp0\gpsbabel" -i nmea -f %1 -o kml -F %2 

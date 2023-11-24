@@ -1,0 +1,69 @@
+<!-- For SharklE Use -->
+
+<PowerTrace version="1.0" signature="0xA5A5A5A5" rev="2" reg ="7">
+    <Timestamp index="0" count="1"/>
+	<System name="PWR_STATUS0_DBG" addr="0x402B_00BC">
+		<Module name="PD_AP_SYS_STATE" register="1" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_CA53_C3_STATE" register="1" bitmap="20:24" maxScale="7"/>
+	    <Module name="PD_CA53_C2_STATE" register="1" bitmap="15:19" maxScale="7"/>
+		<Module name="PD_CA53_C1_STATE" register="1" bitmap="10:14" maxScale="7"/>
+	    <Module name="PD_CA53_C0_STATE" register="1" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_CA53_TOP_STATE" register="1" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="PWR_STATUS1_DBG" addr="0x402B_00C0">
+		<Module name="PD_WTLCP_LTE_P1_STATE" register="2" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P2_STATE" register="2" bitmap="20:24" maxScale="7"/>
+		<Module name="PD_WIFI_WRAP_STATE" register="2" bitmap="15:19" maxScale="7"/>
+		<Module name="PD_WTLCP_LDSP_STATE" register="2" bitmap="10:14" maxScale="7"/>
+		<Module name="PD_WTLCP_TGDSP_STATE" register="2" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_WTLCP_HU3GE_A_STATE" register="2" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="PWR_STATUS2_DBG" addr="0x402B_00C4">
+		<Module name="PD_GNSS_WRAP_STATE" register="3" bitmap="25:29" maxScale="7"/>
+		<Module name="PD_PUB_SYS_STATE" register="3" bitmap="20:24" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P4_STATE" register="3" bitmap="15:19" maxScale="7"/>
+		<Module name="PD_WTLCP_LTE_P3_STATE" register="3" bitmap="10:14" maxScale="7"/>
+		<Module name="PD_PUBCP_SYS_STATE" register="3" bitmap="5:9" maxScale="7"/>
+		<Module name="PD_WTLCP_SYS_STATE" register="3" bitmap="0:4" maxScale="7"/>
+	</System>	
+	<System name="SLEEP_CTRL" addr="0x402B_00CC">
+		<Module name="PUB_SYS_FORCE_SYSTEM_SLEEP" register="4" bitmap="31"/>
+		<Module name="PUB_SYS_FORCE_LIGHT_SLEEP" register="4" bitmap="30"/>
+		<Module name="PUB_SYS_FORCE_DEEP_SLEEP" register="4" bitmap="29"/>
+		<Module name="PUB_SYS_AUTO_DEEP_SLEEP_ENABLE" register="4" bitmap="28"/>
+		<Module name="AON_DMA_FORCE_LIGHT_SLEEP" register="4" bitmap="27"/>
+		<Module name="PUBCP_FORCE_LIGHT_SLEEP" register="4" bitmap="26"/>
+		<Module name="WTLCP_FORCE_LIGHT_SLEEP" register="4" bitmap="25"/>
+		<Module name="WCN_SYS_FORCE_LIGHT_SLEEP" register="4" bitmap="24"/>
+		<Module name="AP_FORCE_LIGHT_SLEEP" register="4" bitmap="23"/>
+		<Module name="AON_SYS_FORCE_LIGHT_SLEEP" register="4" bitmap="22"/>
+		<Module name="SP_SYS_FORCE_DEEP_SLEEP" register="4" bitmap="21"/>
+		<Module name="WCN_SYS_FORCE_DEEP_SLEEP" register="4" bitmap="19"/>
+		<Module name="PUBCP_FORCE_DEEP_SLEEP" register="4" bitmap="18"/>
+		<Module name="WTLCP_FORCE_DEEP_SLEEP" register="4" bitmap="17"/>
+		<Module name="AP_FORCE_DEEP_SLEEP" register="4" bitmap="16"/>
+		<Module name="WCN_SYS_FORCE_SYSTEM_SLEEP" register="4" bitmap="15"/>
+		<Module name="GPU_TOP_FORCE_SYSTEM_SLEEP" register="4" bitmap="14"/>
+		<Module name="MM_TOP_FORCE_SYSTEM_SLEEP" register="4" bitmap="13"/>
+		<Module name="PUBCP_FORCE_SYSTEM_SLEEP" register="4" bitmap="12"/>
+		<Module name="WTLCP_FORCE_SYSTEM_SLEEP" register="4" bitmap="11"/>
+		<Module name="AP_FORCE_SYSTEM_SLEEP" register="4" bitmap="10"/>
+		<Module name="SP_SYS_DEEP_SLEEP" register="4" bitmap="6"/>
+		<Module name="WCN_SYS_DEEP_SLEEP" register="4" bitmap="5"/>
+		<Module name="PUB_SYS_DEEP_SLEEP" register="4" bitmap="4"/>
+		<Module name="PUB_SYS_LIGHT_SLEEP" register="4" bitmap="3"/>
+		<Module name="PUBCP_DEEP_SLEEP" register="4" bitmap="2"/>
+		<Module name="WTLCP_DEEP_SLEEP" register="4" bitmap="1"/>
+		<Module name="AP_DEEP_SLEEP" register="4" bitmap="0"/>
+	</System>	
+	<System name="SLEEP_STATUS" addr="0x402B_00D4">
+		<Module name="SP_SYS_SLP_STATUS" register="5" bitmap="20:23" maxScale="7"/>
+		<Module name="WCN_SYS_SLP_STATUS" register="5" bitmap="12:15" maxScale="7"/>
+		<Module name="PUBCP_SLP_STATUS" register="5" bitmap="8:11" maxScale="7"/>
+		<Module name="WTLCP_SLP_STATUS" register="5" bitmap="4:7" maxScale="7"/>
+		<Module name="AP_SLP_STATUS" register="5" bitmap="0:3" maxScale="7"/>
+	</System>
+	<System name="DDR" addr="0x3000_012C">
+		<Module name="DDR" register="6" bitmap="8:9" maxScale="3"/>
+	</System>
+</PowerTrace>

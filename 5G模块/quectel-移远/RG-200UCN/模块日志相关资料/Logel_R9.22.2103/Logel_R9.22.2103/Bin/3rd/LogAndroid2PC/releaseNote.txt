@@ -1,0 +1,438 @@
+latest version: 3.0.10
+===== 3.0.10 =====
+1、增加/data/local/tmp/
+
+latest version: 3.0.9
+===== 3.0.9 =====
+1、增加/external_storage/Documents/ylog
+
+latest version: 3.0.8
+===== 3.0.8 =====
+main:
+1、增加data/data/com.google.android.providers.media.module，以修复FM录音文件相关LOG没有的问题
+2、增加bugreports
+3、增加/mnt/media/ylog/mnt/media/,yocto_tcard
+4、增加/mnt/data/,yocto_internal
+
+latest version: 3.0.7
+===== 3.0.7 =====
+main:
+1、解决Yocto系统导出log时出现"device is not connected"的问题
+
+latest version: 3.0.6
+===== 3.0.6 =====
+main:
+1、增加minidump log导出
+===== 3.0.5 =====
+main:
+1、增加yocto 平台log导出
+===== 3.0.4 =====
+main:
+1、增加log导出的过程显示
+2、解决linux下面无法导出的问题
+latest version: 3.0.3
+===== 3.0.3 =====
+main:
+1、修改当没有插入t卡时候，无法导出android 4.4 的log的问题
+latest version: 3.0.2
+===== 3.0.2 =====
+main:
+1、修改手机产品名称有冒号时导出失败问题
+latest version: 3.0.1
+===== 3.0.1 =====
+main:
+1、	修改执行命令卡住问题
+
+latest version: 3.0.0
+===== 3.0.0 =====
+main:
+	改进内容：
+1、	如果设备多个，弹出设备供用户选择导出几个。
+2、	Log导出类容全部配置化，用户可自行添加需要导出的内容。
+3、	增加导出结果，失败或成功一目了然，导出结果会在pull_result.log中。
+4、	增加防止usb抖动，adb断开之后会等待设备连接。
+5、	如果导出过程出错，会重试三次。
+6、	目录结构调整，去掉无用的空文件夹。
+
+latest version: 2.6.3
+===== 2.6.3 =====
+main:
+	支持导出含有特殊字符的corefile文件，建议最好安装python；
+	增加导出data/vendor中的modem log文件,需要插入t卡
+latest version: 2.6.2
+===== 2.6.2 =====
+main:
+	支持导出kaios2.5 modem log；
+===== 2.6.1 =====
+main:
+	自动在dropbox目录下生成工具脚本，脚本会生成time.txt，该文件会显示文件时间对应关系；
+===== 2.6.0 =====
+main: 
+    修复android9　modem log的存储路径  
+    modem log 放到了data/vendor/ylog  
+    modem conf file 放到了　data/vendor/local/slogmodem 目录 
+detail: 
+    modify: 
+    增加modem log的目录 
+    1.Log4Android2Log.bat 
+    2.Log4Android2Log.sh 
+    $CMD_ADB pull /data/vendor/ylog "$top_dir/internal_storage/" 
+    修改modemlog配置文件的路径 
+    $CMD_ADB pull /data/vendor/local/slogmodem/slog_modem.conf "$top_dir/data_storage/" 
+===== 2.3.15.9 =====
+main:
+	优化不必要的手机文件创建操作；
+	支持kaios sdcard log导出
+	导出ylog前先flush ylog
+===== 2.3.15.8 =====
+main:
+	增加工具路径超长或包含中文字符的出错提示；
+===== 2.3.15.8 =====
+===== 2.3.15.7 =====
+main:
+	修复不插入SD卡时导出log失败问题;
+	增加工具路径包含空格的出错提示；
+===== 2.3.15.7 =====
+===== 2.3.15.6 =====
+main:
+	增加导出gsi 版本ylog;
+===== 2.3.15.6 =====
+===== 2.3.15.5 =====
+main:
+	增加.sh导出ylog容错重试;
+===== 2.3.15.5 =====
+===== 2.3.15.4 =====
+main:
+	增加导出ylog容错重试;
+===== 2.3.15.4 =====
+===== 2.3.15.3 =====
+main:
+	调整导出顺序，先导出ylog;
+	增加debug log
+===== 2.3.15.3 =====
+===== 2.3.15.2 =====
+main:
+    增加导出目录/data/anr
+	增加导出的过程中先停止ylog重命名
+
+===== 2.3.15.2 =====
+===== 2.3.15 =====
+main:
+    修复路径太长无法导出log的问题
+detail:
+    modify:
+	减少一个目录层级
+	1.Log4Android2Log.bat
+    set LOGDIR=%CD%\logs\%androidVer%_%androidPro%\%BASEDIR%
+    set LOGDIR2=%LOGDIR%
+    rem set LOGDIR=%LOGDIR%\log_%board%_%btype%
+    rem set LOGDIR=%LOGDIR%
+===== 2.3.15 =====
+
+===== 2.3.14 =====
+main:
+    修复在含有空格命名目录无法导出log问题
+	修复不能导出corefile问题
+     修复无法导出phonedump文件
+detail:
+    modify:
+    1.Log4Android2Log.sh 
+	增加mkdir -p "$top_dir/data_storage"
+	所有路径加上双引号
+    2.Log4Android2Log.bat
+	增加md "%LOGDIR%/data_storage"
+	所有路径加上双引号
+
+===== 2.3.14 =====
+
+===== 2.3.13.1 =====
+main:
+    add pull ylog lite
+	modify bug "can not pull corefile"
+===== 2.3.13.1 =====
+main:
+    add pull bugreport 
+	add pull /data/local/slogmodem/slog_modem.conf
+	add pull data/corefile only last 4,and newest 4
+    modify can not pull when the path is long 
+
+===== 2.3.9 Apr 13, 2017=====
+main:
+    Process the sysdump files with the sha1, and checking files whether complete
+detail:
+    modify:
+    1.Log4Android2Log.sh
+	python sha1.py $top_dir/sysdump >> $top_dir/sysdump/sysdump_info.txt 2>&1|tee -a $LOGFILE
+	python sha1.py $top_dir/external_storage/SYSDUMP >> $top_dir/sysdump/sysdump_info.txt 2>&1|tee -a $LOGFILE
+    2.Log4Android2Log.bat
+	python sha1.py "%LOGDIR%\sysdump" 2>&1
+	python sha1.py "%LOGDIR%\external_storage\SYSDUMP" 2>&1
+    add:
+	sha1.py
+
+===== 2.3.9 Apr 1, 2017=====
+main:
+    modify pull data/slog to the dir data_stroage/ pull /storage/emulated/0/slog to the dir  external_strage/
+    pull /storage/scard0/slog to the dir internal_storage/
+detail:
+    1.Log4Android2Log.sh
+	$CMD_ADB pull /data/slog $top_dir/data_storage/
+	$CMD_ADB pull /storage/sdcard0/slog $top_dir/external_storage/
+	$CMD_ADB pull /storage/emulated/0/slog $top_dir/internal_storage/
+    2.Log4Android2Log.bat
+	%ADB_CMD% pull /data/slog %LOGDIR%/data_storage/>>%LOGFILE% 2>&1
+	%ADB_CMD% pull /storage/sdcard0/slog %LOGDIR%/external_storage/>>%LOGFILE% 2>&1
+	%ADB_CMD% pull /storage/emulated/0/slog %LOGDIR%/internal_storage/>>%LOGFILE% 2>&1
+
+===== 2.3.9 Mar 22, 2017=====
+main:
+    modify pull data/ylog to the dir data_stroage/ pull /storage/emulated/0/ylog to the dir  external_strage/
+    pull /storage/scard0/ylog to the dir internal_storage/
+detail:
+    1.Log4Android2Log.sh
+	$CMD_ADB pull /data/ylog $top_dir/data_storage/
+	$CMD_ADB pull /storage/sdcard0/ylog $top_dir/external_storage/
+	$CMD_ADB pull /storage/emulated/0/ylog $top_dir/internal_storage/
+    2.Log4Android2Log.bat
+	%ADB_CMD% pull /data/ylog %LOGDIR%/data_storage/>>%LOGFILE% 2>&1
+	%ADB_CMD% pull /storage/sdcard0/ylog %LOGDIR%/external_storage/>>%LOGFILE% 2>&1
+	%ADB_CMD% pull /storage/emulated/0/ylog %LOGDIR%/internal_storage/>>%LOGFILE% 2>&1
+===== 2.3.9 Nov 18, 2016=====
+main:
+    add vowifi test log capture, default config param is 1
+detail:
+    if {%settings%}=={1} (
+md "%LOGDIR%/app/settings"
+%ADB_CMD% pull   /data/data/com.android.providers.settings/ %LOGDIR%/app/settings>>%LOGFILE% 2>&1
+)
+if {%wifi%}=={1} (
+md "%LOGDIR%/app/wifi"
+%ADB_CMD% pull   /data/misc/wifi/  %LOGDIR%/app/wifi>>%LOGFILE% 2>&1
+)
+
+===== 2.3.8 Aug 04, 2016=====
+main:
+    add pull /data/misc/media data as camera dump files
+detail:
+    $CMD_ADB pull /data/misc/media mkdir -p $top_dir/camera 2>&1|tee -a $LOGFILE
+    fixed board contain space and error string in bat
+
+===== 2.3.7 Mar 30, 2016=====
+main:
+    add clear log support while executing the bat or sh file with paramter 1
+detail:
+    add clear log command adb shell cplogctl clear and make .bat and .sh execute with paramters
+
+===== 2.3.6 Feb 18, 2016=====
+main:
+    add ylog expert
+detail:
+    add internal and external ylog expert
+
+latest version: 2.3.5
+===== 2.3.5 Dec 31, 2015=====
+main:
+    add serialno support
+    update folder defination
+    fix some pc can not catch log error: reason->some PC its language is china so the output of command contains "/" 
+    add export log from data/gnss
+    add command adb shell flush_slog_modem for get buffered log
+detail:
+    change name contains ro.product.name replace ro.product.board
+    add parameters for catching special serialno device's log
+    add export log gnss
+latest version: 2.3.4
+===== 2.3.4 Mar 12, 2015=====
+main:
+    add comlpete tree dir gen
+    modem_log save path change to /data/modem_log and /sdcard/modem_log/
+detail:
+    add python genDir.py
+
+===== 2.3.2 Nov 11, 2014=====
+main:
+    update log check,add check bt log 
+detail:
+    check folder slog/<timestamp>/bt/
+    check folder slog/<timestamp>/cp2/
+
+===== 2.3.1 Otc 11, 2014=====
+main:
+    cancel delete files after capture log complete
+    update log check
+    fixed capture internal and external log fail
+detail:
+    update slogctl command
+    rm delete action
+    update log check
+===== 2.3.0 Sep 2, 2014=====
+main:
+    add log check 
+detail:
+    add some python application for log check
+notice: not released,just as a temp release
+
+===== 2.2.9 Aug 5, 2014=====
+main:
+    add catch log for android application with control flags
+detail:
+    pull many logs that contains wifi bt home-launcher and so on from device while tester config to catch
+===== 2.2.8 Jul 8, 2014=====
+main:
+    add generate deviceinfo on root dir of catched log
+detail:
+    as main
+===== 2.2.7 Jun 10, 2014=====
+main:
+    delete function of get bugreport infomation
+detail:
+    as before
+===== 2.2.6 May 16, 2014=====
+main:
+    support catch adb pull /data/local/storage/persistent/chrome/idb database to ffosdatabase  on ffos version
+detail:
+    as before
+===== 2.2.5 Fri 16, 2014=====
+main:
+    support catch /data/data/com.android.providers.contacts/databases/contacts2.db on userdebug version
+detail:
+    as before
+===== 2.2.4 Apr 17, 2014=====
+main:
+    add comments for end user to check the log catch process
+    add folder download for future log processing
+detail:
+    as before
+
+===== 2.2.3 Apr 1, 2014=====
+main:
+    add pull media databases add runtime logs and add check if log file is empty
+detail:
+    add command
+    /data/data/com.android.providers.media/databases 
+===== 2.2.2 Feb 10, 2014=====
+main:
+    add bugreport command support and store log to bugreport/bugreport.log
+detail:
+    add bugreport command support and store log to bugreport/bugreport.log
+===== 2.2.1 Feb 10, 2014=====
+main:
+    update adb to 1.0.31
+detail:
+    update adb to 1.0.31
+===== 2.2.0 Nov 27, 2013=====
+main:
+	remove bugreport command 
+detail:
+    delete command
+    %ADB_CMD% shell slogctl snap bugreport
+===== 2.1.9 Oct 31, 2013=====
+main:
+	add support get android 4.1_3.4 bt log
+detail:
+    add command
+	%ADB_CMD% pull /sdcard/btsnoop_hci.log %LOGDIR%/bt/
+===== 2.1.7 Oct 16, 2013=====
+main:
+	add new log capture
+	only for sprdroid4.0.3_vlx_3.0_13a_sc2390_dev
+detail:
+	add get NMEA about log capture command in StopLogging.bat
+===== 2.1.6 Oct 15, 2013=====
+main:
+    add command 
+    fix sysdump log lost on windows version
+detail:
+    - 
+===== 2.1.5 Aug 21, 2013=====
+main:
+    add command 
+    %ADB_CMD% shell "trw get legacy 2"
+    %ADB_CMD% shell "trw get legacy 8" 
+    for adapter new trw command
+detail:
+    add new command 
+===== 2.1.4 Jul 9, 2013=====
+main:
+    fix sysdump problem for name rule
+detail:
+    change sysdump_* to sysdump.core*
+===== 2.1.3 Jul 9, 2013=====
+main:
+    add capture bt/wifi register info
+detail:
+    add capture bt/wifi register info
+===== 2.1.2 Jul 5, 2013=====
+main:
+    add clear /data/corefile
+detail:
+    add command adb shell rm /data/corefile/*
+===== 2.1.1 Jun 27, 2013=====
+main:
+    fix can not fetch log at the first time
+detail:
+    add adb wait-for-device
+===== 2.1.0 Jun 14, 2013=====
+main:
+    add pull kernel panic core file
+detail:
+    get kernel panic core file
+===== 2.0.9 May 31, 2013=====
+main:
+    fix sp7710 on user version executing adb root block fetch log
+detail:
+    if not user version execute adb root
+===== 2.0.8 Apr 9, 2013=====
+main:
+    update "find" to "%FIND_CMD%"
+detail:
+    update script fix unable to execute find command while system miss find command
+===== 2.0.7 Mar 26, 2013=====
+main:
+    change command "adb cat /proc/asound/sprdphone/vbc " to execute 10 times
+detail:
+    execute adb cat /proc/asound/sprdphone/vbc $top_dir/audio ten times
+===== 2.0.6 Mar 14, 2013=====
+main:
+    add get audio logs
+detail:
+    adb pull /proc/asound/sprdphone/vbc $top_dir/audio
+    adb pull /proc/asound/sprdphone/sprd-codec $top_dir/audio
+    adb pull /proc/asound/sprdphone/pcm0p/sub0/status $top_dir/audio
+    adb shell tinymix > $top_dir/audio/tinymix.log
+===== 2.0.5 Feb 18, 2013=====
+main:
+    update "adb pull /data/core_file  %LOGDIR%/core_file" to "adb pull /data/corefile  %LOGDIR%/corefile"
+detail:
+	update "adb pull /data/core_file  %LOGDIR%/core_file" to "adb pull /data/corefile  %LOGDIR%/corefile"
+===== 2.0.4 Jan 29, 2013=====
+main:
+    add adb pull /data/core_file  %LOGDIR%/core_file
+detail:
+	add pull core_file
+===== 2.0.3 Jan 11, 2013=====
+main:
+    add adb pull /data/data/com.android.providers.telephony/ %LOGDIR%/mms
+    add adb pull /sdcard/modem_memory.log $top_dir/internal_storage/
+    add adb pull /sdcard/external/modem_memory.log $top_dir/external_storage/
+detail:
+	add pull mms
+	add pull modem_memory log
+===== 2.0.2 Jan 08, 2013=====
+main:
+    add adb pull /data/system/dropbox and adb pull /data/misc/hprofs
+	add adb shell slogctl clear command for clear device log after capture log
+detail:
+	fix clear old log on devie
+===== 2.0.1 Nov 23, 2012=====
+main:
+	error ocur while path has space
+detail:
+	fixed error while path to store tools has space
+===== 2.0.0 Nov 19, 2012=====
+main:
+	initialize new tools for specific tools
+detail:
+	initialize the tools to adapter new log system on DUT,
+	this version works only part of sprd devices such as android 4.0.3 main branch
+	
