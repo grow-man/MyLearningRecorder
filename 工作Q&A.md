@@ -178,10 +178,16 @@
 
 答：
 1. 如果你使用VS Code 首先你需要安装Markdown All in One插件
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/3e6cadae-fe97-4b07-9358-1c40db785976)
+
    
 2. 按住`ctrl + shift + p`打开命令面板,并输入`Add/Update section numbers`,添加章节序号。 非必须
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/10b56e73-42ea-4562-a3e8-55f97d07894c)
+
 
 3. 按住`ctrl + shift + p`打开命令面板,并输入`Create Table of Contents`,添加目录。
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/a8ff0b81-d9f5-4eef-bad2-adf6e5ce884b)
+
 
 ## 1.2. 问: 如何使用 python 读取 excel 文件
 
