@@ -1,208 +1,206 @@
-[[_TOC_]]
-
-- [1. �������QA](#1-�������qa)
-  - [1.1. ��: ���ʹ�� python ��ȡ excel �ļ�](#11-��-���ʹ��-python-��ȡ-excel-�ļ�)
-  - [1.2. ��: python ת�� word �� md �ļ�](#12-��-python-ת��-word-��-md-�ļ�)
-  - [1.3. ��: VSCode ��� `Log File Highlighter` �������](#13-��-vscode-���-log-file-highlighter-�������)
-  - [1.4. ��: VSCode ��� `Doxygen Documentation Generator` �������](#14-��-vscode-���-doxygen-documentation-generator-�������)
-  - [1.5. ��: ����Զ���װpython�ű���Ҫ�Ŀ�](#15-��-����Զ���װpython�ű���Ҫ�Ŀ�)
-  - [1.6. watchdog ʹ��˵��](#16-watchdog-ʹ��˵��)
-  - [1.7. SNMP Э�����](#17-snmp-Э�����)
-  - [1.8. ��: CentOS7 bash ���ִ��� -bash: ����:setlocale: LC\_CTYPE: �޷��ı�����ѡ�� (UTF-8): û���Ǹ��ļ���Ŀ¼](#18-��-centos7-bash-���ִ���--bash-����setlocale-lc_ctype-�޷��ı�����ѡ��-utf-8-û���Ǹ��ļ���Ŀ¼)
-  - [1.9. ��: snmp ���ĺ� trap ���� �ֱ���ʲô](#19-��-snmp-���ĺ�-trap-����-�ֱ���ʲô)
-  - [1.10. ��: ��β鿴CentOS���Ե��ڴ���Ϣ](#110-��-��β鿴centos���Ե��ڴ���Ϣ)
-  - [1.11. ��: ��β鿴CentOS���Ե�CPU��Ϣ](#111-��-��β鿴centos���Ե�cpu��Ϣ)
-  - [1.12. ��: GMT��CST��UTC �ֱ���ʲô��](#112-��-gmtcstutc-�ֱ���ʲô)
-  - [1.13. ��: ��ν��� docker ��ĳ����������־](#113-��-��ν���-docker-��ĳ����������־)
-  - [1.14. ��: ��ν��� docker ��ĳ��������������](#114-��-��ν���-docker-��ĳ��������������)
-  - [1.15. ��: ��β鿴 docker �е�ǰ���������е�����](#115-��-��β鿴-docker-�е�ǰ���������е�����)
-  - [1.16. ��: һ���������ǰ��֧���� commit](#116-��-һ���������ǰ��֧����-commit)
-  - [1.17. ��: git submodule ��γ�ʼ���ض���ģ��](#117-��-git-submodule-��γ�ʼ���ض���ģ��)
-  - [1.18. ��: Ϊ���Ƽ�ʹ�� `nullptr` ��� `NULL` �� `0`](#118-��-Ϊ���Ƽ�ʹ��-nullptr-���-null-��-0)
-  - [1.19. ��: ���ʹ�� python �����ļ��в����� md ��ʽ�ļ�](#119-��-���ʹ��-python-�����ļ��в�����-md-��ʽ�ļ�)
-  - [1.20. ��: C++ Ϊ���Ƽ�ʹ�����������ռ���� static �ؼ���](#120-��-c-Ϊ���Ƽ�ʹ�����������ռ����-static-�ؼ���)
-  - [1.21. ��: C++ ��μ���ٷ���(������λС��)�ַ���](#121-��-c-��μ���ٷ���������λС���ַ���)
-  - [1.22. ��: ���ʹ��everything���������������ļ���](#122-��-���ʹ��everything���������������ļ���)
-  - [1.23. ��: ���ʹ�� C++ ���� csv �ļ�](#123-��-���ʹ��-c-����-csv-�ļ�)
-  - [1.24. ��: C++ ����pcap�ļ��е� udp ����](#124-��-c-����pcap�ļ��е�-udp-����)
-  - [1.25. ��: google �Զ��岻�����ض���վ](#125-��-google-�Զ��岻�����ض���վ)
-  - [1.26. ��: google ��������](#126-��-google-��������)
-  - [1.27. ��: ���ʹ�� gperftools �鿴�������û���ͼ](#127-��-���ʹ��-gperftools-�鿴�������û���ͼ)
-  - [1.28. ��: perf �����÷�](#128-��-perf-�����÷�)
-  - [1.29. ��: ��δ�������ssh-key](#129-��-��δ�������ssh-key)
-  - [1.30. ��:Openwrt����vlan�ķ���](#130-��openwrt����vlan�ķ���)
-  - [1.31. ��: ���ʹ�� clang-format ����ʽ��ĳЩ�ļ�](#131-��-���ʹ��-clang-format-����ʽ��ĳЩ�ļ�)
-  - [1.32. ��: ��μ���ĳ���ļ����£������ļ���ע��ռ���������ı���](#132-��-��μ���ĳ���ļ����´����ļ���ע��ռ���������ı���)
-  - [1.33. ��: ��μ���ĳ���ļ����£������ļ��Ŀ��С�ע�ͺʹ�������](#133-��-��μ���ĳ���ļ����´����ļ��Ŀ���ע�ͺʹ�������)
-  - [1.34. ��: ��β���ĳ���ļ����������ļ�������](#134-��-��β���ĳ���ļ����������ļ�������)
-  - [1.35. ��: cmake �ű��������һ��������ʾĳ�ļ���������Դ�ļ�](#135-��-cmake-�ű��������һ��������ʾĳ�ļ���������Դ�ļ�)
-  - [1.36. ��:�����centos������telnet����](#136-�������centos������telnet����)
-  - [1.37. ��:�����centos������ntp������](#137-�������centos������ntp������)
-  - [1.38. ��: ����� CMake �ű��г�ʼ�� git ��ģ��](#138-��-�����-cmake-�ű��г�ʼ��-git-��ģ��)
-  - [1.39. ��: ��γ�ʼ��һ������ `.gitmodules` �ļ��Ĳֿ�](#139-��-��γ�ʼ��һ������-gitmodules-�ļ��Ĳֿ�)
-  - [1.40. ��: MySQL ���ʹ�÷�ҳ��ѯ](#140-��-mysql-���ʹ�÷�ҳ��ѯ)
-  - [1.41. ��: ����� `gitlab` ���д�����ʹ�� `issue` ģ��](#141-��-�����-gitlab-���д�����ʹ��-issue-ģ��)
-  - [1.42. ��: ���ʹ���ļ���Ų�ѯĳ�ļ����µ��ļ�����](#142-��-���ʹ���ļ���Ų�ѯĳ�ļ����µ��ļ�����)
-  - [1.43. ��: �豸������װĿ¼�淶](#143-��-�豸������װĿ¼�淶)
-  - [1.44. ��: googletest ������в��Ե��Ӽ�](#144-��-googletest-������в��Ե��Ӽ�)
-  - [1.45. �ʣ�Centos ʹ�� yum ��ʹ�� cmake ���� libstdc++.so ���Ӵ���](#145-��centos-ʹ��-yum-��ʹ��-cmake-����-libstdcso-���Ӵ���)
-  - [1.46. �ʣ������� sa �����������ʹ�� coredump ���е���](#146-��������-sa-�����������ʹ��-coredump-���е���)
-  - [1.47. �ʣ�ʹ�ú� yum ����� libstdc++ �������Ӵ���](#147-��ʹ�ú�-yum-�����-libstdc-�������Ӵ���)
-  - [1.48. �ʣ����ʹ��iperf3����](#148-�����ʹ��iperf3����)
-  - [1.49. �ʣ���δ�ץ���ļ�����ȡamr��Ƶ��������](#149-����δ�ץ���ļ�����ȡamr��Ƶ��������)
-  - [1.50. �ʣ���β鿴�ļ��� md5 ��ֵ](#150-����β鿴�ļ���-md5-��ֵ)
-  - [1.51. �ʣ������ץ���е��� rtp ��Ƶ���з���](#151-�������ץ���е���-rtp-��Ƶ���з���)
-  - [1.52. ��: ��� git �����ȡԶ�ֿ̲��ָ����֧](#152-��-���-git-�����ȡԶ�ֿ̲��ָ����֧)
-  - [1.53. �ʣ�windows �� mysql5.7 �������Զ�̷��ʣ�](#153-��windows-��-mysql57-�������Զ�̷���)
-  - [1.54. �ʣ� wireshark ץ��ʱ������ʾ failed to set hardware filter to promiscuous mode: ����ϵͳ�ϵ��豸û�з������á�  (31)](#154-��-wireshark-ץ��ʱ������ʾ-failed-to-set-hardware-filter-to-promiscuous-mode-����ϵͳ�ϵ��豸û�з�������--31)
-  - [1.55. �ʣ�wireshark �л���ģʽָ����ʲô��˼��](#155-��wireshark-�л���ģʽָ����ʲô��˼)
-  - [1.56. ��: `error while loading shared libraries` ���ض�̬��ʧ����ν����](#156-��-error-while-loading-shared-libraries-���ض�̬��ʧ����ν��)
-  - [1.57. �ʣ� `FAQ` ��ʲô��](#157-��-faq-��ʲô)
-  - [1.58. �ʣ� `Q&A` ��ʲô?](#158-��-qa-��ʲô)
-  - [1.59. �ʣ� Centos7 ���Դ����� git](#159-��-centos7-���Դ�����-git)
-  - [1.60. �ʣ� Centos��λ�����ļ�����](#160-��-centos��λ�����ļ�����)
-  - [1.61. �ʣ� `Centos7` ���Դ����� gcc/g++](#161-��-centos7-���Դ�����-gccg)
-  - [1.62. �ʣ� `Centos7` ��ιرշ���ǽ](#162-��-centos7-��ιرշ���ǽ)
-  - [1.63. ��: `Centos7` ���ñʼǱ��ϸǲ�����](#163-��-centos7-���ñʼǱ��ϸǲ�����)
-  - [1.64. ��: `Centos7` ��������������� `wifi`](#164-��-centos7-���������������-wifi)
-  - [1.65. �ʣ�����̨���̶�̨�ֳ������Ų�ȡ֤�ķ�����������](#165-�ʳ���̨�̶�̨�ֳ������Ų�ȡ֤�ķ�����������)
-  - [1.66. �ʣ�����̨�ֳ������Ų�ȡ֤�ķ���](#166-�ʵ���̨�ֳ������Ų�ȡ֤�ķ���)
-  - [1.67. �ʣ�windows/linux������Ӿ�̬·��](#167-��windowslinux������Ӿ�̬·��)
-  - [1.68. �ʣ�windows/linux��ѯ�˿�״̬](#168-��windowslinux��ѯ�˿�״̬)
-  - [1.69. �ʣ���������Ƿ�ɴ�ķ���](#169-�ʼ�������Ƿ�ɴ�ķ���)
-  - [1.70. �ʣ�Linux��������¼����](#170-��linux��������¼����)
-  - [1.71. �ʣ�Linux������¼����](#171-��linux������¼����)
-  - [1.72. ��: `DELL`������`iDRAC`Զ�̿�������](#172-��-dell������idracԶ�̿�������)
-  - [1.73. ��: ������� GitLab �� `Private Token`](#173-��-�������-gitlab-��-private-token)
-  - [1.74. ��: ��θı� `Centos7` ����������](#174-��-��θı�-centos7-����������)
-  - [1.75. ��: CentoS7����ʹ��fdisk��4T���̽��з���, ��home��������](#175-��-centos7����ʹ��fdisk��4t���̽��з���-��home��������)
-  - [1.76. ��: EN50128 �� D.52 �ᵽ�Ľṹ������](#176-��-en50128-��-d52-�ᵽ�Ľṹ������)
-  - [1.77. ��: ssh ������ܵ�¼](#177-��-ssh-������ܵ�¼)
-  - [1.78. ��: MySQL ��α��ⳤ�����ҵ���Ӱ�죿](#178-��-mysql-��α��ⳤ�����ҵ���Ӱ��)
-  - [1.79. ��: MySQL ʹ�ó����Ӻ���ʱ��Ϊ���صĽ�������󣬵����ڴ��������죬��ν��?](#179-��-mysql-ʹ�ó����Ӻ���ʱ��Ϊ���صĽ�����������ڴ�����������ν��)
-  - [1.80. ��: �������ʽ, ���ƥ�� xxx (ms)](#180-��-�������ʽ-���ƥ��-xxx-ms)
-  - [1.81. ��: �������ʽ�����ѡ�в������ı� 172.2.200.66 ����](#181-��-�������ʽ���ѡ�в������ı�-172220066-����)
-  - [1.82. ��: wireshark ������ ICMP ���ĳ��� Destination unreachable (Port unreachable),Ϊʲô������������](#182-��-wireshark-������-icmp-���ĳ���-destination-unreachable-port-unreachableΪʲô������������)
-  - [1.83. �ʣ� ��Ϊ����������װҪ��](#183-��-��Ϊ����������װҪ��)
-  - [1.84. ��: ���ת�� md �ļ�Ϊ latex �ļ�](#184-��-���ת��-md-�ļ�Ϊ-latex-�ļ�)
-  - [1.85. ��: g++ ����ѡ�� `-Wl,--no-as-needed` ��ʲô��˼��](#185-��-g-����ѡ��--wl--no-as-needed-��ʲô��˼)
-  - [1.86. ��: ���ֱ��뾯�� `warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking`](#186-��-���ֱ��뾯��-warning-using-getaddrinfo-in-statically-linked-applications-requires-at-runtime-the-shared-libraries-from-the-glibc-version-used-for-linking)
-  - [1.87. ��: ��β鿴 centos7 ͨ�� yum ��װ����Щ����](#187-��-��β鿴-centos7-ͨ��-yum-��װ����Щ����)
-  - [1.88. ��: ����Զ�ͳ�����һ�� git �ύ�����ӻ�ɾ���Ĵ�������](#188-��-����Զ�ͳ�����һ��-git-�ύ�����ӻ�ɾ���Ĵ�������)
-  - [1.89. ��: ubuntu ��β鿴cpu�¶�](#189-��-ubuntu-��β鿴cpu�¶�)
-  - [1.90. ��: ����ʹ�� git ��Ҫ���е�����](#190-��-����ʹ��-git-��Ҫ���е�����)
-  - [1.91. ��: NAT ��ɶ](#191-��-nat-��ɶ)
-  - [1.92. ��: IPSec ��ɶ](#192-��-ipsec-��ɶ)
-  - [1.93. ��: mysql ���ʵ����������](#193-��-mysql-���ʵ����������)
-  - [1.94. �ʣ��������ɾ����־�ļ��еĿ���](#194-���������ɾ����־�ļ��еĿ���)
-  - [1.95. ��: ��ΰ���־�д����ظ���־ɾ��](#195-��-��ΰ���־�д����ظ���־ɾ��)
-  - [1.96. ��: ʲô�� SQA ?](#196-��-ʲô��-sqa-)
-  - [1.97. ��: ʲô�� 8D ����](#197-��-ʲô��-8d-����)
-  - [1.98. ��: �������Ժ� docker desktop һֱ����������](#198-��-�������Ժ�-docker-desktop-һֱ����������)
-  - [1.99. ��: CSDN ��β���½���ƴ���?](#199-��-csdn-��β���½���ƴ���)
-  - [1.100. ��: MySQL ��β鿴���ݿ������б�������](#1100-��-mysql-��β鿴���ݿ������б�������)
-  - [1.101. ��: Centos7 ��β�ѯ���̹�����ռ�����](#1101-��-centos7-��β�ѯ���̹�����ռ�����)
-  - [1.102. ��: git ���ͨ�������ָ��ʱ��� commit ��Ϣ](#1102-��-git-���ͨ�������ָ��ʱ���-commit-��Ϣ)
-  - [1.103. ��: wsl ������ε����뵼��](#1103-��-wsl-������ε����뵼��)
-  - [1.104. ��: centos �鿴ϵͳ�汾](#1104-��-centos-�鿴ϵͳ�汾)
-  - [1.105. ��: openEuler �鿴ϵͳ�汾](#1105-��-openeuler-�鿴ϵͳ�汾)
-  - [1.106. ��: ubuntu ��װ 32 λ libmysql](#1106-��-ubuntu-��װ-32-λ-libmysql)
-  - [1.107. ��: ubuntu �鿴�Ѱ�װ����](#1107-��-ubuntu-�鿴�Ѱ�װ����)
-  - [1.108. ��: mysql �����������](#1108-��-mysql-�����������)
-  - [1.109. ��: centos7 �� �����������еĶ˿�](#1109-��-centos7-��-�����������еĶ˿�)
-  - [1.110. ��: �鿴��ռ�ö˿ڶ�Ӧ�� PID](#1110-��-�鿴��ռ�ö˿ڶ�Ӧ��-pid)
-  - [1.111. ��: �鿴ָ�� PID �Ľ���](#1111-��-�鿴ָ��-pid-�Ľ���)
-  - [1.112. ��: �滻 sh �ű��е� window �ַ� ^M](#1112-��-�滻-sh-�ű��е�-window-�ַ�-m)
-  - [1.113. ��: �鿴��ִ���ļ������� ��̬��](#1113-��-�鿴��ִ���ļ�������-��̬��)
-  - [1.114. ��: ��ȡ GitLab ָ���������� open ״̬�µ� issue](#1114-��-��ȡ-gitlab-ָ����������-open-״̬�µ�-issue)
-  - [1.115. ��: ��ȡ GitLab ָ������ӵ�� Bug ��ǩ�� issue ���������ļ� bug.json](#1115-��-��ȡ-gitlab-ָ������ӵ��-bug-��ǩ��-issue-���������ļ�-bugjson)
-  - [1.116. ��: google/benchmark ִ�ж�Ӧ�����ܲ���](#1116-��-googlebenchmark-ִ�ж�Ӧ�����ܲ���)
-  - [1.117. ��: cmake ȫ������](#1117-��-cmake-ȫ������)
-  - [1.118. ��: cmake ���� gos ��Ԫ����](#1118-��-cmake-����-gos-��Ԫ����)
-  - [1.119. ��: cmake ��������](#1119-��-cmake-��������)
-  - [1.120. ��: CMake ���в���](#1120-��-cmake-���в���)
-  - [1.121. ��:CMakeָ��MSVC����ʱ��](#1121-��cmakeָ��msvc����ʱ��)
-  - [1.122. ��:Ϊ�ι������ص�googleTest��ܵ�����ʱ��ȱʡΪ/MT �����޸�](#1122-��Ϊ�ι������ص�googletest��ܵ�����ʱ��ȱʡΪmt-�����޸�)
-  - [1.123. ��: ubuntu �滻�廪Դ](#1123-��-ubuntu-�滻�廪Դ)
-  - [1.124. �ʣ�����̨�����޷���¼����ʾ���Ӽ�Ⱥ������ʧ��](#1124-�ʵ���̨�����޷���¼��ʾ���Ӽ�Ⱥ������ʧ��)
-  - [1.125. �ʣ�����̨�����޷���¼����ʾ���Ӷ������ȷ�����ʧ��](#1125-�ʵ���̨�����޷���¼��ʾ���Ӷ������ȷ�����ʧ��)
-  - [1.126. �ʣ�����̨������¼ʱ����ʾ��Ƶ����ʧ��](#1126-�ʵ���̨������¼ʱ��ʾ��Ƶ����ʧ��)
-  - [1.127. �ʣ���¼����̨����ʱ�����ּ�������ʧ��](#1127-�ʵ�¼����̨����ʱ���ּ�������ʧ��)
-  - [1.128. �ʣ�����̨�͵��ȷ�������������ʱ������̨��ʾ���Ӷ������ȷ�����ʧ��](#1128-�ʵ���̨�͵��ȷ�������������ʱ����̨��ʾ���Ӷ������ȷ�����ʧ��)
-  - [1.129. �ʣ�����̨�����򿪺󣬵�¼���棬��¼���˳���ť��λ��](#1129-�ʵ���̨�����򿪺��¼�����¼���˳���ť��λ)
-  - [1.130. �ʣ�����̨�������½�ָʾ�ƣ�LTE���졢CAD���졢ATS���졢NTP����](#1130-�ʵ���̨�������½�ָʾ��lte����cad����ats����ntp����)
-  - [1.131. �ʣ������վ�����г�û��������ڳ���](#1131-�ʵ����վ�����г�û��������ڳ���)
-  - [1.132. �ʣ��˹��㲥�����û�з��ع㲥״̬���޷���ʼ�㲥��](#1132-���˹��㲥�����û�з��ع㲥״̬�޷���ʼ�㲥)
-  - [1.133. �ʣ��˹��㲥����󣬰���PTT˵������û�������㲥������](#1133-���˹��㲥�������ptt˵������û�������㲥����)
-  - [1.134. �ʣ�Ԥ¼���㲥�����û���յ��㲥״̬��](#1134-��Ԥ¼���㲥�����û���յ��㲥״̬)
-  - [1.135. �ʣ�Ԥ¼���㲥�����ʵ�ʲ��Ŵ����͵���̨ѡ�����������](#1135-��Ԥ¼���㲥�����ʵ�ʲ��Ŵ����͵���̨ѡ���������)
-  - [1.136. �ʣ�IPH�����������󣬵���̨û����ʾIPH����](#1136-��iph���������������̨û����ʾiph����)
-  - [1.137. �ʣ�IPH����������������̨�����󣬱�����������δ��ͨ״̬](#1137-��iph��������������̨�����󱨾���������δ��ͨ״̬)
-  - [1.138. �ʣ�IPH�����������󣬵���̨������û����Ƶ��](#1138-��iph���������������̨������û����Ƶ)
-  - [1.139. �ʣ�IPH�����������󣬵���̨������������������������������](#1139-��iph���������������̨����������������������������)
-  - [1.140. �ʣ�����̨��������δ������δ֪��ŵ����](#1140-�ʵ���̨��������δ������δ֪��ŵ����)
-  - [1.141. �ʣ� ��Ⱥ��������ʱ������Ȩʧ�ܣ�������Ȩ��ʾ����](#1141-��-��Ⱥ��������ʱ������Ȩʧ�ܳ�����Ȩ��ʾ��)
-  - [1.142. �ʣ����ų�����ʾ��ʾ����û�ж��ż�¼](#1142-�ʶ��ų�����ʾ��ʾ����û�ж��ż�¼)
-  - [1.143. �ʣ�����̨��Ƶ����ʱ��ѡ����Ҫȷ��ֱ����ȡʱ�ֳ�̨����Ҫ����ȷ��](#1143-�ʵ���̨��Ƶ����ʱѡ����Ҫȷ��ֱ����ȡʱ�ֳ�̨����Ҫ����ȷ��)
-- [2. ���ȷ�����FAQ](#2-���ȷ�����faq)
-  - [2.1. �ʣ����ݿ��޷�Զ��ͨ��root����](#21-�����ݿ��޷�Զ��ͨ��root����)
-  - [2.2. �ʣ����ݿ⿪�������Զ�����](#22-�����ݿ⿪�������Զ�����)
-  - [2.3. �ʣ�dis���̴򿪺����ˣ�dis.log��ʾ���ݿ����Ӵ���](#23-��dis���̴򿪺�����dislog��ʾ���ݿ����Ӵ���)
-  - [2.4. �ʣ�dis������dis.log����ʾ���ݿ����ֶ��Ҳ���](#24-��dis������dislog����ʾ���ݿ����ֶ��Ҳ���)
-  - [2.5. �ʣ�����̨�ͳ���̨ATSָʾ�ƶ�����](#25-�ʵ���̨�ͳ���̨atsָʾ�ƶ�����)
-  - [2.6. �ʣ�dis��һЩȫ��������û��Ч](#26-��dis��һЩȫ��������û��Ч)
-  - [2.7. �ʣ���β鿴�����Ƿ���������������](#27-����β鿴�����Ƿ���������������)
-  - [2.8. �ʣ����������ݿⱸ�����ã�����ֶ���ԭ���ݿ�����](#28-�ʷ��������ݿⱸ����������ֶ���ԭ���ݿ�����)
-- [3. ����̨FAQ](#3-����̨faq)
-  - [3.1. �ʣ�18���߳���̨�ն��ŵ����Լ��ͨ��������޸���](#31-��18���߳���̨�ն��ŵ����Լ��ͨ������޸�)
-  - [3.2. �ʣ�18�����ֱ�һֱ����ժ��״̬](#32-��18�����ֱ�һֱ����ժ��״̬)
-  - [3.3. �ʣ�18���߳���̨�ն������Լ��ͨ��](#33-��18���߳���̨�ն������Լ��ͨ��)
-  - [3.4. �ʣ�����̨�����ŵ����Լ첻����PLMN��ȡ����](#34-�ʳ���̨�����ŵ����Լ첻��plmn��ȡ����)
-  - [3.5. �ʣ�����̨��¼����ȥ��һֱ���ڵ�¼����](#35-�ʳ���̨��¼����ȥһֱ���ڵ�¼����)
-  - [3.6. �ʣ�����̨�ն˻�������](#36-�ʳ���̨�ն˻�������)
-  - [3.7. �ʣ�����̨�ն����Ͻ�������dis״̬����](#37-�ʳ���̨�ն����Ͻ�����dis״̬����)
-  - [3.8. �ʣ�����̨�ն����Ͻ�IPH/PA����](#38-�ʳ���̨�ն����Ͻ�iphpa����)
-  - [3.9. �ʣ�����̨�ն˴�������](#39-�ʳ���̨�ն˴�������)
-  - [3.10. �ʣ�����̨�ն�������û����](#310-�ʳ���̨�ն�������û����)
-  - [3.11. �ʣ�����̨�ն˳��ֺ���](#311-�ʳ���̨�ն˳��ֺ���)
-  - [3.12. �ʣ�18���߹̶�̨��վ�㲥�������](#312-��18���߹̶�̨��վ�㲥�������)
-  - [3.13. �ʣ������֤18���߹̶�̨�ĳ�վ�㲥����](#313-�������֤18���߹̶�̨�ĳ�վ�㲥����)
-  - [3.14. �ʣ�18���߹̶�̨��վ�㲥���ֹ��ϣ��������ų�](#314-��18���߹̶�̨��վ�㲥���ֹ����������ų�)
-  - [3.15. �ʣ��̶�̨�ն˰忨E210�������忨TA30-72�����ĵ�](#315-�ʹ̶�̨�ն˰忨e210�������忨ta30-72�����ĵ�)
-- [4. ����FAQ](#4-����faq)
-  - [4.1. �ʣ����ܷ�����vsftp�����޷���������](#41-�����ܷ�����vsftp�����޷���������)
-  - [4.2. �ʣ�ftp�޷���½��������ls�޷������ļ�](#42-��ftp�޷���½������ls�޷������ļ�)
-  - [4.3. �ʣ��豸��α������ɹ�](#43-���豸��α������ɹ�)
-  - [4.4. �ʣ�ϵͳ״̬��CAD��������¼��¼�������ͼ��һֱ�ɻ�ɫ���豸����Ҳ�ǻ�ɫ״̬�������豸�б��е���̨�豸������Ϊ�հ�](#44-��ϵͳ״̬��cad������¼��¼�������ͼ��һֱ�ɻ�ɫ�豸����Ҳ�ǻ�ɫ״̬�����豸�б��е���̨�豸������Ϊ�հ�)
-  - [4.5. �ʣ���ο��ٲ鿴�����豸�İ汾��Ϣ���ݺ�ͳ��](#45-����ο��ٲ鿴�����豸�İ汾��Ϣ���ݺ�ͳ��)
-  - [4.6. �ʣ���ε�����Ծ�澯����ʷ�澯](#46-����ε�����Ծ�澯����ʷ�澯)
-  - [4.7. �ʣ�ʹ�����ܶ������汾��������](#47-��ʹ�����ܶ������汾��������)
-  - [4.8. �ʣ���ν��и澯���ã����ƹ̶�̨��PA����ʧ�ܸ澯����Ϊ�̶�̨����Ҫ��PA���жԽӣ�����澯û��Ҫ���֡�](#48-����ν��и澯�������ƹ̶�̨��pa����ʧ�ܸ澯��Ϊ�̶�̨����Ҫ��pa���жԽӸ���澯û��Ҫ����)
-- [5. ¼��¼��FAQ](#5-¼��¼��faq)
-  - [5.1. �ʣ�¼��¼�����������](#51-��¼��¼�����������)
-  - [5.2. �ʣ�¼��¼����ļ���ô����](#52-��¼��¼����ļ���ô����)
+- [1. 工作相关QA](#1-工作相关qa)
+  - [1.1. 问: 如何使用 python 读取 excel 文件](#11-问-如何使用-python-读取-excel-文件)
+  - [1.2. 问: python 转换 word 到 md 文件](#12-问-python-转换-word-到-md-文件)
+  - [1.3. 问: VSCode 插件 `Log File Highlighter` 如何配置](#13-问-vscode-插件-log-file-highlighter-如何配置)
+  - [1.4. 问: VSCode 插件 `Doxygen Documentation Generator` 如何配置](#14-问-vscode-插件-doxygen-documentation-generator-如何配置)
+  - [1.5. 问: 如何自动安装python脚本需要的库](#15-问-如何自动安装python脚本需要的库)
+  - [1.6. watchdog 使用说明](#16-watchdog-使用说明)
+  - [1.7. SNMP 协议介绍](#17-snmp-协议介绍)
+  - [1.8. 问: CentOS7 bash 出现错误 -bash: 警告:setlocale: LC\_CTYPE: 无法改变区域选项 (UTF-8): 没有那个文件或目录](#18-问-centos7-bash-出现错误--bash-警告setlocale-lc_ctype-无法改变区域选项-utf-8-没有那个文件或目录)
+  - [1.9. 问: snmp 报文和 trap 报文 分别是什么](#19-问-snmp-报文和-trap-报文-分别是什么)
+  - [1.10. 问: 如何查看CentOS电脑的内存信息](#110-问-如何查看centos电脑的内存信息)
+  - [1.11. 问: 如何查看CentOS电脑的CPU信息](#111-问-如何查看centos电脑的cpu信息)
+  - [1.12. 问: GMT，CST，UTC 分别是什么？](#112-问-gmtcstutc-分别是什么)
+  - [1.13. 问: 如何进入 docker 中某个容器的日志](#113-问-如何进入-docker-中某个容器的日志)
+  - [1.14. 问: 如何进入 docker 中某个容器的命令行](#114-问-如何进入-docker-中某个容器的命令行)
+  - [1.15. 问: 如何查看 docker 中当前的正在运行的容器](#115-问-如何查看-docker-中当前的正在运行的容器)
+  - [1.16. 问: 一条命令导出当前分支所有 commit](#116-问-一条命令导出当前分支所有-commit)
+  - [1.17. 问: git submodule 如何初始化特定子模块](#117-问-git-submodule-如何初始化特定子模块)
+  - [1.18. 问: 为何推荐使用 `nullptr` 替代 `NULL` 和 `0`](#118-问-为何推荐使用-nullptr-替代-null-和-0)
+  - [1.19. 问: 如何使用 python 遍历文件夹并生成 md 格式文件](#119-问-如何使用-python-遍历文件夹并生成-md-格式文件)
+  - [1.20. 问: C++ 为何推荐使用匿名命名空间而非 static 关键字](#120-问-c-为何推荐使用匿名命名空间而非-static-关键字)
+  - [1.21. 问: C++ 如何计算百分数(保留两位小数)字符串](#121-问-c-如何计算百分数保留两位小数字符串)
+  - [1.22. 问: 如何使用everything搜索局域网共享文件夹](#122-问-如何使用everything搜索局域网共享文件夹)
+  - [1.23. 问: 如何使用 C++ 生成 csv 文件](#123-问-如何使用-c-生成-csv-文件)
+  - [1.24. 问: C++ 解析pcap文件中的 udp 报文](#124-问-c-解析pcap文件中的-udp-报文)
+  - [1.25. 问: google 自定义不搜索特定网站](#125-问-google-自定义不搜索特定网站)
+  - [1.26. 问: google 搜索技巧](#126-问-google-搜索技巧)
+  - [1.27. 问: 如何使用 gperftools 查看函数调用火焰图](#127-问-如何使用-gperftools-查看函数调用火焰图)
+  - [1.28. 问: perf 基本用法](#128-问-perf-基本用法)
+  - [1.29. 问: 如何创建本地ssh-key](#129-问-如何创建本地ssh-key)
+  - [1.30. 问:Openwrt配置vlan的方法](#130-问openwrt配置vlan的方法)
+  - [1.31. 问: 如何使用 clang-format 不格式化某些文件](#131-问-如何使用-clang-format-不格式化某些文件)
+  - [1.32. 问: 如何计算某个文件夹下，代码文件的注释占所有行数的比例](#132-问-如何计算某个文件夹下代码文件的注释占所有行数的比例)
+  - [1.33. 问: 如何计算某个文件夹下，代码文件的空行、注释和代码行数](#133-问-如何计算某个文件夹下代码文件的空行注释和代码行数)
+  - [1.34. 问: 如何查找某个文件夹下所有文件的行数](#134-问-如何查找某个文件夹下所有文件的行数)
+  - [1.35. 问: cmake 脚本中如何让一个变量表示某文件夹下所有源文件](#135-问-cmake-脚本中如何让一个变量表示某文件夹下所有源文件)
+  - [1.36. 问:如何在centos上配置telnet服务](#136-问如何在centos上配置telnet服务)
+  - [1.37. 问:如何在centos上配置ntp服务器](#137-问如何在centos上配置ntp服务器)
+  - [1.38. 问: 如何在 CMake 脚本中初始化 git 子模块](#138-问-如何在-cmake-脚本中初始化-git-子模块)
+  - [1.39. 问: 如何初始化一个包含 `.gitmodules` 文件的仓库](#139-问-如何初始化一个包含-gitmodules-文件的仓库)
+  - [1.40. 问: MySQL 如何使用分页查询](#140-问-mysql-如何使用分页查询)
+  - [1.41. 问: 如何在 `gitlab` 库中创建并使用 `issue` 模板](#141-问-如何在-gitlab-库中创建并使用-issue-模板)
+  - [1.42. 问: 如何使用文件编号查询某文件夹下的文件名称](#142-问-如何使用文件编号查询某文件夹下的文件名称)
+  - [1.43. 问: 设备软件安装目录规范](#143-问-设备软件安装目录规范)
+  - [1.44. 问: googletest 如何运行测试的子集](#144-问-googletest-如何运行测试的子集)
+  - [1.45. 问：Centos 使用 yum 后使用 cmake 出现 libstdc++.so 链接错误](#145-问centos-使用-yum-后使用-cmake-出现-libstdcso-链接错误)
+  - [1.46. 问：主板中 sa 软件崩溃如何使用 coredump 进行调试](#146-问主板中-sa-软件崩溃如何使用-coredump-进行调试)
+  - [1.47. 问：使用后 yum 命令后， libstdc++ 出现链接错误](#147-问使用后-yum-命令后-libstdc-出现链接错误)
+  - [1.48. 问：如何使用iperf3打流](#148-问如何使用iperf3打流)
+  - [1.49. 问：如何从抓包文件中提取amr音频流并播放](#149-问如何从抓包文件中提取amr音频流并播放)
+  - [1.50. 问：如何查看文件的 md5 数值](#150-问如何查看文件的-md5-数值)
+  - [1.51. 问：如何在抓包中导出 rtp 音频进行分析](#151-问如何在抓包中导出-rtp-音频进行分析)
+  - [1.52. 问: 如何 git 如何拉取远程仓库的指定分支](#152-问-如何-git-如何拉取远程仓库的指定分支)
+  - [1.53. 问：windows 上 mysql5.7 如何允许远程访问？](#153-问windows-上-mysql57-如何允许远程访问)
+  - [1.54. 问： wireshark 抓包时出现提示 failed to set hardware filter to promiscuous mode: 连到系统上的设备没有发挥作用。  (31)](#154-问-wireshark-抓包时出现提示-failed-to-set-hardware-filter-to-promiscuous-mode-连到系统上的设备没有发挥作用--31)
+  - [1.55. 问：wireshark 中混杂模式指的是什么意思？](#155-问wireshark-中混杂模式指的是什么意思)
+  - [1.56. 问: `error while loading shared libraries` 加载动态库失败如何解决？](#156-问-error-while-loading-shared-libraries-加载动态库失败如何解决)
+  - [1.57. 问： `FAQ` 是什么？](#157-问-faq-是什么)
+  - [1.58. 问： `Q&A` 是什么?](#158-问-qa-是什么)
+  - [1.59. 问： Centos7 如何源码编译 git](#159-问-centos7-如何源码编译-git)
+  - [1.60. 问： Centos定位查找文件命令](#160-问-centos定位查找文件命令)
+  - [1.61. 问： `Centos7` 如何源码编译 gcc/g++](#161-问-centos7-如何源码编译-gccg)
+  - [1.62. 问： `Centos7` 如何关闭防火墙](#162-问-centos7-如何关闭防火墙)
+  - [1.63. 问: `Centos7` 设置笔记本合盖不休眠](#163-问-centos7-设置笔记本合盖不休眠)
+  - [1.64. 问: `Centos7` 如何在命令行链接 `wifi`](#164-问-centos7-如何在命令行链接-wifi)
+  - [1.65. 问：车载台、固定台现场问题排查取证的方法操作流程](#165-问车载台固定台现场问题排查取证的方法操作流程)
+  - [1.66. 问：调度台现场问题排查取证的方法](#166-问调度台现场问题排查取证的方法)
+  - [1.67. 问：windows/linux如何添加静态路由](#167-问windowslinux如何添加静态路由)
+  - [1.68. 问：windows/linux查询端口状态](#168-问windowslinux查询端口状态)
+  - [1.69. 问：检测网络是否可达的方法](#169-问检测网络是否可达的方法)
+  - [1.70. 问：Linux服务器登录方法](#170-问linux服务器登录方法)
+  - [1.71. 问：Linux主机登录方法](#171-问linux主机登录方法)
+  - [1.72. 问: `DELL`服务器`iDRAC`远程控制设置](#172-问-dell服务器idrac远程控制设置)
+  - [1.73. 问: 如何生成 GitLab 的 `Private Token`](#173-问-如何生成-gitlab-的-private-token)
+  - [1.74. 问: 如何改变 `Centos7` 的主机名称](#174-问-如何改变-centos7-的主机名称)
+  - [1.75. 问: CentoS7以上使用fdisk对4T磁盘进行分区, 对home进行扩容](#175-问-centos7以上使用fdisk对4t磁盘进行分区-对home进行扩容)
+  - [1.76. 问: EN50128 中 D.52 提到的结构化方法](#176-问-en50128-中-d52-提到的结构化方法)
+  - [1.77. 问: ssh 如何免密登录](#177-问-ssh-如何免密登录)
+  - [1.78. 问: MySQL 如何避免长事务对业务的影响？](#178-问-mysql-如何避免长事务对业务的影响)
+  - [1.79. 问: MySQL 使用长连接后有时因为返回的结果集过大，导致内存增长过快，如何解决?](#179-问-mysql-使用长连接后有时因为返回的结果集过大导致内存增长过快如何解决)
+  - [1.80. 问: 正则表达式, 如何匹配 xxx (ms)](#180-问-正则表达式-如何匹配-xxx-ms)
+  - [1.81. 问: 正则表达式，如何选中不带有文本 172.2.200.66 的行](#181-问-正则表达式如何选中不带有文本-172220066-的行)
+  - [1.82. 问: wireshark 报文中 ICMP 报文出现 Destination unreachable (Port unreachable),为什么会出现这个错误](#182-问-wireshark-报文中-icmp-报文出现-destination-unreachable-port-unreachable为什么会出现这个错误)
+  - [1.83. 问： 华为核心网服务安装要点](#183-问-华为核心网服务安装要点)
+  - [1.84. 问: 如何转换 md 文件为 latex 文件](#184-问-如何转换-md-文件为-latex-文件)
+  - [1.85. 问: g++ 编译选项 `-Wl,--no-as-needed` 是什么意思？](#185-问-g-编译选项--wl--no-as-needed-是什么意思)
+  - [1.86. 问: 出现编译警告 `warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking`](#186-问-出现编译警告-warning-using-getaddrinfo-in-statically-linked-applications-requires-at-runtime-the-shared-libraries-from-the-glibc-version-used-for-linking)
+  - [1.87. 问: 如何查看 centos7 通过 yum 安装了哪些软件](#187-问-如何查看-centos7-通过-yum-安装了哪些软件)
+  - [1.88. 问: 如何自动统计最近一次 git 提交中增加或删除的代码行数](#188-问-如何自动统计最近一次-git-提交中增加或删除的代码行数)
+  - [1.89. 问: ubuntu 如何查看cpu温度](#189-问-ubuntu-如何查看cpu温度)
+  - [1.90. 问: 初次使用 git 需要进行的配置](#190-问-初次使用-git-需要进行的配置)
+  - [1.91. 问: NAT 是啥](#191-问-nat-是啥)
+  - [1.92. 问: IPSec 是啥](#192-问-ipsec-是啥)
+  - [1.93. 问: mysql 如何实现主主复制](#193-问-mysql-如何实现主主复制)
+  - [1.94. 问：如何批量删除日志文件中的空行](#194-问如何批量删除日志文件中的空行)
+  - [1.95. 问: 如何把日志中大量重复日志删除](#195-问-如何把日志中大量重复日志删除)
+  - [1.96. 问: 什么是 SQA ?](#196-问-什么是-sqa-)
+  - [1.97. 问: 什么是 8D 分析](#197-问-什么是-8d-分析)
+  - [1.98. 问: 重启电脑后 docker desktop 一直卡在启动中](#198-问-重启电脑后-docker-desktop-一直卡在启动中)
+  - [1.99. 问: CSDN 如何不登陆复制代码?](#199-问-csdn-如何不登陆复制代码)
+  - [1.100. 问: MySQL 如何查看数据库中所有表的行数](#1100-问-mysql-如何查看数据库中所有表的行数)
+  - [1.101. 问: Centos7 如何查询磁盘挂载与占用情况](#1101-问-centos7-如何查询磁盘挂载与占用情况)
+  - [1.102. 问: git 如何通过命令返回指定时间的 commit 信息](#1102-问-git-如何通过命令返回指定时间的-commit-信息)
+  - [1.103. 问: wsl 镜像如何导入与导出](#1103-问-wsl-镜像如何导入与导出)
+  - [1.104. 问: centos 查看系统版本](#1104-问-centos-查看系统版本)
+  - [1.105. 问: openEuler 查看系统版本](#1105-问-openeuler-查看系统版本)
+  - [1.106. 问: ubuntu 安装 32 位 libmysql](#1106-问-ubuntu-安装-32-位-libmysql)
+  - [1.107. 问: ubuntu 查看已安装软件](#1107-问-ubuntu-查看已安装软件)
+  - [1.108. 问: mysql 批量插入过程](#1108-问-mysql-批量插入过程)
+  - [1.109. 问: centos7 中 查找所有运行的端口](#1109-问-centos7-中-查找所有运行的端口)
+  - [1.110. 问: 查看被占用端口对应的 PID](#1110-问-查看被占用端口对应的-pid)
+  - [1.111. 问: 查看指定 PID 的进程](#1111-问-查看指定-pid-的进程)
+  - [1.112. 问: 替换 sh 脚本中的 window 字符 ^M](#1112-问-替换-sh-脚本中的-window-字符-m)
+  - [1.113. 问: 查看可执行文件依赖的 动态库](#1113-问-查看可执行文件依赖的-动态库)
+  - [1.114. 问: 获取 GitLab 指定库中所有 open 状态下的 issue](#1114-问-获取-gitlab-指定库中所有-open-状态下的-issue)
+  - [1.115. 问: 获取 GitLab 指定库中拥有 Bug 标签的 issue 并导出到文件 bug.json](#1115-问-获取-gitlab-指定库中拥有-bug-标签的-issue-并导出到文件-bugjson)
+  - [1.116. 问: google/benchmark 执行对应的性能测试](#1116-问-googlebenchmark-执行对应的性能测试)
+  - [1.117. 问: cmake 全部编译](#1117-问-cmake-全部编译)
+  - [1.118. 问: cmake 编译 gos 单元测试](#1118-问-cmake-编译-gos-单元测试)
+  - [1.119. 问: cmake 重新生成](#1119-问-cmake-重新生成)
+  - [1.120. 问: CMake 运行测试](#1120-问-cmake-运行测试)
+  - [1.121. 问:CMake指定MSVC运行时库](#1121-问cmake指定msvc运行时库)
+  - [1.122. 问:为何官网下载的googleTest框架的运行时库缺省为/MT 不能修改](#1122-问为何官网下载的googletest框架的运行时库缺省为mt-不能修改)
+  - [1.123. 问: ubuntu 替换清华源](#1123-问-ubuntu-替换清华源)
+  - [1.124. 问：调度台软件无法登录，提示连接集群服务器失败](#1124-问调度台软件无法登录提示连接集群服务器失败)
+  - [1.125. 问：调度台软件无法登录，提示连接二开调度服务器失败](#1125-问调度台软件无法登录提示连接二开调度服务器失败)
+  - [1.126. 问：调度台软件登录时，提示音频加载失败](#1126-问调度台软件登录时提示音频加载失败)
+  - [1.127. 问：登录调度台软件时，出现加载数据失败](#1127-问登录调度台软件时出现加载数据失败)
+  - [1.128. 问：调度台和调度服务器网络正常时，调度台提示连接二开调度服务器失败](#1128-问调度台和调度服务器网络正常时调度台提示连接二开调度服务器失败)
+  - [1.129. 问：调度台软件打开后，登录界面，登录和退出按钮错位。](#1129-问调度台软件打开后登录界面登录和退出按钮错位)
+  - [1.130. 问：调度台软件左下角指示灯，LTE爆红、CAD爆红、ATS爆红、NTP爆红](#1130-问调度台软件左下角指示灯lte爆红cad爆红ats爆红ntp爆红)
+  - [1.131. 问：点击车站或者列车没有组呼窗口出现](#1131-问点击车站或者列车没有组呼窗口出现)
+  - [1.132. 问：人工广播发起后，没有返回广播状态，无法开始广播。](#1132-问人工广播发起后没有返回广播状态无法开始广播)
+  - [1.133. 问：人工广播发起后，按下PTT说话车上没有听到广播声音。](#1133-问人工广播发起后按下ptt说话车上没有听到广播声音)
+  - [1.134. 问：预录音广播发起后，没有收到广播状态。](#1134-问预录音广播发起后没有收到广播状态)
+  - [1.135. 问：预录音广播发起后，实际播放次数和调度台选择次数不符。](#1135-问预录音广播发起后实际播放次数和调度台选择次数不符)
+  - [1.136. 问：IPH报警器触发后，调度台没有显示IPH请求](#1136-问iph报警器触发后调度台没有显示iph请求)
+  - [1.137. 问：IPH报警器触发，调度台接听后，报警器还处于未接通状态](#1137-问iph报警器触发调度台接听后报警器还处于未接通状态)
+  - [1.138. 问：IPH报警器触发后，调度台接听但没有视频。](#1138-问iph报警器触发后调度台接听但没有视频)
+  - [1.139. 问：IPH报警器触发后，调度台接听但听不到报警器语音的声音。](#1139-问iph报警器触发后调度台接听但听不到报警器语音的声音)
+  - [1.140. 问：调度台可以听到未监听的未知组号的组呼](#1140-问调度台可以听到未监听的未知组号的组呼)
+  - [1.141. 问： 对群组进行组呼时出现抢权失败，出现抢权提示音。](#1141-问-对群组进行组呼时出现抢权失败出现抢权提示音)
+  - [1.142. 问：短信出现提示提示音但没有短信记录](#1142-问短信出现提示提示音但没有短信记录)
+  - [1.143. 问：调度台视频上拉时，选择不需要确认直接拉取时手持台还需要进行确认](#1143-问调度台视频上拉时选择不需要确认直接拉取时手持台还需要进行确认)
+- [2. 调度服务器FAQ](#2-调度服务器faq)
+  - [2.1. 问：数据库无法远程通过root访问](#21-问数据库无法远程通过root访问)
+  - [2.2. 问：数据库开机不会自动启动](#22-问数据库开机不会自动启动)
+  - [2.3. 问：dis进程打开后闪退，dis.log显示数据库连接错误](#23-问dis进程打开后闪退dislog显示数据库连接错误)
+  - [2.4. 问：dis开启后，dis.log中显示数据库有字段找不到](#24-问dis开启后dislog中显示数据库有字段找不到)
+  - [2.5. 问：调度台和车载台ATS指示灯都爆红](#25-问调度台和车载台ats指示灯都爆红)
+  - [2.6. 问：dis的一些全局配置项没生效](#26-问dis的一些全局配置项没生效)
+  - [2.7. 问：如何查看进程是否正常启动并运行](#27-问如何查看进程是否正常启动并运行)
+  - [2.8. 问：服务器数据库备份设置，如何手动复原数据库内容](#28-问服务器数据库备份设置如何手动复原数据库内容)
+- [3. 车载台FAQ](#3-车载台faq)
+  - [3.1. 问：18号线车载台终端信道机自检项不通过，如何修复。](#31-问18号线车载台终端信道机自检项不通过如何修复)
+  - [3.2. 问：18号线手柄一直处于摘机状态](#32-问18号线手柄一直处于摘机状态)
+  - [3.3. 问：18号线车载台终端主机自检项不通过](#33-问18号线车载台终端主机自检项不通过)
+  - [3.4. 问：车载台出现信道机自检不过，PLMN获取不到](#34-问车载台出现信道机自检不过plmn获取不到)
+  - [3.5. 问：车载台登录不上去，一直处于登录界面](#35-问车载台登录不上去一直处于登录界面)
+  - [3.6. 问：车载台终端话柄爆红](#36-问车载台终端话柄爆红)
+  - [3.7. 问：车载台终端右上角主机、dis状态爆红](#37-问车载台终端右上角主机dis状态爆红)
+  - [3.8. 问：车载台终端右上角IPH/PA爆红](#38-问车载台终端右上角iphpa爆红)
+  - [3.9. 问：车载台终端触屏不灵](#39-问车载台终端触屏不灵)
+  - [3.10. 问：车载台终端扬声器没声音](#310-问车载台终端扬声器没声音)
+  - [3.11. 问：车载台终端出现黑屏](#311-问车载台终端出现黑屏)
+  - [3.12. 问：18号线固定台车站广播如何配置](#312-问18号线固定台车站广播如何配置)
+  - [3.13. 问：如何验证18号线固定台的车站广播功能](#313-问如何验证18号线固定台的车站广播功能)
+  - [3.14. 问：18号线固定台车站广播出现故障，无声音放出](#314-问18号线固定台车站广播出现故障无声音放出)
+  - [3.15. 问：固定台终端板卡E210和主机板卡TA30-72测试文档](#315-问固定台终端板卡e210和主机板卡ta30-72测试文档)
+- [4. 网管FAQ](#4-网管faq)
+  - [4.1. 问：网管服务器vsftp服务无法正常启动](#41-问网管服务器vsftp服务无法正常启动)
+  - [4.2. 问：ftp无法登陆服务器，ls无法看到文件](#42-问ftp无法登陆服务器ls无法看到文件)
+  - [4.3. 问：设备如何被网管纳管](#43-问设备如何被网管纳管)
+  - [4.4. 问：系统状态中CAD服务器、录音录像服务器图标一直成灰色，设备上线也是灰色状态，或者设备列表中调度台设备的名称为空白](#44-问系统状态中cad服务器录音录像服务器图标一直成灰色设备上线也是灰色状态或者设备列表中调度台设备的名称为空白)
+  - [4.5. 问：如何快速查看所有设备的版本信息内容和统计](#45-问如何快速查看所有设备的版本信息内容和统计)
+  - [4.6. 问：如何导出活跃告警和历史告警](#46-问如何导出活跃告警和历史告警)
+  - [4.7. 问：使用网管对主机版本进行升级](#47-问使用网管对主机版本进行升级)
+  - [4.8. 问：如何进行告警配置，类似固定台的PA连接失败告警，因为固定台不需要和PA进行对接，该项告警没必要出现。](#48-问如何进行告警配置类似固定台的pa连接失败告警因为固定台不需要和pa进行对接该项告警没必要出现)
+- [5. 录音录像FAQ](#5-录音录像faq)
+  - [5.1. 问：录音录像服务器配置](#51-问录音录像服务器配置)
+  - [5.2. 问：录音录像的文件怎么导出](#52-问录音录像的文件怎么导出)
 
 
-# 1. �������QA
+# 1. 工作相关QA
 
-## 1.1. ��: ���ʹ�� python ��ȡ excel �ļ�
+## 1.1. 问: 如何使用 python 读取 excel 文件
 
 ```python
 import pandas as pd
 from tabulate import tabulate
 
-# ��ȡ Excel �ļ�
+# 读取 Excel 文件
 df = pd.read_excel('input.xlsx')
 
-# ������ת��Ϊ Markdown ����
+# 将数据转换为 Markdown 表格
 md_table = tabulate(df, headers='keys', tablefmt='pipe')
 
-# д�� Markdown �ļ�
+# 写入 Markdown 文件
 with open('output.md', 'w') as f:
     f.write(md_table)
 ```
 
-## 1.2. ��: python ת�� word �� md �ļ�
+## 1.2. 问: python 转换 word 到 md 文件
 
 ```python
 from docx import Document
@@ -216,49 +214,49 @@ def convert_word_to_md(file_path):
 
     return md_content
 
-# ����ʾ��
+# 调用示例
 word_file = "xx.docx"
 md_content = convert_word_to_md(word_file)
 
-# д�� md �ļ�
+# 写入 md 文件
 with open("xx.md", "w", encoding="utf-8") as f:
     f.write(md_content)
 ```
 
-## 1.3. ��: VSCode ��� `Log File Highlighter` �������
+## 1.3. 问: VSCode 插件 `Log File Highlighter` 如何配置
 
-1. ��(Ctrl+P) VSCode �� `settings.json` �ļ�
-2. ������������
+1. 打开(Ctrl+P) VSCode 的 `settings.json` 文件
+2. 添加以下配置
 
 ```json
   "logFileHighlighter.customPatterns": [
     {
-      /// ���󣬱��봦��������
+      /// 错误，必须处理的问题
       "pattern": "exception|ERROR|error|FATAL|fatal|critical|FAILED|bad_variant_access",
       "foreground": "#FF0000"
     },
     {
-      /// ���棬����ע�����Ϣ
+      /// 警告，必须注意的信息
       "pattern": "require type: .{1,5},|SetDevInfo: |SendSnmpGetReq success!| null |since last log time|WARN|warn|warning|percent: 99.|percent: 100| \\b(?:9\\d(?:\\.\\d{1,2})?|100(?:\\.0{1,2})?)%|\\(s\\)",
       "foreground": "#FFFF00"
     },
     {
-      /// ��Ϣ��ֵ��ע�����Ϣ
-      "pattern": "not online, donot check dev|New devices connect to the OMC|SendTextMessage all success|(\"DCCapacityPos\":��get APP request call|INFO  |info |RUN|OK|PASSED|Send DC handle req call which have ulDCCapaCity|spPID->usInstID|spPID->usTaskID|link auth successful, client|RequestCallReq|Dialling is handle as link call.|Function Avg Time:|frequency count|get SA msg:|server_close_connect|OnServerDisconnectClient usClientID|tcp_send: send failed, Socket|SetButtonStatus|get request call|is not need save link group call|handle auto pick up group|Dialling is handle as group call.|eSDK_SendSMS|Skip not auto pick up group|is not auto pick up!|get app request call|Group Call Speaker Change:|OnRequestCallReq|\\(31\\)|\\(34\\)|\\(36\\))",
+      /// 信息，值得注意的信息
+      "pattern": "not online, donot check dev|New devices connect to the OMC|SendTextMessage all success|(\"DCCapacityPos\":｜get APP request call|INFO  |info |RUN|OK|PASSED|Send DC handle req call which have ulDCCapaCity|spPID->usInstID|spPID->usTaskID|link auth successful, client|RequestCallReq|Dialling is handle as link call.|Function Avg Time:|frequency count|get SA msg:|server_close_connect|OnServerDisconnectClient usClientID|tcp_send: send failed, Socket|SetButtonStatus|get request call|is not need save link group call|handle auto pick up group|Dialling is handle as group call.|eSDK_SendSMS|Skip not auto pick up group|is not auto pick up!|get app request call|Group Call Speaker Change:|OnRequestCallReq|\\(31\\)|\\(34\\)|\\(36\\))",
       "foreground": "#42B883"
     },
     {
-      /// ���ԣ����ڵ��Գ������Ϣ
+      /// 调试，用于调试程序的信息
       "pattern": "debug|Debug|DEBUG|Spend Time|Memory Change|Total Time|interval_time_factory",
       "foreground": "#007FFF"
     },
     {
-      /// ��ϸ��Ϣ�����Ժ��Ե���Ϣ
+      /// 详细信息，可以忽略的信息
       "pattern": "DETAIL|detail",
       "foreground": "#2F90B9"
     },
     {
-      /// ��ǰ��ע����Ϣ����Ҫÿ�θ��£�
+      /// 当前关注的信息（需要每次更新）
       "pattern": "(6021102|172\\.2\\.200\\.22)",
       "foreground": "#000000",
       "background": "#19F334"
@@ -266,10 +264,10 @@ with open("xx.md", "w", encoding="utf-8") as f:
   ]
 ```
 
-## 1.4. ��: VSCode ��� `Doxygen Documentation Generator` �������
+## 1.4. 问: VSCode 插件 `Doxygen Documentation Generator` 如何配置
 
-1. ��(Ctrl+P) VSCode �� `settings.json` �ļ�
-2. ������������
+1. 打开(Ctrl+P) VSCode 的 `settings.json` 文件
+2. 添加以下配置
 ```json
   "doxdocgen.generic.useGitUserEmail": true,
   "doxdocgen.generic.useGitUserName": true,
@@ -305,134 +303,134 @@ with open("xx.md", "w", encoding="utf-8") as f:
   ],
 ```
 
-## 1.5. ��: ����Զ���װpython�ű���Ҫ�Ŀ�
+## 1.5. 问: 如何自动安装python脚本需要的库
 
-1. �� py �ļ���ͬĿ¼����һ��������� requirements.txt �ļ�
+1. 在 py 文件的同目录运行一下命令，生成 requirements.txt 文件
 
 
 ```shell
 pipreqs ./ --encoding=utf8
 ```
 
-2. �������װ������
+2. 运行命令安装依赖库
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## 1.6. watchdog ʹ��˵��
+## 1.6. watchdog 使用说明
 
-[WatchDogʹ��˵��.docx](uploads/f5afefa5338bce37f5732a95cc09affd/WatchDogʹ��˵��.docx)
+[WatchDog使用说明.docx](uploads/f5afefa5338bce37f5732a95cc09affd/WatchDog使用说明.docx)
 
-## 1.7. SNMP Э�����
+## 1.7. SNMP 协议介绍
 
-GitHub Copilot: SNMP��Simple Network Management Protocol����һ�����ڹ����ͼ�������豸�ı�׼Э�顣SNMPЭ�鶨����һ����Ϣ��ʽ��ͨ�Ź���ʹ���������ϵͳ�����������豸���н���������ȡ�豸��״̬��Ϣ�����ò����ȡ�
+GitHub Copilot: SNMP（Simple Network Management Protocol）是一种用于管理和监控网络设备的标准协议。SNMP协议定义了一组消息格式和通信规则，使得网络管理系统可以与网络设备进行交互，并获取设备的状态信息、配置参数等。
 
-SNMP�ı�׼Э���ĵ��ɶ��RFC��Request for Comments���ĵ���ɡ�������һЩ��SNMP��ص���ҪRFC�ĵ���
+SNMP的标准协议文档由多个RFC（Request for Comments）文档组成。以下是一些与SNMP相关的主要RFC文档：
 
-1. RFC 1155: ������SNMP�Ļ����������ͣ����������ַ����������ʶ���ȡ�
+1. RFC 1155: 定义了SNMP的基本数据类型，如整数、字符串、对象标识符等。
 
-2. RFC 1157: ������SNMP�ĵ�һ���汾��SNMPv1����������Ϣ��ʽ��������Ϣ�⣨MIB���ȡ�
+2. RFC 1157: 定义了SNMP的第一个版本（SNMPv1），包括消息格式、管理信息库（MIB）等。
 
-3. RFC 1901-1908: ������SNMP�ĵڶ����汾��SNMPv2���������˸���Ĺ��ܺ͸Ľ�����SNMPv2c��SNMPv2u��SNMPv2p�ȡ�
+3. RFC 1901-1908: 定义了SNMP的第二个版本（SNMPv2），引入了更多的功能和改进，如SNMPv2c、SNMPv2u、SNMPv2p等。
 
-4. RFC 3411-3418: ������SNMP�ĵ������汾��SNMPv3���������˰�ȫ�Ժ���֤���ƣ����û�������֤����Ϣ���ܵȡ�
+4. RFC 3411-3418: 定义了SNMP的第三个版本（SNMPv3），引入了安全性和认证机制，如用户身份验证、消息加密等。
 
-������Щ��Ҫ��RFC�ĵ��⣬��������������RFC�ĵ�������SNMP�ĸ������棬��MIB���塢SNMPЭ�����չ�ȡ�
+除了这些主要的RFC文档外，还有许多其他的RFC文档涵盖了SNMP的各个方面，如MIB定义、SNMP协议的扩展等。
 
-������ͨ������IETF��Internet Engineering Task Force������վ`https://www.ietf.org/` ����ȡ������SNMP��׼Э���ĵ����ڸ���վ�ϣ��������������ҵ���SNMP��ص�RFC�ĵ����������Ķ����ǡ�
+您可以通过访问IETF（Internet Engineering Task Force）的网站`https://www.ietf.org/` 来获取完整的SNMP标准协议文档。在该网站上，您可以搜索并找到与SNMP相关的RFC文档，并下载阅读它们。
 
-## 1.8. ��: CentOS7 bash ���ִ��� -bash: ����:setlocale: LC_CTYPE: �޷��ı�����ѡ�� (UTF-8): û���Ǹ��ļ���Ŀ¼
+## 1.8. 问: CentOS7 bash 出现错误 -bash: 警告:setlocale: LC_CTYPE: 无法改变区域选项 (UTF-8): 没有那个文件或目录
 
 ```sh
-# ��װ�������԰�
+# 安装中文语言包
 sudo yum install -y langpacks-zh_CN
 vim /etc/locale.conf
-# ������������
+# 增加以下内容
 LANG="zh_CN.UTF-8"
 LC_CTYPE="zh_CN.UTF-8"
-# ��������������Ϣ
+# 重新生成区域信息
 sudo localedef -c -f UTF-8 -i zh_CN zh_CN.UTF-8
 ```
 
-## 1.9. ��: snmp ���ĺ� trap ���� �ֱ���ʲô
+## 1.9. 问: snmp 报文和 trap 报文 分别是什么
 
-SNMP��Simple Network Management Protocol�����ĺ� Trap �����������������صĸ��
+SNMP（Simple Network Management Protocol）报文和 Trap 报文是与网络管理相关的概念。
 
 
-1. SNMP ���ģ�SNMP �����������������д��������Ϣ�����ݵ�Ԫ�������԰�������Get��GetNext��Set �ȣ�����Ӧ��Response�������͵���Ϣ�����ڹ��������е��豸����Դ��SNMP ����ͨ�������������͡�OID��Object Identifier����ֵ����Ϣ���Ա�����������������
-2. Trap ���ģ�Trap ������һ���첽֪ͨ���ƣ������������������վ�㷢���¼�֪ͨ���������豸����������ض��¼�ʱ����˿�״̬�ı䡢�¶ȳ�����ֵ�ȣ�����������һ�� Trap ���Ĳ����͸�����վ�㣬�Ա����վ����Լ�ʱ��Ӧ�ʹ�������¼���  
+1. SNMP 报文：SNMP 报文是用于在网络中传输管理信息的数据单元。它可以包含请求（Get、GetNext、Set 等）和响应（Response）等类型的消息，用于管理网络中的设备和资源。SNMP 报文通常包含操作类型、OID（Object Identifier）、值等信息，以便进行网络管理操作。
+2. Trap 报文：Trap 报文是一种异步通知机制，用于在网络中向管理站点发送事件通知。当网络设备或代理发生特定事件时（如端口状态改变、温度超过阈值等），它会生成一个 Trap 报文并发送给管理站点，以便管理站点可以及时响应和处理相关事件。  
 
-��Щ������ SNMP Э���а�������Ҫ�Ľ�ɫ������ʵ�������豸�ļ�ء����ú͹��ϴ����ȹ������ܡ�
+这些报文在 SNMP 协议中扮演着重要的角色，用于实现网络设备的监控、配置和故障处理等管理功能。
 
-## 1.10. ��: ��β鿴CentOS���Ե��ڴ���Ϣ
+## 1.10. 问: 如何查看CentOS电脑的内存信息
 
 ```shell
 free -m
 ```
 
-## 1.11. ��: ��β鿴CentOS���Ե�CPU��Ϣ
+## 1.11. 问: 如何查看CentOS电脑的CPU信息
 
 ```shell
 cat /proc/cpuinfo |more
 ```
 
-## 1.12. ��: GMT��CST��UTC �ֱ���ʲô��
+## 1.12. 问: GMT，CST，UTC 分别是什么？
 
-1. UTC(�����׼ʱ��)
+1. UTC(世界标准时间)
 
-Э������ʱ���ֳ������׼ʱ�������Э��ʱ�䣬���UTC����Ӣ�ġ�Coordinated Universal Time����������������Ҫ������ʱ���׼������ԭ��ʱ�볤Ϊ��������ʱ���Ͼ����ӽ��ڸ������α�׼ʱ�䡣
+协调世界时，又称世界标准时间或世界协调时间，简称UTC（从英文“Coordinated Universal Time”而来），是最主要的世界时间标准，其以原子时秒长为基础，在时刻上尽量接近于格林尼治标准时间。
 
-2. GMT(��������ƽʱ)
+2. GMT(格林尼治平时)
 
-��������ƽʱ���ֳƸ�������ƽ��ʱ���������α�׼ʱ�䣬����������α�׼ʱ�䣻Ӣ�Greenwich MeanTime��GMT����ָλ��Ӣ���׶ؽ����ĻʼҸ�����������̨�ı�׼ʱ�䣬��Ϊ���������߱�������ͨ������ľ��ߡ�
-
-
-��������˵���������α�׼ʱ���������ָ��̫���ᴩ��������������ʱ��Ҳ�����ڸ��������Ͽ���ߵ�ʱ����ʱ�䡣���ڵ�����������Բ�������˶��ٶȲ����ȣ����ʱ�̿�����ʵ�ʵ�̫��ʱ�����������16���ӡ�
+格林尼治平时（又称格林尼治平均时间或格林尼治标准时间，旧译格林威治标准时间；英语：Greenwich MeanTime，GMT）是指位于英国伦敦郊区的皇家格林尼治天文台的标准时间，因为本初子午线被定义在通过那里的经线。
 
 
-���ڵ���ÿ�����ת����Щ������ģ��������ڻ������٣���˸�������ʱ���Ѿ����ٱ���Ϊ��׼ʱ��ʹ�á����ڵı�׼ʱ�䣬����ԭ���ӱ�ʱ��Э������ʱ��UTC����
+理论上来说，格林尼治标准时间的正午是指当太阳横穿格林尼治子午线时（也就是在格林尼治上空最高点时）的时间。由于地球在它的椭圆轨道里的运动速度不均匀，这个时刻可能与实际的太阳时有误差，最大误差达16分钟。
 
-3. CST(����ʱ��)
 
-����ʱ�䣬China Standard Time���й���׼ʱ�䡣��ʱ�������ϣ�������������Э������ʱ��8Сʱ����ΪUTC+8��
+由于地球每天的自转是有些不规则的，而且正在缓慢减速，因此格林尼治时间已经不再被作为标准时间使用。现在的标准时间，是由原子钟报时的协调世界时（UTC）。
 
-## 1.13. ��: ��ν��� docker ��ĳ����������־
+3. CST(北京时间)
+
+北京时间，China Standard Time，中国标准时间。在时区划分上，属东八区，比协调世界时早8小时，记为UTC+8。
+
+## 1.13. 问: 如何进入 docker 中某个容器的日志
 
 ```shell
 docker logs <container_id_or_name>
 ```
 
-## 1.14. ��: ��ν��� docker ��ĳ��������������
+## 1.14. 问: 如何进入 docker 中某个容器的命令行
 
 ```shell
 docker exec -it <container_id_or_name> bash
 ```
 
-## 1.15. ��: ��β鿴 docker �е�ǰ���������е�����
+## 1.15. 问: 如何查看 docker 中当前的正在运行的容器
 
 ```shell
 docker ps
 ```
 
-## 1.16. ��: һ���������ǰ��֧���� commit
+## 1.16. 问: 一条命令导出当前分支所有 commit
 
 ```c++
 git log --no-merges 721bfa7..HEAD --date=iso --pretty=format:'%h|%s|%an|%ad|' --shortstat | sed '/^$/d' | sed -n '1h;1!H;${g;s/|\n/,/g;p;}' > /home/commits.csv
 ```
 
-## 1.17. ��: git submodule ��γ�ʼ���ض���ģ��
+## 1.17. 问: git submodule 如何初始化特定子模块
 
 ```c++
 git submodule update --init <submodule_path>
 ```
 
-## 1.18. ��: Ϊ���Ƽ�ʹ�� `nullptr` ��� `NULL` �� `0`
+## 1.18. 问: 为何推荐使用 `nullptr` 替代 `NULL` 和 `0`
 
 1. CppCoreGuidelines: [ES.47: Use nullptr rather than 0 or NULL](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es47-use-nullptr-rather-than-0-or-null)
 
 
-## 1.19. ��: ���ʹ�� python �����ļ��в����� md ��ʽ�ļ�
+## 1.19. 问: 如何使用 python 遍历文件夹并生成 md 格式文件
 
 ```python
 import os
@@ -467,20 +465,20 @@ if __name__ == '__main__':
     # for it in record:
     #     print(f'file name: {it[0]}, file path: {it[1]}')
 
-    # д�� md �ĵ�
+    # 写入 md 文档
     with open('file_path.md', 'w') as f:
-        f.write('# �ļ�·��\n\n')
+        f.write('# 文件路径\n\n')
         for it in record:
             f.write(f'[{it[0]}]({it[1]}): {it[1]}\n\n')
 ```
 
-## 1.20. ��: C++ Ϊ���Ƽ�ʹ�����������ռ���� static �ؼ���
+## 1.20. 问: C++ 为何推荐使用匿名命名空间而非 static 关键字
 
 1. [`Cpp Core Guideline`](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf22-use-an-unnamed-anonymous-namespace-for-all-internalnon-exported-entities): SF.22: Use an unnamed (anonymous) namespace for all internal/non-exported entities
-2. ���������ռ�������� class���� static �ؼ��ֲ������� class
-3. ����һ������ʶ������ֻ��Ҫʹ��һ�������ռ�������������Ҫ�������static��
-4. ע��: ������ .h �ļ���ʹ�����������ռ䣬����ᵼ�����Ӵ���
-����:
+2. 匿名命名空间可以修饰 class，而 static 关键字不能修饰 class
+3. 对于一组多个标识符函数只需要使用一个匿名空间来声明，不需要多次输入static。
+4. 注意: 不能在 .h 文件中使用匿名命名空间，否则会导致链接错误
+举例:
 
 ```c++
 /// xx.cpp
@@ -492,33 +490,33 @@ namespace
 }
 ```
 
-�ο�:
+参考:
 
-[C++ ���������ռ�](https://www.cnblogs.com/youxin/p/4308364.html)
+[C++ 匿名命名空间](https://www.cnblogs.com/youxin/p/4308364.html)
 
-## 1.21. ��: C++ ��μ���ٷ���(������λС��)�ַ���
+## 1.21. 问: C++ 如何计算百分数(保留两位小数)字符串
 
 ```c++
-#include <sstream>  // ����ͷ�ļ���ʹ�� std::ostringstream
-#include <iomanip>  // ����ͷ�ļ���ʹ�� std::setprecision
+#include <sstream>  // 包含头文件以使用 std::ostringstream
+#include <iomanip>  // 包含头文件以使用 std::setprecision
 std::string calculatePercentage(int value, int all_count) {
-    double result = static_cast<double>(value) / all_count;  // ������һ��������ת��Ϊ double ���ͣ��Եõ������������Ľ��
+    double result = static_cast<double>(value) / all_count;  // 将其中一个操作数转换为 double 类型，以得到浮点数除法的结果
 
-    // ʹ�� std::ostringstream ����������ʽ�����ݵ��ַ���
+    // 使用 std::ostringstream 构建包含格式化数据的字符串
     std::ostringstream oss;
     oss << std::fixed << std::setprecision(2) << result * 100 << "%";
 
-    // ���ع������ַ���
+    // 返回构建的字符串
     return oss.str();
 }
 ```
 
-## 1.22. ��: ���ʹ��everything���������������ļ���
+## 1.22. 问: 如何使用everything搜索局域网共享文件夹
 
-��everything���������-ѡ��-�ļ��У�������ӣ�Ȼ�����������ҵ������������ļ��У�Ҳ����ֱ�����������ֱ������·��; ������ɺ�����everything��������������\
-ע��: һ��Ҫ�����ļ���·����ֻ�����������ַ�ǲ��е�
+打开everything，点击工具-选项-文件夹，点击添加，然后在网络里找到共享服务器文件夹，也可以直接在输入框里直接输入路径; 设置完成后重启everything，让它重新索引\
+注意: 一定要输入文件夹路径，只输入服务器地址是不行的
 
-## 1.23. ��: ���ʹ�� C++ ���� csv �ļ�
+## 1.23. 问: 如何使用 C++ 生成 csv 文件
 
 ```c++
 #include <iostream>
@@ -526,7 +524,7 @@ std::string calculatePercentage(int value, int all_count) {
 #include <vector>
 #include <string>
 
-// ���� CSV �ļ��ĺ���
+// 生成 CSV 文件的函数
 void generateCSV(const std::string& filename, const std::vector<std::vector<std::string>>& data) {
     std::ofstream file(filename);
 
@@ -549,7 +547,7 @@ void generateCSV(const std::string& filename, const std::vector<std::vector<std:
 }
 
 int main() {
-    // ���ɵ� CSV ����
+    // 生成的 CSV 数据
     std::vector<std::vector<std::string>> data = {
         {"Name", "Age", "City"},
         {"John", "30", "New York"},
@@ -557,18 +555,18 @@ int main() {
         {"Bob", "35", "Seattle"}
     };
 
-    // ���� CSV �ļ�
+    // 生成 CSV 文件
     generateCSV("output.csv", data);
 
     return 0;
 }
 ```
 
-## 1.24. ��: C++ ����pcap�ļ��е� udp ����
+## 1.24. 问: C++ 解析pcap文件中的 udp 报文
 
-��Ҫ��װ libpcap ��, ��Ҫ ��Դ�� [nlohmann/json](https://github.com/nlohmann/json) �е� json.hpp �ļ�
+需要安装 libpcap 库, 需要 开源库 [nlohmann/json](https://github.com/nlohmann/json) 中的 json.hpp 文件
 
-�����ļ� [`yyy.pcap`](uploads/9871b49db738ca21c023535ca5c1303a/yyy.pcap) �е� udp ����, �����������д�� `output.json` �ļ���
+解析文件 [`yyy.pcap`](uploads/9871b49db738ca21c023535ca5c1303a/yyy.pcap) 中的 udp 报文, 并将解析结果写入 `output.json` 文件中
 
 ```c++
 #include <iostream>
@@ -585,9 +583,9 @@ std::vector<nlohmann::json> json_vec;
 
 void packet_handler(u_char* user, const struct pcap_pkthdr* pkthdr, const u_char* packet)
 {
-    // ������̫��֡ͷ��
+    // 解析以太网帧头部
     struct ether_header* eth = (struct ether_header*)packet;
-    /// ���� tcp/udp ͷ��
+    /// 解析 tcp/udp 头部
     struct ip* ip = (struct ip*)(packet + sizeof(struct ether_header));
 
     // Create a JSON object
@@ -640,7 +638,7 @@ int main()
     char errbuf[PCAP_ERRBUF_SIZE];
     pcap_t* pcap_handle;
 
-    // ������ pcap �ļ�
+    // 打开离线 pcap 文件
     pcap_handle = pcap_open_offline("yyy.pcap", errbuf);
     if (pcap_handle == NULL)
     {
@@ -648,14 +646,14 @@ int main()
         return 1;
     }
 
-    // ѭ����ȡ���ݰ�
+    // 循环读取数据包
     if (pcap_loop(pcap_handle, 0, packet_handler, NULL) < 0)
     {
         std::cerr << "Error reading packets: " << pcap_geterr(pcap_handle) << std::endl;
         return 1;
     }
 
-    // �ر� pcap �ļ�
+    // 关闭 pcap 文件
     pcap_close(pcap_handle);
 
     // Write the JSON object to a file
@@ -668,88 +666,88 @@ int main()
 }
 ```
 
-## 1.25. ��: google �Զ��岻�����ض���վ
+## 1.25. 问: google 自定义不搜索特定网站
 
-1. ���� -����������-�������������棬��Ĭ���������������ҵ���Ҫ�޸ĵ��������棬�����������������Ĳ�ѯ��ַ���Ҽ����ƣ�
-2. �Ը��Ƶ��ı������Ӳ���Ҫ��������վ, `+-site:blog.csdn.net -site:baike.baidu.com+`, ��������λ��
+1. 设置 -》搜索引擎-》管理搜索引擎，在默认搜索引擎那里找到你要修改的搜索引擎，鼠标左键单击三下它的查询网址，右键复制；
+2. 对复制的文本，增加不想要搜索的网站, `+-site:blog.csdn.net -site:baike.baidu.com+`, 添加如下位置
 ```c++
 {google:baseURL}search?q=%s+-site:blog.csdn.net -site:baike.baidu.com+&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:iOSSearchLanguage}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
 ```
-3. ���������������棬���ϸո����ӹ�����վ���ַ��������ø���������ΪĬ���������棬���ɡ�
+3. 新增其他所有引擎，贴上刚刚增加过滤网站的字符串后，设置该搜索引擎为默认搜索引擎，即可。
 
-## 1.26. ��: google ��������
+## 1.26. 问: google 搜索技巧
 
-1. ָ����ĳ����վ������
+1. 指定在某个网站中搜索
 
 ```c++
-/// �� github.com ��վ������ json parser
+/// 在 github.com 网站中搜索 json parser
 json parser site:github.com
 ```
 
-2. ָ��������ĳ��վ����
+2. 指定不搜索某网站内容
 
 ```c++
-/// ����ethheader �ṹ��ͷ�ļ�, ���˵� csdn.net ��վ����
-ethheader �ṹ��ͷ�ļ� -site:csdn.net
+/// 搜索ethheader 结构体头文件, 过滤掉 csdn.net 网站内容
+ethheader 结构体头文件 -site:csdn.net
 ```
 
-3. ����ָ���ļ�����
+3. 搜索指定文件类型
 
 ```c++
 CppCoreGuidelines filetype:pdf
 ```
 
-4. ��ȫƥ���ı�
+4. 完全匹配文本
 
 ```c++
-/// ���������ַ���
-��boost c++��
+/// 搜索整体字符串
+“boost c++”
 ```
 
-5. ���˹ؼ���
+5. 过滤关键字
 
 ```c++
-/// �����Ʒ�������ݣ������˴��� advertising �Ľ��
-�Ʒ��� -advertising
+/// 搜索云服务的内容，并过滤带有 advertising 的结果
+云服务 -advertising
 ```
 
-6. �߼��롢��AND��OR
+6. 逻辑与、或：AND、OR
 
 ```c++
-�ֻ� OR ��� ���� OR ��� OR ����
-����ͬ�� (�ֻ� OR ���) (���� OR ��� OR ����)
+手机 OR 相机 电脑 OR 鼠标 OR 键盘
+它等同于 (手机 OR 相机) (电脑 OR 鼠标 OR 键盘)
 ```
 
-7. ͨ�����?��*
+7. 通配符：?和*
 
-?: ����һ���ַ�
-*: ����һ���ַ���
+?: 代表一个字符
+*: 代表一串字符串
 
 ```c++
-/// �����й�ʲô����
-�й�*����
+/// 搜索中国什么银行
+中国*银行
 ```
 
-8. Ϊ��������ʱ������
+8. 为搜索添加时间区间
 
 ```c++
-/// ����2020��֮ǰ������
+/// 搜索2020年之前的内容
 BEFORE:2020
-/// ����2020��֮�������
+/// 搜索2020年之后的内容
 AFTER:2020
-/// ����ʱ�������ڵ�����
+/// 搜索时间区间内的内容
 2020..2021
 ```
 
-## 1.27. ��: ���ʹ�� gperftools �鿴�������û���ͼ
+## 1.27. 问: 如何使用 gperftools 查看函数调用火焰图
 
-1. ��װ����
+1. 安装软件
 
 ```c++
 apt-get install google-perftools libgoogle-perftools-dev graphviz
 ```
 
-2. �����ļ� test.cc
+2. 创建文件 test.cc
 
 ```c++
 #include <iostream>
@@ -765,155 +763,155 @@ int main()
         return std::shared_ptr<void>(nullptr, [](void *) { ProfilerStop(); });
     };
 
-    auto cp = make_cpu_profiler("case1.perf");  // �������ܷ���
+    auto cp = make_cpu_profiler("case1.perf");  // 启动性能分析
     auto str = "neir:automata"s;
 
     for (int i = 0; i < 1000; i++)
-    {                                                // ѭ��һǧ��
-        auto reg = make_regex(R"(^(\w+)\:(\w+)$)");  // �������ʽ����
+    {                                                // 循环一千次
+        auto reg = make_regex(R"(^(\w+)\:(\w+)$)");  // 正则表达式对象
         auto what = make_match();
 
-        assert(regex_match(str, what, reg));  // ����ƥ��
+        assert(regex_match(str, what, reg));  // 正则匹配
     }
 ```
 
-3. ���벢����
+3. 编译并运行
 
 ```sh
 g+++ -std=c++20 -lprofiler test.cc -o a.out
 ```
 
-4. �鿴���
+4. 查看结果
 
 ```sh
 pprof --text ./a.out case1.perf > case1.txt
-��
+或
 pprof --svg ./a.out case1.perf > case1.svg
-��
+或
 pprof --collapsed ./a.out case1.perf > case1.cbt
 flamegraph.pl case1.cbt > flame.svg
 flamegraph.pl --invert --color aqua case1.cbt > icicle.svg
 ```
 
-* ע: ����Ҳ��� `pprof`, ������ȡ��������ʹ�ã� `git clone git@github.com:gperftools/gperftools.git`
+* 注: 如果找不到 `pprof`, 可以拉取这个库进行使用， `git clone git@github.com:gperftools/gperftools.git`
 
-* ע: ����Ҳ��� `flamegraph.pl`�� ������ȡ��������ʹ�� `git clone git@github.com:brendangregg/FlameGraph.git`
+* 注: 如果找不到 `flamegraph.pl`， 可以拉取这个库进行使用 `git clone git@github.com:brendangregg/FlameGraph.git`
 
-## 1.28. ��: perf �����÷�
+## 1.28. 问: perf 基本用法
 
-1. �鿴 pid Ϊ 1234 �Ľ��̵� cpu ʹ�����
+1. 查看 pid 为 1234 的进程的 cpu 使用情况
 
 ```sh
 perf top -K -p 1234
 ```
 
-## 1.29. ��: ��δ�������ssh-key
+## 1.29. 问: 如何创建本地ssh-key
 
-1. ���նˣ���������ʾ����ȡ������ʹ�õĲ���ϵͳ����
+1. 打开终端（或命令提示符，取决于你使用的操作系统）。
 
-2. ������������������ SSH key���������У�����Ҫ�ṩ��ĵ����ʼ���ַ���⽫��Ϊ��Կ�ı�ǩ��
+2. 输入以下命令来生成 SSH key。在命令中，你需要提供你的电子邮件地址，这将作为密钥的标签。
 
    ```bash
    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```
 
-   `-t rsa` ָ��Ҫʹ�� RSA �㷨��`-b 4096` ָ����Կ��λ����4096 λ��һ�����õİ�ȫѡ�񣩣�`-C` ��������ע�ͣ�һ����д��ĵ����ʼ���ַ��
+   `-t rsa` 指定要使用 RSA 算法，`-b 4096` 指定密钥的位数（4096 位是一个常用的安全选择），`-C` 用于添加注释，一般填写你的电子邮件地址。
 
-3. ϵͳ����ʾ��ѡ����Կ�ļ��Ĵ洢λ�ú��ļ���������㲻�����κ����ݣ�ϵͳ��Ĭ�����û���Ŀ¼�µ� `.ssh` �ļ����д��� `id_rsa` �� `id_rsa.pub` �ļ�����Ҳ����Ϊ��Կ�ļ�ָ���Զ�����ļ�����·����
+3. 系统将提示你选择密钥文件的存储位置和文件名。如果你不输入任何内容，系统将默认在用户主目录下的 `.ssh` 文件夹中创建 `id_rsa` 和 `id_rsa.pub` 文件。你也可以为密钥文件指定自定义的文件名和路径。
 
-4. Ȼ��ϵͳ��ѯ�����Ƿ�Ҫ��������������˽Կ������һ����ѡ�Ĳ��裬������������Ӱ�ȫ�ԣ�������Ҫ��ÿ��ʹ��˽Կʱ�������롣�������Ҫ����İ�ȫ�ԣ����������룬�������������ֱ�Ӱ��س���
+4. 然后，系统将询问你是否要设置密码来保护私钥。这是一个可选的步骤，添加密码会增加安全性，但你需要在每次使用私钥时输入密码。如果你想要额外的安全性，请输入密码，否则你可以留空直接按回车。
 
-5. ��ִ�������������� SSH key ���Ѿ������ˡ���Կ��`id_rsa.pub` �ļ�������Ҫ�� GitHub ������ Git �йܷ��������ӵĲ��֡�
+5. 在执行上述步骤后，你的 SSH key 就已经生成了。公钥（`id_rsa.pub` 文件）是你要在 GitHub 或其他 Git 托管服务上添加的部分。
 
-   �����ʹ�������������鿴���ɵ� SSH key��
+   你可以使用以下命令来查看生成的 SSH key：
 
    ```bash
    cat ~/.ssh/id_rsa.pub
    ```
 
-   ���ߣ������ʹ�õ��� Windows ƽ̨��
+   或者，如果你使用的是 Windows 平台：
 
    ```bash
    type %userprofile%\.ssh\id_rsa.pub
    ```
 
-6. ���ƹ�Կ���� `ssh-rsa` ��ͷ��һ�����ַ�����Ȼ�������ӵ���� GitHub �˻������� Git �йܷ���� SSH key �����С�
+6. 复制公钥（以 `ssh-rsa` 开头的一长串字符），然后将其添加到你的 GitHub 账户或其他 Git 托管服务的 SSH key 设置中。
 
-## 1.30. ��:Openwrt����vlan�ķ���
+## 1.30. 问:Openwrt配置vlan的方法
 
-һ���������ڲ�����������ͼ
+一、主机的内部的网络拓扑图
 
 ![1698302551718](uploads/5507d8f0ae525172a984c01b86f91948/1698302551718.png)
 
-����ǰ�������ڶ�Ӧ��������������eth1,port1��Ӧ���ڱ�ǩLAND��port2��ӦLAN1��prot3��ӦLAN2��port4��ӦLAN3��
+其中前面板的网口对应的物理网卡都是eth1,port1对应网口标签LAND，port2对应LAN1，prot3对应LAN2，port4对应LAN3。
 
-ʹ��������������ʱ���Ӧ����Ҫ���õĶ˿ں�vlan��WEBҳ����Ҳ����ͨ���������ȷ�϶�Ӧ����
+使用下述方法配置时请对应好需要配置的端口和vlan。WEB页面中也可以通过插拔网线确认对应网口
 
 
 ![1698302954470](uploads/89157a64a605fe895e4994d64d56ed84/1698302954470.png)
 
 
-����WEB��ҳ���ù���
+二、WEB网页配置过程
 
-1������vlan
-- ������ѡ����������-������
-- ������Ӱ�ť������vlan
+1、配置vlan
+- 导航栏选择网络配置-交换机
+- 点击添加按钮，添加vlan
 
 ![1698300153370](uploads/4d4565a034fab3ad983c12b4a08f444c/1698300153370.png)
 
 
-- �µ�vlan��CPUҪ����Ϊ`����`,����˿ڸ�����Ҫ����Ӧ�˿ڻ��ֳɲ�ͬvlan����ΪĬ�����ж˿ڶ���vlan1�У�����ʱ�Ƚ�vlan1����Ӧ�˿ڹرա��˿ڵ�����ѡ�����ͣ�`������`��Accessģʽ��`����`��Trunkģʽ,`�ر�`�ǲ�ʹ�øö˿ڡ�
+- 新的vlan中CPU要设置为`关联`,其余端口根据需要将对应端口划分成不同vlan。因为默认所有端口都在vlan1中，划分时先将vlan1中相应端口关闭。端口的下拉选择框解释：`不关联`是Access模式，`关联`是Trunk模式,`关闭`是不使用该端口。
 
 
 ![1698300749459](uploads/4163699e514558822c292f2a051f004f/1698300749459.png)
 
 
-��ͼ��vlan1ΪĬ��vlan���˿�1�Ͷ˿�2��Ч����δ�޸�֮ǰһ��������豸����pingͨbr-lan�ϵĵ�ַ��br-lan�Ž���eth0��eth1.1��vlan1����
+上图中vlan1为默认vlan，端口1和端口2的效果和未修改之前一样，外接设备可以ping通br-lan上的地址，br-lan桥接了eth0和eth1.1（vlan1）。
 
 
-vlan2�󶨵��Ƕ˿�3��vlan3�󶨵��Ƕ˿�4
+vlan2绑定的是端口3，vlan3绑定的是端口4
 
-2������IP
-- ������ѡ����������-�ӿڣ������½ӿ�
+2、配置IP
+- 导航栏选择网络配置-接口，添加新接口
 
 
 ![1698301095540](uploads/2cac49a721cc0364b7608fa503523427/1698301095540.png)
 
 
-- ����ӿ����ƣ�ѡ���·���Ӧ�����vlan�ӿڣ�����ύ
+- 输入接口名称，选择下方对应需求的vlan接口，点击提交
 
 
 ![1698301230075](uploads/f1dcec2e14670f02b9cc362e09680bea/1698301230075.png)
 
 
-- �ύ��ҳ��Ϳ��Խ���IP�����ˡ����úõ�IP�ں�̨ͨ��ifconfig�鿴ʱ��eth1.1��Ӧvlan1,eth1.2��Ӧvlan2,eth1.3��Ӧvlan3��
+- 提交后，页面就可以进行IP配置了。配置好的IP在后台通过ifconfig查看时，eth1.1对应vlan1,eth1.2对应vlan2,eth1.3对应vlan3。
 
 
 ![1698301304316](uploads/8892e46000a73b2cd08377c35bf1acf4/1698301304316.png)
 
-3���޸�br-lan���Ž�ģʽ
-- ��������web����
-- ������ѡ����������-�ӿڣ�ѡ��LAN�ڣ�����޸�
+3、修改br-lan的桥接模式
+- 进入主机web界面
+- 导航栏选择网络配置-接口，选择LAN口，点击修改
 
 
 ![1698299882499](uploads/e06d18a215e7527b316ed4264fe7f6ce/1698299882499.png)
 
 
-- �����ѡ���������ã��ӿڹ�ѡeth0��eth1.1(eth1.1��Ӧ����vlan1�Ľӿڣ������豸ǰ����ϵ�����Ĭ�϶��ǻ�����vlan1��)
+- 进入后选择物理设置，接口勾选eth0和eth1.1(eth1.1对应的是vlan1的接口，我们设备前面板上的网口默认都是划分在vlan1中)
 
 
 ![1698300000850](uploads/b6a29982bdc6bb10ad9e8bf17110e961/1698300000850.png)
 
 
-- �������&Ӧ��
+- 点击保存&应用
 
 
-����ͨ���޸�network�����ļ�������vlan
-1������network�����ļ�
+三、通过修改network配置文件，划分vlan
+1、进入network配置文件
 ```
 vi /etc/config/network
 ```
-2���޸�br-lan�Žӵ����磬��ԭ�����Ž�eth0��eth1�ĳ��Ž�eth0��eth1.1��
+2、修改br-lan桥接的网络，从原来的桥接eth0和eth1改成桥接eth0和eth1.1。
 
 
 ![1698301673540](uploads/75db7ac1ad9d6c3ba3a46b977701ce3f/1698301673540.png)
@@ -930,7 +928,7 @@ config interface 'lan'
         option ipaddr '192.0.1.27'
         option ifname 'eth0 eth1.1'
 ```
-3��vlan1�а������ж˿ڣ�����Ҫ���»���vlan�Ķ˿�ɾ����Ȼ�������µ�vlan,����vlan��Ӧ����������IP��ַ��
+3、vlan1中包含所有端口，将需要重新划分vlan的端口删除，然后添加新的vlan,添加vlan对应虚拟网卡的IP地址。
 
 ![1698302015309](uploads/d9a234019b61dc5912c7ebf2877404d5/1698302015309.png)
 
@@ -959,267 +957,267 @@ config switch_vlan
         option vid '3'
         option ports '0t 4'
 ```
-4�������������
+4、重启网络服务
 ```
 /etc/init.d/network restart
 ```
 
-## 1.31. ��: ���ʹ�� clang-format ����ʽ��ĳЩ�ļ�
+## 1.31. 问: 如何使用 clang-format 不格式化某些文件
 
-1. �����ļ�
+1. 单个文件
 
 ```c++
 // clang-format off
 
-����Ҫ��ʽ���Ĵ���
+不需要格式化的代码
 
 // clang-format on
 ```
 
-2. �ļ����µ��ļ�
+2. 文件夹下的文件
 
-�ڸ��ļ����´��� `.clang-format` �ļ�, ���ļ�д���������
+在该文件夹下创建 `.clang-format` 文件, 该文件写入如下语句
 
 ```c++
 DisableFormat: true
 ```
 
-## 1.32. ��: ��μ���ĳ���ļ����£������ļ���ע��ռ���������ı���
+## 1.32. 问: 如何计算某个文件夹下，代码文件的注释占所有行数的比例
 
 ```sh
 cloc --by-percent c --quiet ./ds/thirdparty
 ```
 
-## 1.33. ��: ��μ���ĳ���ļ����£������ļ��Ŀ��С�ע�ͺʹ�������
+## 1.33. 问: 如何计算某个文件夹下，代码文件的空行、注释和代码行数
 
 ```sh
 cloc ./ds/thirdparty
 ```
 
-## 1.34. ��: ��β���ĳ���ļ����������ļ�������
+## 1.34. 问: 如何查找某个文件夹下所有文件的行数
 
 ```sh
 find ./ds/thirdparty -type f -name "*" -print0 | xargs -0 wc -l
 ```
 
-## 1.35. ��: cmake �ű��������һ��������ʾĳ�ļ���������Դ�ļ�
+## 1.35. 问: cmake 脚本中如何让一个变量表示某文件夹下所有源文件
 
-�� `CMakeLists.txt` ͬ��Ŀ¼����Ŀ¼ `common` ������Դ�ļ���ֵ������ COMMON_FILE
+本 `CMakeLists.txt` 同级目录的子目录 `common` 下所有源文件赋值给变量 COMMON_FILE
 
 ```c++
 aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/common COMMON_FILE)
 ```
 
-## 1.36. ��:�����centos������telnet����
-centos7������ʹ��telnet��¼ϵͳ
+## 1.36. 问:如何在centos上配置telnet服务
+centos7下配置使用telnet登录系统
 
-��CentOS7�У�Ĭ������£�telnet�Ǳ����õģ���Ϊ�����ǰ�ȫ��Э�顣���ǣ��������Ȼ��ʹ��telnet�����԰������²���������ã�
+在CentOS7中，默认情况下，telnet是被禁用的，因为它不是安全的协议。但是，如果您仍然想使用telnet，可以按照以下步骤进行配置：
 
-1����װtelnet�ͻ��˺ͷ�������
+1、安装telnet客户端和服务器：
 
 ```
 sudo yum install xinetd telnet telnet-server
 ```
 
-���߰�װ��
-��154������ȡrpm�����а�װ,·��:
+离线安装：
+在154网盘上取rpm包进行安装,路径:
 ```
-\\10.1.1.154\00-����u��\������Ⱥ������Ŀ\�汾\��������\centos7_telent
+\\10.1.1.154\00-网络u盘\地铁集群二开项目\版本\工具软件\centos7_telent
 
 rpm -ivh telnet-server-0.17-65.el7_8.x86_64.rpm
 rpm -ivh telnet-0.17-65.el7_8.x86_64.rpm
 rpm -ivh xinetd-2.3.15-14.el7.x86_64.rpm
 ```
 
-2������telnet���񣬲���������Ϊ����������
+2、启动telnet服务，并将其设置为开机启动：
 
 ```
 sudo systemctl start telnet.socket
 sudo systemctl enable telnet.socket
 ```
 
-3�����÷���ǽ������telnet���ӣ�
+3、配置防火墙以允许telnet连接：
 
 ```
 sudo firewall-cmd --add-service=telnet --permanent
 sudo firewall-cmd --reload
 ```
 
-4������һ���µ��û����������룺
+4、创建一个新的用户并设置密码：
 
 ```
 sudo adduser username
 sudo passwd username
 ```
 
-5�������û���¼��ϵͳ��
+5、用新用户登录到系统：
 
 ```
 telnet localhost
 ```
 
-6���������û����û�����������е�¼��
+6、输入新用户的用户名和密码进行登录。
 
-ע�⣺��Ȼ���������������ʹ��telnet��¼ϵͳ���������ǰ�ȫ��Э�飬����ʹ�ø���ȫ��SSHЭ��������ϵͳ��¼��
+注意：虽然这个方法可以让您使用telnet登录系统，但它不是安全的协议，建议使用更安全的SSH协议来进行系统登录。
 
-7��root�û�ֱ�ӵ�¼
+7、root用户直接登录
 
-Ĭ������£�ϵͳ�ǲ�����root�û�telnetԶ�̵�¼�ġ����Ҫʹ��root�û�ֱ�ӵ�¼���������������ݡ����߿�������һ�����Ե�¼���û�����¼��su��root�û���������ô˷�������֤ϵͳ��ȫ�����˲����������
+默认情况下，系统是不允许root用户telnet远程登录的。如果要使用root用户直接登录，需设置如下内容。或者可以添加一个可以登录的用户，登录并su到root用户（建议采用此方法，保证系统安全）。此步骤可跳过！
 
-����root�û�ͨ��telnet��½��
-�༭/etc/pam.d/login��ע�͵���������
+允许root用户通过telnet登陆：
+编辑/etc/pam.d/login，注释掉下面这行
 
 ```
 vi /etc/pam.d/login
-#��auth������ȥ��
+#把auth的限制去掉
 #auth [user_unknown=ignore success=ok ignore=ignore default=bad] pam_securetty.so
 ```
 
-����root�û�Զ�̵�½���˲��������!
+开启root用户远程登陆。此步骤可跳过!
 
 ```
 vi /etc/pam.d/remote
 #auth required pam_securetty.so
 ```
 
-* ����telnet��xinetd���� ��telnet����������xinetd����
+* 重启telnet和xinetd服务 【telnet服务依赖于xinetd服务】
 
 ```
 systemctl restart telnet.socket
 systemctl restart xinetd
 ```
 
-* �� 23�˿ڣ�ϵͳĬ��23Ϊtelnet�˿ڣ����ӵ�����ǽ�����Ķ˿ڵ��б��С�
+* 将 23端口（系统默认23为telnet端口）添加到防火墙允许的端口的列表中。
 
 ```
 firewall-cmd --zone=public --add-port=23/tcp --permanent
 ```
 
-8��ж��telnet
+8、卸载telnet
 
-ִ�� rpm -qa telnet*�鿴�Ƿ��Ѿ���װ���ˡ�
+执行 rpm -qa telnet*查看是否已经安装过了。
 
 ```
 rpm -qa telent*
 ```
 
-ʹ�ã�yum remove telnet-*   ȫ��ж�ص�
+使用：yum remove telnet-*   全部卸载掉
 
 ```
 yum remove telnet-*
 ```
 
 
-## 1.37. ��:�����centos������ntp������
-Centos7 ����NTP������
+## 1.37. 问:如何在centos上配置ntp服务器
+Centos7 配置NTP服务器
 
-�� CentOS 7 �� RHEL 7 ϵͳ�ϣ�������ʹ�� `yum` ��������װ `ntpd`��NTP������������������ΰ�װ `ntpd` �Ĳ��裺
+在 CentOS 7 或 RHEL 7 系统上，您可以使用 `yum` 命令来安装 `ntpd`（NTP服务器）。下面是如何安装 `ntpd` 的步骤：
 
-1. ���ն˻� SSH �����ķ�������
+1. 打开终端或 SSH 到您的服务器。
 
-2. ʹ�� `yum` ��װ `ntpd` ����
+2. 使用 `yum` 安装 `ntpd` 服务：
 
    ```bash
    sudo yum install ntp
    ```
 
-3. ��װ�����У���������Ҫȷ���Ƿ�Ҫ���������� `y` ���� Enter ����
+3. 安装过程中，您可能需要确认是否要继续，输入 `y` 并按 Enter 键。
 
-4. ���߰�װ����154���̻�ȡRPM����
+4. 离线安装，从154网盘获取RPM包：
 
    ```
-   \\10.1.1.154\00-����u��\������Ⱥ������Ŀ\�汾\��������\ntp
+   \\10.1.1.154\00-网络u盘\地铁集群二开项目\版本\工具软件\ntp
    rpm -ivh ntp-4.2.6p5-29.el7.centos.2.x86_64.rpm
    rpm -ivh autogen-libopts-5.18-5.el7.x86_64.rpm
    rpm -ivh net-snmp-utils-5.7.2-49.el7_9.1.x86_64.rpm
    ```
 
-5. ��װ��ɺ����������� `ntpd` ������������ϵͳ����ʱ�Զ�������
+5. 安装完成后，您可以启动 `ntpd` 服务并设置它在系统启动时自动启动：
 
    ```bash
    sudo systemctl start ntpd
    sudo systemctl enable ntpd
    ```
 
-   �⽫���� NTP ������������ϵͳ�������Զ�������
+   这将启动 NTP 服务并配置它在系统重启后自动启动。
 
-6. ������ʹ������������ `ntpd` �����״̬����ȷ�����������У�
+6. 您可以使用以下命令检查 `ntpd` 服务的状态，以确保它正在运行：
 
    ```bash
    sudo systemctl status ntpd
    ```
 
-���ڣ�`ntpd` �����ѳɹ���װ���������С������Լ������� `/etc/ntp.conf` �ļ�����ָ��Ҫͬ���� NTP ��������������������������������
+现在，`ntpd` 服务已成功安装并正在运行。您可以继续配置 `/etc/ntp.conf` 文件，以指定要同步的 NTP 服务器和其他参数，以满足您的需求。
 
-�� CentOS 7 �У�`ntp.conf` �ļ��������� NTP �������Ϳͻ��˵����á����ļ��ṩ���й����ͬ���ⲿʱ��Դ��������ڲ��豸�ṩ NTP ͬ��������ѡ������� `ntp.conf` �ļ�����ϸ˵����
-1. ���÷�����ѡ�
+在 CentOS 7 中，`ntp.conf` 文件用于配置 NTP 服务器和客户端的设置。该文件提供了有关如何同步外部时钟源和如何向内部设备提供 NTP 同步的配置选项。下面是 `ntp.conf` 文件的详细说明：
+1. 配置服务器选项：
 
-   - `server`��ʹ�� `server` �ؼ���ָ���ⲿ NTP ���������Դ���Щ������ͬ��ʱ�䡣���磺
+   - `server`：使用 `server` 关键字指定外部 NTP 服务器，以从这些服务器同步时间。例如：
 
      ```
      server 0.centos.pool.ntp.org iburst
      server 1.centos.pool.ntp.org iburst
      ```
 
-     �����ʾ���У�NTP ��������ͬ���� `centos.pool.ntp.org` ���������еķ�������
+     在这个示例中，NTP 服务器将同步到 `centos.pool.ntp.org` 服务器池中的服务器。
 
-   - `iburst`��`iburst` ѡ���ʾ����ͬ����ͨ�������ڷ��������ú��棬�Լ���ͬ����
+   - `iburst`：`iburst` 选项表示快速同步，通常添加在服务器配置后面，以加速同步。
 
-2. ���������ͻ���ͬ����
+2. 允许其他客户端同步：
 
-   - `restrict`��`restrict` �������������� NTP �ͻ��˷������� NTP ��������Ĭ������£�`restrict` �������������Ŀͻ��˷��ʡ����������ӻ��޸� `restrict` ��Ŀ��������������
+   - `restrict`：`restrict` 配置允许或限制 NTP 客户端访问您的 NTP 服务器。默认情况下，`restrict` 允许本地子网的客户端访问。您可以添加或修改 `restrict` 条目以满足您的需求。
 
-     ���磬�������ý��������������еĿͻ���ͬ������ֹ�����ͻ��˵��޸ĺ� TRAP ������
+     例如，以下配置将允许本地子网中的客户端同步并阻止其他客户端的修改和 TRAP 操作：
 
      ```
      restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap
      ```
 
-3. �ṩ NTP ͬ�����ڲ��豸��
+3. 提供 NTP 同步给内部设备：
 
-   - NTP �����������������ڲ��豸��÷���������ʱ��ͬ�������ڲ��豸�ϣ�����Ҫ���������Խ� NTP ����������Ϊ���� CentOS 7 �������� IP ��ַ���������ڲ��豸�������ķ�����ͬ��ʱ�䡣
+   - NTP 服务器的配置允许内部设备向该服务器请求时间同步。在内部设备上，您需要配置它们以将 NTP 服务器设置为您的 CentOS 7 服务器的 IP 地址。这样，内部设备将与您的服务器同步时间。
 
-   - ������ͨ���� NTP �������� IP ��ַ����Ϊ�ڲ��豸�� NTP ��������ʵ�֡�ͨ�����ڲ��豸���������ϵͳ���豸�������ṩ NTP ������������ѡ�
+   - 您可以通过将 NTP 服务器的 IP 地址配置为内部设备的 NTP 服务器来实现。通常，内部设备将在其操作系统或设备设置中提供 NTP 服务器的配置选项。
 
-�ܵ���˵��`ntp.conf` �ļ��������� NTP �������Ϳͻ��˵���Ϊ�������������ⲿ NTP ��������ͬ�����ķ�������ʱ�䣬Ȼ���������������Ŀͻ���ͬ�����ڲ��豸��Ҫ����Ϊʹ������ CentOS 7 �������� IP ��ַ��Ϊ�� NTP ����������ʵ��ʱ��ͬ�����⽫ȷ�������ڲ��豸����׼ȷ��ʱ�䡣
+总的来说，`ntp.conf` 文件用于配置 NTP 服务器和客户端的行为。您可以添加外部 NTP 服务器来同步您的服务器的时间，然后允许本地子网的客户端同步。内部设备需要配置为使用您的 CentOS 7 服务器的 IP 地址作为其 NTP 服务器，以实现时间同步。这将确保所有内部设备具有准确的时间。
 
-Ҫ���� NTP �������Բ��������ӵĿͻ��ˣ������Լ򵥵��� `ntp.conf` �ļ���ɾ����ע�͵��κ� `restrict` �С�Ĭ������£�`ntp.conf` �е� `restrict` ���������������Ŀͻ��˷��ʣ���������ɾ����ע�͵���Щ�У�NTP �������������������ӵĿͻ��ˡ�
+要配置 NTP 服务器以不限制连接的客户端，您可以简单地在 `ntp.conf` 文件中删除或注释掉任何 `restrict` 行。默认情况下，`ntp.conf` 中的 `restrict` 行允许本地子网的客户端访问，因此如果您删除或注释掉这些行，NTP 服务器将不再限制连接的客户端。
 
-������������ò��������ӵĿͻ��˵�ʾ����
+以下是如何配置不限制连接的客户端的示例：
 
-1. �� `/etc/ntp.conf` �ļ��Ա༭����
+1. 打开 `/etc/ntp.conf` 文件以编辑它：
 
    ```bash
    sudo nano /etc/ntp.conf
    ```
 
-2. Ѱ�� `restrict` �У���ɾ����ע�͵����ǡ�Ĭ������£�`restrict` �п���������ʾ��
+2. 寻找 `restrict` 行，并删除或注释掉它们。默认情况下，`restrict` 行可能如下所示：
 
    ```plaintext
    restrict 127.0.0.1
    restrict ::1
    ```
 
-   ע�͵���ɾ����Щ�У�ʹ�ļ���������������
+   注释掉或删除这些行，使文件看起来像这样：
 
    ```plaintext
    #restrict 127.0.0.1
    #restrict ::1
    ```
 
-3. ���沢�ر��ļ���
+3. 保存并关闭文件。
 
-4. �������� NTP ������ʹ������Ч��
+4. 重新启动 NTP 服务以使更改生效：
 
    ```bash
    sudo systemctl restart ntpd
    ```
 
-���ڣ����� NTP �������������������ӵĿͻ��ˣ������������κ���Դ�� NTP ��������������һ�������������ڲ����� NTP ������������Ҫ�ϸ�ķ��ʿ��ơ�����ע�⣬������� NTP �������ɹ������ʣ���ôǿ�ҽ��������ʵ��İ�ȫ���Է�ֹ���á�
+现在，您的 NTP 服务器将不再限制连接的客户端，并允许来自任何来源的 NTP 请求。这适用于在一个受信任网络内部运行 NTP 服务器，不需要严格的访问控制。但请注意，如果您的 NTP 服务器可公开访问，那么强烈建议配置适当的安全性以防止滥用。
 
-## 1.38. ��: ����� CMake �ű��г�ʼ�� git ��ģ��
+## 1.38. 问: 如何在 CMake 脚本中初始化 git 子模块
 
-�� `CMakeLists.txt` �� `project(xxx)` ���֮����������ָ���ִ�� cmake .. ʱ�Զ���ʼ�� git ��ģ��(��Ӧ��ģ����ļ�����Ҫ������)
+在 `CMakeLists.txt` 中 `project(xxx)` 语句之后输入如下指令，在执行 cmake .. 时自动初始化 git 子模块(对应子模块的文件夹需要不存在)
 
 ```sh
 
@@ -1235,26 +1233,26 @@ if(NOT GIT_SUBMOD_RESULT EQUAL "0")
 endif()
 ```
 
-## 1.39. ��: ��γ�ʼ��һ������ `.gitmodules` �ļ��Ĳֿ�
+## 1.39. 问: 如何初始化一个包含 `.gitmodules` 文件的仓库
 
 ```git
 git submodule update --init
 ```
 
-## 1.40. ��: MySQL ���ʹ�÷�ҳ��ѯ
+## 1.40. 问: MySQL 如何使用分页查询
 
-[MySQL��ҳ��ѯ�����Ż�](https://www.w3cschool.cn/mysql/mysql-xilz2oy6.html)
+[MySQL分页查询及其优化](https://www.w3cschool.cn/mysql/mysql-xilz2oy6.html)
 
-[MySQL��ҳ��ѯ�Ż�](http://uusama.com/458.html)
+[MySQL分页查询优化](http://uusama.com/458.html)
 
-## 1.41. ��: ����� `gitlab` ���д�����ʹ�� `issue` ģ��
+## 1.41. 问: 如何在 `gitlab` 库中创建并使用 `issue` 模板
 
-1. �� gitlab ���� master ��֧�£���Ŀ¼�����ļ��� `.gitlab/issue_templates`
-2. ���ڸ��ļ����´�����Ӧ���Ƶ� `.md` �ļ�
-3. �ϴ� `.md` �ļ����������½� `issue` ʱ����� `Choose a template` ʹ����ģ��
+1. 在 gitlab 库中 master 分支下，根目录创建文件夹 `.gitlab/issue_templates`
+2. 并在该文件夹下创建对应名称的 `.md` 文件
+3. 上传 `.md` 文件，即可在新建 `issue` 时，点击 `Choose a template` 使用其模版
 
 
-## 1.42. ��: ���ʹ���ļ���Ų�ѯĳ�ļ����µ��ļ�����
+## 1.42. 问: 如何使用文件编号查询某文件夹下的文件名称
 
 ```c++
 #include <iostream>
@@ -1275,11 +1273,11 @@ std::vector<std::string> get_directory_files(const std::string& path, const std:
     auto f = [&](const auto& dir_entry)
     {
         auto fp = dir_entry.path();
-        /// �����ļ���
+        /// 过滤文件夹
         if (!std::filesystem::is_directory(std::filesystem::status(fp)))
         {
             auto file_name = fp.filename().string();
-            /// ����ƥ��
+            /// 正则匹配
             if (std::regex_match(file_name, reg))
             {
                 vec.push_back(fp.string());
@@ -1289,12 +1287,12 @@ std::vector<std::string> get_directory_files(const std::string& path, const std:
 
     if (is_recursive)
     {
-        /// �ݹ����
+        /// 递归查找
         std::ranges::for_each(std::filesystem::recursive_directory_iterator{p}, f);
     }
     else
     {
-        /// �ǵݹ����
+        /// 非递归查找
         std::ranges::for_each(std::filesystem::directory_iterator{p}, f);
     }
 
@@ -1305,7 +1303,7 @@ std::vector<std::string> get_directory_files(const std::string& path, const std:
 int main()
 {
     auto c4 =
-        get_directory_files("/Users/lijiancong/Workspace/gitlab/sz13_sil2/doc/������/", std::regex("(GBCOM.*)"), true);
+        get_directory_files("/Users/lijiancong/Workspace/gitlab/sz13_sil2/doc/工作区/", std::regex("(GBCOM.*)"), true);
 
     for (auto& i : c4)
     {
@@ -1323,13 +1321,13 @@ int main()
 
         if (it == c4.end())
         {
-            std::cout << "δ�ҵ�" << std::endl;
+            std::cout << "未找到" << std::endl;
         }
         else
         {
-            std::cout << "�ļ�: " << *it << std::endl;
+            std::cout << "文件: " << *it << std::endl;
             auto pos = it->find_last_of("V");
-            std::cout << "�汾��: " << it->substr(pos, 4) << std::endl;
+            std::cout << "版本号: " << it->substr(pos, 4) << std::endl;
         }
         std::cout << std::endl;
     }
@@ -1339,17 +1337,17 @@ int main()
 ```
 
 
-## 1.43. ��: �豸������װĿ¼�淶
+## 1.43. 问: 设备软件安装目录规范
 
-    �豸������װĿ¼�淶���£��ֳ���װĿ¼�������޸ģ���
+    设备软件安装目录规范如下（现场安装目录按本文修改）：
 
-    1������������DIS��MRS��OMC����װ��Ŀ¼��
+    1、二开软件（DIS、MRS、OMC）安装根目录：
 
-    Linuxȱʡ��װ�� /home/gbcom
+    Linux缺省安装在 /home/gbcom
 
-    windows ȱʡ��װ��d:/gbcomĿ¼ ��windows��װ���ֹ�����ϵͳ��������GBCOM_HOME)
+    windows 缺省安装在d:/gbcom目录 （windows安装后手工设置系统环境变量GBCOM_HOME)
 
-   linux�������������ű�ͳһ���ã� start_gbcom.sh �ű�λ�ڸ�Ŀ¼�£��������£�
+   linux服务器的启动脚本统一采用： start_gbcom.sh 脚本位于根目录下，内容如下：
 
 ```c++
     #!/bin/bash
@@ -1359,50 +1357,50 @@ int main()
     $GBCOM_HOME/procmon &
 ```
 
-    �ýű���/etc/rc.local�б����ã����÷������£�
+    该脚本在/etc/rc.local中被调用，调用方法如下：
 
     source /home/gbcom/start_gbcom.sh
 
-   ע�����Ҫ��source���øýű�����֤GBCOM_HOME����������Ч
+   注意必须要用source调用该脚本，保证GBCOM_HOME环境变量生效
 
-   2. dis��omc��mrs
+   2. dis、omc、mrs
 
-    ��װ�ڸ�Ŀ¼��һ��Ŀ¼�У�Ŀ¼���ֱ�Ϊ dis��omc��mrs
+    安装在根目录下一级目录中，目录名分别为 dis、omc、mrs
 
    3. procmon
 
-    ��װ�ڸ�Ŀ¼��  ��windows��ΪwatcgDog����
+    安装在根目录下  （windows下为watcgDog服务）
 
    4. pcap
 
-   ��װ�ڸ�Ŀ¼�� ��windows��Ϊpcap����
+   安装在根目录下 （windows下为pcap服务）
 
    5. ds_chk
 
-  ��װ�ڸ�Ŀ¼��
+  安装在根目录下
 
    6. ftps
 
-  ��װ�ڸ�Ŀ¼��
+  安装在根目录下
 
    7. mysql
 
-   ����ϵͳ��װ��ȱʡĿ¼����ָ��
+   根据系统安装的缺省目录，不指定
 
-   8��ftp������
+   8、ftp服务器
 
-   ��װ�ڸ�Ŀ¼��ftpĿ¼��
+   安装在根目录的ftp目录下
 
-   ftp������Ŀ¼Ϊftp�µ�dataĿ¼��
+   ftp的数据目录为ftp下的data目录，
 
-   �û�����gbcom ���� gbcom@123
+   用户名：gbcom 密码 gbcom@123
 
-   9. dc��omt��spt
+   9. dc、omt、spt
 
-   ��װ�ڸ�Ŀ¼��һ��Ŀ¼�У�Ŀ¼���ֱ�Ϊ dc��omt��spt
+   安装在根目录下一级目录中，目录名分别为 dc、omt、spt
 
 
-## 1.44. ��: googletest ������в��Ե��Ӽ�
+## 1.44. 问: googletest 如何运行测试的子集
 
 ```text
 ./foo_test Has no flag, and thus runs all its tests.
@@ -1414,168 +1412,168 @@ int main()
 ./foo_test --gtest_filter=FooTest.*:BarTest.*-FooTest.Bar:BarTest.Foo Runs everything in test suite FooTest except FooTest.Bar and everything in test suite BarTest except BarTest.Foo.
 ```
 
-## 1.45. �ʣ�Centos ʹ�� yum ��ʹ�� cmake ���� libstdc++.so ���Ӵ���
+## 1.45. 问：Centos 使用 yum 后使用 cmake 出现 libstdc++.so 链接错误
 
 ```c++
 rm -f /usr/lib64/libstdc++.so.6
 ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
 ```
 
-## 1.46. �ʣ������� sa �����������ʹ�� coredump ���е���
+## 1.46. 问：主板中 sa 软件崩溃如何使用 coredump 进行调试
 
-1. sa �����������ӱ�������  `-g` �����ӵ�����Ϣ
+1. sa 软件可以添加编译命令  `-g` 以添加调试信息
 
 ![image](uploads/d13e9746a2335ea2fc94750d5dcb00c9/image.png)
 
-2. ʹ����ʱ���� ������ `coredump` ����
+2. 使用临时命令 打开主机 `coredump` 生成
 
 ```sh
 ulimit -c unlimited
 ```
 
-ͨ������ `ulimit -a | grep core` �鿴 coredump ��С��Ϊ0��ȷ�� coredump �Ѿ�����
+通过命令 `ulimit -a | grep core` 查看 coredump 大小不为0，确认 coredump 已经开启
 
 ![image](uploads/dd44697a5d663a3b49fce3b0280e33ce/image.png)
 
-3. ���п�ִ�г��򣬲��������������� coredump �ļ�
+3. 运行可执行程序，并触发崩溃，生成 coredump 文件
 
-4. ��ѯ�ҵ� coredump �ļ�����
+4. 查询找到 coredump 文件所在
 
 ```sh
 cat /proc/sys/kernel/core_pattern
 ```
 ![image](uploads/e9cb559b0d6f09731f33bc9f90462778/image.png)
 
-5. ��������ִ���ļ�Ŀ¼��
+5. 拷贝到可执行文件目录下
 
 ```sh
-cp /tmp/coredump�ļ��� /sbin/
+cp /tmp/coredump文件名 /sbin/
 ```
 
-6. ʹ�� gdb �鿴 coredump �ļ�
+6. 使用 gdb 查看 coredump 文件
 
 ```sh
 gdb sa coredumpxxx
 ```
 
-sa: ��ִ���ļ�
+sa: 可执行文件
 
-coredumpxxx: coredump �ļ���
+coredumpxxx: coredump 文件名
 
 ![image](uploads/7e867d56c5d86f7b956fb7db267aca87/image.png)
 
-## 1.47. �ʣ�ʹ�ú� yum ����� libstdc++ �������Ӵ���
+## 1.47. 问：使用后 yum 命令后， libstdc++ 出现链接错误
 
 ```c++
 rm -f /usr/lib64/libstdc++.so.6
 ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
 ```
 
-## 1.48. �ʣ����ʹ��iperf3����
-[iperf3ʹ��˵��.docx](uploads/2ec590de34a8482fc65d98a2ccc2de06/iperf3ʹ��˵��.docx)
+## 1.48. 问：如何使用iperf3打流
+[iperf3使用说明.docx](uploads/2ec590de34a8482fc65d98a2ccc2de06/iperf3使用说明.docx)
 
-## 1.49. �ʣ���δ�ץ���ļ�����ȡamr��Ƶ��������
-[��ȡץ���ļ��е�amr��Ƶ��������.docx](uploads/85ae74617881dc1d9bb7f306ab5fcd1d/��ȡץ���ļ��е�amr��Ƶ��������.docx)
+## 1.49. 问：如何从抓包文件中提取amr音频流并播放
+[提取抓包文件中的amr音频流并播放.docx](uploads/85ae74617881dc1d9bb7f306ab5fcd1d/提取抓包文件中的amr音频流并播放.docx)
 
-## 1.50. �ʣ���β鿴�ļ��� md5 ��ֵ
+## 1.50. 问：如何查看文件的 md5 数值
 
 windows
 
 ```c++
-certutil -hashfile �ļ� MD5
+certutil -hashfile 文件 MD5
 ```
 
 ![image](uploads/335e551ee92dbe60b6d97d87df4c6296/image.png)
 
-linux��
+linux：
 
 ```sh
-md5sum �ļ���
+md5sum 文件名
 ```
 
 ![image](uploads/ea43aec2fec914264c5d70102c52bd1f/image.png)
 
-mac��
+mac：
 
 ```sh
-md5 �ļ���
+md5 文件名
 ```
 ![image](uploads/d0955984693ddb34b8198adef08812eb/image.png)
 
-## 1.51. �ʣ������ץ���е��� rtp ��Ƶ���з���
+## 1.51. 问：如何在抓包中导出 rtp 音频进行分析
 
-[Wireshark����rtp��Ƶ���ݲ�ʹ��Audacity����](https://blog.csdn.net/gtychuashuiwang/article/details/128399570)
+[Wireshark导出rtp音频数据并使用Audacity分析](https://blog.csdn.net/gtychuashuiwang/article/details/128399570)
 
-## 1.52. ��: ��� git �����ȡԶ�ֿ̲��ָ����֧
+## 1.52. 问: 如何 git 如何拉取远程仓库的指定分支
 
 ```sh
 git clone -b develop http://xxxxx
 ```
 
-## 1.53. �ʣ�windows �� mysql5.7 �������Զ�̷��ʣ�
+## 1.53. 问：windows 上 mysql5.7 如何允许远程访问？
 
-[windows��mysql�������Զ������](https://blog.csdn.net/qq_43308242/article/details/104839328)
+[windows中mysql如何设置远程连接](https://blog.csdn.net/qq_43308242/article/details/104839328)
 
-1. ʹ������ `mysql -uroot -p` ���� mysql
-2. ������������
+1. 使用命令 `mysql -uroot -p` 进入 mysql
+2. 输入如下命令
 
 ```sh
 use mysql;
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '�������' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '你的密码' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
-3. �رձ����� 3306 �˿ڵķ���ǽ
+3. 关闭本机对 3306 端口的防火墙
 
-## 1.54. �ʣ� wireshark ץ��ʱ������ʾ failed to set hardware filter to promiscuous mode: ����ϵͳ�ϵ��豸û�з������á�  (31)
+## 1.54. 问： wireshark 抓包时出现提示 failed to set hardware filter to promiscuous mode: 连到系统上的设备没有发挥作用。  (31)
 
 ![image](uploads/eb7f03ade293a1152a7d8db2f53f5911/image.png)
 
-����ͨ���رջ���ģʽ����ץ��
+可以通过关闭混杂模式进行抓包
 
-��� ���� -> ѡ�ȡ����ѡ����ģʽ����ץ��
+点击 捕获 -> 选项，取消勾选混杂模式即可抓包
 
 ![image](uploads/1aaf938caac08248f06cc9ff6b9807ad/image.png)
 
-## 1.55. �ʣ�wireshark �л���ģʽָ����ʲô��˼��
+## 1.55. 问：wireshark 中混杂模式指的是什么意思？
 
-ͨ����������Ϊ����ģʽ���ܲ�������������з������ݣ������ǹ㲥���ͷǷ����Լ����������ݰ���
+通过设置网卡为混杂模式就能捕获局域网内所有发包内容，包括非广播包和非发给自己主机的数据包。
 
-����ѡ��ѡ����Բ��񣬹㲥�����Լ��İ���
+不勾选此选项可以捕获，广播包和自己的包。
 
 
-## 1.56. ��: `error while loading shared libraries` ���ض�̬��ʧ����ν����
+## 1.56. 问: `error while loading shared libraries` 加载动态库失败如何解决？
 
-��̬�⻺�����⣺ Linux ʹ�ö�̬���ӿ⻺����������ܡ�������ڳ�������ǰ�����˶�̬���ļ���������Ҫˢ�¶�̬�⻺�档
+动态库缓存问题： Linux 使用动态链接库缓存来提高性能。如果你在程序运行前更新了动态库文件，可能需要刷新动态库缓存。
 
-���������
-1. ����Ӧ�Ķ�̬���ļ����뵽`/usr/lib`Ŀ¼�¡�
-2. ˢ�¶�̬�⻺�� `sudo ldconfig`
-ע����������ֻ��ִ��һ�Σ�����������Ч��
+解决方法：
+1. 把相应的动态库文件放入到`/usr/lib`目录下。
+2. 刷新动态库缓存 `sudo ldconfig`
+注：上述操作只需执行一次，重启后仍生效。
 
-## 1.57. �ʣ� `FAQ` ��ʲô��
+## 1.57. 问： `FAQ` 是什么？
 
-FAQ �� Frequently Asked Questions���������⣩����д������ָ���������������һЩ����Ͷ�Ӧ�Ľ��ͨ�����ڰ����û��������������ṩ�����Ϣ��
+FAQ 是 Frequently Asked Questions（常见问题）的缩写。它是指经常被人们提出的一些问题和对应的解答，通常用于帮助用户解决常见问题或提供相关信息。
 
-## 1.58. �ʣ� `Q&A` ��ʲô?
+## 1.58. 问： `Q&A` 是什么?
 
-`Question and Answer`��������ش� ����д
+`Question and Answer`（问题与回答） 的缩写
 
-## 1.59. �ʣ� [Centos7 ���Դ����� git](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
+## 1.59. 问： [Centos7 如何源码编译 git](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)
 
-1. ���Ȱ�װ gcc �� g++
+1. 首先安装 gcc 和 g++
 
 ```sh
 yum install -y gcc gcc-c++
 ```
 
-2. ��װ����
+2. 安装依赖
 
 ```c++
 yum install -y dh-autoreconf curl-devel expat-devel gettext-devel openssl-devel perl-devel zlib-devel asciidoc xmlto docbook2X
 ```
 
-3. ����Դ�벢��װ
+3. 下载源码并安装
 
 ```sh
 curl -O https://github.com/git/git/archive/refs/tags/v2.42.0.tar.gz
@@ -1584,46 +1582,46 @@ cd git-2.42.0
 make configure
 ./configure
 make all doc info -j12
-yum remove git  ///< ɾ���ϰ汾 git
+yum remove git  ///< 删除老版本 git
 sudo make install
 sudo make install install-doc install-html install-info
 ```
 
-## 1.60. �ʣ� Centos��λ�����ļ�����
+## 1.60. 问： Centos定位查找文件命令
 
-1. ���ļ����²����ļ�
+1. 本文件夹下查找文集
 
 ```sh
 find -name filename
 ```
 
-2. ȫ������
+2. 全部查找
 
 ```sh
 find / -name filename
 ```
 
-3. ʹ���������ʽ������ .cs ��׺���ļ�
+3. 使用正则表达式，查找 .cs 后缀的文件
 
 ```sh
 find / -name "*.cs"
 ```
 
-## 1.61. �ʣ� `Centos7` ���Դ����� gcc/g++
+## 1.61. 问： `Centos7` 如何源码编译 gcc/g++
 
-1. ��װ���빤�� gcc g++
+1. 安装编译工具 gcc g++
 
 ```sh
 yum install -y gcc gcc-c++
 ```
 
-2. ��װ���������� 32λ��
+2. 安装编译依赖的 32位库
 
 ```sh
 yum install glibc-devel.i686
 ```
 
-3. ����Դ�룬�� `GCC13.2` ����
+3. 下载源码，以 `GCC13.2` 举例
 
 ```sh
 curl -O http://ftp.tsukuba.wide.ad.jp/software/gcc/releases/gcc-13.2.0/gcc-13.2.0.tar.gz
@@ -1631,250 +1629,250 @@ tar -xzvf gcc-13.2.0.tar.gz
 cd gcc-13.2.0
 ```
 
-4. �������������ñ���ѡ��
+4. 下载依赖，配置编译选项
 
 ```sh
-./contrib/download_prerequisites ///< ��������
-./configure --enable-languages=c,c++ --enable-multilib ///< ���ñ��� 32λ �� 64λ
+./contrib/download_prerequisites ///< 下载依赖
+./configure --enable-languages=c,c++ --enable-multilib ///< 配置编译 32位 和 64位
 ```
 
-5. ���벢��װ
+5. 编译并安装
 
 ```sh
-sudo make -j12 ///< ����
+sudo make -j12 ///< 编译
 
-yum remove gcc gcc-c++ ///< ɾ��yum��װ��gcc
+yum remove gcc gcc-c++ ///< 删除yum安装的gcc
 
-sudo make install ///< ��װ
+sudo make install ///< 安装
 
-gcc -v ///< �鿴�汾
-g++ -v ///< �鿴�汾
+gcc -v ///< 查看版本
+g++ -v ///< 查看版本
 ```
 
-6. ���� `main.cpp` ����������Ƿ�װ�ɹ�
+6. 创建 `main.cpp` 并编译测试是否安装成功
 
-## 1.62. �ʣ� `Centos7` ��ιرշ���ǽ
+## 1.62. 问： `Centos7` 如何关闭防火墙
 
-1. �鿴����ǽ״̬
+1. 查看防火墙状态
 
 ```sh
 systemctl status firewalld
 ```
 
-2. �رշ���ǽ
+2. 关闭防火墙
 
 ```sh
 systemctl stop firewalld
 ```
 
-3. ֹͣ����ǽ������
+3. 停止防火墙自启动
 
 ```sh
 systemctl disable firewalld
 ```
 
-## 1.63. ��: `Centos7` ���ñʼǱ��ϸǲ�����
+## 1.63. 问: `Centos7` 设置笔记本合盖不休眠
 
 ```sh
 vim /etc/systemd/logind.conf
 ```
 
-�����ļ����ҵ�����Ҫ�޸ĵ������
+配置文件中找到我们要修改的配置项：
 
 ```sh
-HandlePowerKey ���µ�Դ�������Ϊ��Ĭ��power off
-HandleSleepKey ���¹���������Ϊ��Ĭ��suspend
-HandleHibernateKey �������߼������Ϊ��Ĭ��hibernate
-HandleLidSwitch ���ϱʼǱ��Ǻ����Ϊ��Ĭ��suspend
+HandlePowerKey 按下电源键后的行为，默认power off
+HandleSleepKey 按下挂起键后的行为，默认suspend
+HandleHibernateKey 按下休眠键后的行为，默认hibernate
+HandleLidSwitch 合上笔记本盖后的行为，默认suspend
 ```
 
-ѡ�
+选项：
 
 ```sh
-ignore ���ԣ�����
-power off �ػ�
-reboot ����
-halt ����
-lock �����������������������
+ignore 忽略，跳过
+power off 关机
+reboot 重启
+halt 挂起
+lock 仅锁屏，计算机继续工作。
 ```
 
-����������Ч
+重启服务生效
 
 ```sh
 systemctl restart systemd-logind
 ```
 
-## 1.64. ��: `Centos7` ��������������� `wifi`
+## 1.64. 问: `Centos7` 如何在命令行链接 `wifi`
 
-1. ��һ������װ��
+1. 第一步，安装包
 
 ```sh
 yum install NetworkManager*
 ```
 
-2. ����NetworkManager�Զ�����
+2. 设置NetworkManager自动启动
 
 ```sh
 chkconfig NetworkManager on
 ```
 
-3. ����WiFi
+3. 开启WiFi
 
 ```sh
 nmcli r wifi on
 ```
 
-4. ɨ�����wifi
+4. 扫描可用wifi
 
 ```sh
 nmcli dev wifi
 ```
 
-5. ��4��ѯ����`wifi` `SSID`���� `wifi`
+5. 用4查询到的`wifi` `SSID`连接 `wifi`
 
 ```sh
 nmcli --ask dev wifi connect SSID
 ```
 
-���������е�SSIDΪ���Ƶ�WiFi������
+更换命令中的SSID为复制的WiFi的名字
 
-����--ask�����������wifi���룬���������Ļ�
+加上--ask后会让你添加wifi密码，如果有密码的话
 
 or
 
 ```sh
-nmctl dev wifi con "wifi��" password "����" name "����"
+nmctl dev wifi con "wifi名" password "密码" name "别名"
 ```
 
-6. ���wifiû��������
+6. 如果wifi没有连接上
 
 ```sh
-nmcli con up wifi���������ղ�nmtui���������ӣ�
+nmcli con up wifi连接名（刚才nmtui创建的连接）
 ```
 
-7. ���ӳɹ���鿴�Ѵ�����wifi���ӣ�������
+7. 添加成功后查看已创建的wifi连接（别名）
 
 ```sh
 nmcli conn
 ```
 
-8. �رտ���������̫��
+8. 关闭开机启动以太网
 
 ```sh
 cd /etc/sysconfig/network-scripts
-vi ifcfg-enp4s0f2   //�������������ļ�
-# ����
+vi ifcfg-enp4s0f2   //有线网卡配置文件
+# 设置
 ONBOOT=no
 ```
 
-## 1.65. �ʣ�����̨���̶�̨�ֳ������Ų�ȡ֤�ķ�����������
-[20220909����̨�̶�̨�����Ų�ȡ֤����v0.5.pdf](uploads/d0d5c61fad72975f328ddd464a471288/20220909����̨�̶�̨�����Ų�ȡ֤����v0.5.pdf)
+## 1.65. 问：车载台、固定台现场问题排查取证的方法操作流程
+[20220909车载台固定台问题排查取证方法v0.5.pdf](uploads/d0d5c61fad72975f328ddd464a471288/20220909车载台固定台问题排查取证方法v0.5.pdf)
 
-## 1.66. �ʣ�����̨�ֳ������Ų�ȡ֤�ķ���
+## 1.66. 问：调度台现场问题排查取证的方法
 
-1.  ��¼�������ʱ�䣬�����¼���⣬������������
+1.  记录问题产生时间，拍摄记录问题，描述问题现象
 
-2.  ȡ��־��·��Ϊdc.exe����Ŀ¼��log�ļ�����dc.log
+2.  取日志，路径为dc.exe所在目录下log文件夹下dc.log
 
-3.  ����ʱץ��������̨��wireshark���ߣ�����������ץ����
+3.  复现时抓包，调度台打开wireshark工具，对网卡开启抓包；
 
-    ����̨������ʹ��tcpdump �Ci ����-vvv �Cs 0 �Cw �������ʱ��.pcap
+    调度台服务器使用tcpdump –i 网卡-vvv –s 0 –w 问题产生时间.pcap
 
-## 1.67. �ʣ�windows/linux������Ӿ�̬·��
+## 1.67. 问：windows/linux如何添加静态路由
 
-��
+答：
 
-1.  windows: �һ����½�windowsͼ�꣬���windows
-    powershell(����Ա)���ڴ���������������
+1.  windows: 右击左下角windows图标，点击windows
+    powershell(管理员)，在窗口输入下面命令
 
-2.  route -p�����ñ��棩 add 172.16.1.0��Ŀ���ַ�� mask 255.255.255.0
-    192.168.101.1�����ص�ַ/��һ����ַ��ͨ���õ�ַ��ȥ����Ŀ���ַ��
+2.  route -p（永久保存） add 172.16.1.0（目标地址） mask 255.255.255.0
+    192.168.101.1（网关地址/下一跳地址，通过该地址出去访问目标地址）
 
-3.  linux:ʹ��CRT�����������������������������
+3.  linux:使用CRT进入服务器，命令行输入下面命令
 
-4.  route add -net 172.16.1.0 ��Ŀ���ַ��netmask 255.255.255.0 gw
-    192.168.101.1�����ص�ַ/��һ����ַ��ͨ���õ�ַ��ȥ����Ŀ���ַ��
+4.  route add -net 172.16.1.0 （目标地址）netmask 255.255.255.0 gw
+    192.168.101.1（网关地址/下一跳地址，通过该地址出去访问目标地址）
 
-5.  CentOS7���þ�̬·����Ҫд�� /etc/sysconfig/network-scripts/route-������
-    �ļ��У�����/etc/sysconfig/network-scripts/�£��½��ļ���Ϊroute-���������ļ�������ѯ������ifconfig���������
+5.  CentOS7永久静态路由需要写到 /etc/sysconfig/network-scripts/route-网卡名
+    文件中，故在/etc/sysconfig/network-scripts/下，新建文件名为route-网卡名的文件，（查询网卡名ifconfig）下面命令：
 
-    vim /etc/sysconfig/network-scripts/route-������
+    vim /etc/sysconfig/network-scripts/route-网卡名
 
-    100.0.0.0/24 via 192.168.10.20 dev ������
+    100.0.0.0/24 via 192.168.10.20 dev 网卡名
 
-## 1.68. �ʣ�windows/linux��ѯ�˿�״̬
+## 1.68. 问：windows/linux查询端口状态
 
-��
+答：
 
-1.  windows��netstat -ano \#�鿴���ж˿�
+1.  windows：netstat -ano \#查看所有端口
 
-    netstat -ano \| findstr �˿� \#�鿴ָ���˿�
+    netstat -ano \| findstr 端口 \#查看指定端口
 
-2.  linux��netstat -anp \#�鿴���ж˿�
+2.  linux：netstat -anp \#查看所有端口
 
-    netstat -anp \| grep �˿� \#�鿴ָ���˿�
+    netstat -anp \| grep 端口 \#查看指定端口
 
 
-## 1.69. �ʣ���������Ƿ�ɴ�ķ���
+## 1.69. 问：检测网络是否可达的方法
 
-1.  telnet����
+1.  telnet连接
 
-2.  ץ��
+2.  抓包
 
 3.  Ping
 
-## 1.70. �ʣ�Linux��������¼����
+## 1.70. 问：Linux服务器登录方法
 
-1.  ���ȵ���IP��ַҪ�ͷ�����IP��ַ��������ͨ��
+1.  首先电脑IP地址要和服务器IP地址可以正常通信
 
-2.  CRT���ӣ�CRT�����������IPѡ��ssh���ӽ���
+2.  CRT连接，CRT中输入服务器IP选择ssh连接进入
 
-3.  ֱ�ӵ���cmd���ڣ�ʹ��ssh IP��ַ�����ӽ���
+3.  直接电脑cmd窗口，使用ssh IP地址，连接进入
 
-## 1.71. �ʣ�Linux������¼����
+## 1.71. 问：Linux主机登录方法
 
-1.  ���ȵ���IP��ַҪ������IP��ַ��������ͨ��
+1.  首先电脑IP地址要和主机IP地址可以正常通信
 
-2.  CRT���ӣ�CRT����������IPѡ��telnet���ӽ���
+2.  CRT连接，CRT中输入主机IP选择telnet连接进入
 
-3.  ֱ�ӵ���cmd���ڣ�ʹ��telnet IP��ַ�����ӽ���
-
-
-## 1.72. ��: `DELL`������`iDRAC`Զ�̿�������
-
-[DELL������iDRACԶ�̿�������](https://www.cnblogs.com/panjianhui/p/12626185.html)
+3.  直接电脑cmd窗口，使用telnet IP地址，连接进入
 
 
-## 1.73. ��: ������� GitLab �� `Private Token`
+## 1.72. 问: `DELL`服务器`iDRAC`远程控制设置
 
-�� GitLab ������ Private Token ��ѭ���²��裺
-
-1. **��¼�� GitLab �ʻ���** ���ȣ���¼����� GitLab �ʻ���
-
-2. **���������ã�** ��ҳ�����Ͻǣ���ῴ��һ�������˵���ѡ�� "Settings"��
-
-3. **ѡ�� Access Tokens��** ����ർ�����У�ѡ�� "Access Tokens"��
-
-4. **������ Token��** �� "Create a personal access token" ���֣���д��Ҫ����Ϣ���������ơ��������ڵȡ�
-
-5. **ѡ��Ȩ�ޣ�** ѡ��˷������Ƶ�Ȩ�ޡ�ͨ��������Ҫѡ�� `api`���Ա���� GitLab API��
-
-6. **���� Token��** ��� "Create personal access token"��
-
-7. **���� Token��** һ�� Token ���ɣ��������������ڰ�ȫ�ĵط���**������Ψһ�Ļ��Ḵ��������Ϊ�������ٴ���ʾ��**
+[DELL服务器iDRAC远程控制设置](https://www.cnblogs.com/panjianhui/p/12626185.html)
 
 
-## 1.74. ��: ��θı� `Centos7` ����������
+## 1.73. 问: 如何生成 GitLab 的 `Private Token`
+
+在 GitLab 上生成 Private Token 遵循以下步骤：
+
+1. **登录到 GitLab 帐户：** 首先，登录到你的 GitLab 帐户。
+
+2. **导航到设置：** 在页面右上角，你会看到一个下拉菜单，选择 "Settings"。
+
+3. **选择 Access Tokens：** 在左侧导航栏中，选择 "Access Tokens"。
+
+4. **生成新 Token：** 在 "Create a personal access token" 部分，填写必要的信息，比如名称、到期日期等。
+
+5. **选择权限：** 选择此访问令牌的权限。通常，你需要选择 `api`，以便访问 GitLab API。
+
+6. **生成 Token：** 点击 "Create personal access token"。
+
+7. **复制 Token：** 一旦 Token 生成，复制它并保存在安全的地方。**这是你唯一的机会复制它，因为它不会再次显示。**
+
+
+## 1.74. 问: 如何改变 `Centos7` 的主机名称
 
 ```sh
 hostnamectl set-hostname host_name
 ```
 
-## 1.75. ��: CentoS7����ʹ��fdisk��4T���̽��з���, ��home��������
+## 1.75. 问: CentoS7以上使用fdisk对4T磁盘进行分区, 对home进行扩容
 
-[�ĵ���Centos7��home����.docx](uploads/44a6cda68a3bae070a717dcc71f7c784/Centos7��home����.docx)
+[文档：Centos7对home扩容.docx](uploads/44a6cda68a3bae070a717dcc71f7c784/Centos7对home扩容.docx)
 
-## 1.76. ��: EN50128 �� D.52 �ᵽ�Ľṹ������
+## 1.76. 问: EN50128 中 D.52 提到的结构化方法
 
 * SSADM (Structured Systems Analysis and Design Method)
 * LBMS (Life Cycle Business Method Specification)
@@ -1885,283 +1883,283 @@ hostnamectl set-hostname host_name
 * SDL (Specification and Description Language)
 
 
-## 1.77. ��: ssh ������ܵ�¼
+## 1.77. 问: ssh 如何免密登录
 
-�� Centos7 Ϊ���� ���Լ����Ե� id_rsa.pub �е����ݣ�׷�ӵ���Ҫ���ܵ�¼�������� ~/.ssh/authorized_keys �У��ٴ� ssh ��¼����
+以 Centos7 为例， 把自己电脑的 id_rsa.pub 中的内容，追加到需要免密登录服务器的 ~/.ssh/authorized_keys 中，再次 ssh 登录即可
 
-�Լ��� `id_rsa.pub` �ļ�ͨ��������������ʹ�� `ssh-keygen` ����������� `C:\Users\yourname\.ssh\` �ļ�����
+自己的 `id_rsa.pub` 文件通常是在命令行中使用 `ssh-keygen` 命令后生成于 `C:\Users\yourname\.ssh\` 文件夹下
 
-[�ο�](https://blog.csdn.net/jeikerxiao/article/details/84105529)
+[参考](https://blog.csdn.net/jeikerxiao/article/details/84105529)
 
-## 1.78. ��: MySQL ��α��ⳤ�����ҵ���Ӱ�죿
+## 1.78. 问: MySQL 如何避免长事务对业务的影响？
 
-1. ���ȣ���Ӧ�ÿ�����������
+1. 首先，从应用开发端来看：
 
-- ȷ���Ƿ�ʹ���� set autocommit=0�����ȷ�Ϲ��������ڲ��Ի����п�չ���� MySQL �� general_log ��������Ȼ�������һ��ҵ���߼���ͨ�� general_log ����־��ȷ�ϡ�һ����������������ֵ��Ҳ�ͻ��ṩ������������Ϊ�����Ŀ����ǰ����ĳ� 1��
+- 确认是否使用了 set autocommit=0。这个确认工作可以在测试环境中开展，把 MySQL 的 general_log 开起来，然后随便跑一个业务逻辑，通过 general_log 的日志来确认。一般框架如果会设置这个值，也就会提供参数来控制行为，你的目标就是把它改成 1。
 
-- ȷ���Ƿ��в���Ҫ��ֻ��������Щ��ܻ�ϰ�߲���ʲô������� begin/commit ���������Ҽ�����Щ��ҵ��û�������Ҫ������Ҳ�Ѻü��� select ���ŵ��������С�����ֻ���������ȥ����
+- 确认是否有不必要的只读事务。有些框架会习惯不管什么语句先用 begin/commit 框起来。我见过有些是业务并没有这个需要，但是也把好几个 select 语句放到了事务中。这种只读事务可以去掉。
 
-- ҵ���������ݿ��ʱ�򣬸���ҵ������Ԥ����ͨ�� SET MAX_EXECUTION_TIME ���������ÿ�����ִ�е��ʱ�䣬���ⵥ���������ִ��̫��ʱ�䡣��Ϊʲô�����⣿�ں����������л��ᵽ���స����
+- 业务连接数据库的时候，根据业务本身的预估，通过 SET MAX_EXECUTION_TIME 命令，来控制每个语句执行的最长时间，避免单个语句意外执行太长时间。（为什么会意外？在后续的文章中会提到这类案例）
 
-2. ��Σ������ݿ��������
+2. 其次，从数据库端来看：
 
-- ��� information_schema.Innodb_trx �������ó�������ֵ�������ͱ��� / ���� kill��
+- 监控 information_schema.Innodb_trx 表，设置长事务阈值，超过就报警 / 或者 kill；
 
-- Percona �� pt-kill ������߲������Ƽ�ʹ�ã�
+- Percona 的 pt-kill 这个工具不错，推荐使用；
 
-- ��ҵ���ܲ��Խ׶�Ҫ��������е� general_log��������־��Ϊ��ǰ�������⣻
+- 在业务功能测试阶段要求输出所有的 general_log，分析日志行为提前发现问题；
 
-- ���ʹ�õ��� MySQL 5.6 ���߸��°汾���� innodb_undo_tablespaces ���ó� 2��������ֵ���������ĳ��ִ������»ع��ι����������ú��������������㡣
+- 如果使用的是 MySQL 5.6 或者更新版本，把 innodb_undo_tablespaces 设置成 2（或更大的值）。如果真的出现大事务导致回滚段过大，这样设置后清理起来更方便。
 
-## 1.79. ��: MySQL ʹ�ó����Ӻ���ʱ��Ϊ���صĽ�������󣬵����ڴ��������죬��ν��?
+## 1.79. 问: MySQL 使用长连接后有时因为返回的结果集过大，导致内存增长过快，如何解决?
 
-1. ���ڶϿ������ӡ�ʹ��һ��ʱ�䣬���߳��������ж�ִ�й�һ��ռ���ڴ�Ĵ��ѯ�󣬶Ͽ����ӣ�֮��Ҫ��ѯ��������
-2. ������õ��� MySQL 5.7 ����°汾��������ÿ��ִ��һ���Ƚϴ�Ĳ�����ͨ��ִ�� mysql_reset_connection �����³�ʼ��������Դ��������̲���Ҫ������������Ȩ����֤�����ǻὫ���ӻָ����ոմ�����ʱ��״̬��
+1. 定期断开长连接。使用一段时间，或者程序里面判断执行过一个占用内存的大查询后，断开连接，之后要查询再重连。
+2. 如果你用的是 MySQL 5.7 或更新版本，可以在每次执行一个比较大的操作后，通过执行 mysql_reset_connection 来重新初始化连接资源。这个过程不需要重连和重新做权限验证，但是会将连接恢复到刚刚创建完时的状态。
 
-## 1.80. ��: �������ʽ, ���ƥ�� xxx (ms)
+## 1.80. 问: 正则表达式, 如何匹配 xxx (ms)
 
 ```regex
 \d{3}\s\(ms\)
 ```
 
-## 1.81. ��: �������ʽ�����ѡ�в������ı� 172.2.200.66 ����
+## 1.81. 问: 正则表达式，如何选中不带有文本 172.2.200.66 的行
 
 ```sh
-��ѡ�л��з�:
+不选中换行符:
 ^(?!.*172\.2\.200\.66).*$
-ѡ�л��з�:
+选中换行符:
 ^(?!.*172\.2\.200\.66).*\r?\n?
 ```
 
-## 1.82. ��: wireshark ������ ICMP ���ĳ��� Destination unreachable (Port unreachable),Ϊʲô������������
+## 1.82. 问: wireshark 报文中 ICMP 报文出现 Destination unreachable (Port unreachable),为什么会出现这个错误
 
-��һ��������ͼ���ӵ���һ�������ϵ�һ�������ڵĶ˿�ʱ���ͻ���֡�Destination unreachable (Port unreachable)��������ͨ������������ԭ��֮һ���µģ�
+当一个主机试图连接到另一个主机上的一个不存在的端口时，就会出现“Destination unreachable (Port unreachable)”错误。这通常是由于以下原因之一导致的：
 
-1. Ŀ�������ϵ�Ӧ�ó���û����ָ���Ķ˿������С����磬����㳢�����ӵ�һ��û������Web��������������80�˿ڣ��ͻ�����������
+1. 目标主机上的应用程序没有在指定的端口上运行。例如，如果你尝试连接到一个没有运行Web服务器的主机的80端口，就会出现这个错误。
 
-2. Ŀ�������ϵķ���ǽ��·������ֹ�����ӡ����������Ϊ����ǽ��·�������ò���ȷ��������Ϊ����������ֹδ����Ȩ�����ӡ�
+2. 目标主机上的防火墙或路由器阻止了连接。这可能是因为防火墙或路由器配置不正确，或者因为它们正在阻止未经授权的连接。
 
-3. Ŀ���������ɴ���������ΪĿ�������ѹرա�������ϻ�����ԭ���µġ�
+3. 目标主机不可达。这可能是因为目标主机已关闭、网络故障或其他原因导致的。
 
-��Wireshark����һ����Destination unreachable (Port unreachable)������ʱ����ͨ�������ICMP���ġ����ICMP������Ŀ���������ͻ����ģ�����Դ��������ʧ�ܵ�ԭ����Wireshark�У�����Բ鿴ICMP���ĵ���ϸ��Ϣ����ȷ������ʧ�ܵ�ԭ��
+当Wireshark捕获到一个“Destination unreachable (Port unreachable)”错误时，它通常会包含ICMP报文。这个ICMP报文是目标主机发送回来的，告诉源主机连接失败的原因。在Wireshark中，你可以查看ICMP报文的详细信息，以确定连接失败的原因。
 
-## 1.83. �ʣ� ��Ϊ����������װҪ��
+## 1.83. 问： 华为核心网服务安装要点
 
-1. �ó����û���¼��
-2. ������Ҫ��װ�����ĺ��пո��Ŀ¼
-3. ���������賬���û�Ȩ��
-4. �رշ���ǽ
+1. 用超级用户登录，
+2. 软件不要安装在中文和有空格的目录
+3. 给软件赋予超级用户权限
+4. 关闭防火墙
 
-## 1.84. ��: ���ת�� md �ļ�Ϊ latex �ļ�
+## 1.84. 问: 如何转换 md 文件为 latex 文件
 
-ʹ�� pandoc.exe �Լ� eisvogel latex ģ�� ����
+使用 pandoc.exe 以及 eisvogel latex 模板 生成
 
-[pandoc ��װ����](https://pandoc.org/installing.html)
+[pandoc 安装链接](https://pandoc.org/installing.html)
 
-[eisvogel ��װ����](https://github.com/Wandmalfarbe/pandoc-latex-template)
+[eisvogel 安装链接](https://github.com/Wandmalfarbe/pandoc-latex-template)
 
 ```ps
 pandoc skiplist.md -o example.pdf --from markdown --template eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="Microsoft YaHei"
 ```
 
-## 1.85. ��: g++ ����ѡ�� `-Wl,--no-as-needed` ��ʲô��˼��
+## 1.85. 问: g++ 编译选项 `-Wl,--no-as-needed` 是什么意思？
 
-`-Wl,--no-as-needed`��һ������ѡ����ڸ���������������ʱ��Ҫ����δʹ�õĿ⡣
+`-Wl,--no-as-needed`是一个编译选项，用于告诉链接器在链接时不要忽略未使用的库。
 
-��Linuxϵͳ�У�������Ĭ�ϻ����δʹ�õĿ⣬����ζ��������ĳ���û��ʹ�ÿ��е��κκ�������ô�ÿ⽫���ᱻ���ӵ����ĳ����С�������Ϊ���Լ��ٳ���Ĵ�С������ʱ�䣬��Ҳ���ܵ���һЩ���⣬������ʹ��`dlopen`��̬���ؿ�ʱ��δʹ�õĿ���ܻᱻ����غ��ԡ�
+在Linux系统中，链接器默认会忽略未使用的库，这意味着如果您的程序没有使用库中的任何函数，那么该库将不会被链接到您的程序中。这种行为可以减少程序的大小和启动时间，但也可能导致一些问题，例如在使用`dlopen`动态加载库时，未使用的库可能会被错误地忽略。
 
-ʹ��`-Wl,--no-as-needed`ѡ����Խ�����������������Ϊ��ȷ�����пⶼ�����ӵ������У������Ƿ�ʹ���˿��еĺ���������Խ��һЩ�������⣬������ʹ��`dlopen`��̬���ؿ�ʱ��ȷ�����������ⶼ����ȷ�ؼ��ء�
+使用`-Wl,--no-as-needed`选项可以禁用链接器的这种行为，确保所有库都被链接到程序中，无论是否使用了库中的函数。这可以解决一些链接问题，例如在使用`dlopen`动态加载库时，确保所有依赖库都被正确地加载。
 
-��Ҫע����ǣ�ʹ��`-Wl,--no-as-needed`ѡ����ܻ����ӳ���Ĵ�С������ʱ�䣬��Ϊ���пⶼ�����ӵ������У���ʹ���ĳ���û��ʹ�ÿ��е��κκ�������ˣ�ֻ������Ҫʱ��Ӧ��ʹ�ø�ѡ�
+需要注意的是，使用`-Wl,--no-as-needed`选项可能会增加程序的大小和启动时间，因为所有库都被链接到程序中，即使您的程序没有使用库中的任何函数。因此，只有在需要时才应该使用该选项。
 
-## 1.86. ��: ���ֱ��뾯�� `warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking`
+## 1.86. 问: 出现编译警告 `warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking`
 
-��ϸ����:
+详细报错:
 
 ```shell
 [build] ../../../lib/libgtest.a(gtest-all.cc.o): In function `testing::internal::StreamingListener::SocketWriter::MakeConnection()':
 [build] /home/lijiancong/gitlab/wz2/ds/thirdparty/googletest/googletest/src/gtest.cc:4916: warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 ```
 
-��������������ھ�̬����ʱʹ����`getaddrinfo`���������ú�����Ҫ������ʱʹ��������ʱʹ�õ�glibc�汾��ͬ�Ĺ����⡣��������뿴��������棬�����ڱ���ʱ����`-Wl,--no-as-needed`ѡ�
+这个警告是由于在静态链接时使用了`getaddrinfo`函数，而该函数需要在运行时使用与链接时使用的glibc版本相同的共享库。如果您不想看到这个警告，可以在编译时添加`-Wl,--no-as-needed`选项。
 
-�������ڱ���ʱ����`-Wl,--no-as-needed`ѡ���ʾ����
+以下是在编译时添加`-Wl,--no-as-needed`选项的示例：
 
 ```
 g++ -o myapp myapp.cpp -lgtest -Wl,--no-as-needed
 ```
 
-��ע�⣬������沢����Ӱ�����ĳ�������У�ֻ����������ʹ��`getaddrinfo`����ʱ��Ҫע�⡣������ĳ���û��ʹ��`getaddrinfo`��������ô�����Ժ���������档
+请注意，这个警告并不会影响您的程序的运行，只是提醒您在使用`getaddrinfo`函数时需要注意。如果您的程序没有使用`getaddrinfo`函数，那么您可以忽略这个警告。
 
-## 1.87. ��: ��β鿴 centos7 ͨ�� yum ��װ����Щ����
+## 1.87. 问: 如何查看 centos7 通过 yum 安装了哪些软件
 
 ```shell
 yum list installed
 ```
 
-## 1.88. ��: ����Զ�ͳ�����һ�� git �ύ�����ӻ�ɾ���Ĵ�������
+## 1.88. 问: 如何自动统计最近一次 git 提交中增加或删除的代码行数
 
-����:
+输入:
 ```git
 git diff --numstat HEAD~1 HEAD
 ```
 
-�����ʽ:
+输出格式:
 ```shell
-<����������>\t<ɾ��������>\t<�ļ���>
+<新增的行数>\t<删除的行数>\t<文件名>
 ```
 
-## 1.89. ��: ubuntu ��β鿴cpu�¶�
+## 1.89. 问: ubuntu 如何查看cpu温度
 
-��Ubuntu�ϲ鿴CPU�¶ȣ�����ʹ��`lm-sensors`���ߡ��밴�����²��������
+在Ubuntu上查看CPU温度，可以使用`lm-sensors`工具。请按照以下步骤操作：
 
-1. ���Ȱ�װ`lm-sensors`��
+1. 首先安装`lm-sensors`：
 
 ```
 sudo apt update
 sudo apt install lm-sensors
 ```
 
-2. ����`sensors-detect`����Լ������ϵͳ�ϵĴ�������
+2. 运行`sensors-detect`命令，以检测您的系统上的传感器：
 
 ```
 sudo sensors-detect
 ```
 
-������ʾ�ش����⡣���������£�������ֱ�Ӱ�Enter��ѡ��Ĭ��ѡ���ɺ���������һ�������ļ���
+按照提示回答问题。大多数情况下，您可以直接按Enter键选择默认选项。完成后，它将生成一个配置文件。
 
-3. �����ں�ģ�飺
+3. 加载内核模块：
 
 ```
 sudo service kmod start
 ```
 
-4. ���ڣ�������ʹ��`sensors`����鿴CPU�¶ȣ�
+4. 现在，您可以使用`sensors`命令查看CPU温度：
 
-ÿ����ˢ��һ�� sensors ����
+每两秒刷新一次 sensors 命令
 ```
 watch -n 2 sensors
 ```
 
-�⽫��ʾϵͳ�����д����������������CPU�¶ȡ����������Ӳ���ʹ��������Ͷ��졣
+这将显示系统上所有传感器的输出，包括CPU温度。输出可能因硬件和传感器类型而异。
 
-## 1.90. ��: ����ʹ�� git ��Ҫ���е�����
+## 1.90. 问: 初次使用 git 需要进行的配置
 
 ```shell
-git config --global user.name "�������"
-git config --global user.email "�������"
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱"
 
-ssh-keygen -t rsa -C ������� // һ·�س�����ssh-key
+ssh-keygen -t rsa -C 你的邮箱 // 一路回车设置ssh-key
 ```
 
-## 1.91. ��: NAT ��ɶ
+## 1.91. 问: NAT 是啥
 
-NAT��Network Address Translation����һ�������ַת�������������ڽ�˽�������ڵ�IP��ַת��Ϊ����IP��ַ�����ּ������Խ�����豸����һ������IP��ַ���Ӷ���һ���̶��ϻ���IPv4��ַ��������⡣
+NAT（Network Address Translation）是一种网络地址转换技术，常用于将私有网络内的IP地址转换为公网IP地址。这种技术可以将多个设备共享一个公网IP地址，从而在一定程度上缓解IPv4地址不足的问题。
 
-NATͨ�������ڼ�ͥ��С�Ͱ칫�����磬ʹ�ö���豸����ͨ��һ������IP��ַ�뻥��������ͨ�š���NAT�����У�˽�������е�ÿ���豸��������һ��˽��IP��ַ����Щ��ַͨ���ڱ�����������Ψһ�ģ����ڹ����в���Ψһ�ġ�����Щ�豸��Ҫ���ʻ�����ʱ��NAT����˽��IP��ַת��Ϊ����IP��ַ���Ӷ�ʵ���뻥����ͨ�š�
+NAT通常被用于家庭或小型办公室网络，使得多个设备可以通过一个公网IP地址与互联网进行通信。在NAT网络中，私有网络中的每个设备都分配了一个私有IP地址，这些地址通常在本地网络中是唯一的，但在公网中不是唯一的。当这些设备需要访问互联网时，NAT将其私有IP地址转换为公网IP地址，从而实现与互联网通信。
 
-���⣬NAT���������ڰ�ȫĿ�ģ����罫����ǽ����������豸��ʹ��һ������IP��ַ���Ӷ����������ߵĹ����档
+此外，NAT还可以用于安全目的，例如将防火墙后面的所有设备都使用一个公网IP地址，从而减少入侵者的攻击面。
 
-## 1.92. ��: IPSec ��ɶ
+## 1.92. 问: IPSec 是啥
 
-IPSec��Internet Protocol Security����һ����Internet Protocol��IP�������ṩ���ݼ��ܡ�����������У���������֤��Э�顣���ṩ��һ�ְ�ȫ��ͨ�ŷ�ʽ�����ڱ����ڹ������磨��Internet���ϴ�������ݡ�IPSec��һ�����ŵı�׼�����㷺����VPN��Virtual Private Network����������ȫ�������ӵ�ʵ���С�
+IPSec（Internet Protocol Security）是一种在Internet Protocol（IP）层上提供数据加密、数据完整性校验和身份验证的协议。它提供了一种安全的通信方式，用于保护在公共网络（如Internet）上传输的数据。IPSec是一个开放的标准，被广泛用于VPN（Virtual Private Network）和其他安全网络连接的实现中。
 
-IPSecʹ��һϵ�м����㷨����֤���ƺ���Կ����Э����ȷ�����ݵı����ԡ������ԺͿɿ��ԡ�������Ϊ���������ṩ�˵��˵İ�ȫ�ԣ��Ӷ�ʹ�û����԰�ȫ��Զ�̷���˽��������Դ�������ص����������ݱ������߽ػ�ʹ۸ġ�IPSec���������ڱ���VoIP��Voice over IP������Ƶ����ʵʱӦ�ó�������ݴ��䣬�Ӷ���֤���ݵ�ʵʱ�ԺͰ�ȫ�ԡ�
+IPSec使用一系列加密算法、认证机制和密钥管理协议来确保数据的保密性、完整性和可靠性。它可以为网络连接提供端到端的安全性，从而使用户可以安全地远程访问私人网络资源，而不必担心敏感数据被攻击者截获和篡改。IPSec还可以用于保护VoIP（Voice over IP）和视频流等实时应用程序的数据传输，从而保证数据的实时性和安全性。
 
-IPSecЭ����һ�����ӵ�Э�飬��Ҫ�������豸�Ͻ������ú͹��������ǣ��ִ��������豸ͨ����֧��IPSecЭ�飬���ṩ������ʹ�õĹ������棬ʹ�����ú͹�����ø������ס�
+IPSec协议是一个复杂的协议，需要在网络设备上进行配置和管理。但是，现代的网络设备通常都支持IPSec协议，并提供了易于使用的管理界面，使得配置和管理变得更加容易。
 
-## 1.93. ��: mysql ���ʵ����������
+## 1.93. 问: mysql 如何实现主主复制
 
-MySQL ֧�ֶ��ֲ�ͬ�ĸ��Ʒ�ʽ�����а������Ӹ��ƺ��������ơ����Ӹ���������ĸ��Ʒ�ʽ������һ�� MySQL ��������Ϊ����������������պʹ���д��������������Ǹ��Ƶ�һ�������ӷ������ϡ��ӷ�����ֻ�ܶ�ȡ���ݣ�����д�����ݡ�
+MySQL 支持多种不同的复制方式，其中包括主从复制和主主复制。主从复制是最常见的复制方式，其中一个 MySQL 服务器作为主服务器，负责接收和处理写入操作，并将它们复制到一个或多个从服务器上。从服务器只能读取数据，不能写入数据。
 
-���֮�£������������������ MySQL ������ͬʱ�䵱����������ÿ���������������Խ��պʹ���д���������������ͬ�����������������ϡ����ָ��Ʒ�ʽ�������ϵͳ�Ŀ����Ժ��ݴ���������Ϊ��ʹһ�������������ֹ��ϣ���������������Ȼ���Լ����ṩ����
+相比之下，主主复制则允许多个 MySQL 服务器同时充当主服务器，每个主服务器都可以接收和处理写入操作，并将它们同步到其他主服务器上。这种复制方式可以提高系统的可用性和容错能力，因为即使一个主服务器出现故障，其他主服务器仍然可以继续提供服务。
 
-Ҫʵ�� MySQL ���������ƣ�����Ҫִ�����²��裺
+要实现 MySQL 的主主复制，您需要执行以下步骤：
 
-1. ��ÿ�����������ϴ���һ�� MySQL ʵ�������ֱ��������ǵ����������ʹӷ�������Ϣ����Щ��Ϣ���������� ID����־�ļ����ƺ�λ�á��Լ�Ҫ���Ƶ����ݿ�ͱ����б��ȵȡ�
+1. 在每个主服务器上创建一个 MySQL 实例，并分别配置它们的主服务器和从服务器信息。这些信息包括服务器 ID、日志文件名称和位置、以及要复制的数据库和表的列表等等。
 
-2. ��ÿ���������������ö�������־��¼��binary logging�����Ա��¼����д��������������Ǵ������������������ʹӷ������ϡ�������ʹ�� MySQL �������ļ���������ѡ�������ö�������־��¼��
+2. 在每个主服务器上启用二进制日志记录（binary logging），以便记录所有写入操作，并将它们传播到其他主服务器和从服务器上。您可以使用 MySQL 的配置文件或命令行选项来启用二进制日志记录。
 
-3. ��ÿ���������������ø��ƹ�������replication filters�����Ա���˵�����Ҫ���Ƶ����ݡ����磬������ѡ��ֻ����ĳЩ���ݿ����������ų�ĳЩ�������ͣ��� DROP TABLE �� DELETE��
+3. 在每个主服务器上配置复制过滤器（replication filters），以便过滤掉不需要复制的数据。例如，您可以选择只复制某些数据库或表，或者排除某些操作类型，如 DROP TABLE 或 DELETE。
 
-4. ��ÿ�����������������������ƣ����������ӵ��������������ϡ�������ʹ�� MySQL �� CHANGE MASTER TO ����������ļ���ָ����������������������Ϣ����ע�⣬����ҪΪÿ��������������һ�������ĸ������ӡ�
+4. 在每个主服务器上配置主主复制，并将其连接到其他主服务器上。您可以使用 MySQL 的 CHANGE MASTER TO 命令或配置文件来指定其他主服务器的连接信息。请注意，您需要为每个主服务器配置一个单独的复制连接。
 
-5. ��ÿ�������������������ƽ��̣����ȴ�����ͬ����ɡ����һ����������Ӧ���ܹ���ÿ�����������Ͽ���ͬ�������ݡ�
+5. 在每个主服务器上启动复制进程，并等待数据同步完成。如果一切正常，您应该能够在每个主服务器上看到同样的数据。
 
-��Ҫע����ǣ�MySQL ������������Ҫ����һЩ��������ú�ά����������ȷ�����ݵ�һ���ԺͿɿ��ԡ����磬����Ҫ���ڼ����޸�������ͻ���������ͬ���ӳٺͳ�ͻ���Լ����ݺͻָ����ݵȵȡ���ˣ����������Ϥ MySQL �ĸ��ƺ͹��������������Ƚ���һЩ���Ժ�ʵ�飬��ȷ������ϵͳ�ܹ���ȷ�ش������Ϻ��쳣�����
+需要注意的是，MySQL 的主主复制需要进行一些额外的配置和维护工作，以确保数据的一致性和可靠性。例如，您需要定期检查和修复主键冲突、解决数据同步延迟和冲突、以及备份和恢复数据等等。因此，如果您不熟悉 MySQL 的复制和管理技术，建议先进行一些测试和实验，以确保您的系统能够正确地处理故障和异常情况。
 
 
-## 1.94. �ʣ��������ɾ����־�ļ��еĿ���
+## 1.94. 问：如何批量删除日志文件中的空行
 
-1. ����Ҫ�����ı��������ļ���
-2. �� Ctrl + H ���滻��塣
-3. ���滻����У�������ģʽ�л�Ϊ�������ʽģʽ���������Ҳ�� .* ͼ�꼴���л�����
-4. ���������������������ʽ ^\s*$\n?����ʾ�������С����У�^ ��ʾ�еĿ�ͷ��$ ��ʾ�еĽ�β��\s ��ʾ�հ��ַ��������ո��Ʊ����ȣ���* ��ʾƥ�����������\n ��ʾƥ����β���з���
-5. ���滻���в������κ����ݣ���ʾ�������������Ŀ����滻Ϊ�ա�
-6. ��� Replace All ��ť����ɾ�����п��С�
+1. 打开需要进行文本处理的文件。
+2. 按 Ctrl + H 打开替换面板。
+3. 在替换面板中，将搜索模式切换为正则表达式模式（点击面板右侧的 .* 图标即可切换）。
+4. 在搜索框中输入正则表达式 ^\s*$\n?，表示搜索空行。其中，^ 表示行的开头，$ 表示行的结尾，\s 表示空白字符（包括空格、制表符等），* 表示匹配任意次数，\n 表示匹配行尾换行符。
+5. 在替换框中不输入任何内容，表示将所有搜索到的空行替换为空。
+6. 点击 Replace All 按钮即可删除所有空行。
 
-## 1.95. ��: ��ΰ���־�д����ظ���־ɾ��
+## 1.95. 问: 如何把日志中大量重复日志删除
 
-VSCode ��
+VSCode 中
 
-1. ����Ҫ�����ı��������ļ���
-2. �� Ctrl + H ���滻��塣
-3. ���滻����У�������ģʽ�л�Ϊ�������ʽģʽ���������Ҳ�� .* ͼ�꼴���л�����
-4. ���������������������ʽ
+1. 打开需要进行文本处理的文件。
+2. 按 Ctrl + H 打开替换面板。
+3. 在替换面板中，将搜索模式切换为正则表达式模式（点击面板右侧的 .* 图标即可切换）。
+4. 在搜索框中输入正则表达式
 ```text
-^.*����Ҫƥ����ַ���.*\r?\n?
+^.*你想要匹配的字符串.*\r?\n?
 
-��:
+例:
 ^.*retry send app msg failed.*\r?\n?
 ^.*Find no position.*\r?\n?
 ^.*SetRegisterStatus: strLongNum.*\r?\n?
 ```
-��ʾ���������ض��ַ��������У�ͬʱƥ�� Windows �� Unix �Ļ��з������У�^ ��ʾ�еĿ�ͷ��$ ��ʾ�еĽ�β��\[��\]��\s ���ַ���Ҫ�÷�б�ܽ���ת�塣
+表示搜索包含特定字符串的整行，同时匹配 Windows 和 Unix 的换行符。其中，^ 表示行的开头，$ 表示行的结尾，\[、\]、\s 等字符需要用反斜杠进行转义。
 
-5. ���滻�������� \r\n����ʾ�� Windows ���з��滻ƥ����С������ʹ�õ��� Unix ϵͳ���������� \n��
-6. ��� Replace All ��ť����ɾ�����а����ض��ַ������в��Ҳ����¿��С�
+5. 在替换框中输入 \r\n，表示用 Windows 换行符替换匹配的行。如果你使用的是 Unix 系统，可以输入 \n。
+6. 点击 Replace All 按钮即可删除所有包含特定字符串的行并且不留下空行。
 
-## 1.96. ��: ʲô�� SQA ?
+## 1.96. 问: 什么是 SQA ?
 
-SQA��Software Quality Assurance��������ָ�������������������ж������������й����ͱ��ϵĹ�����SQA ����ּ��ȷ��������Ʒ�ܹ������û������������ͬʱҲ������֯��������׼�ͷ���Ҫ��
+SQA（Software Quality Assurance）工作是指在软件开发生命周期中对软件质量进行管理和保障的工作。SQA 工作旨在确保软件产品能够满足用户需求和期望，同时也满足组织的质量标准和法律要求。
 
-SQA �����������·��棺
+SQA 工作包括以下方面：
 
-1. �滮�͹���������ȷ�����������е�������׼��Ŀ�꣬��ȷ����Ŀ�Ŷ���ѭ��Щ��׼��Ŀ�ꡣ
+1. 规划和管理质量：确定开发过程中的质量标准和目标，并确保项目团队遵循这些标准和目标。
 
-2. ������֤���ƶ���ִ�и���������֤�����ȷ��������Ʒ������������֯�ı�׼���û���������
+2. 质量保证：制定和执行各种质量保证活动，以确保软件产品的质量符合组织的标准和用户的期望。
 
-3. ���Թ������滮����ƺ͹������Ի���������Լƻ����������������Գ����Ͳ��Ա��档
+3. 测试管理：规划、设计和管理测试活动，包括测试计划、测试用例、测试场景和测试报告。
 
-4. ȱ�ݹ����������������������з��ֵ������ȱ�ݣ����������¼��ȱ�ݸ��ٺ�ȱ���޸��Ȼ��
+4. 缺陷管理：管理软件开发过程中发现的问题和缺陷，包括问题记录、缺陷跟踪和缺陷修复等活动。
 
-5. �˲����ˣ�����������������еĸ����ĵ�������������ļ�����ȷ���������������ԡ�
+5. 核查和审核：审核软件开发过程中的各种文档、代码和配置文件，以确保其质量和完整性。
 
-6. ���̸Ľ���ͨ���������������̽��з��������������������ƿ����������Ľ����飬�������������Ч�ʺ�������
+6. 过程改进：通过对软件开发过程进行分析和评估，发现问题和瓶颈，并提出改进建议，以提高软件开发效率和质量。
 
-SQA ��������������Ʒ�ĳɹ��������û������������Ҫ�������԰�����֯�������������ɱ��ͷ��գ������������Ч�ʺ��������Ӷ���ǿ��֯�ľ�������
+SQA 工作对于软件产品的成功交付和用户满意度至关重要。它可以帮助组织降低软件开发成本和风险，提高软件开发效率和质量，从而增强组织的竞争力。
 
-## 1.97. ��: ʲô�� 8D ����
+## 1.97. 问: 什么是 8D 分析
 
-8D������Eight Disciplines�����8D����һ�����ڽ������͸Ľ����̵�������������8D��һ��ϵͳ�ԡ������Եķ�����ͨ�����ڽ���������⣬��Ҳ����Ӧ�����������͵����⡣
+8D分析（Eight Disciplines，简称8D）是一种用于解决问题和改进过程的问题解决方法。8D是一种系统性、纪律性的方法，通常用于解决质量问题，但也可以应用于其他类型的问题。
 
-8D�����ɰ˸�������ɣ�ÿ�����趼���ض��������Ŀ�ꡣ��Щ�����ǣ�
+8D分析由八个步骤组成，每个步骤都有特定的任务和目标。这些步骤是：
 
-1. ȷ�����ⷶΧ����ȷ��������ʡ�Ӱ�췶Χ��Ӱ��̶ȡ�
-2. �齨�Ŷӣ�ѡ��߱����֪ʶ�ͼ��ܵ���Ա����Ŷӣ�ȷ���ŶӸ����ˡ�
-3. �������⣺�����������ϸ����������������ķ���ʱ�䡢�ص㡢Ƶ�ʡ������Եȡ�
-4. �ƶ���ʱ��ʩ����ȡ��Ҫ�Ĵ�ʩ����������ķ�������ɢ��ȷ�����ⲻ���һ���񻯡�
-5. ȷ������ԭ��ʹ�ó��õ�����������ߺͼ�����ȷ������ĸ���ԭ��
-6. �ƶ����ڴ�ʩ�����ڶԸ���ԭ��ķ������ƶ����еĳ��ڴ�ʩ��������⡣
-7. ʵʩ����֤��ʩ��ʵʩ���ڴ�ʩ������֤����Ч�ԡ�
-8. Ԥ����ʩ��ͨ��ѧϰ���ܽᾭ�飬��ȡԤ����ʩ����ֹ�����ٴη�����
+1. 确定问题范围：明确问题的性质、影响范围和影响程度。
+2. 组建团队：选择具备相关知识和技能的人员组成团队，确定团队负责人。
+3. 描述问题：对问题进行详细的描述，包括问题的发生时间、地点、频率、严重性等。
+4. 制定临时措施：采取必要的措施来遏制问题的发生和扩散，确保问题不会进一步恶化。
+5. 确定根本原因：使用常用的问题分析工具和技术来确定问题的根本原因。
+6. 制定长期措施：基于对根本原因的分析，制定可行的长期措施来解决问题。
+7. 实施和验证措施：实施长期措施，并验证其有效性。
+8. 预防措施：通过学习和总结经验，采取预防措施，防止问题再次发生。
 
-8D������һ�ֳ��õ������������������԰�����֯���õ��������⣬��ͨ���ƶ����еĽ�����������ƺ��Ż����̣������֯�ļ�Ч��Ч�ʡ�
+8D分析是一种常用的问题解决方法，它可以帮助组织更好地理解问题，并通过制定可行的解决方案来改善和优化过程，提高组织的绩效和效率。
 
-## 1.98. ��: �������Ժ� docker desktop һֱ����������
+## 1.98. 问: 重启电脑后 docker desktop 一直卡在启动中
 
-1. ɱ�����˳� docker desktop
-2. ����Աģʽ���� command line ����
+1. 杀掉或退出 docker desktop
+2. 管理员模式运行 command line 输入
 ```shell
 net stop com.docker.service
 wsl --unregister docker-desktop
@@ -2169,79 +2167,79 @@ wsl --unregister docker-desktop-data
 net start com.docker.service
 ```
 
-## 1.99. ��: CSDN ��β���½���ƴ���?
+## 1.99. 问: CSDN 如何不登陆复制代码?
 
-1. F12 ���뿪����ģʽ
+1. F12 进入开发者模式
 
-2. ����������
+2. 命令行输入
 ```log
 document.designMode='on'
 ```
 
-## 1.100. ��: MySQL ��β鿴���ݿ������б�������
+## 1.100. 问: MySQL 如何查看数据库中所有表的行数
 
 ```sql
 SELECT table_name, table_rows FROM information_schema.tables WHERE table_schema = 'your_database_name';
 ```
 
-## 1.101. ��: Centos7 ��β�ѯ���̹�����ռ�����
+## 1.101. 问: Centos7 如何查询磁盘挂载与占用情况
 
 ```sh
-* df -T  ֻ���Բ鿴�Ѿ����صķ������ļ�ϵͳ����
+* df -T  只可以查看已经挂载的分区和文件系统类型
 
-* fdisk -l ������ʾ�����й��غ�δ���صķ�����������ʾ�ļ�ϵͳ����
+* fdisk -l 可以显示出所有挂载和未挂载的分区，但不显示文件系统类型
 
-* parted -l ���Բ鿴δ���ص��ļ�ϵͳ���ͣ��Լ���Щ������δ��ʽ��
+* parted -l 可以查看未挂载的文件系统类型，以及哪些分区尚未格式化
 
-* lsblk -f ���Բ鿴δ���ص��ļ�ϵͳ����
+* lsblk -f 可以查看未挂载的文件系统类型
 
-* df -h �鿴����ʹ����
+* df -h 查看磁盘使用率
 
-* du -h �鿴�ļ��д���ռ�����
+* du -h 查看文件夹磁盘占用情况
 
-* sudo fdisk -l ����ϵͳ�����п��÷�������Ϣ
+* sudo fdisk -l 操作系统上所有可用分区的信息
 ```
 
-## 1.102. ��: git ���ͨ�������ָ��ʱ��� commit ��Ϣ
+## 1.102. 问: git 如何通过命令返回指定时间的 commit 信息
 
-1. ͨ����ǩ�ţ���ѯ�ñ�ǩ��(V2.0.56)�� ����ǰ���ύ��Ϣ
+1. 通过标签号，查询该标签号(V2.0.56)， 到当前的提交信息
 ```sh
 git log V2.0.0.58-P4..HEAD --pretty=format:"* %ad %an [%h](%H) : %s %b" --date=short --no-merges
 ```
 
-2. ͨ��ʱ���ѯ����ʱ�䵽���ڵ��ύ��Ϣ
+2. 通过时间查询，该时间到现在的提交信息
 
 ```sh
 git log  --after="2023-3-6 16:20" --pretty=format:"* %ad %an [%h](%H) : %s %b" --date=short --no-merges
 ```
 
-## 1.103. ��: wsl ������ε����뵼��
+## 1.103. 问: wsl 镜像如何导入与导出
 
 ```cmd
-/// ����
-wsl --export <ϵͳ����> <����λ��//��������.tar>
+/// 导出
+wsl --export <系统名字> <导出位置//导出名字.tar>
 
 wsl --export Ubuntu F://desktop//ubuntu.tar
 
-/// ����
-wsl --import <ϵͳ����> <Ҫ�ᵽ��λ��> <֮ǰ��������λ��>
+/// 导入
+wsl --import <系统名字> <要搬到的位置> <之前导出包的位置>
 
 wsl --import Ubuntu D://WSLUbuntu F://desktop//ubuntu.tar
 ```
 
-## 1.104. ��: centos �鿴ϵͳ�汾
+## 1.104. 问: centos 查看系统版本
 
 ```shell
 cat /etc/centos-release
 ```
 
-## 1.105. ��: openEuler �鿴ϵͳ�汾
+## 1.105. 问: openEuler 查看系统版本
 
 ```shell
 cat /etc/openEuler-release
 ```
 
-## 1.106. ��: ubuntu ��װ 32 λ libmysql
+## 1.106. 问: ubuntu 安装 32 位 libmysql
 
 ```shell
 sudo dpkg --add-architecture i386
@@ -2250,13 +2248,13 @@ sudo apt-get dist-upgrade
 sudo apt-get install libmysqlclient-dev:i386
 ```
 
-## 1.107. ��: ubuntu �鿴�Ѱ�װ����
+## 1.107. 问: ubuntu 查看已安装软件
 
 ```sh
 dpkg -l | grep -i "mysql"
 ```
 
-## 1.108. ��: mysql �����������
+## 1.108. 问: mysql 批量插入过程
 
 ```sql
 BEGIN
@@ -2268,70 +2266,70 @@ BEGIN
 END
 ```
 
-## 1.109. ��: centos7 �� �����������еĶ˿�
+## 1.109. 问: centos7 中 查找所有运行的端口
 
 ```sh
 netstat -ano
 ```
 
-## 1.110. ��: �鿴��ռ�ö˿ڶ�Ӧ�� PID
+## 1.110. 问: 查看被占用端口对应的 PID
 
 ```sh
 netstat -aon|findstr "<pid>"
 ```
 
-## 1.111. ��: �鿴ָ�� PID �Ľ���
+## 1.111. 问: 查看指定 PID 的进程
 
 ```sh
 tasklist | findstr "<pid>"
 ```
 
-## 1.112. ��: �滻 sh �ű��е� window �ַ� ^M
+## 1.112. 问: 替换 sh 脚本中的 window 字符 ^M
 
 ```sh
 sed -i -e 's/\r$//' compress_log.sh
 ```
 
-## 1.113. ��: �鿴��ִ���ļ������� ��̬��
+## 1.113. 问: 查看可执行文件依赖的 动态库
 
 ```cmd
 dd /sbin/ftpd
 ```
 
-## 1.114. ��: ��ȡ GitLab ָ���������� open ״̬�µ� issue
+## 1.114. 问: 获取 GitLab 指定库中所有 open 状态下的 issue
 
 ```cmd
 curl.exe --header "Private-Token: ojWG5DPUbmRSGqMxZs1s" "http://gitlab.gbcom.com.cn/api/v4/projects/701/issues"
 ```
 
-## 1.115. ��: ��ȡ GitLab ָ������ӵ�� Bug ��ǩ�� issue ���������ļ� bug.json
+## 1.115. 问: 获取 GitLab 指定库中拥有 Bug 标签的 issue 并导出到文件 bug.json
 
 ```cmd
 curl.exe -o bug.json --header "Private-Token: ojWG5DPUbmRSGqMxZs1s" "http://gitlab.gbcom.com.cn/api/v4/projects/701/issues?labels=Bug&state=opened&per_page=1000"
 ```
 
-## 1.116. ��: google/benchmark ִ�ж�Ӧ�����ܲ���
+## 1.116. 问: google/benchmark 执行对应的性能测试
 
 ```cmd
-/// ִ�ж�Ӧ�����ܲ���
+/// 执行对应的性能测试
 .\gos_benchmark.exe --benchmark_filter=BM_LogStream
-/// ��ָ���ĵ�Ԫ���Ժ�ִ���ظ�
+/// 跑指定的单元测试和执行重复
 ./build/ds/cp4_filesystem/cp4_filesystem_tests --gtest_filter=vector.for_erase  --gtest_repeat=1000 --gtest_break_on_failure
 ```
 
-## 1.117. ��: cmake ȫ������
+## 1.117. 问: cmake 全部编译
 
-1. windows ��
+1. windows 中
 ```cmd
 cmake --build ./build/ --config=Debug
 ```
 
-2. linux ��
+2. linux 中
 ```sh
 sudo cmake --build ./build/ --target all --clean-first -- -j $(nproc)
 ```
 
-## 1.118. ��: cmake ���� gos ��Ԫ����
+## 1.118. 问: cmake 编译 gos 单元测试
 
 1. windows
 ```cmd
@@ -2342,7 +2340,7 @@ cmake --build ./build/ds/gos --target gos_tests
 cmake --build ./build/ds/gos --target gos_tests -- -j$(nproc)
 ```
 
-## 1.119. ��: cmake ��������
+## 1.119. 问: cmake 重新生成
 
 windows
 
@@ -2350,74 +2348,74 @@ windows
 cmake -E chdir "build" cmake .. -A Win32
 ```
 
-## 1.120. ��: CMake ���в���
+## 1.120. 问: CMake 运行测试
 
 windows
 
 ```cmd
 cmake --build ./build/ --target RUN_TESTS --config=Debug
 
-# ���ɡ����롢���в���
+# 生成、编译、运行测试
 cmake -E chdir "build" cmake .. -A Win32 ; cmake --build ./build/ ; cmake -E chdir "build" ctest .. -C Debug
 ```
 
-## 1.121. ��:CMakeָ��MSVC����ʱ��
+## 1.121. 问:CMake指定MSVC运行时库
 ```
-��CMake 3.15�汾������MSVC_RUNTIME_LIBRARY Ŀ����������޸�MSVC����ʱ��
-�����÷�Ϊ����д��cmake_minimum_required��project֮����������MSVC���п⣬������Ӱ�����е�����Ŀ�꣬���磺
-set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>") ///��DEBUGģʽ��ʹ��/MT ��
-MultiThreaded�ؼ��ֱ�ʾMT��
-��������ؼ��ֿ��Բ��չ�����https://runebook.dev/zh/docs/cmake/variable/cmake_msvc_runtime_library
+在CMake 3.15版本后新增MSVC_RUNTIME_LIBRARY 目标变量用于修改MSVC运行时库
+具体用法为：在写完cmake_minimum_required和project之后马上设置MSVC运行库，这样会影响所有的生成目标，例如：
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>") ///在DEBUG模式下使用/MT 库
+MultiThreaded关键字表示MT库
+其他具体关键字可以参照官网：https://runebook.dev/zh/docs/cmake/variable/cmake_msvc_runtime_library
 ```
 
-## 1.122. ��:Ϊ�ι������ص�googleTest��ܵ�����ʱ��ȱʡΪ/MT �����޸�
+## 1.122. 问:为何官网下载的googleTest框架的运行时库缺省为/MT 不能修改
 
-��string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")ע�ͺ�����޸�
+将string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")注释后可以修改
 ![image](uploads/84716b5788e299be105c1b3d1c5d012c/image.png)
 
 
-## 1.123. ��: ubuntu �滻�廪Դ
+## 1.123. 问: ubuntu 替换清华源
 
 ```cmd
 sudo sed -i "s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 ```
 
-## 1.124. �ʣ�����̨�����޷���¼����ʾ���Ӽ�Ⱥ������ʧ��
+## 1.124. 问：调度台软件无法登录，提示连接集群服务器失败
 
-��
+答：
 
-1.  �鿴����IP��ַ��ping����Ƿ���Ժͼ�Ⱥ��������ַ����ͨ�š�
+1.  查看电脑IP地址，ping检测是否可以和集群服务器地址正常通信。
 
-2.  �鿴dc.ini��mdc_ip =��ַ�Ƿ������
+2.  查看dc.ini中mdc_ip =地址是否配错。
 
-3.  ����SDK����δ������ע�⣺��һ�ΰ�װ����ʱҪ�Թ���Ա�������У���װ��ɺ���Ҫ�������ԡ�
+3.  本地SDK服务未启动，注意：第一次安装服务时要以管理员身份运行，安装完成后需要重启电脑。
 
 ![7cc8192f462e3add3a76bec5f87b2dbc](uploads/4e5d9c318e41ffed56bc783c1daf3d27/7cc8192f462e3add3a76bec5f87b2dbc.png)
 
 ![5704f4b6d46cf6b793b1e65ed5170db0](uploads/a92e0e1cf2f1a2e479c76427869a009c/5704f4b6d46cf6b793b1e65ed5170db0.png)
 
-## 1.125. �ʣ�����̨�����޷���¼����ʾ���Ӷ������ȷ�����ʧ��
+## 1.125. 问：调度台软件无法登录，提示连接二开调度服务器失败
 
-��
+答：
 
-1.  �鿴����IP��ַ��ping����Ƿ���ԺͶ������ȷ���������ͨ�ţ�����ɴ
+1.  查看电脑IP地址，ping检测是否可以和二开调度服务器正常通信，网络可达。
 
-2.  �鿴dc.ini��dis_ip = ��ַ�Ƿ������
+2.  查看dc.ini中dis_ip = 地址是否配错。
 
 ![45eeadaa9aebaaa5bb6ccad8599c4fbc](uploads/3e07d5e6ca8089ea85b15fe98922a932/45eeadaa9aebaaa5bb6ccad8599c4fbc.png)
 
 ![0991c896ca4cb82d666fd6bac158a791](uploads/e91a25f72c3e8edfcceeed3ca3d2806b/0991c896ca4cb82d666fd6bac158a791.png)
 
-## 1.126. �ʣ�����̨������¼ʱ����ʾ��Ƶ����ʧ��
+## 1.126. 问：调度台软件登录时，提示音频加载失败
 
-��
+答：
 
-1.  �鿴�Ƿ�û�н���Ƶ�豸��
+1.  查看是否没有接音频设备。
 
-2.  �鿴��Ƶ�豸�Ƿ񱻽��ã��������½��Ҽ������������С���ȣ�ѡ���������鿴���ź�¼������Ƶ�豸�Ƿ�������
+2.  查看音频设备是否被禁用，电脑右下角右键点击声音设置小喇叭，选择声音，查看播放和录制中音频设备是否正常。
 
-    ע�����Ǹհ�װ��Ϊ�����п�����û��ʹ�ù���ԱȨ�ް�װ��Ϊ�����¡�
+    注：若是刚安装华为服务，有可能是没有使用管理员权限安装华为服务导致。
 
 ![6c9d31d5213cfee592f363fcc967ecd9](uploads/edad2e31aee6dcf2759e54b288ca64a3/6c9d31d5213cfee592f363fcc967ecd9.png)
 
@@ -2429,61 +2427,61 @@ sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn
 
 ![eadc88fec0ae625cd8a0367573f643e4](uploads/e18cd81cba1e6fd1877bcee5c7b3b6be/eadc88fec0ae625cd8a0367573f643e4.png)
 
-## 1.127. �ʣ���¼����̨����ʱ�����ּ�������ʧ��
+## 1.127. 问：登录调度台软件时，出现加载数据失败
 
-��
+答：
 
-1.  �鿴��־���Ƿ������Դ����ӡ���磺[error]�������������ݿ�
+1.  查看日志，是否有明显错误打印例如：[error]，检查配置项、数据库
 
-2.  ���dis��dc�汾�Ƿ�ƥ�䡣
+2.  检查dis和dc版本是否匹配。
 
-���磺Dis.log����[DTP]socker error����dis�����µ�¼dc���ܷ�ָ���
+例如：Dis.log出现[DTP]socker error重启dis，重新登录dc看能否恢复。
 
 ![68aebdc3c7a85c3f000f90221705cebe](uploads/cc6827aa0be06f046f4969ce0e1b7168/68aebdc3c7a85c3f000f90221705cebe.png)
 
 ![85f416692db158ac069a090cb01b2536](uploads/5617352e683c2deeee52f9edb3a32ad6/85f416692db158ac069a090cb01b2536.png)  
 
 
-## 1.128. �ʣ�����̨�͵��ȷ�������������ʱ������̨��ʾ���Ӷ������ȷ�����ʧ��
+## 1.128. 问：调度台和调度服务器网络正常时，调度台提示连接二开调度服务器失败
 
-��
+答：
 
-1.  Զ�����Ӷ������ȷ������鿴dis�����Ƿ��������У��Ƿ��н��̺š���־�Ƿ���error��ӡ����
+1.  远程连接二开调度服务器查看dis进程是否正常运行（是否有进程号、日志是否有error打印）。
 
-2.  Dis�ǲ����ڷ�������
+2.  Dis是不是在反复重启
 
-3.  Dis���������ݿ��Ƿ���������
+3.  Dis起来后数据库是否正常运行
 
 ![30d24228bd83ccba93b54f86cd2f59d5](uploads/a124c457610e117d8e2f70d7225d1a96/30d24228bd83ccba93b54f86cd2f59d5.png)
 
-## 1.129. �ʣ�����̨�����򿪺󣬵�¼���棬��¼���˳���ť��λ��
+## 1.129. 问：调度台软件打开后，登录界面，登录和退出按钮错位。
 
-�𣺲鿴����̨���Եķֱ��ʣ���ϵͳ�����Ҽ�ѡ����ʾ���ã��鿴�����벼�ֽ��ֱ������ó�����ġ�
+答：查看调度台电脑的分辨率，在系统桌面右键选择显示设置，查看缩放与布局将分辨率设置成适配的。
 
 ![5db1671b4bc044a4b65917a56c1e2f85](uploads/e4c52316e52ae1cdef1b889174e9481c/5db1671b4bc044a4b65917a56c1e2f85.png)
 
-## 1.130. �ʣ�����̨�������½�ָʾ�ƣ�LTE���졢CAD���졢ATS���졢NTP����
+## 1.130. 问：调度台软件左下角指示灯，LTE爆红、CAD爆红、ATS爆红、NTP爆红
 
-��**LTE����**ʱ��ping������MDC��ַ���Ƿ��������ͨ�ţ�������о��Ų��������⡣����pingͨ�Ļ����鿴sdk�����������С�
+答：**LTE爆红**时，ping核心网MDC地址看是否可以正常通信，如果不行就排查网络问题。可以ping通的话，查看sdk服务正常运行。
 
-CAD���죬ping����������dis�ĵ�ַ���Ƿ��������ͨ�š�
+CAD爆红，ping二开服务器dis的地址看是否可以正常通信。
 
-ATS���죬�������̨�������鿴ATS�ӿ��Ƿ��������鿴��־�Ƿ��й���ATS�ı���������pingATS�ӿڵ�ַ�ܷ�ͨ�š�
+ATS爆红，进入调度台服务器查看ATS接口是否正常，查看日志是否有关于ATS的报错，尝试pingATS接口地址能否通信。
 
-NTP���죬�鿴���ӵ�NTP��������NTP״̬�Ƿ�����
+NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
 ![19f965039b5c6db3420a35a6986ae23e](uploads/e552d575ca0f926a0cc00b0c9df449b1/19f965039b5c6db3420a35a6986ae23e.png)
 
 ![aef467b18441f00b2fec2982b689d221](uploads/62734ee3af90a111681a82c34742435c/aef467b18441f00b2fec2982b689d221.png)
 
 
-## 1.131. �ʣ������վ�����г�û��������ڳ���
+## 1.131. 问：点击车站或者列车没有组呼窗口出现
 
-��
+答：
 
-��һ�֣��ó�վ/�г�û���飬��Ҫͨ��ά������̨���г�/��վ�����顣
+第一种：该车站/列车没有组，需要通过维护调度台给列车/车站添加组。
 
-�ڶ��֣��������̨�Ϸ�ϵͳ����-\>ҵ�����������ʾ���е�����Ҫ��ѡ��
+第二种：点击调度台上方系统配置-\>业务参数里面显示呼叫弹窗需要勾选。
 
 ![c001eee06ccc826c50eb630cd3d13538](uploads/7a1676237f8f98be88dff391bd67b9af/c001eee06ccc826c50eb630cd3d13538.png)
 
@@ -2491,470 +2489,470 @@ NTP���죬�鿴���ӵ�NTP��������NTP״̬�Ƿ�����
 
 ![3c1f0c64428fd849b77312bb5a844b98](uploads/4c220c90f6b80be299e6d0f54ead3fbd/3c1f0c64428fd849b77312bb5a844b98.png)
 
-## 1.132. �ʣ��˹��㲥�����û�з��ع㲥״̬���޷���ʼ�㲥��
+## 1.132. 问：人工广播发起后，没有返回广播状态，无法开始广播。
 
-��
+答：
 
-1.  �����ǵ���˹��㲥��ťʱ���򿪴��ڣ���ʱ�ͻ����˹��㲥�����͸�PAϵͳ��������г��ϵ������㲥��Ӧ������ǵ���̨���Կ�ʼ�Ĺ㲥״̬��
+1.  当我们点击人工广播按钮时，打开窗口，这时就会有人工广播请求发送给PA系统，打断所有车上的其他广播，应答给我们调度台可以开始的广播状态。
 
-2.  �鿴����������SA��־��tail -f
-    /mnt/emmc/logsave/sa.log���Ȳ鿴�͹㲥�ӿ��Ƿ��������ӣ�������������Ļ�������̨�˹��㲥�����ʱ��sa����־Ҳ���з����˹��㲥�Ĵ�ӡ
+2.  查看车载主机的SA日志，tail -f
+    /mnt/emmc/logsave/sa.log，先查看和广播接口是否正常连接，如果连接正常的话，调度台人工广播发起的时候，sa的日志也会有发起人工广播的打印
 
-3.  ���û�����Ų������ڲ�����鿴����̨��־���Ƿ��з����˹��㲥������
+3.  如果没有先排查我们内部问题查看调度台日志，是否有发起人工广播的请求
 
-4.  ����У�����Ҫ�㲥�����Ų����⣬���Խ���ץ����ͨ�����Ľ�һ��ȷ�������Ƿ񷢳���
+4.  如果有，则需要广播厂家排查问题，可以进行抓包，通过报文进一步确认请求是否发出。
 
 
-## 1.133. �ʣ��˹��㲥����󣬰���PTT˵������û�������㲥������
+## 1.133. 问：人工广播发起后，按下PTT说话车上没有听到广播声音。
 
-��
+答：
 
-1.  ��������ץ���鿴�Ƿ���PCM���ķ���
+1.  在主机上抓包查看是否有PCM报文发出
 
-2.  �鿴����̨��־�����Ƿ��з���PCM�Ĵ�ӡ���ڵ���̨�����ϰ�װWireshark����ץ�����ߣ������˹��㲥ҵ��ʱ�鿴�Ƿ���UDP���ķ���
+2.  查看调度台日志，看是否有发送PCM的打印，在调度台电脑上安装Wireshark，打开抓包工具，在做人工广播业务时查看是否有UDP报文发送
 
-## 1.134. �ʣ�Ԥ¼���㲥�����û���յ��㲥״̬��
+## 1.134. 问：预录音广播发起后，没有收到广播状态。
 
-��
+答：
 
-1.  ȷ�ϰ���û�з��͵��㲥ϵͳ
+1.  确认包有没有发送到广播系统
 
-2.  ��Ҫȷ��Ԥ¼���㲥�Ƿ�ɹ����ų���������г��ϳɹ����ţ����ǹ㲥ϵͳû������Ӧ�����Ϣ���п������ǵ������ǲ�����ɺ�Ÿ�����Ӧ�𣬵������������һ�����⣬���ǵ���̨��Ԥ¼���㲥����󣬴����Ǵ�״̬ʱ������̨û�յ��㲥��Ӧ�𣬾ͻ��ظ�ȥ��㲥ϵͳ������ͬԤ¼���㲥���㲥ϵͳû�����жϵĻ���Ԥ¼���㲥�ͻ��ڳ���һֱ�ظ����ţ��㲥ϵͳӦ���յ�Ԥ¼����Ϣ�����̸�����̨Ӧ����Ϣ��
+2.  需要确认预录音广播是否成功播放出来，如果列车上成功播放，则是广播系统没给立即应答的消息，有可能他们的做法是播放完成后才给我们应答，但这样会存在另一个问题，我们调度台在预录音广播发起后，窗口是打开状态时，调度台没收到广播的应答，就会重复去向广播系统发送相同预录音广播，广播系统没做好判断的话，预录音广播就会在车上一直重复播放，广播系统应该收到预录音消息后，立刻给调度台应答消息。
 
-3.  �������û�в���Ԥ¼���㲥�����Ų����̨���͵���Ϣ������̨����SA�Ƿ��յ���ת�����鿴sa.log�Ϳ��Կ�����
+3.  如果车上没有播放预录音广播，先排查调度台发送的消息，车载台主机SA是否收到并转发，查看sa.log就可以看出。
 
-## 1.135. �ʣ�Ԥ¼���㲥�����ʵ�ʲ��Ŵ����͵���̨ѡ�����������
+## 1.135. 问：预录音广播发起后，实际播放次数和调度台选择次数不符。
 
-��Ԥ¼���㲥�����Ǻ�Ԥ¼���㲥����һ���͸��㲥ϵͳ�ģ�����ͨ���鿴sa����־���������Ԥ¼���㲥�������ţ��Ǵ������ԣ�������ǹ㲥ϵͳ�������⣬��������������վ�ȹ㲥���š�
+答：预录音广播次数是和预录音广播内容一起发送给广播系统的，可以通过查看sa的日志，如果车上预录音广播正常播放，那次数不对，大概率是广播系统处理问题，或者由于其他到站等广播干扰。
 
-## 1.136. �ʣ�IPH�����������󣬵���̨û����ʾIPH����
+## 1.136. 问：IPH报警器触发后，调度台没有显示IPH请求
 
-�𣺲鿴sa��־��ȷ��IPH������û�з������ǣ����û����Ҫ�㲥ϵͳ�Ų飬�еĻ����Ų������ڲ���
+答：查看sa日志先确认IPH请求有没有发给我们，如果没有需要广播系统排查，有的话则排查我们内部。
 
-��һ�֣��Ų��г��Ƿ���λ����Ϣ�����û�У��鿴dis��ATS�ӿ��Ƿ���������ʱ���ԵĻ�����ʹ���ֶ�ת�飬���г�һ��λ�á�
+第一种，排查列车是否有位置信息，如果没有，查看dis和ATS接口是否正常，临时测试的话可以使用手动转组，给列车一个位置。
 
-�ڶ��֣��Ų������Ƿ�������sa�Ƿ���Ϣ���͸�dis���鿴dis����־���鿴dc����־��
+第二种，排查网络是否正常，sa是否将消息发送给dis，查看dis的日志，查看dc的日志。
 
 ![14e84b756de9211a94dcd6e6e4db6534](uploads/9d9ca33bc9d8239bb63a48a86a3ad7f2/14e84b756de9211a94dcd6e6e4db6534.png)
 
-## 1.137. �ʣ�IPH����������������̨�����󣬱�����������δ��ͨ״̬
+## 1.137. 问：IPH报警器触发，调度台接听后，报警器还处于未接通状态
 
-��
+答：
 
-1.  �鿴sa��־������̨�����������Ϣ���͸�dis��dis�ٷ��͸�sa��sa��־���е���̨��������Ϣ
+1.  查看sa日志，调度台接听后会有消息发送给dis，dis再发送给sa，sa日志中有调度台接听的消息
 
-2.  ��������ץ���鿴��Ϣ��û�з��͸��㲥���ң�������˾���Ҫ�㲥�����Ų����⡣
+2.  在主机上抓包查看消息有没有发送给广播厂家，如果发了就需要广播厂家排查问题。
 
-## 1.138. �ʣ�IPH�����������󣬵���̨������û����Ƶ��
+## 1.138. 问：IPH报警器触发后，调度台接听但没有视频。
 
-��
+答：
 
-1.  ʹ�õ���̨ping�㲥�����ĵ�ַ��ping��ͨ�Ļ��Ƚ���������⣬
+1.  使用调度台ping广播主机的地址，ping不通的话先解决网络问题，
 
-2.  �����pingͨ���ڵ���̨�ĵ�����ʹ��VLC�������������Բ鿴dc.log������н���IPH����ƵURL��Ϣ�����Ƶ�VLC�����������ܷ�鿴����Ƶ�����磺"VideoURL":"rtsp://192.0.1.27:55404/h264/ch1/sub/av_stream"
+2.  如果能ping通，在调度台的电脑上使用VLC进行拉流，可以查看dc.log里面会有接听IPH的视频URL信息，复制到VLC里面拉流看能否查看到视频。例如："VideoURL":"rtsp://192.0.1.27:55404/h264/ch1/sub/av_stream"
 
-3.  ������ܿ�����Ƶ������Ҫ�㲥�����Ų�����ͷ��IP�Ͷ˿ڵ��Ƿ�������ȷ��
+3.  如果不能看到视频，则需要广播厂家排查摄像头的IP和端口等是否配置正确。
 
-4.  ����ܿ�����Ƶ������Ҫ�Ų����̨�������⡣
+4.  如果能看到视频，则需要排查调度台软件问题。
 
 
-## 1.139. �ʣ�IPH�����������󣬵���̨������������������������������
+## 1.139. 问：IPH报警器触发后，调度台接听但听不到报警器语音的声音。
 
-��
+答：
 
-1.  ����̨��������������������ֱ�ӵ���̨ץ����������̨���ܷ��յ�����������������
+1.  调度台听不到报警器的语音，直接调度台抓包，看调度台上能否收到报警器的语音报文
 
-2.  ���û�У��ڳ���̨�����Ͻ���ץ�����������Ƿ���ץ����������������
+2.  如果没有，在车载台主机上进行抓包，看主机是否能抓到报警器语音报文
 
-3.  �����ץ�������Ų��ڲ�����
+3.  如果能抓到，则排查内部问题
 
-4.  �������ץ����������Ҫ�㲥ϵͳ�Ų鱨���������Ƿ��ͳ���
+4.  如果还是抓不到，则需要广播系统排查报警器语音是否发送出来
 
-5.  ����������������ˣ����Ų��м䳵�ط���ǽ�Ƿ�ѱ��������ˡ�
+5.  如果报警器发出来了，则排查中间车载防火墙是否把报文拦截了。
 
-## 1.140. �ʣ�����̨��������δ������δ֪��ŵ����
+## 1.140. 问：调度台可以听到未监听的未知组号的组呼
 
-��
+答：
 
-1.  �Ȳ鿴�õ���̨���½Ǻ��м�¼�����Ǹ�Ⱥ����е������
+1.  先查看该调度台右下角呼叫记录中是那个群组进行的组呼。
 
-2.  ����˵���Ļ��л�Ȩ����ʾ�����������ƺ���������ж����������͡�
+2.  正在说话的会有话权人显示，根据组名称和组号码来判断这个组的类型。
 
-3.  ����Ǿ�̬�飬�ھ�̬���б���һ��ʼû�ҵ���Ⱥ�飬�Ҽ�ѡ��鿴�����飬�����ҵ�����飬��״̬Ӧ���ǶԽ���������̨����ͨ����,�˳�Ⱥ���������ͨ���ˣ�
+3.  如果是静态组，在静态组列表内一开始没找到该群组，右键选择查看所有组，从中找到这个组，其状态应该是对讲，被调度台监听通话了,退出群组就听不到通话了；
 
-4.  ����Ƕ�̬��������ɽ��飬����ͨ��dc.exe -t
-    �򿪲��ԣ����ҵ����������̬����ɽ���ĵ���̨��Ȼ��ѯ���Ƿ��Ⱥ���Ƿ����ã�û�еĻ����ͷŵ���
+4.  如果是动态组或者是派接组，可以通过dc.exe -t
+    打开测试，查找到创建这个动态组和派接组的调度台，然后询问是否该群组是否有用，没有的话就释放掉。
 
 ![dc4f3a0920d9b14edeef3790ceb8e9e4](uploads/2ab89f19098629ca1035a09d23b52b50/dc4f3a0920d9b14edeef3790ceb8e9e4.png)
 
 ![2d97a8d4e84f8a5cb5fce43047098d17](uploads/ca9699e8b744af10a953af5c1f13ce07/2d97a8d4e84f8a5cb5fce43047098d17.png)
 
-## 1.141. �ʣ� ��Ⱥ��������ʱ������Ȩʧ�ܣ�������Ȩ��ʾ����
+## 1.141. 问： 对群组进行组呼时出现抢权失败，出现抢权提示音。
 
-��
+答：
 
-1.  �鿴����̨�Ƿ���������LTE���硣
+1.  查看调度台是否正常接入LTE网络。
 
-2.  �鿴��Ⱥ������Ա��û���������̨
+2.  查看该群组的组成员有没有这个调度台
 
-3.  �����Ӧ������������̨ͬʱ��˵������������Ȩ��ʾ
+3.  如果有应该是其他调度台同时在说话，正常的抢权提示
 
-4.  ���û�У���Ҫ�������ѵ���̨����þ�̬�顣
+4.  如果没有，需要核心网把调度台加入该静态组。
 
-## 1.142. �ʣ����ų�����ʾ��ʾ����û�ж��ż�¼
+## 1.142. 问：短信出现提示提示音但没有短信记录
 
-�𣺲鿴dc.log��û���½����ŵĴ�ӡ�����ſ��Ե�sdkĿ¼��������û��������ݡ�
+答：查看dc.log有没有新进短信的打印，彩信可以到sdk目录下面找有没有相关内容。
 
-## 1.143. �ʣ�����̨��Ƶ����ʱ��ѡ����Ҫȷ��ֱ����ȡʱ�ֳ�̨����Ҫ����ȷ��
+## 1.143. 问：调度台视频上拉时，选择不需要确认直接拉取时手持台还需要进行确认
 
-����Ҫ�ֳ�̨����Ƶ�ش������ñ����ش���ȷ�ϵĹ�ѡȥ����
+答：需要手持台将视频回传中设置被动回传需确认的勾选去掉。
 
-# 2. ���ȷ�����FAQ
+# 2. 调度服务器FAQ
 
-## 2.1. �ʣ����ݿ��޷�Զ��ͨ��root����
+## 2.1. 问：数据库无法远程通过root访问
 
-�𣺷����������ݿ�δ��rootԶ�̷��ʡ�
+答：服务器的数据库未打开root远程访问。
 
-����Զ��Ȩ�޵ķ�����
+开启远程权限的方法：
 
 mysql\> use mysql;
 
-mysql\> show databases��  \#��ѯ��ǰ���ݿ�
+mysql\> show databases；  \#查询当前数据库
 
-mysql\> select user,host from user; \#��ѯ�Ƿ�ֻ����localhost��¼
+mysql\> select user,host from user; \#查询是否只允许localhost登录
 
-mysql\> grant all privileges on \*.\* to root\@'%' identified by '��¼������';
-\#����Զ�̵�¼
+mysql\> grant all privileges on \*.\* to root\@'%' identified by '登录的密码';
+\#允许远程登录
 
-mysql\> select user,host from user; �ٴβ�ѯ�Ƿ�����Զ�̵�¼
+mysql\> select user,host from user; 再次查询是否允许远程登录
 
-mysql\> flush  privileges; \#ˢ��ϵͳȨ����ر�
+mysql\> flush  privileges; \#刷新系统权限相关表
 
 ![cd0e682c8153dde53975d8d1fcff9de0](uploads/5a3d9ce6efa2ba8e4b8c129718ea08cc/cd0e682c8153dde53975d8d1fcff9de0.png)
 
-## 2.2. �ʣ����ݿ⿪�������Զ�����
+## 2.2. 问：数据库开机不会自动启动
 
-��ͨ������鿴һ�����ݿ��Ƿ���������
+答：通过命令查看一下数据库是否开启自启动
 
-chkconfig//�鿴mysql�Ƿ񿪻�������
+chkconfig//查看mysql是否开机自启动
 
 ![4d37653ae19989ddb679d53e0159c1dc](uploads/e8191f02074b3fb066aefd1ac08b6e20/4d37653ae19989ddb679d53e0159c1dc.png)
 
-�������mysql�ķ��񣬲���3,4,5����on�Ļ���ɹ��������off��������
+如果看到mysql的服务，并且3,4,5都是on的话则成功，如果是off，则输入
 
 chkconfig --level 345 mysql on
 
-## 2.3. �ʣ�dis���̴򿪺����ˣ�dis.log��ʾ���ݿ����Ӵ���
+## 2.3. 问：dis进程打开后闪退，dis.log显示数据库连接错误
 
-��
+答：
 
-1.  �鿴dis.ini�����ݿ��ַ�����Ƿ���ȷ
+1.  查看dis.ini中数据库地址配置是否正确
 
-2.  ͨ��Navicat�������ݿ⣬�鿴���ݿ��Ƿ��ѵ��롣
+2.  通过Navicat连接数据库，查看数据库是否已导入。
 
-## 2.4. �ʣ�dis������dis.log����ʾ���ݿ����ֶ��Ҳ���
+## 2.4. 问：dis开启后，dis.log中显示数据库有字段找不到
 
-��
+答：
 
-1.  Զ��Navicat�������ݿ⣬�鿴�����ֶ������ݿ����Ƿ����
+1.  远程Navicat连入数据库，查看报错字段在数据库中是否存在
 
-2.  ��������ڣ��Ҽ�ѡ�и����ݿ����Ȼ����Ʊ����հ汾�ĵ�˵���������ֶ�����
+2.  如果不存在，右键选中该数据库表格，然后设计表按照版本文档说明进行新字段添加
 
-3.  ������ڣ�dis.log�л��ǳ��ִ����ӡ����Ҫ�Ų�һ�����ݿ��Ƿ������˲������˴�Сд���鿴/etc/my.cnf�ļ������Ƿ�������lower_case_table_names=1//�����������ִ�Сд��
+3.  如果存在，dis.log中还是出现错误打印，需要排查一下数据库是否配置了不区分了大小写，查看/etc/my.cnf文件里面是否配置了lower_case_table_names=1//表名不再区分大小写。
 
-## 2.5. �ʣ�����̨�ͳ���̨ATSָʾ�ƶ�����
+## 2.5. 问：调度台和车载台ATS指示灯都爆红
 
-��
+答：
 
-1.  ͨ��dis�ķ�����ȥping ATS�ĵ�ַ��ping��ͨ�����Ų���������
+1.  通过dis的服务器去ping ATS的地址，ping不通，先排查网络问题
 
-2.  pingͨ�鿴dis.log����û�й���ATS�ı�����Ϣ
+2.  ping通查看dis.log，有没有关于ATS的报错信息
 
-3.  ץȡ��ATS��ҵ�񽻻����������ģ�ͨ�������������ӿ��Ƿ������������Ƿ�������ATSʵʱ�����г�λ����Ϣ��û�С�
+3.  抓取和ATS做业务交互的网卡报文，通过报文来分析接口是否正常，连接是否正常，ATS实时给的列车位置信息有没有。
 
-## 2.6. �ʣ�dis��һЩȫ��������û��Ч
+## 2.6. 问：dis的一些全局配置项没生效
 
-��
+答：
 
-1.  ���dis.ini�����ļ�������������Ƿ���ȷ�����ƴд�Ƿ�����������֮��Ҫ����dis������Ч��
+1.  检查dis.ini配置文件中相关配置项是否正确，检查拼写是否有误。配置了之后，要重启dis才能生效。
 
-2.  ����������󣬿���ͨ��dis.log���������dis.ini���Ƿ�һ�¡�
+2.  如果发现有误，可以通过dis.log中配置项和dis.ini中是否一致。
 
-3.  Dis.ini�������������дλ���Ƿ���ȷ��
+3.  Dis.ini中相关配置项填写位置是否正确。
 
-## 2.7. �ʣ���β鿴�����Ƿ���������������
+## 2.7. 问：如何查看进程是否正常启动并运行
 
-��
+答：
 
-1.  ����ͨ����������pidof dis���鿴dis�����Ƿ��ڷ���������
+1.  可以通过反复输入pidof dis，查看dis进程是否在反复启动。
 
-2.  �鿴dis.log��־�Ƿ�������ӡ��û�б�����
+2.  查看dis.log日志是否正常打印，没有报错。
 
-## 2.8. �ʣ����������ݿⱸ�����ã�����ֶ���ԭ���ݿ�����
+## 2.8. 问：服务器数据库备份设置，如何手动复原数据库内容
 
-��
+答：
 
-1.  ��Ҫ��backup_db.sh�ű����õ�dis�ļ�ͬ��Ŀ¼�£��޸Ľű�����Ϊ�ֳ�ʵ�����ݿ�����
+1.  需要将backup_db.sh脚本放置到dis文件同级目录下，修改脚本内容为现场实际数据库配置
 
-2.  disͬ��Ŀ¼����bakĿ¼����Ŀ¼�������ݿⱸ���ļ�����ѹ���ݿ��ļ�
+2.  dis同级目录中有bak目录，该目录下有数据库备份文件，解压数据库文件
 
-3.  ���뱾��mysql���ݿ��У�mysql -uroot -p����
+3.  进入本机mysql数据库中，mysql -uroot -p密码
 
-4.  ���롰source ���ݿⱸ���ļ��ľ���·��;���س������ɽ����ݿ��ļ��ָ�
+4.  输入“source 数据库备份文件的绝对路径;”回车，即可将数据库文件恢复
 
-# 3. ����̨FAQ
+# 3. 车载台FAQ
 
-## 3.1. �ʣ�18���߳���̨�ն��ŵ����Լ��ͨ��������޸���
+## 3.1. 问：18号线车载台终端信道机自检项不通过，如何修复。
 
-��
+答：
 
-1.  �鿴������־�����лָ����ò���
+1.  查看操作日志后发现有恢复配置操作
 
-2.  ��������ҳ��鿴�ŵ������ò�ȷ������������̨app����̨������
+2.  进入配置页面查看信道机配置并确定，重启车载台app或车载台主机。
 
-## 3.2. �ʣ�18�����ֱ�һֱ����ժ��״̬
+## 3.2. 问：18号线手柄一直处于摘机状态
 
-�𣺲鿴�����Ƿ����ҵ���ȷ��λ�ã������·��Ƿ����ڵ����ڲ���app�в鿴PTT��ť�Ƿ���Ч��
+答：查看话柄是否悬挂到正确的位置，话柄下方是否有遮挡，在测试app中查看PTT按钮是否有效。
 
-## 3.3. �ʣ�18���߳���̨�ն������Լ��ͨ��
+## 3.3. 问：18号线车载台终端主机自检项不通过
 
-��ʹ���������ӳ���̨������CRT�����������鿴dba��sa��־����־���Ƿ������Ա�����������־��ʾ�����޸������޷��޸�����ϵ������Ա��
+答：使用网线连接车载台主机，CRT连接主机并查看dba、sa日志，日志中是否有明显报错，根据日志提示进行修复；仍无法修复，联系开发人员。
 
-## 3.4. �ʣ�����̨�����ŵ����Լ첻����PLMN��ȡ����
+## 3.4. 问：车载台出现信道机自检不过，PLMN获取不到
 
-��
+答：
 
-1.  �ֳ����ٴ�����ʽ��������
+1.  现场快速处理方式，重启。
 
-2.  ������������������ص�ַ��751��ַ�����������Ȼ��������
+2.  如果不行重新配置网关地址（751地址），点击保存然后重启。
 
-3.  ��������У����¶Գ���̨�����������á�
+3.  如果还不行，重新对车载台进行入网配置。
 
-## 3.5. �ʣ�����̨��¼����ȥ��һֱ���ڵ�¼����
+## 3.5. 问：车载台登录不上去，一直处于登录界面
 
-��
+答：
 
-1.  һֱ��¼�����ǳ���̨�ͺ�����ͨ�Ź��ϣ�ͨ�����������豸δ����������������¼�������ü�鿪�����ú��������Ƿ���ȷ��
+1.  一直登录不上是车载台和核心网通信故障，通常出现在新设备未入网，可以跳过登录进到设置检查开具配置和软卡号是否正确。
 
-2.  �������ȷ�����½����������ã�
+2.  如果不正确，重新进行入网配置；
 
-3.  ���û�������ô��󣬿����Ҹ���̨������������̨����ͬС������λ�ô�����ͬ�ĵط������ܷ��������������������Ҫ�������Ų����⡣
+3.  如果没发现配置错误，可以找个手台或者其他车载台，在同小区物理位置大致相同的地方，看能否正常入网，如果不行需要核心网排查问题。
 
-4.  ���ַ�����¼�˳�����Ҫ�鿴����IMSI�Ƿ��ظ���
+4.  出现反复登录退出，需要查看开户IMSI是否重复。
 
-5.  �ն�ϵͳʱ���Ƿ�����
+5.  终端系统时间是否正常
 
-6.  ���������Գ���̨�ŵ�����·�ɿ���ʱ�Ƿ���ȷ
+6.  检查核心网对车载台信道机后路由开户时是否正确
 
-7.  ������udc����ʱ����һ��ҪΪ�գ�����Ҳ�޷����е�¼
+7.  核心网udc开户时关联一项要为空，否则也无法进行登录
 
 ![b7dac8153cef12c11c9bb2b0180b1565](uploads/189d7261ae5480ba361abc40063ef0e0/b7dac8153cef12c11c9bb2b0180b1565.jpg)
 
 ![8b7a09c94f69d8d8e89636ab32568da2](uploads/e2b37a654f22077216b350dad2f3714b/8b7a09c94f69d8d8e89636ab32568da2.jpg)
 
-## 3.6. �ʣ�����̨�ն˻�������
+## 3.6. 问：车载台终端话柄爆红
 
-1.  ����δ�һ���
+1.  话柄未挂机好
 
-2.  ��������δ�Ӻã���Ҫ��黰��������ߺͳ���̨�������
+2.  话柄线缆未接好，需要检查话柄后面接线和车载台后面接线
 
-## 3.7. �ʣ�����̨�ն����Ͻ�������dis״̬����
+## 3.7. 问：车载台终端右上角主机、dis状态爆红
 
-1.  ���������D�����Ƿ��ɶ�
+1.  检查主机的D口线是否松动
 
-2.  ��鳵��̨�ն˱����D�����Ƿ��ɶ�
+2.  检查车载台终端背面的D口线是否松动
 
-3.  ������������Ƿ���ȷ
+3.  检查各项开局配置是否正确
 
-4.  ͨ��web��ҳ����������ַ��������������Ƿ���ȷ
+4.  通过web网页输入主机地址，检查主机配置是否正确
 
-5.  CRT�����������鿴����dba.log�Ƿ��д����ӡ
+5.  CRT连接主机，查看主机dba.log是否有错误打印
 
-## 3.8. �ʣ�����̨�ն����Ͻ�IPH/PA����
+## 3.8. 问：车载台终端右上角IPH/PA爆红
 
-1.  ���㲥�ӿ������Ƿ��ɶ�
+1.  检查广播接口线缆是否松动
 
-2.  �������web��������������IPH/PA��ַ�Ƿ���ȷ
+2.  检查主机web界面中主机配置IPH/PA地址是否正确
 
-3.  CRT����������ping�Է��㲥������ַ���ܷ�pingͨ
+3.  CRT连接主机，ping对方广播主机地址看能否ping通
 
-4.  �鿴����sa.log�Ƿ��д����ӡ��������ʱ����־��ץ���ļ�
+4.  查看主机sa.log是否有错误打印，保留当时的日志和抓包文件
 
-## 3.9. �ʣ�����̨�ն˴�������
+## 3.9. 问：车载台终端触屏不灵
 
-1.  �����豸���鿴�ܷ�ָ�
+1.  重启设备，查看能否恢复
 
-2.  �����ն��豸
+2.  更换终端设备
 
-## 3.10. �ʣ�����̨�ն�������û����
+## 3.10. 问：车载台终端扬声器没声音
 
-1.  ����̨APP���ý��棬����ص�����
+1.  车载台APP设置界面，点击回到桌面
 
-2.  ʹ�ò���APP�������֣���������̨�������Ƿ���������ժ�»������������Ƿ�ӻ����д�����
+2.  使用测试APP播放音乐，监听车载台扬声器是否有声音，摘下话柄监听声音是否从话柄中传出。
 
-3.  ������������������������
+3.  话柄有声音则是扬声器故障
 
-4.  ����������
+4.  更换扬声器
 
-## 3.11. �ʣ�����̨�ն˳��ֺ���
+## 3.11. 问：车载台终端出现黑屏
 
-1.  ����̨�����Ƿ���������
+1.  车载台主机是否正常供电
 
-2.  ����ն�����rst��ť�޸�
+2.  点击终端面板的rst按钮修复
 
-3.  ��������̨�������鿴�ܷ�ָ�
+3.  重启车载台主机，查看能否恢复
 
-4.  �����豸
+4.  更换设备
 
 
-## 3.12. �ʣ�18���߹̶�̨��վ�㲥�������
+## 3.12. 问：18号线固定台车站广播如何配置
 
-��
+答：
 
-1.  �������������IP��ַ��������������ҳ��
+1.  浏览器输入主机IP地址，进入主机配置页面
  
-2.  �����������-IP�ض������ã�����IP��ַ�����磺
+2.  点击网络配置-IP重定向配置，输入IP地址。例如：
 
-    ��ͷվ�̶�̨�㲥IP��10.18.101.10
+    航头站固定台广播IP：10.18.101.10
 
-    �㲥ͨ���ն�IP��10.18.101.21
+    广播通信终端IP：10.18.101.21
 
-    ��ɳվ�̶�̨�㲥IP��10.18.102.10
+    下沙站固定台广播IP：10.18.102.10
 
-    �㲥ͨ���ն�IP��10.18.102.21���������ö���ͬ��
+    广播通信终端IP：10.18.102.21，其余配置都相同。
 
 ![b7dd2cd3005bafafffd4cf580868042b](uploads/f266fcb266f2b935fb9646e17ae3936c/b7dd2cd3005bafafffd4cf580868042b.jpg)
 
 ![1d3e7d149cd6e737b00382e8fb3c697f](uploads/41c053ce69b7c1389df6eb759d6e0928/1d3e7d149cd6e737b00382e8fb3c697f.jpg)
 
-## 3.13. �ʣ������֤18���߹̶�̨�ĳ�վ�㲥����
+## 3.13. 问：如何验证18号线固定台的车站广播功能
 
-��
+答：
 
-1.  ʹ���ֳ�̨�ֶ��л�����վ���л����й㲥�� 
+1.  使用手持台手动切换至车站上行或下行广播组 
 
-2.  �ֳ�̨����������̶�̨��⵽��վ���㲥ͨ��ʱ�����Զ��л����㲥�飬ͨ�������ӳ�վ�㲥ϵͳ�в���
+2.  手持台进行组呼，固定台监测到有站区广播通话时，会自动切换至广播组，通话声音从车站广播系统中播出
 
-3.  �㲥����֮�󣬹̶�̨Ⱥ����Զ��л�����ǰͨ����
+3.  广播结束之后，固定台群组会自动切换到当前通话组
 
-## 3.14. �ʣ�18���߹̶�̨��վ�㲥���ֹ��ϣ��������ų�
+## 3.14. 问：18号线固定台车站广播出现故障，无声音放出
 
-��
+答：
 
-1.  ��ǰ�̶�̨��LTE�����Ƿ�����
+1.  当前固定台的LTE网络是否正常
 
-2.  ���������·�����Ƿ�������1��3��������ɫ���ͷ�Ƿ����ӹ㲥ϵͳ
+2.  检查物理线路连接是否正常，1分3的线上绿色凤凰头是否连接广播系统
 
-3.  ���������Ƿ�����������ping�㲥�豸��ip��ַ
+3.  网络连接是否正常，尝试ping广播设备的ip地址
 
-## 3.15. �ʣ��̶�̨�ն˰忨E210�������忨TA30-72�����ĵ�
+## 3.15. 问：固定台终端板卡E210和主机板卡TA30-72测试文档
 
-[�̶�̨�ն˰忨E210����.docx](uploads/9a4dca68fa11c06a957c8f7bf3b6c767/�̶�̨�ն˰忨E210����.docx)
+[固定台终端板卡E210测试.docx](uploads/9a4dca68fa11c06a957c8f7bf3b6c767/固定台终端板卡E210测试.docx)
 
-[�̶�̨�����忨TA30-72����.docx](uploads/995d0aa51217f70941afc3bd9bb858f2/�̶�̨�����忨TA30-72����.docx)
+[固定台主机板卡TA30-72测试.docx](uploads/995d0aa51217f70941afc3bd9bb858f2/固定台主机板卡TA30-72测试.docx)
 
-# 4. ����FAQ
+# 4. 网管FAQ
 
-## 4.1. �ʣ����ܷ�����vsftp�����޷���������
+## 4.1. 问：网管服务器vsftp服务无法正常启动
 
-��
+答：
 
-1.  ʹ������systemctl status vsftpd�鿴��ǰ����״̬
+1.  使用命令systemctl status vsftpd查看当前服务状态
 
-2.  systemctl start vsftpd�����������������д�����ʾ�������������ļ�����
+2.  systemctl start vsftpd启动服务，启动不了有错误提示，可能是配置文件错误
 
-3.  �����ļ����ݣ�ʹ��ԭ�������ļ�vsftpd.conf,�����н�������
+3.  配置文件备份，使用原生配置文件vsftpd.conf,在其中进行配置
 
-4.  ��������vsftpd����
+4.  重新启动vsftpd服务
 
-## 4.2. �ʣ�ftp�޷���½��������ls�޷������ļ�
+## 4.2. 问：ftp无法登陆服务器，ls无法看到文件
 
-��
+答：
 
-1.  �鿴������vsftpd�������Ƿ����������С�systemctl status vsftpd
+1.  查看服务器vsftpd服务器是否开启正常运行。systemctl status vsftpd
 
-2.  ����������ǽ�Ƿ�رա�systemctl disable firewalld.service \#���ùرշ���ǽ
+2.  服务器防火墙是否关闭。systemctl disable firewalld.service \#永久关闭防火墙
 
-3.  SELinux�Ƿ�ر�
+3.  SELinux是否关闭
 
 ![bbe035fd587cfbd2dc0cd43a24a9386f](uploads/6fda28a0822c0f6c2361d22541745741/bbe035fd587cfbd2dc0cd43a24a9386f.jpg)
 
-## 4.3. �ʣ��豸��α������ɹ�
+## 4.3. 问：设备如何被网管纳管
 
-��
+答：
 
-1.  omc.ini������allow_auto_online=true�������Զ����ߣ����豸�������ܵ�ַΪomc��������ַʱ���豸���Զ��������ɹܡ�
+1.  omc.ini中配置allow_auto_online=true是允许自动上线，当设备配置网管地址为omc服务器地址时，设备将自动被网管纳管。
 
-2.  omc.ini������allow_auto_online=false�ǲ������Զ����ߣ����豸�������ܵ�ַ����Ҫ��omt�ͻ�������Ҫ�����豸�����ɹܡ�
+2.  omc.ini中配置allow_auto_online=false是不允许自动上线，当设备配置网管地址后，需要在omt客户端上需要添加设备进行纳管。
 
-3.  �豸��mac��ַҪ�ǲ�����Ļ���������omc.log�п��Կ���δ���ɹ��豸��IP��MAC��ַ��
+3.  设备的mac地址要是不清楚的话，可以在omc.log中可以看到未被纳管设备的IP和MAC地址。
 
 ![a8fb4ece24368f44bb6f856fa16575d3](uploads/786508a029764ecc877f017f65962119/a8fb4ece24368f44bb6f856fa16575d3.png)
 
-## 4.4. �ʣ�ϵͳ״̬��CAD��������¼��¼�������ͼ��һֱ�ɻ�ɫ���豸����Ҳ�ǻ�ɫ״̬�������豸�б��е���̨�豸������Ϊ�հ�
+## 4.4. 问：系统状态中CAD服务器、录音录像服务器图标一直成灰色，设备上线也是灰色状态，或者设备列表中调度台设备的名称为空白
 
-��
+答：
 
-1.  ��Ҫ���豸�������ļ���[oma]������dev_name=XXX�ֶ�
+1.  需要在设备的配置文件中[oma]中配置dev_name=XXX字段
 
-2.  CAD��������¼��¼�������Ҫ��װϵͳ״̬�е�ͼ����dev_name���ó���ͬ�����ƣ�ϵͳ״̬�е�ͼ��������豸ʵ�����������ɫ�仯��
+2.  CAD服务器和录音录像服务器要安装系统状态中的图例，dev_name设置成相同的名称，系统状态中的图例会根据设备实际情况进行颜色变化。
 
-## 4.5. �ʣ���ο��ٲ鿴�����豸�İ汾��Ϣ���ݺ�ͳ��
+## 4.5. 问：如何快速查看所有设备的版本信息内容和统计
 
-��
+答：
 
-1.  ��½omt�ͻ��ˣ����豸�б�
+1.  登陆omt客户端，打开设备列表
 
-2.  ѡ����̨��̶�̨���Ҽ���ʾȫ��������Ϣ����Բ鿴����׿�汾���ŵ����汾��
+2.  选择车载台或固定台，右键显示全部基本信息后可以查看到安卓版本和信道机版本。
 
-3.  �Ҽ����Խ���ȫ���������ɽ��豸�б����嵼�������ڽ����豸�汾ͳ��
+3.  右键可以进行全部导出，可将设备列表整体导出，便于进行设备版本统计
 
-## 4.6. �ʣ���ε�����Ծ�澯����ʷ�澯
+## 4.6. 问：如何导出活跃告警和历史告警
 
->   ��
+>   答：
 
-1.  ѡ�����ܸ澯�¼�
+1.  选中网管告警事件
 
-2.  ��������Ը澯����ɸѡ��ѯ
+2.  按照需求对告警进行筛选查询
 
-3.  ���Ͻǵ�����ť���Ҽ���������Ե�ǰ��ѯ�����б����е�������ǰ����
+3.  右上角导出按钮或右键导出，会对当前查询内容列表进行导出至当前电脑
 
-## 4.7. �ʣ�ʹ�����ܶ������汾��������
+## 4.7. 问：使用网管对主机版本进行升级
 
-1.  omt�ͻ��˵�ϵͳ����-�汾���������������汾
+1.  omt客户端的系统设置-版本管理中添加主机版本
 
-2.  ����������ѡ��Ҫ�������豸�Ͱ汾���������
+2.  升级管理中选择要升级的设备和版本，点击升级
 
-## 4.8. �ʣ���ν��и澯���ã����ƹ̶�̨��PA����ʧ�ܸ澯����Ϊ�̶�̨����Ҫ��PA���жԽӣ�����澯û��Ҫ���֡�
+## 4.8. 问：如何进行告警配置，类似固定台的PA连接失败告警，因为固定台不需要和PA进行对接，该项告警没必要出现。
 
-��
+答：
 
-1.  ѡ��ϵͳ����-�澯����
+1.  选择系统设置-告警配置
 
-2.  ѡ���豸��ѡ����ظ澯
+2.  选择设备，选中相关告警
 
-3.  ����޸ģ�ѡ����Ըø澯
+3.  点击修改，选择忽略该告警
 
-# 5. ¼��¼��FAQ
+# 5. 录音录像FAQ
 
-## 5.1. �ʣ�¼��¼�����������
+## 5.1. 问：录音录像服务器配置
 
-��
+答：
 
 [How_to_use_MdcProxy_RECServer-CN.doc](/uploads/bf6eaee60188f76431f90ee485a4df81/How_to_use_MdcProxy_RECServer-CN.doc)
 
-1.  ��Ҫ��������¼��¼��ڵ�
+1.  需要核心网开录音录像节点
 
 ![734537cb6d498eb1d3316e0e14a507cd](uploads/d342054035a909a5393dbc120990fbe4/734537cb6d498eb1d3316e0e14a507cd.jpg)
 
-2.  mrs.ini�ļ����ã�user��pwd�Ȱ��պ���������ʱ������
+2.  mrs.ini文件配置，user、pwd等按照核心网开户时的配置
 
 ![39e665636875bb2076ce414694848663](uploads/52c13035443f643bfe5e1b042ac6bf30/39e665636875bb2076ce414694848663.jpg)
 
-## 5.2. �ʣ�¼��¼����ļ���ô����
+## 5.2. 问：录音录像的文件怎么导出
 
-��
+答：
 
-1.  ��spt�ͻ�����ֱ��ѡ���ļ��Ҽ�������ѡ�񵼳��ļ���Ŀ���ļ���
+1.  从spt客户端上直接选中文件右键导出，选择导出文件的目标文件夹
 
-2.  ֱ�Ӵ�mrs���������ҵ��ļ��洢Ŀ¼���ֶ���mrs��������ֱ�ӿ�������
+2.  直接从mrs服务器中找到文件存储目录，手动从mrs服务器上直接拷贝出来
