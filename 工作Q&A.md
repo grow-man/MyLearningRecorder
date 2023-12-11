@@ -841,14 +841,16 @@ perf top -K -p 1234
 
 一、主机的内部的网络拓扑图
 
-![1698302551718](uploads/5507d8f0ae525172a984c01b86f91948/1698302551718.png)
+![设备网络架构](uploads/5507d8f0ae525172a984c01b86f91948/1698302551718.png)  
 
-其中前面板的网口对应的物理网卡都是eth1,port1对应网口标签LAND，port2对应LAN1，prot3对应LAN2，port4对应LAN3。
+请按照实际的网络拓扑架构完成port与物理接口的对应关系，可以使用命令`swconfig dev switch0 show`展示在switch0下的端口状态，此时插拔网线即可知晓物理网口与哪个port对应。
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/54112f9f-f2d2-4441-949f-0fb3db3228e7)  
+
+在我的设备中前面板的网口对应的物理网卡都是eth1,port1对应网口标签LAND，port2对应LAN1，prot3对应LAN2，port4对应LAN3。
 
 使用下述方法配置时请对应好需要配置的端口和vlan。WEB页面中也可以通过插拔网线确认对应网口
 
-
-![1698302954470](uploads/89157a64a605fe895e4994d64d56ed84/1698302954470.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/38145f7a-f834-43a7-988c-d5e07c40da68)  
 
 
 二、WEB网页配置过程
@@ -856,51 +858,38 @@ perf top -K -p 1234
 1、配置vlan
 - 导航栏选择网络配置-交换机
 - 点击添加按钮，添加vlan
-
-![1698300153370](uploads/4d4565a034fab3ad983c12b4a08f444c/1698300153370.png)
-
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/ffeefd40-12ec-428d-a8b1-01e6b0403e90)  
 
 - 新的vlan中CPU要设置为`关联`,其余端口根据需要将对应端口划分成不同vlan。因为默认所有端口都在vlan1中，划分时先将vlan1中相应端口关闭。端口的下拉选择框解释：`不关联`是Access模式，`关联`是Trunk模式,`关闭`是不使用该端口。
-
-
-![1698300749459](uploads/4163699e514558822c292f2a051f004f/1698300749459.png)
-
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/e2f6c699-861e-4165-94e3-42f47f56952d)  
 
 上图中vlan1为默认vlan，端口1和端口2的效果和未修改之前一样，外接设备可以ping通br-lan上的地址，br-lan桥接了eth0和eth1.1（vlan1）。
-
 
 vlan2绑定的是端口3，vlan3绑定的是端口4
 
 2、配置IP
 - 导航栏选择网络配置-接口，添加新接口
 
-
-![1698301095540](uploads/2cac49a721cc0364b7608fa503523427/1698301095540.png)
-
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f2192a54-f37e-4d80-a162-e641735310eb)  
 
 - 输入接口名称，选择下方对应需求的vlan接口，点击提交
 
-
-![1698301230075](uploads/f1dcec2e14670f02b9cc362e09680bea/1698301230075.png)
-
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/1267d32c-e7f9-4207-b0dc-0d285707806b)  
 
 - 提交后，页面就可以进行IP配置了。配置好的IP在后台通过ifconfig查看时，eth1.1对应vlan1,eth1.2对应vlan2,eth1.3对应vlan3。
 
-
-![1698301304316](uploads/8892e46000a73b2cd08377c35bf1acf4/1698301304316.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/80f18068-d051-4986-a64e-b6522a56d70d)   
 
 3、修改br-lan的桥接模式
 - 进入主机web界面
 - 导航栏选择网络配置-接口，选择LAN口，点击修改
 
-
-![1698299882499](uploads/e06d18a215e7527b316ed4264fe7f6ce/1698299882499.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/0fb01542-fb2b-47e1-8fb6-7ffd22d5cc94)  
 
 
 - 进入后选择物理设置，接口勾选eth0和eth1.1(eth1.1对应的是vlan1的接口，我们设备前面板上的网口默认都是划分在vlan1中)
 
-
-![1698300000850](uploads/b6a29982bdc6bb10ad9e8bf17110e961/1698300000850.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/9ccd8df8-a644-443a-8119-ad7722c670b2)  
 
 
 - 点击保存&应用
@@ -913,8 +902,7 @@ vi /etc/config/network
 ```
 2、修改br-lan桥接的网络，从原来的桥接eth0和eth1改成桥接eth0和eth1.1。
 
-
-![1698301673540](uploads/75db7ac1ad9d6c3ba3a46b977701ce3f/1698301673540.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/5b147311-451d-4a13-a3e2-ee6886713089)  
 
 
 ```
@@ -929,8 +917,7 @@ config interface 'lan'
         option ifname 'eth0 eth1.1'
 ```
 3、vlan1中包含所有端口，将需要重新划分vlan的端口删除，然后添加新的vlan,添加vlan对应虚拟网卡的IP地址。
-
-![1698302015309](uploads/d9a234019b61dc5912c7ebf2877404d5/1698302015309.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f420b79e-57b4-4137-8ff3-f95b9b3c62ee)  
 
 ```
 config switch_vlan
@@ -1020,10 +1007,9 @@ sudo yum install xinetd telnet telnet-server
 ```
 
 离线安装：
-在154网盘上取rpm包进行安装,路径:
+请先离线下载好`telnet-server-0.17-65.el7_8.x86_64.rpm`、`telnet-0.17-65.el7_8.x86_64.rpm`、`xinetd-2.3.15-14.el7.x86_64.rpm`  
+然后使用rpm命令手动安装
 ```
-\\10.1.1.154\00-网络u盘\地铁集群二开项目\版本\工具软件\centos7_telent
-
 rpm -ivh telnet-server-0.17-65.el7_8.x86_64.rpm
 rpm -ivh telnet-0.17-65.el7_8.x86_64.rpm
 rpm -ivh xinetd-2.3.15-14.el7.x86_64.rpm
@@ -1123,10 +1109,9 @@ Centos7 配置NTP服务器
 
 3. 安装过程中，您可能需要确认是否要继续，输入 `y` 并按 Enter 键。
 
-4. 离线安装，从154网盘获取RPM包：
+4. 离线安装，从网络上获取RPM包：
 
    ```
-   \\10.1.1.154\00-网络u盘\地铁集群二开项目\版本\工具软件\ntp
    rpm -ivh ntp-4.2.6p5-29.el7.centos.2.x86_64.rpm
    rpm -ivh autogen-libopts-5.18-5.el7.x86_64.rpm
    rpm -ivh net-snmp-utils-5.7.2-49.el7_9.1.x86_64.rpm
@@ -1419,11 +1404,12 @@ rm -f /usr/lib64/libstdc++.so.6
 ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
 ```
 
-## 1.46. 问：主板中 sa 软件崩溃如何使用 coredump 进行调试
+## 1.46. 问：如何使用 coredump 进行调试，以主板中 sa 软件为例
 
 1. sa 软件可以添加编译命令  `-g` 以添加调试信息
 
-![image](uploads/d13e9746a2335ea2fc94750d5dcb00c9/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/5e9a3414-13c3-44a1-94f3-063e9e32b321)
+
 
 2. 使用临时命令 打开主机 `coredump` 生成
 
@@ -1431,9 +1417,7 @@ ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
 ulimit -c unlimited
 ```
 
-通过命令 `ulimit -a | grep core` 查看 coredump 大小不为0，确认 coredump 已经开启
-
-![image](uploads/dd44697a5d663a3b49fce3b0280e33ce/image.png)
+通过命令 `ulimit -c ` 查看 coredump 大小不为0，确认 coredump 已经开启
 
 3. 运行可执行程序，并触发崩溃，生成 coredump 文件
 
@@ -1442,7 +1426,8 @@ ulimit -c unlimited
 ```sh
 cat /proc/sys/kernel/core_pattern
 ```
-![image](uploads/e9cb559b0d6f09731f33bc9f90462778/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/4c9f8122-78b6-4832-b082-a2843cf65c53)
+
 
 5. 拷贝到可执行文件目录下
 
@@ -1460,7 +1445,8 @@ sa: 可执行文件
 
 coredumpxxx: coredump 文件名
 
-![image](uploads/7e867d56c5d86f7b956fb7db267aca87/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/882f0e8e-e11f-49df-8e9b-48059612d118)
+
 
 ## 1.47. 问：使用后 yum 命令后， libstdc++ 出现链接错误
 
@@ -1470,10 +1456,11 @@ ln -s /usr/local/lib64/libstdc++.so.6 /usr/lib64/libstdc++.so.6
 ```
 
 ## 1.48. 问：如何使用iperf3打流
-[iperf3使用说明.docx](uploads/2ec590de34a8482fc65d98a2ccc2de06/iperf3使用说明.docx)
+[iperf3使用说明.docx](https://github.com/grow-man/MyLearningRecorder/files/13630745/iperf3.docx)
+
 
 ## 1.49. 问：如何从抓包文件中提取amr音频流并播放
-[提取抓包文件中的amr音频流并播放.docx](uploads/85ae74617881dc1d9bb7f306ab5fcd1d/提取抓包文件中的amr音频流并播放.docx)
+[提取抓包文件中的amr音频流并播放.docx](https://github.com/grow-man/MyLearningRecorder/files/13631545/amr.docx)  
 
 ## 1.50. 问：如何查看文件的 md5 数值
 
@@ -1483,22 +1470,14 @@ windows
 certutil -hashfile 文件 MD5
 ```
 
-![image](uploads/335e551ee92dbe60b6d97d87df4c6296/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f9825e29-f76a-4665-894a-9533ae3f6c1f)  
 
 linux：
 
 ```sh
 md5sum 文件名
 ```
-
-![image](uploads/ea43aec2fec914264c5d70102c52bd1f/image.png)
-
-mac：
-
-```sh
-md5 文件名
-```
-![image](uploads/d0955984693ddb34b8198adef08812eb/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/72f5a5dc-c19e-4f48-b57b-79348f771694)
 
 ## 1.51. 问：如何在抓包中导出 rtp 音频进行分析
 
@@ -1525,15 +1504,16 @@ FLUSH PRIVILEGES;
 
 3. 关闭本机对 3306 端口的防火墙
 
-## 1.54. 问： wireshark 抓包时出现提示 failed to set hardware filter to promiscuous mode: 连到系统上的设备没有发挥作用。  (31)
+## 1.54. 问： wireshark 抓包时出现提示 failed to set hardware filter to promiscuous mode: 连到系统上的设备没有发挥作用。 
 
-![image](uploads/eb7f03ade293a1152a7d8db2f53f5911/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/a5db608a-b4b8-4aea-8d81-f0030c8146de)
+
 
 可以通过关闭混杂模式进行抓包
 
 点击 捕获 -> 选项，取消勾选混杂模式即可抓包
 
-![image](uploads/1aaf938caac08248f06cc9ff6b9807ad/image.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/86a4f52a-4b01-4afa-b2e2-2100641743dc)  
 
 ## 1.55. 问：wireshark 中混杂模式指的是什么意思？
 
@@ -1765,9 +1745,6 @@ vi ifcfg-enp4s0f2   //有线网卡配置文件
 ONBOOT=no
 ```
 
-## 1.65. 问：车载台、固定台现场问题排查取证的方法操作流程
-[20220909车载台固定台问题排查取证方法v0.5.pdf](uploads/d0d5c61fad72975f328ddd464a471288/20220909车载台固定台问题排查取证方法v0.5.pdf)
-
 ## 1.66. 问：调度台现场问题排查取证的方法
 
 1.  记录问题产生时间，拍摄记录问题，描述问题现象
@@ -1870,7 +1847,8 @@ hostnamectl set-hostname host_name
 
 ## 1.75. 问: CentoS7以上使用fdisk对4T磁盘进行分区, 对home进行扩容
 
-[文档：Centos7对home扩容.docx](uploads/44a6cda68a3bae070a717dcc71f7c784/Centos7对home扩容.docx)
+[Centos7对home扩容.docx](https://github.com/grow-man/MyLearningRecorder/files/13631641/Centos7.home.docx)  
+
 
 ## 1.76. 问: EN50128 中 D.52 提到的结构化方法
 
@@ -2371,8 +2349,7 @@ MultiThreaded关键字表示MT库
 ## 1.122. 问:为何官网下载的googleTest框架的运行时库缺省为/MT 不能修改
 
 将string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")注释后可以修改
-![image](uploads/84716b5788e299be105c1b3d1c5d012c/image.png)
-
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/6959dc91-77af-451a-887a-246ad7439a6f)  
 
 ## 1.123. 问: ubuntu 替换清华源
 
@@ -2380,32 +2357,6 @@ MultiThreaded关键字表示MT库
 sudo sed -i "s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 ```
-
-## 1.124. 问：调度台软件无法登录，提示连接集群服务器失败
-
-答：
-
-1.  查看电脑IP地址，ping检测是否可以和集群服务器地址正常通信。
-
-2.  查看dc.ini中mdc_ip =地址是否配错。
-
-3.  本地SDK服务未启动，注意：第一次安装服务时要以管理员身份运行，安装完成后需要重启电脑。
-
-![7cc8192f462e3add3a76bec5f87b2dbc](uploads/4e5d9c318e41ffed56bc783c1daf3d27/7cc8192f462e3add3a76bec5f87b2dbc.png)
-
-![5704f4b6d46cf6b793b1e65ed5170db0](uploads/a92e0e1cf2f1a2e479c76427869a009c/5704f4b6d46cf6b793b1e65ed5170db0.png)
-
-## 1.125. 问：调度台软件无法登录，提示连接二开调度服务器失败
-
-答：
-
-1.  查看电脑IP地址，ping检测是否可以和二开调度服务器正常通信，网络可达。
-
-2.  查看dc.ini中dis_ip = 地址是否配错。
-
-![45eeadaa9aebaaa5bb6ccad8599c4fbc](uploads/3e07d5e6ca8089ea85b15fe98922a932/45eeadaa9aebaaa5bb6ccad8599c4fbc.png)
-
-![0991c896ca4cb82d666fd6bac158a791](uploads/e91a25f72c3e8edfcceeed3ca3d2806b/0991c896ca4cb82d666fd6bac158a791.png)
 
 ## 1.126. 问：调度台软件登录时，提示音频加载失败
 
@@ -2417,29 +2368,13 @@ sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn
 
     注：若是刚安装华为服务，有可能是没有使用管理员权限安装华为服务导致。
 
-![6c9d31d5213cfee592f363fcc967ecd9](uploads/edad2e31aee6dcf2759e54b288ca64a3/6c9d31d5213cfee592f363fcc967ecd9.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/eecd5de4-8fde-412d-a153-3ef36ee810f2)  
 
-![fb58e934250485e584478beed75d4768](uploads/650e6afdda52049933db22503838a5a9/fb58e934250485e584478beed75d4768.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/5aea763c-8333-4678-a328-a3213a8e8015)  
 
-![56acc30d0c0f34ad95e112029246d1e5](uploads/91cc9d3da94455ef2f0a590118c085e1/56acc30d0c0f34ad95e112029246d1e5.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/b86811de-5fb6-4a71-b268-7757a7649c4a)  
 
-![079b13a7c06dcb36e94496c95fd9fa26](uploads/4a923f3f3fe0389e55d6bfbbcb446062/079b13a7c06dcb36e94496c95fd9fa26.png)
-
-![eadc88fec0ae625cd8a0367573f643e4](uploads/e18cd81cba1e6fd1877bcee5c7b3b6be/eadc88fec0ae625cd8a0367573f643e4.png)
-
-## 1.127. 问：登录调度台软件时，出现加载数据失败
-
-答：
-
-1.  查看日志，是否有明显错误打印例如：[error]，检查配置项、数据库
-
-2.  检查dis和dc版本是否匹配。
-
-例如：Dis.log出现[DTP]socker error重启dis，重新登录dc看能否恢复。
-
-![68aebdc3c7a85c3f000f90221705cebe](uploads/cc6827aa0be06f046f4969ce0e1b7168/68aebdc3c7a85c3f000f90221705cebe.png)
-
-![85f416692db158ac069a090cb01b2536](uploads/5617352e683c2deeee52f9edb3a32ad6/85f416692db158ac069a090cb01b2536.png)  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/21a66fe1-fc75-4502-a8ec-6cb0d266fe5d)  
 
 
 ## 1.128. 问：调度台和调度服务器网络正常时，调度台提示连接二开调度服务器失败
@@ -2452,13 +2387,12 @@ sudo sed -i "s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn
 
 3.  Dis起来后数据库是否正常运行
 
-![30d24228bd83ccba93b54f86cd2f59d5](uploads/a124c457610e117d8e2f70d7225d1a96/30d24228bd83ccba93b54f86cd2f59d5.png)
-
 ## 1.129. 问：调度台软件打开后，登录界面，登录和退出按钮错位。
 
 答：查看调度台电脑的分辨率，在系统桌面右键选择显示设置，查看缩放与布局将分辨率设置成适配的。
 
-![5db1671b4bc044a4b65917a56c1e2f85](uploads/e4c52316e52ae1cdef1b889174e9481c/5db1671b4bc044a4b65917a56c1e2f85.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/4d13f35e-0a4f-4684-a5a9-a7402b6acdee)
+
 
 ## 1.130. 问：调度台软件左下角指示灯，LTE爆红、CAD爆红、ATS爆红、NTP爆红
 
@@ -2470,24 +2404,6 @@ ATS爆红，进入调度台服务器查看ATS接口是否正常，查看日志�
 
 NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
-![19f965039b5c6db3420a35a6986ae23e](uploads/e552d575ca0f926a0cc00b0c9df449b1/19f965039b5c6db3420a35a6986ae23e.png)
-
-![aef467b18441f00b2fec2982b689d221](uploads/62734ee3af90a111681a82c34742435c/aef467b18441f00b2fec2982b689d221.png)
-
-
-## 1.131. 问：点击车站或者列车没有组呼窗口出现
-
-答：
-
-第一种：该车站/列车没有组，需要通过维护调度台给列车/车站添加组。
-
-第二种：点击调度台上方系统配置-\>业务参数里面显示呼叫弹窗需要勾选。
-
-![c001eee06ccc826c50eb630cd3d13538](uploads/7a1676237f8f98be88dff391bd67b9af/c001eee06ccc826c50eb630cd3d13538.png)
-
-![60ca55f2e988265f4d87fe7279d2fa33](uploads/f9b028aaa0bda2ea7782a8c660d88e4c/60ca55f2e988265f4d87fe7279d2fa33.png)
-
-![3c1f0c64428fd849b77312bb5a844b98](uploads/4c220c90f6b80be299e6d0f54ead3fbd/3c1f0c64428fd849b77312bb5a844b98.png)
 
 ## 1.132. 问：人工广播发起后，没有返回广播状态，无法开始广播。
 
@@ -2501,6 +2417,10 @@ NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 3.  如果没有先排查我们内部问题查看调度台日志，是否有发起人工广播的请求
 
 4.  如果有，则需要广播厂家排查问题，可以进行抓包，通过报文进一步确认请求是否发出。
+
+人工广播业务时序如下：
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/2e07ac4c-6be9-4a2f-acd1-d8e15523bef0)
+
 
 
 ## 1.133. 问：人工广播发起后，按下PTT说话车上没有听到广播声音。
@@ -2533,7 +2453,8 @@ NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
 第二种，排查网络是否正常，sa是否将消息发送给dis，查看dis的日志，查看dc的日志。
 
-![14e84b756de9211a94dcd6e6e4db6534](uploads/9d9ca33bc9d8239bb63a48a86a3ad7f2/14e84b756de9211a94dcd6e6e4db6534.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/3c82f861-7150-461a-b698-3b177a7870ec)
+
 
 ## 1.137. 问：IPH报警器触发，调度台接听后，报警器还处于未接通状态
 
@@ -2555,6 +2476,8 @@ NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
 4.  如果能看到视频，则需要排查调度台软件问题。
 
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/bd4e8fad-1c3a-494c-896e-ee63b46976de)
+
 
 ## 1.139. 问：IPH报警器触发后，调度台接听但听不到报警器语音的声音。
 
@@ -2570,6 +2493,9 @@ NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
 5.  如果报警器发出来了，则排查中间车载防火墙是否把报文拦截了。
 
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/135a3ae1-ac63-4e70-9b64-01887a438dec)
+
+
 ## 1.140. 问：调度台可以听到未监听的未知组号的组呼
 
 答：
@@ -2582,10 +2508,6 @@ NTP爆红，查看连接的NTP服务器的NTP状态是否正常
 
 4.  如果是动态组或者是派接组，可以通过dc.exe -t
     打开测试，查找到创建这个动态组和派接组的调度台，然后询问是否该群组是否有用，没有的话就释放掉。
-
-![dc4f3a0920d9b14edeef3790ceb8e9e4](uploads/2ab89f19098629ca1035a09d23b52b50/dc4f3a0920d9b14edeef3790ceb8e9e4.png)
-
-![2d97a8d4e84f8a5cb5fce43047098d17](uploads/ca9699e8b744af10a953af5c1f13ce07/2d97a8d4e84f8a5cb5fce43047098d17.png)
 
 ## 1.141. 问： 对群组进行组呼时出现抢权失败，出现抢权提示音。
 
@@ -2628,7 +2550,8 @@ mysql\> select user,host from user; 再次查询是否允许远程登录
 
 mysql\> flush  privileges; \#刷新系统权限相关表
 
-![cd0e682c8153dde53975d8d1fcff9de0](uploads/5a3d9ce6efa2ba8e4b8c129718ea08cc/cd0e682c8153dde53975d8d1fcff9de0.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/af2c93eb-c94e-4a1b-9acc-353f9141443c)
+
 
 ## 2.2. 问：数据库开机不会自动启动
 
@@ -2636,7 +2559,8 @@ mysql\> flush  privileges; \#刷新系统权限相关表
 
 chkconfig//查看mysql是否开机自启动
 
-![4d37653ae19989ddb679d53e0159c1dc](uploads/e8191f02074b3fb066aefd1ac08b6e20/4d37653ae19989ddb679d53e0159c1dc.png)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/1efb66ae-0c26-447b-84b6-66f2ff28cd9e)
+
 
 如果看到mysql的服务，并且3,4,5都是on的话则成功，如果是off，则输入
 
@@ -2660,33 +2584,13 @@ chkconfig --level 345 mysql on
 
 3.  如果存在，dis.log中还是出现错误打印，需要排查一下数据库是否配置了不区分了大小写，查看/etc/my.cnf文件里面是否配置了lower_case_table_names=1//表名不再区分大小写。
 
-## 2.5. 问：调度台和车载台ATS指示灯都爆红
-
-答：
-
-1.  通过dis的服务器去ping ATS的地址，ping不通，先排查网络问题
-
-2.  ping通查看dis.log，有没有关于ATS的报错信息
-
-3.  抓取和ATS做业务交互的网卡报文，通过报文来分析接口是否正常，连接是否正常，ATS实时给的列车位置信息有没有。
-
-## 2.6. 问：dis的一些全局配置项没生效
-
-答：
-
-1.  检查dis.ini配置文件中相关配置项是否正确，检查拼写是否有误。配置了之后，要重启dis才能生效。
-
-2.  如果发现有误，可以通过dis.log中配置项和dis.ini中是否一致。
-
-3.  Dis.ini中相关配置项填写位置是否正确。
-
 ## 2.7. 问：如何查看进程是否正常启动并运行
 
 答：
 
-1.  可以通过反复输入pidof dis，查看dis进程是否在反复启动。
+1.  反复使用pidof xxx 查看进程是否起来并且pid是否有变化，正常运行的进程pid应该是不变的。
 
-2.  查看dis.log日志是否正常打印，没有报错。
+2.  查看日志，日志连续且没有error打印。
 
 ## 2.8. 问：服务器数据库备份设置，如何手动复原数据库内容
 
@@ -2746,9 +2650,9 @@ chkconfig --level 345 mysql on
 
 7.  核心网udc开户时关联一项要为空，否则也无法进行登录
 
-![b7dac8153cef12c11c9bb2b0180b1565](uploads/189d7261ae5480ba361abc40063ef0e0/b7dac8153cef12c11c9bb2b0180b1565.jpg)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/cea57b53-402c-486f-8b08-f8b5f3e578a2)
 
-![8b7a09c94f69d8d8e89636ab32568da2](uploads/e2b37a654f22077216b350dad2f3714b/8b7a09c94f69d8d8e89636ab32568da2.jpg)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/b16d4704-4f80-46b2-bf14-54cc37272919)
 
 ## 3.6. 问：车载台终端话柄爆红
 
@@ -2805,26 +2709,6 @@ chkconfig --level 345 mysql on
 4.  更换设备
 
 
-## 3.12. 问：18号线固定台车站广播如何配置
-
-答：
-
-1.  浏览器输入主机IP地址，进入主机配置页面
- 
-2.  点击网络配置-IP重定向配置，输入IP地址。例如：
-
-    航头站固定台广播IP：10.18.101.10
-
-    广播通信终端IP：10.18.101.21
-
-    下沙站固定台广播IP：10.18.102.10
-
-    广播通信终端IP：10.18.102.21，其余配置都相同。
-
-![b7dd2cd3005bafafffd4cf580868042b](uploads/f266fcb266f2b935fb9646e17ae3936c/b7dd2cd3005bafafffd4cf580868042b.jpg)
-
-![1d3e7d149cd6e737b00382e8fb3c697f](uploads/41c053ce69b7c1389df6eb759d6e0928/1d3e7d149cd6e737b00382e8fb3c697f.jpg)
-
 ## 3.13. 问：如何验证18号线固定台的车站广播功能
 
 答：
@@ -2844,12 +2728,6 @@ chkconfig --level 345 mysql on
 2.  检查物理线路连接是否正常，1分3的线上绿色凤凰头是否连接广播系统
 
 3.  网络连接是否正常，尝试ping广播设备的ip地址
-
-## 3.15. 问：固定台终端板卡E210和主机板卡TA30-72测试文档
-
-[固定台终端板卡E210测试.docx](uploads/9a4dca68fa11c06a957c8f7bf3b6c767/固定台终端板卡E210测试.docx)
-
-[固定台主机板卡TA30-72测试.docx](uploads/995d0aa51217f70941afc3bd9bb858f2/固定台主机板卡TA30-72测试.docx)
 
 # 4. 网管FAQ
 
@@ -2875,7 +2753,8 @@ chkconfig --level 345 mysql on
 
 3.  SELinux是否关闭
 
-![bbe035fd587cfbd2dc0cd43a24a9386f](uploads/6fda28a0822c0f6c2361d22541745741/bbe035fd587cfbd2dc0cd43a24a9386f.jpg)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/88118d66-9792-4043-9f75-f2d58b342010)
+
 
 ## 4.3. 问：设备如何被网管纳管
 
@@ -2886,8 +2765,6 @@ chkconfig --level 345 mysql on
 2.  omc.ini中配置allow_auto_online=false是不允许自动上线，当设备配置网管地址后，需要在omt客户端上需要添加设备进行纳管。
 
 3.  设备的mac地址要是不清楚的话，可以在omc.log中可以看到未被纳管设备的IP和MAC地址。
-
-![a8fb4ece24368f44bb6f856fa16575d3](uploads/786508a029764ecc877f017f65962119/a8fb4ece24368f44bb6f856fa16575d3.png)
 
 ## 4.4. 问：系统状态中CAD服务器、录音录像服务器图标一直成灰色，设备上线也是灰色状态，或者设备列表中调度台设备的名称为空白
 
@@ -2943,11 +2820,10 @@ chkconfig --level 345 mysql on
 
 1.  需要核心网开录音录像节点
 
-![734537cb6d498eb1d3316e0e14a507cd](uploads/d342054035a909a5393dbc120990fbe4/734537cb6d498eb1d3316e0e14a507cd.jpg)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/10be9a1f-2fd0-43c9-b3db-cb8156dba755)
+
 
 2.  mrs.ini文件配置，user、pwd等按照核心网开户时的配置
-
-![39e665636875bb2076ce414694848663](uploads/52c13035443f643bfe5e1b042ac6bf30/39e665636875bb2076ce414694848663.jpg)
 
 ## 5.2. 问：录音录像的文件怎么导出
 
