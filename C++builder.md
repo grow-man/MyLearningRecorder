@@ -24,6 +24,41 @@ Resource compiler not found!
 
 ![56f376b54f304ee144d37d7c80d90c5](https://github.com/grow-man/MyLearningRecorder/assets/52662997/8978eb57-7065-4d05-8764-4ac28a8f29d2)  
 
+# 可视化文件选择控件`TFileOpenDialog`  
+1.TFileOpenDialog 空间是 C++ Builder 提供的一个用于在应用程序中显示文件打开对话框的组件。通过这个组件，用户可以以可视化的方式在系统中选择任意文件。  
+成员函数`Execute `提供一个可视化的文件打开对话框供用户选择文件。
+2.`option`选项可以设置文件是否是只读、是否允许选择多个文件等。 
+3.示例如下：  
+```
+TFileOpenDialog *dlgOpenFile = new TFileOpenDialog(NULL);
+try
+{
+    dlgOpenFile->Options << ofReadOnly << ofAllowMultiSelect; // 设置只读选项和允许多选
+
+    if (dlgOpenFile->Execute())
+    {
+        // 用户点击了 "打开" 按钮
+        TStrings *SelectedFiles = dlgOpenFile->Files;
+        for (int i = 0; i < SelectedFiles->Count; ++i)
+        {
+            ShowMessage("选中的文件是：" + SelectedFiles->Strings[i]);
+        }
+    }
+    else
+    {
+        // 用户点击了 "取消" 按钮或关闭了对话框
+        ShowMessage("用户取消了操作");
+    }
+}
+__finally
+{
+    delete dlgOpenFile;
+}
+
+```
+
+
+
 
 
 
