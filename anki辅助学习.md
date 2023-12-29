@@ -4,14 +4,51 @@
 # 使用  
 详细教程https://zhuanlan.zhihu.com/p/21328602  
 
+# 优点 
+自定义程度高，几乎可以覆盖任何场景，常见的有问答卡、填空卡、看图填空，特殊的还可以对图片进行遮盖、添加音频等  
+
+# 缺点  
+功能繁杂，上手困难。调整模板UI风格需要额外学习Html以及CSS  
+
 ## 导入 
-在主页->文件->导入 点击弹出文件选择框如下：  
+在主页->文件->导入(或者首页底部的导入文件按钮) 如下图所示：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/48ed1b56-3e33-4b17-854c-e26af947c495)  
+
 ![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/4ca57986-6774-4383-ba5c-0be7fbb72b7d)  
 支持的文件格式有：*.txt *.csv *.apkg 等  
+需要注意anki只支持`utf-8`格式的文件，文件格式不对会报错(转换下格式即可)，如下图所示：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f1bbe238-9f44-4bbf-a62a-6440b36be9f1)  
 
 ## 制作牌组 
-点击主页牌组->创建牌组->在弹窗中输入牌组名称  
+点击主页牌组->创建牌组->在弹窗中输入牌组名称->点击确认即可  
 ![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/6d9c693c-fdff-40bb-8070-3bbf97b7daaf)  
+
+## 牌组设置  
+首页点击牌组->选择牌组->点击右侧齿轮按钮->选择选项：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/36c5b030-345d-40cf-ba7c-7a7591ae04e7)  
+
+牌组选项： 
+可以点击帮助按钮获取选项详细信息：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f2370396-ab40-492c-a603-dc5fedc2ec5a)  
+
+## 制作填空类型的卡片  
+点击首页的添加按钮，选择你需要制作的卡片模板(这里我们选择填空题)以及卡组，如下图所示：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/a749d5d1-ae1e-49cd-87bf-2685bace47ad)  
+
+将你需要制作成卡片的文本信息拷贝到文字栏，选中需要挖空的文字，然后再顶部工具栏点击`[···]`图标即可  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/f2638fb6-b522-486d-8be6-63a04ab6d262)  
+
+效果预览：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/9d0a27e6-a268-4302-9c37-757df5ede9e6)
+
+## 制作问答题类型的卡片  
+点击首页添加按钮，选择你需要制作的卡片模板(这里我们选择问答题)以及卡组，如下图所示：  
+在正面一栏填写问题描述，在背面一栏填写问题答案即可  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/88b1f27c-67ab-43ad-b782-053c2f76cdd8)   
+预览效果：  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/afb39d35-4dc5-45a8-b8af-da9a06c5af62)
+
+## 制作带图片的问答卡
 
 ## 使用chatGPT生成问答类的卡片  
 感谢https://zhuanlan.zhihu.com/p/609413004提供的Prompt  
@@ -52,6 +89,8 @@
 ![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/15bf7b4f-fba2-41cd-9f62-cdae0b2adaa7)  
 将chatGPT的截图拷贝粘贴到execl文件并另存为.csv文件即可导入到anki制作为卡牌。  
 生成的卡片如下图所示：  
-![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/c826aed0-85f4-4289-b80c-39283ba204c1)
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/c826aed0-85f4-4289-b80c-39283ba204c1)  
+
+
 
 
