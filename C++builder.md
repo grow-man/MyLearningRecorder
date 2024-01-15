@@ -26,8 +26,8 @@ Resource compiler not found!
 
 # 可视化文件选择控件`TFileOpenDialog`  
 1.TFileOpenDialog 空间是 C++ Builder 提供的一个用于在应用程序中显示文件打开对话框的组件。通过这个组件，用户可以以可视化的方式在系统中选择任意文件。  
-成员函数`Execute `提供一个可视化的文件打开对话框供用户选择文件。
-2.`option`选项可以设置文件是否是只读、是否允许选择多个文件等。 
+成员函数`Execute `提供一个可视化的文件打开对话框供用户选择文件。  
+2.`option`选项可以设置文件是否是只读、是否允许选择多个文件等。   
 3.示例如下：  
 ```
 TFileOpenDialog *dlgOpenFile = new TFileOpenDialog(NULL);
@@ -56,6 +56,29 @@ __finally
 }
 
 ```
+
+# 记录控件`TcxTreeListNode` 的`DataBinging`属性导致软件崩溃  
+
+## 现象
+
+将一个超过2147483647 的无符号整数赋值给`TcxTreeListNode` 控件时软件崩溃，报错信息为:`Overflow while converting variant of type (UnicodeString) into type (Integer)`   
+
+![05d452d8b75b2b8389c5cb34962a49a](https://github.com/grow-man/MyLearningRecorder/assets/52662997/19288088-1951-485e-ab3a-2e13a1d0986a)  
+
+## 原因  
+
+控件`TcxTreeListNode`缺省属性是`integer `它通常表示32位的有符号整数，所以将一个一个超过2147483647 的无符号整数赋值`TcxTreeListNode`会导致软件崩溃。  
+可以将它设置为`largelnt `以表示更大的范围(64位有符号数)来规避此问题。  
+
+### 修改前  
+
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/e36c3ca8-13d1-4720-b2b5-0f8ee8eb0ecb)  
+
+### 修改后  
+
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/040d4a9e-d3a3-4b0a-a510-c0a15a476587)  
+
+
 
 
 
