@@ -13,4 +13,6 @@ root@TA30-71:~# iptables -t nat -vS
 
 ## 查询本机所有的iptables规则  
 
-`iptables -t nat -nvL`
+`iptables -t nat -nvL`, 如下图所示：  
+![a584d2985a1b6af81306ba43803c971](https://github.com/grow-man/MyLearningRecorder/assets/52662997/141a839a-bb90-4d42-b1de-f990b8afb9e5)
+
