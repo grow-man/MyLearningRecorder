@@ -4,6 +4,38 @@
 1、版本发布时不集中  
 2、issue提交不集中，现场问题BUG可能涉及多个网元但是只在一个库提交  
 
+```
+
+这通常发生在你试图添加一个非空的目录作为子模块，并且该目录尚未被初始化为 Git 仓库。为了解决这个问题，你可以手动进行以下步骤：
+
+1. 进入目标目录并初始化为 Git 仓库：
+    ```bash
+    cd TX/build_dir/linux-ar71xx_generic/linux-3.3.8
+    git init
+    ```
+
+2. 将该目录连接到子模块的远程仓库：
+    ```bash
+    git remote add origin git@gitlab.gbcom.com.cn:SDK/QSDK_10_2_KERNEL.git
+    ```
+
+3. 拉取远程仓库的内容：
+    ```bash
+    git pull origin master
+    ```
+
+这样你就手动将该目录初始化为一个 Git 仓库，并连接到你想要作为子模块的远程仓库。最后，它会拉取远程仓库中的内容到这个目录中。完成后，你可以回到项目的根目录并尝试再次运行 `git submodule add` 命令。
+
+```bash
+git submodule add git@gitlab.gbcom.com.cn:SDK/QSDK_10_2_KERNEL.git ./TX/build_dir/linux-ar71xx_generic/linux-3.3.8/
+
+当你再次运行 `git submodule add` 时，Git 应该能够正确地初始化子模块，并且可以在父项目中正确地追踪它。
+
+```
+
+
+
+
 
 ## gitlab 不能直接上传超过10M文件
 `curl.exe --request POST --header "Private-Token: z31sGkhX_EwRSxAZtgNz" --form "file=@D:\\常用软件\\tftp\\unzip(1)\unzip.exe" "http://gitlab.gbcom.com.cn/api/v4/projects/847/uploads"`  
