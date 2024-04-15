@@ -40,3 +40,41 @@ int main() {
 }
 
 ```
+
+常用的捕获情况如下：  
+```
+[]：默认不捕获任何变量；
+[=]：默认以值捕获所有变量；
+[&]：默认以引⽤捕获所有变量；
+[x]：仅以值捕获x，其它变量不捕获；
+[&x]：仅以引⽤捕获x，其它变量不捕获；
+[=, &x]：默认以值捕获所有变量，但是x是例外，通过引⽤捕获；
+[&, x]：默认以引⽤捕获所有变量，但是x是例外，通过值捕获；
+[this]：通过引⽤捕获当前对象（其实是复制指针）；
+[*this]：通过传值⽅式捕获当前对象；
+```
+
+# constexpr  
+修饰常量对象  
+例如在C语言中声明常量通常是`#define test_const_value 1`  
+使用constexpr可以是`constexpr int n=1`  
+constexpr 还可以用来修饰函数、对象等  
+
+# 基于范围的for循环  
+按照容器范围遍历  
+例如 
+```
+int arr[5] = {0};
+std:vector<int> var;
+
+for (int x : arr) /// x是arr的副本
+
+for (int &x : arr) /// x是arr的引用，修改x会修改arr元素的数据
+
+for (const int &x : arr ) /// x是arr的常量引用，不允许修改但是减少了一次拷贝
+
+for (auto x : var) /// x是var的元素的自动类型推导的引用
+
+for (const auto x : var) /// x是var的元素的自动类型推导的常量引用
+
+```
