@@ -1,6 +1,6 @@
 # uloop 
 
-## C与C++函数签名不同造成的编译连接问题  
+### C与C++函数签名不同造成的编译连接问题  
 
 ```
 obj-app = dmo_test
@@ -55,7 +55,7 @@ extern "C" {
 ```
 在内部头文件中使用extern"C"将uloop.h包起来,注意其他位置不要再包含`#include    <libubox/uloop.h>`否则会有声明冲突的问题。   
 
-## 多线程？  
+### uloop的实现  
 uloop不是多线程实现，在`version:2015-11-08`中uloop_run()函数实现如下：  
 ```
 void uloop_run(void)
