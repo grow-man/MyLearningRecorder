@@ -1,4 +1,6 @@
-# uloop 编译问题 
+# uloop 
+
+## C与C++函数签名不同造成的编译连接问题  
 
 ```
 obj-app = dmo_test
@@ -51,4 +53,88 @@ extern "C" {
 
 #endif 
 ```
-在内部头文件中使用extern"C"将uloop.h包起来,注意其他位置不要再包含`#include    <libubox/uloop.h>`否则会有声明冲突的问题。  
+在内部头文件中使用extern"C"将uloop.h包起来,注意其他位置不要再包含`#include    <libubox/uloop.h>`否则会有声明冲突的问题。   
+
+## 多线程？  
+uloop不是多线程实现，在`version:2015-11-08`中uloop_run()函数实现如下：  
+```
+void uloop_run(void)
+{
+	static int recursive_calls = 0;
+	struct timeval tv;
+
+	/*
+	 * Handlers are only updated for the first call to uloop_run() (and restored
+	 * when this call is done).
+	 */
+	if (!recursive_calls++)
+		uloop_setup_signals(true);
+
+	uloop_cancelled = false;
+	while(!uloop_cancelled)
+	{
+		uloop_gettime(&tv);
+		uloop_process_timeouts(&tv);
+
+		if (do_sigchld)
+			uloop_handle_processes();
+
+		if (uloop_cancelled)
+			break;
+
+		uloop_gettime(&tv);
+		uloop_run_events(uloop_get_next_timeout(&tv));
+	}
+
+	if (!--recursive_calls)
+		uloop_setup_signals(false);
+}
+```
+可以看到在调用uloop_run 时是一个事件循环,循环监测超时定时器以及进程监控，uloop_run_events 是事件循环的核心部分，它会调用 poll 或 epoll 来等待文件描述符上的事件。uloop_run_events 检测到事件后，会调用相应的回调函数： 
+```
+static void uloop_run_events(int timeout)
+{
+	struct uloop_fd_event *cur;
+	struct uloop_fd *fd;
+
+	if (!cur_nfds) {
+		cur_fd = 0;
+		cur_nfds = uloop_fetch_events(timeout); /// epool_wait 等待触发
+		if (cur_nfds < 0)
+			cur_nfds = 0;
+	}
+
+	while (cur_nfds > 0) {
+		struct uloop_fd_stack stack_cur;
+		unsigned int events;
+
+		cur = &cur_fds[cur_fd++];
+		cur_nfds--;
+
+		fd = cur->fd;
+		events = cur->events;
+		if (!fd)
+			continue;
+
+		if (!fd->cb)
+			continue;
+
+		if (uloop_fd_stack_event(fd, cur->events))
+			continue;
+
+		stack_cur.next = fd_stack;
+		stack_cur.fd = fd;
+		fd_stack = &stack_cur;
+		do {
+			stack_cur.events = 0;
+			fd->cb(fd, events);
+			events = stack_cur.events & ULOOP_EVENT_MASK;
+		} while (stack_cur.fd && events);
+		fd_stack = stack_cur.next;
+
+		return;
+	}
+}
+```
+
+
