@@ -590,3 +590,58 @@ serial@78b0000 {
 
 确保 `dmesg` 输出中没有与设备树加载、GPIO配置和串口驱动相关的错误信息。  
 
+
+# 在 usb-option 中没有添加对应设备的Vid 和 Pid导致usb设备不能被自动识别并注册节点 
+ 现象：查看usb设备`cat /sys/kernel/debug/usb/devices`能够看到该USB设备：
+ ```
+root@QA70-20:~# cat /sys/kernel/debug/usb/devices
+
+T:  Bus=04 Lev=00 Prnt=00 Port=00 Cnt=00 Dev#=  1 Spd=5000 MxCh= 0
+B:  Alloc=  0/800 us ( 0%), #Int=  0, #Iso=  0
+D:  Ver= 3.00 Cls=09(hub  ) Sub=00 Prot=03 MxPS= 9 #Cfgs=  1
+P:  Vendor=1d6b ProdID=0003 Rev= 4.04
+S:  Manufacturer=Linux 4.4.60 xhci-hcd
+S:  Product=xHCI Host Controller
+S:  SerialNumber=xhci-hcd.1.auto
+C:* #Ifs= 1 Cfg#= 1 Atr=e0 MxPwr=  0mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=09(hub  ) Sub=00 Prot=00 Driver=(none)
+E:  Ad=81(I) Atr=03(Int.) MxPS=   4 Ivl=256ms
+
+··· 省略
+
+# 目标设备 Vid：1546 Pid:01a8
+T:  Bus=03 Lev=01 Prnt=01 Port=00 Cnt=01 Dev#=  2 Spd=12   MxCh= 0
+D:  Ver= 1.10 Cls=02(comm.) Sub=00 Prot=00 MxPS=64 #Cfgs=  1
+P:  Vendor=1546 ProdID=01a8 Rev= 3.01
+S:  Manufacturer=u-blox AG - www.u-blox.com
+S:  Product=u-blox GNSS receiver
+C:* #Ifs= 2 Cfg#= 1 Atr=c0 MxPwr=100mA
+I:* If#= 0 Alt= 0 #EPs= 1 Cls=02(comm.) Sub=02 Prot=01 Driver=(none)
+E:  Ad=83(I) Atr=03(Int.) MxPS=  64 Ivl=255ms
+I:* If#= 1 Alt= 0 #EPs= 2 Cls=0a(data ) Sub=00 Prot=ff Driver=(none)
+E:  Ad=01(O) Atr=02(Bulk) MxPS=  64 Ivl=0ms
+E:  Ad=82(I) Atr=02(Bulk) MxPS=  64 Ivl=0ms
+ ```
+
+手动添加：`echo "1546 01a8" > /sys/bus/usb-serial/drivers/option1/new_id` 后在 /dev/目录下能够创建设备节点并正确输出GPS信息。　　　
+
+根据上述信息判断，在设备上没有对应的驱动，且通用驱动option没有添加对应的节点(Vid 和 Pid)。  
+
+修复方法：
+在 [kernel]//drivers/usb/serial/option.c 中添加对应的Vid Pid即可，如下所示：
+![4c54b2f239ddaca3cb97f222f273af2](https://github.com/grow-man/MyLearningRecorder/assets/52662997/ffd80f8f-8807-4e56-838d-60a77b514568)  
+
+编译ko：在openwrt 中在外层选中表示将该模块编译成ko打包到版本中减少升级内核带来的问题：  
+make menuconfig ->Kernel Modules -> USB Support 选中对应的KO模块 此处选中("*"(外层选中表示编译成KO打包到版本))kmod-usb-serial-option   
+
+
+# Bypass 导致不能识别LTE模块  
+![image](https://github.com/grow-man/MyLearningRecorder/assets/52662997/8be698fb-f4e7-4e2c-a39d-515c0fef1422)  
+
+如上图所示，通过gpio控制EM360模块bypass,版本启动时将该模块设置为bypass模式导致该模块不可用(/sys/kernel/debug/usb/devices 没有该模块信息),后续修改为上电后设备unbypass修复   
+
+
+
+
+
+ 
