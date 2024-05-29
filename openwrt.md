@@ -137,4 +137,30 @@ static void uloop_run_events(int timeout)
 }
 ```
 
+### 使用uloop时定时器必须声明为全局变量
+
+原因：作用域问题，当你使用uloop_timeout_set()函数添加一个定时器时，uloop并没有拷贝对应的副本，而是将传入参数的指针指向本地定时器链表。  
+```
+int uloop_timeout_add(struct uloop_timeout *timeout)
+{
+	struct uloop_timeout *tmp;
+	struct list_head *h = &timeouts;
+
+	if (timeout->pending)
+		return -1;
+
+	list_for_each_entry(tmp, &timeouts, list) {
+		if (tv_diff(&tmp->time, &timeout->time) > 0) {  ///找到链表中第一个超时时间比当前timeout对象的时间晚的节点位置。确保新的超时事件按时间顺序插入链表中，保持链表按超时时间排序
+			h = &tmp->list;
+			break;
+		}
+	}
+
+	list_add_tail(&timeout->list, h); /// 此处将传入参数(当前timeout对象)加入定时器链表，注意并未产生拷贝。所以当程序中定时器变量是局部变量时由于作用域的关系该链表中的定时器对象失效,所以不允许将定时器变量设为局部变量
+	timeout->pending = true;
+
+	return 0;
+}
+```
+
 
