@@ -555,4 +555,38 @@ serial@78b0000 {
 
 ```
 
-# 如何判
+# 查看dmesg打印过滤串口注册信息
+在 `dmesg` 输出中，你可以搜索关键字来确认设备树的加载和串口相关的信息。你可以使用 `grep` 命令来过滤 `dmesg` 输出，以查找关键字。以下是一些可能有用的关键字：
+
+- **Device Tree**：搜索以 "Device Tree" 或 "dtb" 开头的信息，这些信息会显示设备树的加载情况。
+  
+  ```bash
+  dmesg | grep "Device Tree"
+  ```
+
+- **GPIO**：搜索与 GPIO 相关的信息，确保 GPIO 相关的驱动和引脚配置被正确加载。
+
+  ```bash
+  dmesg | grep "gpio"
+  ```
+
+- **Serial**：搜索与串口相关的信息，以确认串口驱动程序是否正确加载，并查看是否有关于 UART1 的信息。
+
+  ```bash
+  dmesg | grep "serial"
+  ```
+
+- **UART**：搜索与UART相关的信息，以确保UART设备已经被正确识别。
+
+  ```bash
+  dmesg | grep "uart"
+  ```
+
+- **特定设备节点**：如果你知道串口设备节点的名称，你也可以搜索这个名称。
+
+  ```bash
+  dmesg | grep "ttyS1"
+  ```
+
+确保 `dmesg` 输出中没有与设备树加载、GPIO配置和串口驱动相关的错误信息。  
+
