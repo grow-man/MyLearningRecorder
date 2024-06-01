@@ -640,6 +640,31 @@ make menuconfig ->Kernel Modules -> USB Support 选中对应的KO模块 此处�
 
 如上图所示，通过gpio控制EM360模块bypass,版本启动时将该模块设置为bypass模式导致该模块不可用(/sys/kernel/debug/usb/devices 没有该模块信息),后续修改为上电后设备unbypass修复   
 
+# Linux系统中USB驱动的匹配与加载机制  
+设备匹配驱动时，驱动会检查设备对应的Vid和Pid是自身支持的Vid和Pid，如果支持则加载设备自动加载：  
+设备的连接和识别过程如下：
+
+* 1.设备连接：当USB设备连接到Linux系统时，内核通过usbcore模块检测到新设备的插入。
+
+* 2.设备描述符读取：内核读取设备的描述符信息，包括Vendor ID（Vid）和Product ID（Pid）。
+
+* 3.匹配驱动：
+ 内核模块：Linux内核通过usb_device_id结构在已加载的内核模块中查找与设备Vid和Pid匹配的驱动程序。
+
+一般在驱动程序中会维护支持设备列表，例如在`/drivers/usb/serial/option.c`中的`struct usb_device_id option_ids[]` :
+```
+static const struct usb_device_id option_ids[] = {
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_COLT) },
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA) },
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_LIGHT) },
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_QUAD) },
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_QUAD_LIGHT) },
+	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_NDIS) },
+····
+}
+```
+
+
 
 
 
