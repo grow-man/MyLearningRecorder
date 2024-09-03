@@ -163,4 +163,62 @@ int uloop_timeout_add(struct uloop_timeout *timeout)
 }
 ```
 
+ # 使用ethtool查看网口协商
+
+ ![image](https://github.com/user-attachments/assets/e2b1d77f-35d2-4e74-86fd-a1a846d0b443)  
+
+ ### 相关参数解释如下：
+
+ ```
+`ethtool` 是一个用于查询和修改网络接口设备参数的命令工具。你提供的输出信息显示了网络接口 `eth0` 的当前配置和支持的功能。下面是对这些信息的解释：
+
+### 1. `Supported ports: [ TP MII ]`
+- **TP (Twisted Pair)**: 代表网络接口支持使用双绞线（通常是以太网电缆）作为物理连接介质。
+- **MII (Media Independent Interface)**: 表示该设备支持使用 MII（介质独立接口），这是用来在 MAC 控制器和 PHY 之间传输数据的一种接口。
+
+### 2. `Supported link modes`
+- **10baseT/Half, 10baseT/Full**: 表示该接口支持 10 Mbps 的半双工和全双工模式。
+- **100baseT/Half, 100baseT/Full**: 表示该接口支持 100 Mbps 的半双工和全双工模式。
+- **1000baseT/Full**: 表示该接口支持 1000 Mbps（即 1 Gbps）的全双工模式。注意，这里不包括半双工模式。
+
+### 3. `Supported pause frame use: No`
+- 该接口不支持使用暂停帧（pause frames）来控制流量。这意味着它无法通过发送和接收暂停帧来进行流量控制，防止在高负载情况下的丢包。
+
+### 4. `Supports auto-negotiation: Yes`
+- 表示该接口支持自动协商（Auto-Negotiation）功能。自动协商是一种协议，它允许以太网设备协商速度和双工模式。
+
+### 5. `Advertised link modes`
+- **Advertised link modes** 是该接口通过自动协商向其他设备宣布它能够支持的链路模式。你可以看到，接口声明它支持 10 Mbps、100 Mbps、1000 Mbps 的各种模式。
+
+### 6. `Advertised pause frame use: No`
+- 该接口没有宣布支持暂停帧。
+
+### 7. `Advertised auto-negotiation: Yes`
+- 接口宣布它支持自动协商功能。
+
+### 8. `Speed: 100Mb/s`
+- 当前接口的连接速度为 100 Mbps。
+
+### 9. `Duplex: Full`
+- 当前接口的双工模式为全双工（Full-Duplex），表示它可以同时发送和接收数据。
+
+### 10. `Port: MII`
+- 该接口使用 MII 接口连接到外部 PHY（物理层芯片）。
+
+### 11. `PHYAD: 0`
+- 表示该接口的 PHY 地址为 0。PHY 地址是用来在 MII 或 RMII 总线上标识不同的 PHY 设备。
+
+### 12. `Transceiver: external`
+- 该接口使用外部的收发器（transceiver）。
+
+### 13. `Auto-negotiation: on`
+- 自动协商功能已开启，这意味着该接口会自动与连接的对端协商最佳的链路速度和双工模式。
+
+### 14. `Current message level: 0x000000ff (255)`
+- 这是内核驱动程序调试消息的级别。当前设置为 `255`，这意味着所有类型的消息都会被记录。
+
+### 15. `Link detected: no`
+- 该接口未检测到物理链路。这可能意味着电缆没有插入，或连接的对端设备没有启用/配置正确。
+ ```
+
 
