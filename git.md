@@ -4,35 +4,50 @@
 1、版本发布时不集中  
 2、issue提交不集中，现场问题BUG可能涉及多个网元但是只在一个库提交  
 
+  ### 添加子模块  
+  ```
+    git submodule add -b master git@gitlab.gbcom.com.cn:cp4/gos.git ds/gos
+  ```
+-b 表示需要添加的子仓库的分支 + 子仓库的url + 本地子仓库位置 
+
+ ### 删除子模块  
+
+ ```
+    git submodule deinit -f path_to_submodule  
+    git rm -f path_to_submodule
+    git commit -m "Remove submodule"
+    git push
 ```
 
-这通常发生在你试图添加一个非空的目录作为子模块，并且该目录尚未被初始化为 Git 仓库。为了解决这个问题，你可以手动进行以下步骤：
+### 1. `git submodule deinit -f path_to_submodule`
+这一命令的作用是**取消子模块的初始化**。子模块初始化的意思是将子模块的内容加载到主仓库的工作目录中，并让主仓库跟踪子模块的内容。
 
-1. 进入目标目录并初始化为 Git 仓库：
-    ```bash
-    cd TX/build_dir/linux-ar71xx_generic/linux-3.3.8
-    git init
-    ```
-
-2. 将该目录连接到子模块的远程仓库：
-    ```bash
-    git remote add origin git@gitlab.gbcom.com.cn:SDK/QSDK_10_2_KERNEL.git
-    ```
-
-3. 拉取远程仓库的内容：
-    ```bash
-    git pull origin master
-    ```
-
-这样你就手动将该目录初始化为一个 Git 仓库，并连接到你想要作为子模块的远程仓库。最后，它会拉取远程仓库中的内容到这个目录中。完成后，你可以回到项目的根目录并尝试再次运行 `git submodule add` 命令。
+- **`deinit`**：该子命令用于取消子模块的初始化，即从工作目录中移除子模块的文件，但不会删除 `.gitmodules` 文件中的子模块信息。子模块仍然存在于主仓库的历史记录中。
+- **`-f` (force)**：强制执行取消初始化操作，即使子模块当前仍有未提交的更改或冲突。
+  
+例子：
 
 ```bash
-git submodule add git@gitlab.gbcom.com.cn:SDK/QSDK_10_2_KERNEL.git ./TX/build_dir/linux-ar71xx_generic/linux-3.3.8/
-
-当你再次运行 `git submodule add` 时，Git 应该能够正确地初始化子模块，并且可以在父项目中正确地追踪它。
-
+git submodule deinit -f tx
 ```
 
+这会从工作目录中移除 `tx` 子模块的内容（即使有未提交的修改），但子模块的配置和引用仍然在 `.gitmodules` 中。
+
+### 2. `git rm -f path_to_submodule`
+该命令的作用是**从 Git 中删除子模块的记录**，并将子模块从主仓库中移除。
+
+- **`rm`**：用于从 Git 仓库中删除文件或子模块。在删除子模块时，它会同时移除 `.gitmodules` 文件中的对应子模块条目。
+- **`-f` (force)**：强制删除子模块，无论是否有未提交的更改。
+  
+例子：
+
+```bash
+git rm -f tx
+```
+
+这个命令不仅会删除工作目录中的 `tx` 文件夹，还会从 `.gitmodules` 文件中移除对该子模块的引用，意味着子模块将不再被主仓库跟踪。
+
+**注意**：这条命令不会删除远程仓库中的子模块仓库本身，只是删除了主仓库中的引用。
 
 
 
