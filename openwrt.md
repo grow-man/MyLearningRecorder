@@ -221,4 +221,27 @@ int uloop_timeout_add(struct uloop_timeout *timeout)
 - 该接口未检测到物理链路。这可能意味着电缆没有插入，或连接的对端设备没有启用/配置正确。
  ```
 
+# 磁盘空间耗尽后变为只读挂载  
+
+现象：
+1、df-h能看到emmc设备空间耗尽   
+
+2、mount能看到emmc设备正确挂载但是挂载模式从RW->RO   
+
+3、ls -al看不到挂载目录下的文件   
+
+原因：
+1、文件系统变成只读 (RO)： 当 eMMC 空间被完全占满后，Linux 文件系统可能会自动将挂载点设置为只读状态，以防止数据损坏。通常情况下，这是由系统检测到文件系统的某种异常或错误引发的。这种行为也可能与文件系统类型（如 ext4、FAT 等）有关。 使用命令dmesg查看异常出现的时间及相关信息，例如：
+```
+[138819.160000] EXT4-fs error (device sda1) in ext4_da_write_begin:2432: IO failure  
+[138819.170000] EXT4-fs (sda1): previous I/O error to superblock detected  
+[138819.170000] EXT4-fs error (device sda1): ext4_journal_start_sb:327: Detected aborted journal  
+[138819.180000] EXT4-fs (sda1): Remounting filesystem read-only  
+```
+2、无法显示文件 (ls -al 无法列出目录内容）： 当文件系统空间耗尽时，这可能是因为目录的元数据无法更新或读取失败。  
+
+3、df -h 可以看到空间被占满： 即使文件系统变为只读，df -h 依然可以正常显示文件系统的使用情况。这是因为 df -h 只是读取挂载点的元数据，而不需要对文件系统进行写入操作。  
+
+一般重启设备后可以恢复：1、重启设备时会通过fsck修复磁盘此时会释放部分空间以及重启时会重新将设备挂载为RW。重启后进入系统后需要及时查看哪些文件占用大量空间，及时备份删除恢复磁盘。  
+
 
