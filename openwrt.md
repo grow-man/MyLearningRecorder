@@ -163,6 +163,53 @@ int uloop_timeout_add(struct uloop_timeout *timeout)
 }
 ```
 
+
+关于这个问题有一个新的疑问：如下代码在调用uloop_timeout_set将定时器加入到超时链表后立即调用uloop_run阻塞，局部定时器地址仍然有效为何程序崩溃？    
+```
+/// 定时器不能是局部变量
+/// struct uloop_timeout stTimeoutGetDMOWorkStatus;
+
+struct uloop_fd stUloopUartFd;
+struct uloop_fd stUloopAPPUdpFd;
+
+int main(int argc, char **argv)
+{
+
+    struct uloop_timeout stTimeoutGetDMOWorkStatus;
+    stTimeoutGetDMOWorkStatus.cb = DMOQueryVersion_cb;
+
+    uloop_init();
+
+    uloop_timeout_set(&stTimeoutGetDMOWorkStatus, 1); /// 设置定时器
+
+    uloop_run(); /// 阻塞 等待回调触发
+
+    uloop_timeout_cancel(&stTimeoutGetDMOWorkStatus); /// 释放定时器资源
+
+    uloop_fd_delete(&stUloopUartFd); /// 释放文件监听资源
+    uloop_fd_delete(&stUloopAPPUdpFd);
+
+    uloop_done();
+    return 0;
+}
+
+```
+
+答案是回调函数，由于定时器在回调执行一次后即失效需要重新设置，此时如果是局部变量则引发未定义行为(在另一个函数中操作main中的局部地址)导致程序崩溃     
+```
+VOID DMOQueryWorkStatus_cb(struct uloop_timeout *pstTimeOut)
+{
+    if (!pstTimeOut)
+    {
+        return ;
+    }
+
+    uloop_timeout_set(pstTimeOut, 5000); /// 设置定时器 每5秒查询一次  此处重新设置定时器，如果是局部变量会导致UB，表现为程序崩溃
+
+    DMOQueryWorkStatusReq();
+}
+``` 
+
  # 使用ethtool查看网口协商
 
  ![image](https://github.com/user-attachments/assets/e2b1d77f-35d2-4e74-86fd-a1a846d0b443)  
