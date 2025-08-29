@@ -10,6 +10,15 @@
   ```
 -b 表示需要添加的子仓库的分支 + 子仓库的url + 本地子仓库位置 
 
+  ### 添加错误  
+
+  ```
+  git submodule add -b gos_4019 git@gitlab.gbcom.com.cn:cp4/gos.git package/gbcom/libs/gos/ 'package/gbcom/libs/gos' already exists in the index
+  ```
+
+package/gbcom/libs/gos目录已经被git记录，使用`git rm -r --cached package/gbcom/libs/gos`删除该索引即可  
+
+
  ### 删除子模块  
 
  ```
@@ -145,4 +154,5 @@ git clone -b development <远程仓库URL>
 10. 粘贴之前复制的公钥内容到相应的字段中，并保存。
 
 现在，你已经成功添加了 SSH 密钥，可以使用 SSH 协议与远程仓库进行交互，而无需每次输入密码。
+
 
